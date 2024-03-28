@@ -1,0 +1,2416 @@
+2024-03-26 18:48:58,100 - ----------   Round 1     ----------
+2024-03-26 18:48:58,218 - Number of ZIFs in Dataset: 1
+2024-03-26 18:48:58,218 - Mean Absolute Error: 0.06000000000000005
+2024-03-26 18:48:58,279 - Number of ZIFs in Dataset: 2
+2024-03-26 18:48:58,279 - Mean Absolute Error: 0.1591876125335694
+2024-03-26 18:48:58,335 - Number of ZIFs in Dataset: 3
+2024-03-26 18:48:58,335 - Mean Absolute Error: 0.23019766569137579
+2024-03-26 18:48:58,399 - Number of ZIFs in Dataset: 4
+2024-03-26 18:48:58,400 - Mean Absolute Error: 0.2522322511672974
+2024-03-26 18:48:59,060 - Number of ZIFs in Dataset: 5
+2024-03-26 18:48:59,060 - Mean Absolute Error: 0.323258308172226
+2024-03-26 18:49:00,158 - Number of ZIFs in Dataset: 6
+2024-03-26 18:49:00,158 - Mean Absolute Error: 0.330387813448906
+2024-03-26 18:49:01,584 - Number of ZIFs in Dataset: 7
+2024-03-26 18:49:01,584 - Mean Absolute Error: 0.3020638203620911
+2024-03-26 18:49:02,942 - Number of ZIFs in Dataset: 8
+2024-03-26 18:49:02,942 - Mean Absolute Error: 0.3104549771547318
+2024-03-26 18:49:04,594 - Number of ZIFs in Dataset: 9
+2024-03-26 18:49:04,594 - Mean Absolute Error: 0.33645902335643774
+2024-03-26 18:49:06,348 - Number of ZIFs in Dataset: 10
+2024-03-26 18:49:06,349 - Mean Absolute Error: 0.32271006464958196
+2024-03-26 18:49:08,068 - Number of ZIFs in Dataset: 11
+2024-03-26 18:49:08,077 - Mean Absolute Error: 0.3614128208160401
+2024-03-26 18:49:09,823 - Number of ZIFs in Dataset: 12
+2024-03-26 18:49:09,823 - Mean Absolute Error: 0.36306763947010046
+2024-03-26 18:49:11,504 - Number of ZIFs in Dataset: 13
+2024-03-26 18:49:11,504 - Mean Absolute Error: 0.3627652949094773
+2024-03-26 18:49:13,263 - Number of ZIFs in Dataset: 14
+2024-03-26 18:49:13,287 - Mean Absolute Error: 0.37586131453514104
+2024-03-26 18:49:15,020 - Number of ZIFs in Dataset: 15
+2024-03-26 18:49:15,020 - Mean Absolute Error: 0.36562898516654974
+2024-03-26 18:49:16,518 - Number of ZIFs in Dataset: 16
+2024-03-26 18:49:16,518 - Mean Absolute Error: 0.3700473582744599
+2024-03-26 18:49:18,099 - Number of ZIFs in Dataset: 17
+2024-03-26 18:49:18,099 - Mean Absolute Error: 0.36804131925106054
+2024-03-26 18:49:19,641 - Number of ZIFs in Dataset: 18
+2024-03-26 18:49:19,641 - Mean Absolute Error: 0.36499766767025
+2024-03-26 18:49:21,044 - Number of ZIFs in Dataset: 19
+2024-03-26 18:49:21,044 - Mean Absolute Error: 0.3755444413423539
+2024-03-26 18:49:22,728 - Number of ZIFs in Dataset: 20
+2024-03-26 18:49:22,728 - Mean Absolute Error: 0.37311276555061346
+2024-03-26 18:49:24,477 - Number of ZIFs in Dataset: 21
+2024-03-26 18:49:24,477 - Mean Absolute Error: 0.37644891202449804
+2024-03-26 18:49:26,120 - Number of ZIFs in Dataset: 22
+2024-03-26 18:49:26,120 - Mean Absolute Error: 0.37725740432739263
+2024-03-26 18:49:27,715 - Number of ZIFs in Dataset: 23
+2024-03-26 18:49:27,715 - Mean Absolute Error: 0.3785924887657166
+2024-03-26 18:49:29,546 - Number of ZIFs in Dataset: 24
+2024-03-26 18:49:29,546 - Mean Absolute Error: 0.37981982290744787
+2024-03-26 18:49:31,226 - Number of ZIFs in Dataset: 25
+2024-03-26 18:49:31,226 - Mean Absolute Error: 0.3733730441331864
+2024-03-26 18:49:33,148 - Number of ZIFs in Dataset: 26
+2024-03-26 18:49:33,148 - Mean Absolute Error: 0.37715272367000585
+2024-03-26 18:49:34,832 - Number of ZIFs in Dataset: 27
+2024-03-26 18:49:34,832 - Mean Absolute Error: 0.37664244830608373
+2024-03-26 18:49:36,400 - Number of ZIFs in Dataset: 28
+2024-03-26 18:49:36,401 - Mean Absolute Error: 0.3755107498168946
+2024-03-26 18:49:37,992 - Number of ZIFs in Dataset: 29
+2024-03-26 18:49:37,993 - Mean Absolute Error: 0.37490994989871984
+2024-03-26 18:49:39,690 - Number of ZIFs in Dataset: 30
+2024-03-26 18:49:39,690 - Mean Absolute Error: 0.3498003906011582
+2024-03-26 18:49:41,120 - Number of ZIFs in Dataset: 31
+2024-03-26 18:49:41,120 - Mean Absolute Error: 0.356247810125351
+2024-03-26 18:49:42,802 - Number of ZIFs in Dataset: 32
+2024-03-26 18:49:42,802 - Mean Absolute Error: 0.40362578392028814
+2024-03-26 18:49:44,548 - Number of ZIFs in Dataset: 33
+2024-03-26 18:49:44,549 - Mean Absolute Error: 0.4044246202707291
+2024-03-26 18:49:46,286 - Number of ZIFs in Dataset: 34
+2024-03-26 18:49:46,286 - Mean Absolute Error: 0.40704563021659856
+2024-03-26 18:49:46,286 - ----------   Round 2     ----------
+2024-03-26 18:49:46,365 - Number of ZIFs in Dataset: 1
+2024-03-26 18:49:46,365 - Mean Absolute Error: 2.43
+2024-03-26 18:49:46,469 - Number of ZIFs in Dataset: 2
+2024-03-26 18:49:46,469 - Mean Absolute Error: 2.3690515685081484
+2024-03-26 18:49:46,560 - Number of ZIFs in Dataset: 3
+2024-03-26 18:49:46,560 - Mean Absolute Error: 2.4516776728630068
+2024-03-26 18:49:46,643 - Number of ZIFs in Dataset: 4
+2024-03-26 18:49:46,643 - Mean Absolute Error: 2.2344513463974
+2024-03-26 18:49:47,688 - Number of ZIFs in Dataset: 5
+2024-03-26 18:49:47,688 - Mean Absolute Error: 2.2073914933204652
+2024-03-26 18:49:48,831 - Number of ZIFs in Dataset: 6
+2024-03-26 18:49:48,831 - Mean Absolute Error: 2.1935566592216493
+2024-03-26 18:49:50,346 - Number of ZIFs in Dataset: 7
+2024-03-26 18:49:50,346 - Mean Absolute Error: 2.213749878406525
+2024-03-26 18:49:51,889 - Number of ZIFs in Dataset: 8
+2024-03-26 18:49:51,889 - Mean Absolute Error: 2.191636555194855
+2024-03-26 18:49:53,643 - Number of ZIFs in Dataset: 9
+2024-03-26 18:49:53,643 - Mean Absolute Error: 2.191572539806366
+2024-03-26 18:49:55,230 - Number of ZIFs in Dataset: 10
+2024-03-26 18:49:55,249 - Mean Absolute Error: 2.1700848865509035
+2024-03-26 18:49:56,683 - Number of ZIFs in Dataset: 11
+2024-03-26 18:49:56,683 - Mean Absolute Error: 2.235368185043335
+2024-03-26 18:49:58,449 - Number of ZIFs in Dataset: 12
+2024-03-26 18:49:58,449 - Mean Absolute Error: 2.2281247305870058
+2024-03-26 18:50:00,264 - Number of ZIFs in Dataset: 13
+2024-03-26 18:50:00,288 - Mean Absolute Error: 2.21731644153595
+2024-03-26 18:50:01,879 - Number of ZIFs in Dataset: 14
+2024-03-26 18:50:01,879 - Mean Absolute Error: 2.204478077888489
+2024-03-26 18:50:03,640 - Number of ZIFs in Dataset: 15
+2024-03-26 18:50:03,641 - Mean Absolute Error: 2.235390238761902
+2024-03-26 18:50:05,454 - Number of ZIFs in Dataset: 16
+2024-03-26 18:50:05,454 - Mean Absolute Error: 2.218274109363556
+2024-03-26 18:50:07,186 - Number of ZIFs in Dataset: 17
+2024-03-26 18:50:07,186 - Mean Absolute Error: 2.218681983947754
+2024-03-26 18:50:08,972 - Number of ZIFs in Dataset: 18
+2024-03-26 18:50:08,972 - Mean Absolute Error: 0.5914434719085695
+2024-03-26 18:50:10,912 - Number of ZIFs in Dataset: 19
+2024-03-26 18:50:10,912 - Mean Absolute Error: 0.5989102649688722
+2024-03-26 18:50:12,676 - Number of ZIFs in Dataset: 20
+2024-03-26 18:50:12,676 - Mean Absolute Error: 0.6107665824890138
+2024-03-26 18:50:14,396 - Number of ZIFs in Dataset: 21
+2024-03-26 18:50:14,397 - Mean Absolute Error: 0.5923263359069826
+2024-03-26 18:50:15,968 - Number of ZIFs in Dataset: 22
+2024-03-26 18:50:15,968 - Mean Absolute Error: 0.6934584903717043
+2024-03-26 18:50:17,963 - Number of ZIFs in Dataset: 23
+2024-03-26 18:50:17,963 - Mean Absolute Error: 0.720806293487549
+2024-03-26 18:50:19,523 - Number of ZIFs in Dataset: 24
+2024-03-26 18:50:19,523 - Mean Absolute Error: 0.5486685562133791
+2024-03-26 18:50:21,346 - Number of ZIFs in Dataset: 25
+2024-03-26 18:50:21,347 - Mean Absolute Error: 0.7002910900115968
+2024-03-26 18:50:23,177 - Number of ZIFs in Dataset: 26
+2024-03-26 18:50:23,177 - Mean Absolute Error: 0.4558257389068605
+2024-03-26 18:50:24,897 - Number of ZIFs in Dataset: 27
+2024-03-26 18:50:24,897 - Mean Absolute Error: 0.47984593391418473
+2024-03-26 18:50:26,785 - Number of ZIFs in Dataset: 28
+2024-03-26 18:50:26,785 - Mean Absolute Error: 0.4013678359985353
+2024-03-26 18:50:28,591 - Number of ZIFs in Dataset: 29
+2024-03-26 18:50:28,592 - Mean Absolute Error: 0.42972105026245133
+2024-03-26 18:50:30,585 - Number of ZIFs in Dataset: 30
+2024-03-26 18:50:30,585 - Mean Absolute Error: 0.5655104446411134
+2024-03-26 18:50:32,440 - Number of ZIFs in Dataset: 31
+2024-03-26 18:50:32,440 - Mean Absolute Error: 0.43428628921508805
+2024-03-26 18:50:34,330 - Number of ZIFs in Dataset: 32
+2024-03-26 18:50:34,330 - Mean Absolute Error: 0.459181480407715
+2024-03-26 18:50:36,231 - Number of ZIFs in Dataset: 33
+2024-03-26 18:50:36,231 - Mean Absolute Error: 0.4893748092651369
+2024-03-26 18:50:38,104 - Number of ZIFs in Dataset: 34
+2024-03-26 18:50:38,105 - Mean Absolute Error: 0.48072045326232926
+2024-03-26 18:50:38,105 - ----------   Round 3     ----------
+2024-03-26 18:50:38,191 - Number of ZIFs in Dataset: 1
+2024-03-26 18:50:38,191 - Mean Absolute Error: 0.13999985337257387
+2024-03-26 18:50:38,314 - Number of ZIFs in Dataset: 2
+2024-03-26 18:50:38,314 - Mean Absolute Error: 0.19919381856918333
+2024-03-26 18:50:38,474 - Number of ZIFs in Dataset: 3
+2024-03-26 18:50:38,474 - Mean Absolute Error: 0.34390036582946776
+2024-03-26 18:50:38,620 - Number of ZIFs in Dataset: 4
+2024-03-26 18:50:38,620 - Mean Absolute Error: 0.17924283266067503
+2024-03-26 18:50:39,786 - Number of ZIFs in Dataset: 5
+2024-03-26 18:50:39,786 - Mean Absolute Error: 0.27290586948394774
+2024-03-26 18:50:41,117 - Number of ZIFs in Dataset: 6
+2024-03-26 18:50:41,117 - Mean Absolute Error: 0.25283519744873045
+2024-03-26 18:50:42,548 - Number of ZIFs in Dataset: 7
+2024-03-26 18:50:42,548 - Mean Absolute Error: 0.15683372139930724
+2024-03-26 18:50:44,213 - Number of ZIFs in Dataset: 8
+2024-03-26 18:50:44,213 - Mean Absolute Error: 0.1403696072101593
+2024-03-26 18:50:45,804 - Number of ZIFs in Dataset: 9
+2024-03-26 18:50:45,804 - Mean Absolute Error: 0.25352959156036375
+2024-03-26 18:50:47,460 - Number of ZIFs in Dataset: 10
+2024-03-26 18:50:47,460 - Mean Absolute Error: 0.18784664392471312
+2024-03-26 18:50:49,244 - Number of ZIFs in Dataset: 11
+2024-03-26 18:50:49,244 - Mean Absolute Error: 0.051209790706634506
+2024-03-26 18:50:50,817 - Number of ZIFs in Dataset: 12
+2024-03-26 18:50:50,825 - Mean Absolute Error: 0.21875415563583372
+2024-03-26 18:50:52,648 - Number of ZIFs in Dataset: 13
+2024-03-26 18:50:52,648 - Mean Absolute Error: 0.14038766741752623
+2024-03-26 18:50:54,324 - Number of ZIFs in Dataset: 14
+2024-03-26 18:50:54,324 - Mean Absolute Error: 0.22836731195449828
+2024-03-26 18:50:56,172 - Number of ZIFs in Dataset: 15
+2024-03-26 18:50:56,195 - Mean Absolute Error: 0.20535050153732298
+2024-03-26 18:50:57,745 - Number of ZIFs in Dataset: 16
+2024-03-26 18:50:57,745 - Mean Absolute Error: 0.06606133103370665
+2024-03-26 18:50:59,372 - Number of ZIFs in Dataset: 17
+2024-03-26 18:50:59,372 - Mean Absolute Error: 0.15180112242698668
+2024-03-26 18:51:01,016 - Number of ZIFs in Dataset: 18
+2024-03-26 18:51:01,016 - Mean Absolute Error: 0.20286296129226683
+2024-03-26 18:51:02,700 - Number of ZIFs in Dataset: 19
+2024-03-26 18:51:02,700 - Mean Absolute Error: 0.19741789817810057
+2024-03-26 18:51:04,179 - Number of ZIFs in Dataset: 20
+2024-03-26 18:51:04,179 - Mean Absolute Error: 0.2380088996887207
+2024-03-26 18:51:05,580 - Number of ZIFs in Dataset: 21
+2024-03-26 18:51:05,580 - Mean Absolute Error: 0.16409183859825133
+2024-03-26 18:51:07,105 - Number of ZIFs in Dataset: 22
+2024-03-26 18:51:07,105 - Mean Absolute Error: 0.2116043996810913
+2024-03-26 18:51:08,642 - Number of ZIFs in Dataset: 23
+2024-03-26 18:51:08,642 - Mean Absolute Error: 0.22872642993927
+2024-03-26 18:51:10,083 - Number of ZIFs in Dataset: 24
+2024-03-26 18:51:10,083 - Mean Absolute Error: 0.18729285717010496
+2024-03-26 18:51:11,700 - Number of ZIFs in Dataset: 25
+2024-03-26 18:51:11,700 - Mean Absolute Error: 0.15001801967620848
+2024-03-26 18:51:13,308 - Number of ZIFs in Dataset: 26
+2024-03-26 18:51:13,308 - Mean Absolute Error: 0.11691213965415953
+2024-03-26 18:51:14,630 - Number of ZIFs in Dataset: 27
+2024-03-26 18:51:14,630 - Mean Absolute Error: 0.040086401700973495
+2024-03-26 18:51:16,221 - Number of ZIFs in Dataset: 28
+2024-03-26 18:51:16,221 - Mean Absolute Error: 0.11144436717033385
+2024-03-26 18:51:17,852 - Number of ZIFs in Dataset: 29
+2024-03-26 18:51:17,852 - Mean Absolute Error: 0.13242901682853697
+2024-03-26 18:51:19,411 - Number of ZIFs in Dataset: 30
+2024-03-26 18:51:19,411 - Mean Absolute Error: 0.07491831302642821
+2024-03-26 18:51:20,992 - Number of ZIFs in Dataset: 31
+2024-03-26 18:51:20,992 - Mean Absolute Error: 0.19022927999496458
+2024-03-26 18:51:22,573 - Number of ZIFs in Dataset: 32
+2024-03-26 18:51:22,573 - Mean Absolute Error: 0.05288190960884093
+2024-03-26 18:51:24,186 - Number of ZIFs in Dataset: 33
+2024-03-26 18:51:24,186 - Mean Absolute Error: 0.1097277534008026
+2024-03-26 18:51:25,928 - Number of ZIFs in Dataset: 34
+2024-03-26 18:51:25,928 - Mean Absolute Error: 0.13235927939414976
+2024-03-26 18:51:25,928 - ----------   Round 4     ----------
+2024-03-26 18:51:25,990 - Number of ZIFs in Dataset: 1
+2024-03-26 18:51:25,990 - Mean Absolute Error: 0.30999970674514765
+2024-03-26 18:51:26,086 - Number of ZIFs in Dataset: 2
+2024-03-26 18:51:26,109 - Mean Absolute Error: 0.25334304809570307
+2024-03-26 18:51:26,191 - Number of ZIFs in Dataset: 3
+2024-03-26 18:51:26,192 - Mean Absolute Error: 0.189965488910675
+2024-03-26 18:51:26,272 - Number of ZIFs in Dataset: 4
+2024-03-26 18:51:26,272 - Mean Absolute Error: 0.18665856361389155
+2024-03-26 18:51:26,964 - Number of ZIFs in Dataset: 5
+2024-03-26 18:51:26,964 - Mean Absolute Error: 0.20260185241699213
+2024-03-26 18:51:27,918 - Number of ZIFs in Dataset: 6
+2024-03-26 18:51:27,918 - Mean Absolute Error: 0.24808144807815546
+2024-03-26 18:51:28,971 - Number of ZIFs in Dataset: 7
+2024-03-26 18:51:28,971 - Mean Absolute Error: 0.3022502386569976
+2024-03-26 18:51:30,236 - Number of ZIFs in Dataset: 8
+2024-03-26 18:51:30,236 - Mean Absolute Error: 0.28847655892372126
+2024-03-26 18:51:31,684 - Number of ZIFs in Dataset: 9
+2024-03-26 18:51:31,684 - Mean Absolute Error: 0.31210714817047114
+2024-03-26 18:51:33,145 - Number of ZIFs in Dataset: 10
+2024-03-26 18:51:33,145 - Mean Absolute Error: 0.324318858385086
+2024-03-26 18:51:34,446 - Number of ZIFs in Dataset: 11
+2024-03-26 18:51:34,446 - Mean Absolute Error: 0.30676844954490656
+2024-03-26 18:51:36,261 - Number of ZIFs in Dataset: 12
+2024-03-26 18:51:36,261 - Mean Absolute Error: 0.3017900609970092
+2024-03-26 18:51:38,032 - Number of ZIFs in Dataset: 13
+2024-03-26 18:51:38,032 - Mean Absolute Error: 0.26555496692657465
+2024-03-26 18:51:39,920 - Number of ZIFs in Dataset: 14
+2024-03-26 18:51:39,920 - Mean Absolute Error: 0.2746720933914184
+2024-03-26 18:51:41,596 - Number of ZIFs in Dataset: 15
+2024-03-26 18:51:41,596 - Mean Absolute Error: 0.3028298342227935
+2024-03-26 18:51:43,368 - Number of ZIFs in Dataset: 16
+2024-03-26 18:51:43,368 - Mean Absolute Error: 0.30394071578979487
+2024-03-26 18:51:44,956 - Number of ZIFs in Dataset: 17
+2024-03-26 18:51:44,956 - Mean Absolute Error: 0.3028562688827514
+2024-03-26 18:51:46,535 - Number of ZIFs in Dataset: 18
+2024-03-26 18:51:46,535 - Mean Absolute Error: 0.30103311181068415
+2024-03-26 18:51:48,260 - Number of ZIFs in Dataset: 19
+2024-03-26 18:51:48,260 - Mean Absolute Error: 0.3506892645359039
+2024-03-26 18:51:49,658 - Number of ZIFs in Dataset: 20
+2024-03-26 18:51:49,658 - Mean Absolute Error: 0.34188142657279963
+2024-03-26 18:51:50,959 - Number of ZIFs in Dataset: 21
+2024-03-26 18:51:50,959 - Mean Absolute Error: 0.34050685405731196
+2024-03-26 18:51:52,605 - Number of ZIFs in Dataset: 22
+2024-03-26 18:51:52,606 - Mean Absolute Error: 0.35436764597892756
+2024-03-26 18:51:54,370 - Number of ZIFs in Dataset: 23
+2024-03-26 18:51:54,370 - Mean Absolute Error: 0.37618190288543696
+2024-03-26 18:51:56,135 - Number of ZIFs in Dataset: 24
+2024-03-26 18:51:56,135 - Mean Absolute Error: 0.3439445221424102
+2024-03-26 18:51:58,041 - Number of ZIFs in Dataset: 25
+2024-03-26 18:51:58,041 - Mean Absolute Error: 0.2953504347801208
+2024-03-26 18:51:59,896 - Number of ZIFs in Dataset: 26
+2024-03-26 18:51:59,896 - Mean Absolute Error: 0.34159317851066584
+2024-03-26 18:52:01,558 - Number of ZIFs in Dataset: 27
+2024-03-26 18:52:01,558 - Mean Absolute Error: 0.312820109128952
+2024-03-26 18:52:03,435 - Number of ZIFs in Dataset: 28
+2024-03-26 18:52:03,435 - Mean Absolute Error: 0.3290827894210815
+2024-03-26 18:52:05,185 - Number of ZIFs in Dataset: 29
+2024-03-26 18:52:05,185 - Mean Absolute Error: 0.35501697897911066
+2024-03-26 18:52:07,052 - Number of ZIFs in Dataset: 30
+2024-03-26 18:52:07,052 - Mean Absolute Error: 0.3512389683723449
+2024-03-26 18:52:08,743 - Number of ZIFs in Dataset: 31
+2024-03-26 18:52:08,743 - Mean Absolute Error: 0.35286000609397883
+2024-03-26 18:52:10,674 - Number of ZIFs in Dataset: 32
+2024-03-26 18:52:10,674 - Mean Absolute Error: 0.3547092998027801
+2024-03-26 18:52:12,408 - Number of ZIFs in Dataset: 33
+2024-03-26 18:52:12,408 - Mean Absolute Error: 0.3627855205535888
+2024-03-26 18:52:14,409 - Number of ZIFs in Dataset: 34
+2024-03-26 18:52:14,409 - Mean Absolute Error: 0.34409147739410395
+2024-03-26 18:52:14,409 - ----------   Round 5     ----------
+2024-03-26 18:52:14,538 - Number of ZIFs in Dataset: 1
+2024-03-26 18:52:14,539 - Mean Absolute Error: 0.3599994659423828
+2024-03-26 18:52:14,652 - Number of ZIFs in Dataset: 2
+2024-03-26 18:52:14,652 - Mean Absolute Error: 0.3592370629310608
+2024-03-26 18:52:14,785 - Number of ZIFs in Dataset: 3
+2024-03-26 18:52:14,785 - Mean Absolute Error: 0.21055867075920104
+2024-03-26 18:52:14,917 - Number of ZIFs in Dataset: 4
+2024-03-26 18:52:14,917 - Mean Absolute Error: 0.3141203999519348
+2024-03-26 18:52:15,928 - Number of ZIFs in Dataset: 5
+2024-03-26 18:52:15,928 - Mean Absolute Error: 0.3147028565406799
+2024-03-26 18:52:17,024 - Number of ZIFs in Dataset: 6
+2024-03-26 18:52:17,024 - Mean Absolute Error: 0.2587187170982361
+2024-03-26 18:52:18,252 - Number of ZIFs in Dataset: 7
+2024-03-26 18:52:18,252 - Mean Absolute Error: 0.2650967717170715
+2024-03-26 18:52:19,822 - Number of ZIFs in Dataset: 8
+2024-03-26 18:52:19,822 - Mean Absolute Error: 0.22958360910415648
+2024-03-26 18:52:21,432 - Number of ZIFs in Dataset: 9
+2024-03-26 18:52:21,432 - Mean Absolute Error: 0.23247491121292113
+2024-03-26 18:52:23,175 - Number of ZIFs in Dataset: 10
+2024-03-26 18:52:23,175 - Mean Absolute Error: 0.22196539044380187
+2024-03-26 18:52:24,844 - Number of ZIFs in Dataset: 11
+2024-03-26 18:52:24,844 - Mean Absolute Error: 0.21376295685768126
+2024-03-26 18:52:26,632 - Number of ZIFs in Dataset: 12
+2024-03-26 18:52:26,632 - Mean Absolute Error: 0.22853564023971557
+2024-03-26 18:52:28,310 - Number of ZIFs in Dataset: 13
+2024-03-26 18:52:28,328 - Mean Absolute Error: 0.20948927402496337
+2024-03-26 18:52:30,342 - Number of ZIFs in Dataset: 14
+2024-03-26 18:52:30,342 - Mean Absolute Error: 0.2335874021053314
+2024-03-26 18:52:32,288 - Number of ZIFs in Dataset: 15
+2024-03-26 18:52:32,288 - Mean Absolute Error: 0.1570871353149414
+2024-03-26 18:52:34,431 - Number of ZIFs in Dataset: 16
+2024-03-26 18:52:34,431 - Mean Absolute Error: 0.1971790075302124
+2024-03-26 18:52:36,205 - Number of ZIFs in Dataset: 17
+2024-03-26 18:52:36,205 - Mean Absolute Error: 0.18880619406700133
+2024-03-26 18:52:38,048 - Number of ZIFs in Dataset: 18
+2024-03-26 18:52:38,048 - Mean Absolute Error: 0.19889365434646605
+2024-03-26 18:52:40,012 - Number of ZIFs in Dataset: 19
+2024-03-26 18:52:40,012 - Mean Absolute Error: 0.1855699598789215
+2024-03-26 18:52:41,712 - Number of ZIFs in Dataset: 20
+2024-03-26 18:52:41,712 - Mean Absolute Error: 0.1795824646949768
+2024-03-26 18:52:43,328 - Number of ZIFs in Dataset: 21
+2024-03-26 18:52:43,328 - Mean Absolute Error: 0.18962835073471068
+2024-03-26 18:52:44,836 - Number of ZIFs in Dataset: 22
+2024-03-26 18:52:44,836 - Mean Absolute Error: 0.0839674949645996
+2024-03-26 18:52:46,504 - Number of ZIFs in Dataset: 23
+2024-03-26 18:52:46,504 - Mean Absolute Error: 0.12695475220680236
+2024-03-26 18:52:48,240 - Number of ZIFs in Dataset: 24
+2024-03-26 18:52:48,240 - Mean Absolute Error: 0.10622527003288268
+2024-03-26 18:52:50,065 - Number of ZIFs in Dataset: 25
+2024-03-26 18:52:50,065 - Mean Absolute Error: 0.0887895107269287
+2024-03-26 18:52:51,856 - Number of ZIFs in Dataset: 26
+2024-03-26 18:52:51,856 - Mean Absolute Error: 0.021670576930046093
+2024-03-26 18:52:53,604 - Number of ZIFs in Dataset: 27
+2024-03-26 18:52:53,613 - Mean Absolute Error: 0.07210384011268617
+2024-03-26 18:52:55,384 - Number of ZIFs in Dataset: 28
+2024-03-26 18:52:55,384 - Mean Absolute Error: 0.06163812875747682
+2024-03-26 18:52:57,225 - Number of ZIFs in Dataset: 29
+2024-03-26 18:52:57,225 - Mean Absolute Error: 0.0068392783403396495
+2024-03-26 18:52:58,788 - Number of ZIFs in Dataset: 30
+2024-03-26 18:52:58,812 - Mean Absolute Error: 0.07419852614402772
+2024-03-26 18:53:00,644 - Number of ZIFs in Dataset: 31
+2024-03-26 18:53:00,644 - Mean Absolute Error: 0.0736020475625992
+2024-03-26 18:53:02,374 - Number of ZIFs in Dataset: 32
+2024-03-26 18:53:02,374 - Mean Absolute Error: 0.03914990723133088
+2024-03-26 18:53:04,119 - Number of ZIFs in Dataset: 33
+2024-03-26 18:53:04,119 - Mean Absolute Error: 0.05031196475028993
+2024-03-26 18:53:05,742 - Number of ZIFs in Dataset: 34
+2024-03-26 18:53:05,742 - Mean Absolute Error: 0.035562899708747875
+2024-03-26 18:53:05,742 - ----------   Round 6     ----------
+2024-03-26 18:53:05,848 - Number of ZIFs in Dataset: 1
+2024-03-26 18:53:05,848 - Mean Absolute Error: 1.9699977302551268
+2024-03-26 18:53:05,968 - Number of ZIFs in Dataset: 2
+2024-03-26 18:53:05,968 - Mean Absolute Error: 1.394349660873413
+2024-03-26 18:53:06,060 - Number of ZIFs in Dataset: 3
+2024-03-26 18:53:06,060 - Mean Absolute Error: 1.3214482927322386
+2024-03-26 18:53:06,161 - Number of ZIFs in Dataset: 4
+2024-03-26 18:53:06,161 - Mean Absolute Error: 1.1457429790496825
+2024-03-26 18:53:07,000 - Number of ZIFs in Dataset: 5
+2024-03-26 18:53:07,000 - Mean Absolute Error: 0.28934499263763425
+2024-03-26 18:53:08,024 - Number of ZIFs in Dataset: 6
+2024-03-26 18:53:08,024 - Mean Absolute Error: 1.1275441312789916
+2024-03-26 18:53:09,125 - Number of ZIFs in Dataset: 7
+2024-03-26 18:53:09,125 - Mean Absolute Error: 1.0917230510711669
+2024-03-26 18:53:10,244 - Number of ZIFs in Dataset: 8
+2024-03-26 18:53:10,244 - Mean Absolute Error: 0.6216272974014282
+2024-03-26 18:53:11,693 - Number of ZIFs in Dataset: 9
+2024-03-26 18:53:11,693 - Mean Absolute Error: 0.9437979125976562
+2024-03-26 18:53:13,259 - Number of ZIFs in Dataset: 10
+2024-03-26 18:53:13,259 - Mean Absolute Error: 0.9765424394607544
+2024-03-26 18:53:14,780 - Number of ZIFs in Dataset: 11
+2024-03-26 18:53:14,798 - Mean Absolute Error: 0.972615327835083
+2024-03-26 18:53:16,244 - Number of ZIFs in Dataset: 12
+2024-03-26 18:53:16,244 - Mean Absolute Error: 0.9175339603424072
+2024-03-26 18:53:17,600 - Number of ZIFs in Dataset: 13
+2024-03-26 18:53:17,600 - Mean Absolute Error: 1.3011748456954955
+2024-03-26 18:53:19,501 - Number of ZIFs in Dataset: 14
+2024-03-26 18:53:19,501 - Mean Absolute Error: 0.8672815227508545
+2024-03-26 18:53:21,208 - Number of ZIFs in Dataset: 15
+2024-03-26 18:53:21,208 - Mean Absolute Error: 1.047182765007019
+2024-03-26 18:53:23,183 - Number of ZIFs in Dataset: 16
+2024-03-26 18:53:23,183 - Mean Absolute Error: 0.15069827079772946
+2024-03-26 18:53:24,778 - Number of ZIFs in Dataset: 17
+2024-03-26 18:53:24,779 - Mean Absolute Error: 0.19060262680053708
+2024-03-26 18:53:26,260 - Number of ZIFs in Dataset: 18
+2024-03-26 18:53:26,260 - Mean Absolute Error: 0.0712294244766235
+2024-03-26 18:53:28,004 - Number of ZIFs in Dataset: 19
+2024-03-26 18:53:28,004 - Mean Absolute Error: 0.13785031080245969
+2024-03-26 18:53:29,671 - Number of ZIFs in Dataset: 20
+2024-03-26 18:53:29,671 - Mean Absolute Error: 0.7338976526260376
+2024-03-26 18:53:31,267 - Number of ZIFs in Dataset: 21
+2024-03-26 18:53:31,291 - Mean Absolute Error: 0.5862633848190307
+2024-03-26 18:53:32,700 - Number of ZIFs in Dataset: 22
+2024-03-26 18:53:32,700 - Mean Absolute Error: 0.6548654699325561
+2024-03-26 18:53:34,296 - Number of ZIFs in Dataset: 23
+2024-03-26 18:53:34,296 - Mean Absolute Error: 0.6150197649002075
+2024-03-26 18:53:35,797 - Number of ZIFs in Dataset: 24
+2024-03-26 18:53:35,797 - Mean Absolute Error: 0.6394567155838012
+2024-03-26 18:53:37,448 - Number of ZIFs in Dataset: 25
+2024-03-26 18:53:37,448 - Mean Absolute Error: 0.6170054340362549
+2024-03-26 18:53:39,232 - Number of ZIFs in Dataset: 26
+2024-03-26 18:53:39,232 - Mean Absolute Error: 0.6468259954452514
+2024-03-26 18:53:41,053 - Number of ZIFs in Dataset: 27
+2024-03-26 18:53:41,053 - Mean Absolute Error: 0.607903208732605
+2024-03-26 18:53:42,687 - Number of ZIFs in Dataset: 28
+2024-03-26 18:53:42,711 - Mean Absolute Error: 0.5211057329177856
+2024-03-26 18:53:44,542 - Number of ZIFs in Dataset: 29
+2024-03-26 18:53:44,542 - Mean Absolute Error: 0.6717688703536987
+2024-03-26 18:53:46,188 - Number of ZIFs in Dataset: 30
+2024-03-26 18:53:46,188 - Mean Absolute Error: 0.6049787664413452
+2024-03-26 18:53:47,710 - Number of ZIFs in Dataset: 31
+2024-03-26 18:53:47,738 - Mean Absolute Error: 0.6501046085357666
+2024-03-26 18:53:49,494 - Number of ZIFs in Dataset: 32
+2024-03-26 18:53:49,494 - Mean Absolute Error: 0.6573474073410034
+2024-03-26 18:53:51,161 - Number of ZIFs in Dataset: 33
+2024-03-26 18:53:51,161 - Mean Absolute Error: 0.611286129951477
+2024-03-26 18:53:53,027 - Number of ZIFs in Dataset: 34
+2024-03-26 18:53:53,027 - Mean Absolute Error: 0.5984365606307983
+2024-03-26 18:53:53,028 - ----------   Round 7     ----------
+2024-03-26 18:53:53,096 - Number of ZIFs in Dataset: 1
+2024-03-26 18:53:53,097 - Mean Absolute Error: 1.5999977684020996
+2024-03-26 18:53:53,215 - Number of ZIFs in Dataset: 2
+2024-03-26 18:53:53,215 - Mean Absolute Error: 1.8005828952789307
+2024-03-26 18:53:53,346 - Number of ZIFs in Dataset: 3
+2024-03-26 18:53:53,346 - Mean Absolute Error: 0.050691375732421884
+2024-03-26 18:53:53,452 - Number of ZIFs in Dataset: 4
+2024-03-26 18:53:53,452 - Mean Absolute Error: 0.11965095043182372
+2024-03-26 18:53:54,396 - Number of ZIFs in Dataset: 5
+2024-03-26 18:53:54,396 - Mean Absolute Error: 0.10271619796752929
+2024-03-26 18:53:55,344 - Number of ZIFs in Dataset: 6
+2024-03-26 18:53:55,344 - Mean Absolute Error: 0.10107480525970458
+2024-03-26 18:53:56,596 - Number of ZIFs in Dataset: 7
+2024-03-26 18:53:56,596 - Mean Absolute Error: 0.12754117488861083
+2024-03-26 18:53:57,993 - Number of ZIFs in Dataset: 8
+2024-03-26 18:53:57,998 - Mean Absolute Error: 0.11420886754989623
+2024-03-26 18:53:59,540 - Number of ZIFs in Dataset: 9
+2024-03-26 18:53:59,540 - Mean Absolute Error: 0.12575083017349242
+2024-03-26 18:54:01,376 - Number of ZIFs in Dataset: 10
+2024-03-26 18:54:01,376 - Mean Absolute Error: 0.19749568939208983
+2024-03-26 18:54:03,224 - Number of ZIFs in Dataset: 11
+2024-03-26 18:54:03,224 - Mean Absolute Error: 0.12581687211990356
+2024-03-26 18:54:05,018 - Number of ZIFs in Dataset: 12
+2024-03-26 18:54:05,018 - Mean Absolute Error: 0.10595398187637328
+2024-03-26 18:54:06,784 - Number of ZIFs in Dataset: 13
+2024-03-26 18:54:06,784 - Mean Absolute Error: 0.14752607583999633
+2024-03-26 18:54:08,453 - Number of ZIFs in Dataset: 14
+2024-03-26 18:54:08,453 - Mean Absolute Error: 0.14867376327514648
+2024-03-26 18:54:10,098 - Number of ZIFs in Dataset: 15
+2024-03-26 18:54:10,098 - Mean Absolute Error: 0.1297627592086792
+2024-03-26 18:54:11,581 - Number of ZIFs in Dataset: 16
+2024-03-26 18:54:11,581 - Mean Absolute Error: 0.125650098323822
+2024-03-26 18:54:13,102 - Number of ZIFs in Dataset: 17
+2024-03-26 18:54:13,102 - Mean Absolute Error: 0.10392521858215331
+2024-03-26 18:54:14,702 - Number of ZIFs in Dataset: 18
+2024-03-26 18:54:14,702 - Mean Absolute Error: 0.14129780769348144
+2024-03-26 18:54:16,594 - Number of ZIFs in Dataset: 19
+2024-03-26 18:54:16,594 - Mean Absolute Error: 0.00882984161376954
+2024-03-26 18:54:18,072 - Number of ZIFs in Dataset: 20
+2024-03-26 18:54:18,072 - Mean Absolute Error: 0.012038776874542245
+2024-03-26 18:54:19,579 - Number of ZIFs in Dataset: 21
+2024-03-26 18:54:19,579 - Mean Absolute Error: 0.11312740087509154
+2024-03-26 18:54:21,202 - Number of ZIFs in Dataset: 22
+2024-03-26 18:54:21,202 - Mean Absolute Error: 0.11454932928085326
+2024-03-26 18:54:22,900 - Number of ZIFs in Dataset: 23
+2024-03-26 18:54:22,900 - Mean Absolute Error: 0.08900218248367309
+2024-03-26 18:54:24,853 - Number of ZIFs in Dataset: 24
+2024-03-26 18:54:24,853 - Mean Absolute Error: 0.056416144371032706
+2024-03-26 18:54:26,576 - Number of ZIFs in Dataset: 25
+2024-03-26 18:54:26,576 - Mean Absolute Error: 0.16802149057388305
+2024-03-26 18:54:28,352 - Number of ZIFs in Dataset: 26
+2024-03-26 18:54:28,352 - Mean Absolute Error: 0.15156429052352904
+2024-03-26 18:54:29,869 - Number of ZIFs in Dataset: 27
+2024-03-26 18:54:29,869 - Mean Absolute Error: 0.00030385494232176846
+2024-03-26 18:54:31,279 - Number of ZIFs in Dataset: 28
+2024-03-26 18:54:31,279 - Mean Absolute Error: 0.008452048301696768
+2024-03-26 18:54:32,852 - Number of ZIFs in Dataset: 29
+2024-03-26 18:54:32,852 - Mean Absolute Error: 0.06589715719223022
+2024-03-26 18:54:34,304 - Number of ZIFs in Dataset: 30
+2024-03-26 18:54:34,304 - Mean Absolute Error: 0.033686389923095694
+2024-03-26 18:54:35,754 - Number of ZIFs in Dataset: 31
+2024-03-26 18:54:35,754 - Mean Absolute Error: 0.07548265695571899
+2024-03-26 18:54:37,457 - Number of ZIFs in Dataset: 32
+2024-03-26 18:54:37,457 - Mean Absolute Error: 0.06866549491882323
+2024-03-26 18:54:39,210 - Number of ZIFs in Dataset: 33
+2024-03-26 18:54:39,210 - Mean Absolute Error: 0.05335318088531493
+2024-03-26 18:54:40,816 - Number of ZIFs in Dataset: 34
+2024-03-26 18:54:40,816 - Mean Absolute Error: 0.07773785829544066
+2024-03-26 18:54:40,816 - ----------   Round 8     ----------
+2024-03-26 18:54:40,909 - Number of ZIFs in Dataset: 1
+2024-03-26 18:54:40,909 - Mean Absolute Error: 1.129998769760132
+2024-03-26 18:54:41,021 - Number of ZIFs in Dataset: 2
+2024-03-26 18:54:41,021 - Mean Absolute Error: 0.22081422448158264
+2024-03-26 18:54:41,108 - Number of ZIFs in Dataset: 3
+2024-03-26 18:54:41,108 - Mean Absolute Error: 0.11846059203147888
+2024-03-26 18:54:41,200 - Number of ZIFs in Dataset: 4
+2024-03-26 18:54:41,200 - Mean Absolute Error: 0.12424489498138427
+2024-03-26 18:54:42,080 - Number of ZIFs in Dataset: 5
+2024-03-26 18:54:42,080 - Mean Absolute Error: 0.12938189148902893
+2024-03-26 18:54:43,213 - Number of ZIFs in Dataset: 6
+2024-03-26 18:54:43,214 - Mean Absolute Error: 0.1332104468345642
+2024-03-26 18:54:44,360 - Number of ZIFs in Dataset: 7
+2024-03-26 18:54:44,379 - Mean Absolute Error: 0.1382286810874939
+2024-03-26 18:54:45,576 - Number of ZIFs in Dataset: 8
+2024-03-26 18:54:45,576 - Mean Absolute Error: 0.12434911370277404
+2024-03-26 18:54:47,248 - Number of ZIFs in Dataset: 9
+2024-03-26 18:54:47,248 - Mean Absolute Error: 0.1599653923511505
+2024-03-26 18:54:49,140 - Number of ZIFs in Dataset: 10
+2024-03-26 18:54:49,140 - Mean Absolute Error: 0.11344396710395813
+2024-03-26 18:54:50,848 - Number of ZIFs in Dataset: 11
+2024-03-26 18:54:50,848 - Mean Absolute Error: 0.06848732769489288
+2024-03-26 18:54:52,534 - Number of ZIFs in Dataset: 12
+2024-03-26 18:54:52,534 - Mean Absolute Error: 0.06026880085468292
+2024-03-26 18:54:54,185 - Number of ZIFs in Dataset: 13
+2024-03-26 18:54:54,185 - Mean Absolute Error: 0.057034772038459775
+2024-03-26 18:54:55,954 - Number of ZIFs in Dataset: 14
+2024-03-26 18:54:55,978 - Mean Absolute Error: 0.08351526796817779
+2024-03-26 18:54:57,686 - Number of ZIFs in Dataset: 15
+2024-03-26 18:54:57,686 - Mean Absolute Error: 0.05379430592060089
+2024-03-26 18:54:59,169 - Number of ZIFs in Dataset: 16
+2024-03-26 18:54:59,169 - Mean Absolute Error: 0.07241256177425384
+2024-03-26 18:55:00,603 - Number of ZIFs in Dataset: 17
+2024-03-26 18:55:00,603 - Mean Absolute Error: 0.06930870950222015
+2024-03-26 18:55:01,964 - Number of ZIFs in Dataset: 18
+2024-03-26 18:55:01,964 - Mean Absolute Error: 0.06661550343036651
+2024-03-26 18:55:03,240 - Number of ZIFs in Dataset: 19
+2024-03-26 18:55:03,240 - Mean Absolute Error: 0.07110532760620117
+2024-03-26 18:55:04,406 - Number of ZIFs in Dataset: 20
+2024-03-26 18:55:04,406 - Mean Absolute Error: 0.07709750175476074
+2024-03-26 18:55:06,101 - Number of ZIFs in Dataset: 21
+2024-03-26 18:55:06,101 - Mean Absolute Error: 0.06551722824573517
+2024-03-26 18:55:07,711 - Number of ZIFs in Dataset: 22
+2024-03-26 18:55:07,711 - Mean Absolute Error: 0.055305849909782406
+2024-03-26 18:55:09,192 - Number of ZIFs in Dataset: 23
+2024-03-26 18:55:09,192 - Mean Absolute Error: 0.057037096619606015
+2024-03-26 18:55:10,806 - Number of ZIFs in Dataset: 24
+2024-03-26 18:55:10,806 - Mean Absolute Error: 0.06401928901672363
+2024-03-26 18:55:12,633 - Number of ZIFs in Dataset: 25
+2024-03-26 18:55:12,633 - Mean Absolute Error: 0.06697150707244873
+2024-03-26 18:55:14,550 - Number of ZIFs in Dataset: 26
+2024-03-26 18:55:14,551 - Mean Absolute Error: 0.0850600117444992
+2024-03-26 18:55:16,339 - Number of ZIFs in Dataset: 27
+2024-03-26 18:55:16,339 - Mean Absolute Error: 0.0750524365901947
+2024-03-26 18:55:18,319 - Number of ZIFs in Dataset: 28
+2024-03-26 18:55:18,319 - Mean Absolute Error: 0.06877803444862365
+2024-03-26 18:55:20,263 - Number of ZIFs in Dataset: 29
+2024-03-26 18:55:20,263 - Mean Absolute Error: 0.11757725119590759
+2024-03-26 18:55:22,161 - Number of ZIFs in Dataset: 30
+2024-03-26 18:55:22,161 - Mean Absolute Error: 0.15899866461753845
+2024-03-26 18:55:24,113 - Number of ZIFs in Dataset: 31
+2024-03-26 18:55:24,131 - Mean Absolute Error: 0.18494367241859436
+2024-03-26 18:55:26,116 - Number of ZIFs in Dataset: 32
+2024-03-26 18:55:26,117 - Mean Absolute Error: 0.17063289523124694
+2024-03-26 18:55:28,086 - Number of ZIFs in Dataset: 33
+2024-03-26 18:55:28,086 - Mean Absolute Error: 0.15628650426864624
+2024-03-26 18:55:30,074 - Number of ZIFs in Dataset: 34
+2024-03-26 18:55:30,074 - Mean Absolute Error: 0.15779900193214416
+2024-03-26 18:55:30,074 - ----------   Round 9     ----------
+2024-03-26 18:55:30,184 - Number of ZIFs in Dataset: 1
+2024-03-26 18:55:30,184 - Mean Absolute Error: 0.07000025987625122
+2024-03-26 18:55:30,302 - Number of ZIFs in Dataset: 2
+2024-03-26 18:55:30,302 - Mean Absolute Error: 0.07075151681900024
+2024-03-26 18:55:30,434 - Number of ZIFs in Dataset: 3
+2024-03-26 18:55:30,434 - Mean Absolute Error: 0.03974764168262482
+2024-03-26 18:55:30,616 - Number of ZIFs in Dataset: 4
+2024-03-26 18:55:30,616 - Mean Absolute Error: 0.039508716464042665
+2024-03-26 18:55:31,598 - Number of ZIFs in Dataset: 5
+2024-03-26 18:55:31,598 - Mean Absolute Error: 0.03941911578178406
+2024-03-26 18:55:32,678 - Number of ZIFs in Dataset: 6
+2024-03-26 18:55:32,678 - Mean Absolute Error: 0.040038318634033204
+2024-03-26 18:55:33,850 - Number of ZIFs in Dataset: 7
+2024-03-26 18:55:33,850 - Mean Absolute Error: 0.04736484706401825
+2024-03-26 18:55:35,453 - Number of ZIFs in Dataset: 8
+2024-03-26 18:55:35,453 - Mean Absolute Error: 0.09943131476640701
+2024-03-26 18:55:36,984 - Number of ZIFs in Dataset: 9
+2024-03-26 18:55:36,984 - Mean Absolute Error: 0.08849121749401093
+2024-03-26 18:55:39,008 - Number of ZIFs in Dataset: 10
+2024-03-26 18:55:39,008 - Mean Absolute Error: 0.12232034772634506
+2024-03-26 18:55:40,901 - Number of ZIFs in Dataset: 11
+2024-03-26 18:55:40,911 - Mean Absolute Error: 0.12609579533338547
+2024-03-26 18:55:42,423 - Number of ZIFs in Dataset: 12
+2024-03-26 18:55:42,423 - Mean Absolute Error: 0.11020618796348572
+2024-03-26 18:55:44,110 - Number of ZIFs in Dataset: 13
+2024-03-26 18:55:44,110 - Mean Absolute Error: 0.10128842413425446
+2024-03-26 18:55:45,904 - Number of ZIFs in Dataset: 14
+2024-03-26 18:55:45,927 - Mean Absolute Error: 0.1257518094778061
+2024-03-26 18:55:47,790 - Number of ZIFs in Dataset: 15
+2024-03-26 18:55:47,790 - Mean Absolute Error: 0.08356915533542633
+2024-03-26 18:55:49,537 - Number of ZIFs in Dataset: 16
+2024-03-26 18:55:49,537 - Mean Absolute Error: 0.06611472487449646
+2024-03-26 18:55:51,511 - Number of ZIFs in Dataset: 17
+2024-03-26 18:55:51,511 - Mean Absolute Error: 0.04252594828605652
+2024-03-26 18:55:53,539 - Number of ZIFs in Dataset: 18
+2024-03-26 18:55:53,539 - Mean Absolute Error: 0.05105963468551636
+2024-03-26 18:55:55,316 - Number of ZIFs in Dataset: 19
+2024-03-26 18:55:55,316 - Mean Absolute Error: 0.0842338216304779
+2024-03-26 18:55:57,208 - Number of ZIFs in Dataset: 20
+2024-03-26 18:55:57,226 - Mean Absolute Error: 0.09297043204307556
+2024-03-26 18:55:58,726 - Number of ZIFs in Dataset: 21
+2024-03-26 18:55:58,726 - Mean Absolute Error: 0.08616970598697662
+2024-03-26 18:56:00,444 - Number of ZIFs in Dataset: 22
+2024-03-26 18:56:00,444 - Mean Absolute Error: 0.07775826871395111
+2024-03-26 18:56:02,234 - Number of ZIFs in Dataset: 23
+2024-03-26 18:56:02,234 - Mean Absolute Error: 0.09718423455953598
+2024-03-26 18:56:03,892 - Number of ZIFs in Dataset: 24
+2024-03-26 18:56:03,892 - Mean Absolute Error: 0.10699672371149063
+2024-03-26 18:56:05,438 - Number of ZIFs in Dataset: 25
+2024-03-26 18:56:05,438 - Mean Absolute Error: 0.0830085438489914
+2024-03-26 18:56:07,195 - Number of ZIFs in Dataset: 26
+2024-03-26 18:56:07,195 - Mean Absolute Error: 0.10595142960548401
+2024-03-26 18:56:09,096 - Number of ZIFs in Dataset: 27
+2024-03-26 18:56:09,096 - Mean Absolute Error: 0.07126429796218872
+2024-03-26 18:56:10,577 - Number of ZIFs in Dataset: 28
+2024-03-26 18:56:10,577 - Mean Absolute Error: 0.0620853465795517
+2024-03-26 18:56:12,296 - Number of ZIFs in Dataset: 29
+2024-03-26 18:56:12,296 - Mean Absolute Error: 0.12147819370031357
+2024-03-26 18:56:13,958 - Number of ZIFs in Dataset: 30
+2024-03-26 18:56:13,958 - Mean Absolute Error: 0.09773419171571732
+2024-03-26 18:56:15,548 - Number of ZIFs in Dataset: 31
+2024-03-26 18:56:15,548 - Mean Absolute Error: 0.07070079565048218
+2024-03-26 18:56:17,334 - Number of ZIFs in Dataset: 32
+2024-03-26 18:56:17,334 - Mean Absolute Error: 0.08567020416259766
+2024-03-26 18:56:19,178 - Number of ZIFs in Dataset: 33
+2024-03-26 18:56:19,179 - Mean Absolute Error: 0.08796045303344727
+2024-03-26 18:56:20,801 - Number of ZIFs in Dataset: 34
+2024-03-26 18:56:20,801 - Mean Absolute Error: 0.0663076651096344
+2024-03-26 18:56:20,801 - ----------   Round 10     ----------
+2024-03-26 18:56:20,848 - Number of ZIFs in Dataset: 1
+2024-03-26 18:56:20,848 - Mean Absolute Error: 0.42
+2024-03-26 18:56:20,909 - Number of ZIFs in Dataset: 2
+2024-03-26 18:56:20,909 - Mean Absolute Error: 0.5639871788024903
+2024-03-26 18:56:20,982 - Number of ZIFs in Dataset: 3
+2024-03-26 18:56:20,982 - Mean Absolute Error: 0.6057119798660279
+2024-03-26 18:56:21,060 - Number of ZIFs in Dataset: 4
+2024-03-26 18:56:21,060 - Mean Absolute Error: 0.5057968330383301
+2024-03-26 18:56:21,943 - Number of ZIFs in Dataset: 5
+2024-03-26 18:56:21,943 - Mean Absolute Error: 0.473729772567749
+2024-03-26 18:56:23,219 - Number of ZIFs in Dataset: 6
+2024-03-26 18:56:23,219 - Mean Absolute Error: 0.5329621863365174
+2024-03-26 18:56:24,404 - Number of ZIFs in Dataset: 7
+2024-03-26 18:56:24,404 - Mean Absolute Error: 0.47235224962234496
+2024-03-26 18:56:25,736 - Number of ZIFs in Dataset: 8
+2024-03-26 18:56:25,741 - Mean Absolute Error: 0.4100029897689819
+2024-03-26 18:56:27,069 - Number of ZIFs in Dataset: 9
+2024-03-26 18:56:27,069 - Mean Absolute Error: 0.2887576949596405
+2024-03-26 18:56:28,893 - Number of ZIFs in Dataset: 10
+2024-03-26 18:56:28,893 - Mean Absolute Error: 0.28965316534042357
+2024-03-26 18:56:30,640 - Number of ZIFs in Dataset: 11
+2024-03-26 18:56:30,640 - Mean Absolute Error: 0.2570917439460754
+2024-03-26 18:56:32,452 - Number of ZIFs in Dataset: 12
+2024-03-26 18:56:32,452 - Mean Absolute Error: 0.1947136056423187
+2024-03-26 18:56:33,864 - Number of ZIFs in Dataset: 13
+2024-03-26 18:56:33,864 - Mean Absolute Error: 0.1433714312314987
+2024-03-26 18:56:35,659 - Number of ZIFs in Dataset: 14
+2024-03-26 18:56:35,659 - Mean Absolute Error: 0.14724005579948424
+2024-03-26 18:56:37,274 - Number of ZIFs in Dataset: 15
+2024-03-26 18:56:37,275 - Mean Absolute Error: 0.16679283797740935
+2024-03-26 18:56:39,267 - Number of ZIFs in Dataset: 16
+2024-03-26 18:56:39,267 - Mean Absolute Error: 0.15617483675479887
+2024-03-26 18:56:40,884 - Number of ZIFs in Dataset: 17
+2024-03-26 18:56:40,884 - Mean Absolute Error: 0.15907279968261717
+2024-03-26 18:56:42,900 - Number of ZIFs in Dataset: 18
+2024-03-26 18:56:42,900 - Mean Absolute Error: 0.16840204417705534
+2024-03-26 18:56:44,684 - Number of ZIFs in Dataset: 19
+2024-03-26 18:56:44,684 - Mean Absolute Error: 0.11877272844314575
+2024-03-26 18:56:46,501 - Number of ZIFs in Dataset: 20
+2024-03-26 18:56:46,501 - Mean Absolute Error: 0.11808205962181091
+2024-03-26 18:56:48,152 - Number of ZIFs in Dataset: 21
+2024-03-26 18:56:48,152 - Mean Absolute Error: 0.12391736924648285
+2024-03-26 18:56:49,785 - Number of ZIFs in Dataset: 22
+2024-03-26 18:56:49,785 - Mean Absolute Error: 0.11930240511894226
+2024-03-26 18:56:51,481 - Number of ZIFs in Dataset: 23
+2024-03-26 18:56:51,481 - Mean Absolute Error: 0.12897647738456725
+2024-03-26 18:56:53,095 - Number of ZIFs in Dataset: 24
+2024-03-26 18:56:53,095 - Mean Absolute Error: 0.09978157103061676
+2024-03-26 18:56:54,963 - Number of ZIFs in Dataset: 25
+2024-03-26 18:56:54,991 - Mean Absolute Error: 0.09008081078529358
+2024-03-26 18:56:56,552 - Number of ZIFs in Dataset: 26
+2024-03-26 18:56:56,552 - Mean Absolute Error: 0.07647760033607483
+2024-03-26 18:56:58,173 - Number of ZIFs in Dataset: 27
+2024-03-26 18:56:58,173 - Mean Absolute Error: 0.08403301060199737
+2024-03-26 18:56:59,982 - Number of ZIFs in Dataset: 28
+2024-03-26 18:57:00,007 - Mean Absolute Error: 0.09919911444187164
+2024-03-26 18:57:01,644 - Number of ZIFs in Dataset: 29
+2024-03-26 18:57:01,644 - Mean Absolute Error: 0.07516677498817444
+2024-03-26 18:57:03,176 - Number of ZIFs in Dataset: 30
+2024-03-26 18:57:03,176 - Mean Absolute Error: 0.054515509009361265
+2024-03-26 18:57:04,894 - Number of ZIFs in Dataset: 31
+2024-03-26 18:57:04,894 - Mean Absolute Error: 0.08939005255699158
+2024-03-26 18:57:06,529 - Number of ZIFs in Dataset: 32
+2024-03-26 18:57:06,529 - Mean Absolute Error: 0.12427864789962768
+2024-03-26 18:57:08,410 - Number of ZIFs in Dataset: 33
+2024-03-26 18:57:08,410 - Mean Absolute Error: 0.08919596493244171
+2024-03-26 18:57:10,226 - Number of ZIFs in Dataset: 34
+2024-03-26 18:57:10,226 - Mean Absolute Error: 0.1306286585330963
+2024-03-26 18:57:10,226 - ----------   Round 11     ----------
+2024-03-26 18:57:10,328 - Number of ZIFs in Dataset: 1
+2024-03-26 18:57:10,328 - Mean Absolute Error: 0.25
+2024-03-26 18:57:10,416 - Number of ZIFs in Dataset: 2
+2024-03-26 18:57:10,416 - Mean Absolute Error: 0.2045954167842865
+2024-03-26 18:57:10,491 - Number of ZIFs in Dataset: 3
+2024-03-26 18:57:10,491 - Mean Absolute Error: 0.851201057434082
+2024-03-26 18:57:10,574 - Number of ZIFs in Dataset: 4
+2024-03-26 18:57:10,574 - Mean Absolute Error: 0.6452733874320984
+2024-03-26 18:57:11,538 - Number of ZIFs in Dataset: 5
+2024-03-26 18:57:11,557 - Mean Absolute Error: 0.31389886140823364
+2024-03-26 18:57:12,765 - Number of ZIFs in Dataset: 6
+2024-03-26 18:57:12,765 - Mean Absolute Error: 0.20453977584838867
+2024-03-26 18:57:14,024 - Number of ZIFs in Dataset: 7
+2024-03-26 18:57:14,024 - Mean Absolute Error: 0.11122843623161316
+2024-03-26 18:57:15,380 - Number of ZIFs in Dataset: 8
+2024-03-26 18:57:15,380 - Mean Absolute Error: 0.28707146644592285
+2024-03-26 18:57:16,880 - Number of ZIFs in Dataset: 9
+2024-03-26 18:57:16,880 - Mean Absolute Error: 0.31807923316955566
+2024-03-26 18:57:18,649 - Number of ZIFs in Dataset: 10
+2024-03-26 18:57:18,649 - Mean Absolute Error: 0.3654095530509949
+2024-03-26 18:57:20,540 - Number of ZIFs in Dataset: 11
+2024-03-26 18:57:20,540 - Mean Absolute Error: 0.000692710280418396
+2024-03-26 18:57:22,305 - Number of ZIFs in Dataset: 12
+2024-03-26 18:57:22,305 - Mean Absolute Error: 0.08642268180847168
+2024-03-26 18:57:24,218 - Number of ZIFs in Dataset: 13
+2024-03-26 18:57:24,218 - Mean Absolute Error: 0.07781383395195007
+2024-03-26 18:57:26,196 - Number of ZIFs in Dataset: 14
+2024-03-26 18:57:26,196 - Mean Absolute Error: 0.018741995096206665
+2024-03-26 18:57:28,048 - Number of ZIFs in Dataset: 15
+2024-03-26 18:57:28,048 - Mean Absolute Error: 0.01043403148651123
+2024-03-26 18:57:29,836 - Number of ZIFs in Dataset: 16
+2024-03-26 18:57:29,836 - Mean Absolute Error: 0.015062898397445679
+2024-03-26 18:57:31,373 - Number of ZIFs in Dataset: 17
+2024-03-26 18:57:31,373 - Mean Absolute Error: 0.08996701240539551
+2024-03-26 18:57:33,256 - Number of ZIFs in Dataset: 18
+2024-03-26 18:57:33,256 - Mean Absolute Error: 0.009025812149047852
+2024-03-26 18:57:35,184 - Number of ZIFs in Dataset: 19
+2024-03-26 18:57:35,184 - Mean Absolute Error: 0.017669618129730225
+2024-03-26 18:57:37,293 - Number of ZIFs in Dataset: 20
+2024-03-26 18:57:37,293 - Mean Absolute Error: 0.03839024901390076
+2024-03-26 18:57:39,189 - Number of ZIFs in Dataset: 21
+2024-03-26 18:57:39,189 - Mean Absolute Error: 0.0005338788032531738
+2024-03-26 18:57:40,456 - Number of ZIFs in Dataset: 22
+2024-03-26 18:57:40,456 - Mean Absolute Error: 0.021167397499084473
+2024-03-26 18:57:42,145 - Number of ZIFs in Dataset: 23
+2024-03-26 18:57:42,145 - Mean Absolute Error: 0.02323320508003235
+2024-03-26 18:57:44,016 - Number of ZIFs in Dataset: 24
+2024-03-26 18:57:44,016 - Mean Absolute Error: 0.02395087480545044
+2024-03-26 18:57:45,887 - Number of ZIFs in Dataset: 25
+2024-03-26 18:57:45,887 - Mean Absolute Error: 0.013610541820526123
+2024-03-26 18:57:47,513 - Number of ZIFs in Dataset: 26
+2024-03-26 18:57:47,513 - Mean Absolute Error: 0.002587437629699707
+2024-03-26 18:57:49,238 - Number of ZIFs in Dataset: 27
+2024-03-26 18:57:49,238 - Mean Absolute Error: 0.0011830180883407593
+2024-03-26 18:57:51,053 - Number of ZIFs in Dataset: 28
+2024-03-26 18:57:51,053 - Mean Absolute Error: 0.009046182036399841
+2024-03-26 18:57:52,650 - Number of ZIFs in Dataset: 29
+2024-03-26 18:57:52,650 - Mean Absolute Error: 0.030171304941177368
+2024-03-26 18:57:54,260 - Number of ZIFs in Dataset: 30
+2024-03-26 18:57:54,260 - Mean Absolute Error: 0.03844946622848511
+2024-03-26 18:57:55,967 - Number of ZIFs in Dataset: 31
+2024-03-26 18:57:55,967 - Mean Absolute Error: 0.042525291442871094
+2024-03-26 18:57:57,709 - Number of ZIFs in Dataset: 32
+2024-03-26 18:57:57,709 - Mean Absolute Error: 0.04201766848564148
+2024-03-26 18:57:59,690 - Number of ZIFs in Dataset: 33
+2024-03-26 18:57:59,690 - Mean Absolute Error: 0.023757249116897583
+2024-03-26 18:58:01,300 - Number of ZIFs in Dataset: 34
+2024-03-26 18:58:01,300 - Mean Absolute Error: 0.011853694915771484
+2024-03-26 18:58:01,300 - ----------   Round 12     ----------
+2024-03-26 18:58:01,365 - Number of ZIFs in Dataset: 1
+2024-03-26 18:58:01,365 - Mean Absolute Error: 0.689999418258667
+2024-03-26 18:58:01,452 - Number of ZIFs in Dataset: 2
+2024-03-26 18:58:01,452 - Mean Absolute Error: 0.030803533196449268
+2024-03-26 18:58:01,559 - Number of ZIFs in Dataset: 3
+2024-03-26 18:58:01,559 - Mean Absolute Error: 0.031053500175476062
+2024-03-26 18:58:01,665 - Number of ZIFs in Dataset: 4
+2024-03-26 18:58:01,665 - Mean Absolute Error: 0.03080645382404326
+2024-03-26 18:58:02,640 - Number of ZIFs in Dataset: 5
+2024-03-26 18:58:02,641 - Mean Absolute Error: 0.03089556276798247
+2024-03-26 18:58:03,711 - Number of ZIFs in Dataset: 6
+2024-03-26 18:58:03,711 - Mean Absolute Error: 0.03069579780101775
+2024-03-26 18:58:04,853 - Number of ZIFs in Dataset: 7
+2024-03-26 18:58:04,853 - Mean Absolute Error: 0.023628638982772815
+2024-03-26 18:58:06,181 - Number of ZIFs in Dataset: 8
+2024-03-26 18:58:06,181 - Mean Absolute Error: 0.013504488468170178
+2024-03-26 18:58:07,752 - Number of ZIFs in Dataset: 9
+2024-03-26 18:58:07,783 - Mean Absolute Error: 0.0069072824716568115
+2024-03-26 18:58:09,529 - Number of ZIFs in Dataset: 10
+2024-03-26 18:58:09,529 - Mean Absolute Error: 0.0002460610866546753
+2024-03-26 18:58:11,524 - Number of ZIFs in Dataset: 11
+2024-03-26 18:58:11,524 - Mean Absolute Error: 0.03357319712638854
+2024-03-26 18:58:13,244 - Number of ZIFs in Dataset: 12
+2024-03-26 18:58:13,244 - Mean Absolute Error: 0.007110955119132983
+2024-03-26 18:58:15,233 - Number of ZIFs in Dataset: 13
+2024-03-26 18:58:15,233 - Mean Absolute Error: 0.010482592582702649
+2024-03-26 18:58:17,020 - Number of ZIFs in Dataset: 14
+2024-03-26 18:58:17,020 - Mean Absolute Error: 0.020384727120399487
+2024-03-26 18:58:18,936 - Number of ZIFs in Dataset: 15
+2024-03-26 18:58:18,954 - Mean Absolute Error: 0.024068115353584302
+2024-03-26 18:58:20,636 - Number of ZIFs in Dataset: 16
+2024-03-26 18:58:20,636 - Mean Absolute Error: 0.0061266404390335205
+2024-03-26 18:58:22,344 - Number of ZIFs in Dataset: 17
+2024-03-26 18:58:22,344 - Mean Absolute Error: 0.009131165146827686
+2024-03-26 18:58:24,206 - Number of ZIFs in Dataset: 18
+2024-03-26 18:58:24,230 - Mean Absolute Error: 0.010447295308113086
+2024-03-26 18:58:25,736 - Number of ZIFs in Dataset: 19
+2024-03-26 18:58:25,736 - Mean Absolute Error: 0.01192726016044618
+2024-03-26 18:58:27,588 - Number of ZIFs in Dataset: 20
+2024-03-26 18:58:27,588 - Mean Absolute Error: 0.02756272077560426
+2024-03-26 18:58:29,484 - Number of ZIFs in Dataset: 21
+2024-03-26 18:58:29,484 - Mean Absolute Error: 0.06975722134113313
+2024-03-26 18:58:31,344 - Number of ZIFs in Dataset: 22
+2024-03-26 18:58:31,344 - Mean Absolute Error: 0.053002623915672314
+2024-03-26 18:58:32,870 - Number of ZIFs in Dataset: 23
+2024-03-26 18:58:32,870 - Mean Absolute Error: 0.056084221303462994
+2024-03-26 18:58:34,368 - Number of ZIFs in Dataset: 24
+2024-03-26 18:58:34,368 - Mean Absolute Error: 0.039909346103668225
+2024-03-26 18:58:35,964 - Number of ZIFs in Dataset: 25
+2024-03-26 18:58:35,964 - Mean Absolute Error: 0.03952137947082521
+2024-03-26 18:58:37,520 - Number of ZIFs in Dataset: 26
+2024-03-26 18:58:37,520 - Mean Absolute Error: 0.044239042401313794
+2024-03-26 18:58:39,083 - Number of ZIFs in Dataset: 27
+2024-03-26 18:58:39,083 - Mean Absolute Error: 0.02290576517581941
+2024-03-26 18:58:40,605 - Number of ZIFs in Dataset: 28
+2024-03-26 18:58:40,605 - Mean Absolute Error: 0.04244506180286409
+2024-03-26 18:58:42,216 - Number of ZIFs in Dataset: 29
+2024-03-26 18:58:42,216 - Mean Absolute Error: 0.037636948823928845
+2024-03-26 18:58:43,820 - Number of ZIFs in Dataset: 30
+2024-03-26 18:58:43,820 - Mean Absolute Error: 0.03355291306972505
+2024-03-26 18:58:45,788 - Number of ZIFs in Dataset: 31
+2024-03-26 18:58:45,788 - Mean Absolute Error: 0.21733735680580138
+2024-03-26 18:58:47,606 - Number of ZIFs in Dataset: 32
+2024-03-26 18:58:47,606 - Mean Absolute Error: 0.2278396952152252
+2024-03-26 18:58:49,248 - Number of ZIFs in Dataset: 33
+2024-03-26 18:58:49,248 - Mean Absolute Error: 0.19336228251457213
+2024-03-26 18:58:50,758 - Number of ZIFs in Dataset: 34
+2024-03-26 18:58:50,758 - Mean Absolute Error: 0.1773982810974121
+2024-03-26 18:58:50,758 - ----------   Round 13     ----------
+2024-03-26 18:58:50,835 - Number of ZIFs in Dataset: 1
+2024-03-26 18:58:50,835 - Mean Absolute Error: 0.7099994325637817
+2024-03-26 18:58:50,967 - Number of ZIFs in Dataset: 2
+2024-03-26 18:58:50,968 - Mean Absolute Error: 0.38748620986938476
+2024-03-26 18:58:51,052 - Number of ZIFs in Dataset: 3
+2024-03-26 18:58:51,052 - Mean Absolute Error: 0.3909828567504883
+2024-03-26 18:58:51,118 - Number of ZIFs in Dataset: 4
+2024-03-26 18:58:51,119 - Mean Absolute Error: 0.3666292333602905
+2024-03-26 18:58:52,020 - Number of ZIFs in Dataset: 5
+2024-03-26 18:58:52,021 - Mean Absolute Error: 0.35182886362075805
+2024-03-26 18:58:53,108 - Number of ZIFs in Dataset: 6
+2024-03-26 18:58:53,118 - Mean Absolute Error: 0.2852625751495361
+2024-03-26 18:58:54,376 - Number of ZIFs in Dataset: 7
+2024-03-26 18:58:54,376 - Mean Absolute Error: 0.2648536467552185
+2024-03-26 18:58:55,763 - Number of ZIFs in Dataset: 8
+2024-03-26 18:58:55,763 - Mean Absolute Error: 0.15854983568191527
+2024-03-26 18:58:57,311 - Number of ZIFs in Dataset: 9
+2024-03-26 18:58:57,311 - Mean Absolute Error: 0.1410683000087738
+2024-03-26 18:58:59,026 - Number of ZIFs in Dataset: 10
+2024-03-26 18:58:59,026 - Mean Absolute Error: 0.13420896768569945
+2024-03-26 18:59:00,810 - Number of ZIFs in Dataset: 11
+2024-03-26 18:59:00,810 - Mean Absolute Error: 0.0895085835456848
+2024-03-26 18:59:02,536 - Number of ZIFs in Dataset: 12
+2024-03-26 18:59:02,536 - Mean Absolute Error: 0.06823839783668517
+2024-03-26 18:59:03,985 - Number of ZIFs in Dataset: 13
+2024-03-26 18:59:03,986 - Mean Absolute Error: 0.08431755542755126
+2024-03-26 18:59:05,912 - Number of ZIFs in Dataset: 14
+2024-03-26 18:59:05,912 - Mean Absolute Error: 0.11586313486099242
+2024-03-26 18:59:07,844 - Number of ZIFs in Dataset: 15
+2024-03-26 18:59:07,844 - Mean Absolute Error: 0.0817288064956665
+2024-03-26 18:59:09,880 - Number of ZIFs in Dataset: 16
+2024-03-26 18:59:09,884 - Mean Absolute Error: 0.09739409923553466
+2024-03-26 18:59:11,306 - Number of ZIFs in Dataset: 17
+2024-03-26 18:59:11,306 - Mean Absolute Error: 0.15904294490814208
+2024-03-26 18:59:13,280 - Number of ZIFs in Dataset: 18
+2024-03-26 18:59:13,280 - Mean Absolute Error: 0.07815601468086242
+2024-03-26 18:59:15,190 - Number of ZIFs in Dataset: 19
+2024-03-26 18:59:15,194 - Mean Absolute Error: 0.13637652039527892
+2024-03-26 18:59:17,116 - Number of ZIFs in Dataset: 20
+2024-03-26 18:59:17,116 - Mean Absolute Error: 0.12757675886154174
+2024-03-26 18:59:18,672 - Number of ZIFs in Dataset: 21
+2024-03-26 18:59:18,672 - Mean Absolute Error: 0.12264334201812743
+2024-03-26 18:59:20,311 - Number of ZIFs in Dataset: 22
+2024-03-26 18:59:20,335 - Mean Absolute Error: 0.17447327613830566
+2024-03-26 18:59:21,910 - Number of ZIFs in Dataset: 23
+2024-03-26 18:59:21,910 - Mean Absolute Error: 0.13874258637428283
+2024-03-26 18:59:23,575 - Number of ZIFs in Dataset: 24
+2024-03-26 18:59:23,575 - Mean Absolute Error: 0.1376631462574005
+2024-03-26 18:59:25,296 - Number of ZIFs in Dataset: 25
+2024-03-26 18:59:25,296 - Mean Absolute Error: 0.12513475656509399
+2024-03-26 18:59:26,888 - Number of ZIFs in Dataset: 26
+2024-03-26 18:59:26,888 - Mean Absolute Error: 0.10713525652885436
+2024-03-26 18:59:28,574 - Number of ZIFs in Dataset: 27
+2024-03-26 18:59:28,574 - Mean Absolute Error: 0.1237665319442749
+2024-03-26 18:59:30,295 - Number of ZIFs in Dataset: 28
+2024-03-26 18:59:30,295 - Mean Absolute Error: 0.13146918058395385
+2024-03-26 18:59:32,064 - Number of ZIFs in Dataset: 29
+2024-03-26 18:59:32,074 - Mean Absolute Error: 0.1495323085784912
+2024-03-26 18:59:33,732 - Number of ZIFs in Dataset: 30
+2024-03-26 18:59:33,732 - Mean Absolute Error: 0.19084056258201598
+2024-03-26 18:59:35,596 - Number of ZIFs in Dataset: 31
+2024-03-26 18:59:35,596 - Mean Absolute Error: 0.1182970905303955
+2024-03-26 18:59:37,452 - Number of ZIFs in Dataset: 32
+2024-03-26 18:59:37,452 - Mean Absolute Error: 0.025854905843734732
+2024-03-26 18:59:39,446 - Number of ZIFs in Dataset: 33
+2024-03-26 18:59:39,446 - Mean Absolute Error: 0.004799922704696646
+2024-03-26 18:59:41,237 - Number of ZIFs in Dataset: 34
+2024-03-26 18:59:41,237 - Mean Absolute Error: 0.028987666368484488
+2024-03-26 18:59:41,237 - ----------   Round 14     ----------
+2024-03-26 18:59:41,300 - Number of ZIFs in Dataset: 1
+2024-03-26 18:59:41,300 - Mean Absolute Error: 0.29999971866607666
+2024-03-26 18:59:41,419 - Number of ZIFs in Dataset: 2
+2024-03-26 18:59:41,419 - Mean Absolute Error: 0.4825369071960449
+2024-03-26 18:59:41,517 - Number of ZIFs in Dataset: 3
+2024-03-26 18:59:41,517 - Mean Absolute Error: 0.579816575050354
+2024-03-26 18:59:41,592 - Number of ZIFs in Dataset: 4
+2024-03-26 18:59:41,592 - Mean Absolute Error: 0.13153300166130066
+2024-03-26 18:59:42,403 - Number of ZIFs in Dataset: 5
+2024-03-26 18:59:42,403 - Mean Absolute Error: 0.2533670711517334
+2024-03-26 18:59:43,410 - Number of ZIFs in Dataset: 6
+2024-03-26 18:59:43,410 - Mean Absolute Error: 0.20902354001998902
+2024-03-26 18:59:44,801 - Number of ZIFs in Dataset: 7
+2024-03-26 18:59:44,801 - Mean Absolute Error: 0.3075631010532379
+2024-03-26 18:59:46,348 - Number of ZIFs in Dataset: 8
+2024-03-26 18:59:46,348 - Mean Absolute Error: 0.2573646354675293
+2024-03-26 18:59:47,900 - Number of ZIFs in Dataset: 9
+2024-03-26 18:59:47,900 - Mean Absolute Error: 0.19416934728622437
+2024-03-26 18:59:49,556 - Number of ZIFs in Dataset: 10
+2024-03-26 18:59:49,556 - Mean Absolute Error: 0.1953170943260193
+2024-03-26 18:59:51,051 - Number of ZIFs in Dataset: 11
+2024-03-26 18:59:51,051 - Mean Absolute Error: 0.1909458088874817
+2024-03-26 18:59:52,576 - Number of ZIFs in Dataset: 12
+2024-03-26 18:59:52,576 - Mean Absolute Error: 0.22214749932289124
+2024-03-26 18:59:54,337 - Number of ZIFs in Dataset: 13
+2024-03-26 18:59:54,337 - Mean Absolute Error: 0.16526198863983155
+2024-03-26 18:59:56,106 - Number of ZIFs in Dataset: 14
+2024-03-26 18:59:56,106 - Mean Absolute Error: 0.28145835280418396
+2024-03-26 18:59:57,904 - Number of ZIFs in Dataset: 15
+2024-03-26 18:59:57,904 - Mean Absolute Error: 0.1998208212852478
+2024-03-26 18:59:59,606 - Number of ZIFs in Dataset: 16
+2024-03-26 18:59:59,606 - Mean Absolute Error: 0.18952957272529602
+2024-03-26 19:00:01,336 - Number of ZIFs in Dataset: 17
+2024-03-26 19:00:01,336 - Mean Absolute Error: 0.24886590719223023
+2024-03-26 19:00:03,045 - Number of ZIFs in Dataset: 18
+2024-03-26 19:00:03,045 - Mean Absolute Error: 0.12189746379852295
+2024-03-26 19:00:05,028 - Number of ZIFs in Dataset: 19
+2024-03-26 19:00:05,028 - Mean Absolute Error: 0.2732860493659973
+2024-03-26 19:00:07,099 - Number of ZIFs in Dataset: 20
+2024-03-26 19:00:07,099 - Mean Absolute Error: 0.19254717707633973
+2024-03-26 19:00:08,943 - Number of ZIFs in Dataset: 21
+2024-03-26 19:00:08,943 - Mean Absolute Error: 0.22942343831062317
+2024-03-26 19:00:10,743 - Number of ZIFs in Dataset: 22
+2024-03-26 19:00:10,743 - Mean Absolute Error: 0.19073886156082154
+2024-03-26 19:00:12,228 - Number of ZIFs in Dataset: 23
+2024-03-26 19:00:12,228 - Mean Absolute Error: 0.07640296697616578
+2024-03-26 19:00:13,908 - Number of ZIFs in Dataset: 24
+2024-03-26 19:00:13,908 - Mean Absolute Error: 0.13033479928970337
+2024-03-26 19:00:15,698 - Number of ZIFs in Dataset: 25
+2024-03-26 19:00:15,698 - Mean Absolute Error: 0.0545709776878357
+2024-03-26 19:00:17,381 - Number of ZIFs in Dataset: 26
+2024-03-26 19:00:17,381 - Mean Absolute Error: 0.02277732372283936
+2024-03-26 19:00:18,989 - Number of ZIFs in Dataset: 27
+2024-03-26 19:00:18,989 - Mean Absolute Error: 0.10472149133682251
+2024-03-26 19:00:20,600 - Number of ZIFs in Dataset: 28
+2024-03-26 19:00:20,600 - Mean Absolute Error: 0.019639487266540523
+2024-03-26 19:00:22,338 - Number of ZIFs in Dataset: 29
+2024-03-26 19:00:22,338 - Mean Absolute Error: 0.0024786639213562056
+2024-03-26 19:00:24,052 - Number of ZIFs in Dataset: 30
+2024-03-26 19:00:24,052 - Mean Absolute Error: 0.01188421726226807
+2024-03-26 19:00:25,785 - Number of ZIFs in Dataset: 31
+2024-03-26 19:00:25,785 - Mean Absolute Error: 0.025255446434021
+2024-03-26 19:00:27,718 - Number of ZIFs in Dataset: 32
+2024-03-26 19:00:27,718 - Mean Absolute Error: 0.05155235052108764
+2024-03-26 19:00:29,208 - Number of ZIFs in Dataset: 33
+2024-03-26 19:00:29,227 - Mean Absolute Error: 0.028481776714324947
+2024-03-26 19:00:30,664 - Number of ZIFs in Dataset: 34
+2024-03-26 19:00:30,664 - Mean Absolute Error: 0.017823810577392574
+2024-03-26 19:00:30,664 - ----------   Round 15     ----------
+2024-03-26 19:00:30,718 - Number of ZIFs in Dataset: 1
+2024-03-26 19:00:30,718 - Mean Absolute Error: 0.16999970674514775
+2024-03-26 19:00:30,785 - Number of ZIFs in Dataset: 2
+2024-03-26 19:00:30,785 - Mean Absolute Error: 0.22999976873397832
+2024-03-26 19:00:30,864 - Number of ZIFs in Dataset: 3
+2024-03-26 19:00:30,864 - Mean Absolute Error: 0.04914147853851314
+2024-03-26 19:00:30,945 - Number of ZIFs in Dataset: 4
+2024-03-26 19:00:30,945 - Mean Absolute Error: 0.024539697170257613
+2024-03-26 19:00:31,635 - Number of ZIFs in Dataset: 5
+2024-03-26 19:00:31,635 - Mean Absolute Error: 0.10898940563201909
+2024-03-26 19:00:32,530 - Number of ZIFs in Dataset: 6
+2024-03-26 19:00:32,530 - Mean Absolute Error: 0.12159581780433659
+2024-03-26 19:00:33,693 - Number of ZIFs in Dataset: 7
+2024-03-26 19:00:33,693 - Mean Absolute Error: 0.21869434714317326
+2024-03-26 19:00:35,091 - Number of ZIFs in Dataset: 8
+2024-03-26 19:00:35,091 - Mean Absolute Error: 0.20819832682609563
+2024-03-26 19:00:36,425 - Number of ZIFs in Dataset: 9
+2024-03-26 19:00:36,425 - Mean Absolute Error: 0.14361749887466435
+2024-03-26 19:00:38,020 - Number of ZIFs in Dataset: 10
+2024-03-26 19:00:38,020 - Mean Absolute Error: 0.1296631813049316
+2024-03-26 19:00:39,501 - Number of ZIFs in Dataset: 11
+2024-03-26 19:00:39,501 - Mean Absolute Error: 0.13053716421127315
+2024-03-26 19:00:41,076 - Number of ZIFs in Dataset: 12
+2024-03-26 19:00:41,095 - Mean Absolute Error: 0.12878532409667964
+2024-03-26 19:00:42,690 - Number of ZIFs in Dataset: 13
+2024-03-26 19:00:42,690 - Mean Absolute Error: 0.149420154094696
+2024-03-26 19:00:44,171 - Number of ZIFs in Dataset: 14
+2024-03-26 19:00:44,171 - Mean Absolute Error: 0.1759745597839355
+2024-03-26 19:00:45,799 - Number of ZIFs in Dataset: 15
+2024-03-26 19:00:45,800 - Mean Absolute Error: 0.1184712171554565
+2024-03-26 19:00:47,170 - Number of ZIFs in Dataset: 16
+2024-03-26 19:00:47,170 - Mean Absolute Error: 0.12117416858673091
+2024-03-26 19:00:48,680 - Number of ZIFs in Dataset: 17
+2024-03-26 19:00:48,680 - Mean Absolute Error: 0.12340540885925289
+2024-03-26 19:00:50,188 - Number of ZIFs in Dataset: 18
+2024-03-26 19:00:50,188 - Mean Absolute Error: 0.09596277475357051
+2024-03-26 19:00:51,917 - Number of ZIFs in Dataset: 19
+2024-03-26 19:00:51,917 - Mean Absolute Error: 0.05241127014160152
+2024-03-26 19:00:53,666 - Number of ZIFs in Dataset: 20
+2024-03-26 19:00:53,666 - Mean Absolute Error: 0.11988104581832881
+2024-03-26 19:00:55,460 - Number of ZIFs in Dataset: 21
+2024-03-26 19:00:55,460 - Mean Absolute Error: 0.1889866709709167
+2024-03-26 19:00:56,964 - Number of ZIFs in Dataset: 22
+2024-03-26 19:00:56,964 - Mean Absolute Error: 0.19968123435974117
+2024-03-26 19:00:58,620 - Number of ZIFs in Dataset: 23
+2024-03-26 19:00:58,620 - Mean Absolute Error: 0.18580622673034664
+2024-03-26 19:01:00,313 - Number of ZIFs in Dataset: 24
+2024-03-26 19:01:00,313 - Mean Absolute Error: 0.17117620706558223
+2024-03-26 19:01:02,091 - Number of ZIFs in Dataset: 25
+2024-03-26 19:01:02,091 - Mean Absolute Error: 0.18001700639724727
+2024-03-26 19:01:03,847 - Number of ZIFs in Dataset: 26
+2024-03-26 19:01:03,847 - Mean Absolute Error: 0.13928921222686763
+2024-03-26 19:01:05,658 - Number of ZIFs in Dataset: 27
+2024-03-26 19:01:05,677 - Mean Absolute Error: 0.15826959609985347
+2024-03-26 19:01:07,004 - Number of ZIFs in Dataset: 28
+2024-03-26 19:01:07,004 - Mean Absolute Error: 0.14721978902816768
+2024-03-26 19:01:08,633 - Number of ZIFs in Dataset: 29
+2024-03-26 19:01:08,633 - Mean Absolute Error: 0.1656841158866882
+2024-03-26 19:01:10,032 - Number of ZIFs in Dataset: 30
+2024-03-26 19:01:10,032 - Mean Absolute Error: 0.1514575600624084
+2024-03-26 19:01:11,782 - Number of ZIFs in Dataset: 31
+2024-03-26 19:01:11,783 - Mean Absolute Error: 0.1530541896820068
+2024-03-26 19:01:13,410 - Number of ZIFs in Dataset: 32
+2024-03-26 19:01:13,410 - Mean Absolute Error: 0.17549855709075923
+2024-03-26 19:01:15,510 - Number of ZIFs in Dataset: 33
+2024-03-26 19:01:15,510 - Mean Absolute Error: 0.17128087282180782
+2024-03-26 19:01:17,382 - Number of ZIFs in Dataset: 34
+2024-03-26 19:01:17,382 - Mean Absolute Error: 0.1805766940116882
+2024-03-26 19:01:17,383 - ----------   Round 16     ----------
+2024-03-26 19:01:17,460 - Number of ZIFs in Dataset: 1
+2024-03-26 19:01:17,460 - Mean Absolute Error: 1.9700000000000002
+2024-03-26 19:01:17,572 - Number of ZIFs in Dataset: 2
+2024-03-26 19:01:17,573 - Mean Absolute Error: 1.9707378458976748
+2024-03-26 19:01:17,688 - Number of ZIFs in Dataset: 3
+2024-03-26 19:01:17,688 - Mean Absolute Error: 1.9707310807704927
+2024-03-26 19:01:17,810 - Number of ZIFs in Dataset: 4
+2024-03-26 19:01:17,810 - Mean Absolute Error: 1.6106783461570742
+2024-03-26 19:01:18,745 - Number of ZIFs in Dataset: 5
+2024-03-26 19:01:18,745 - Mean Absolute Error: 1.6246170115470888
+2024-03-26 19:01:19,879 - Number of ZIFs in Dataset: 6
+2024-03-26 19:01:19,879 - Mean Absolute Error: 0.32708218574523906
+2024-03-26 19:01:21,179 - Number of ZIFs in Dataset: 7
+2024-03-26 19:01:21,179 - Mean Absolute Error: 0.3181915569305418
+2024-03-26 19:01:22,741 - Number of ZIFs in Dataset: 8
+2024-03-26 19:01:22,751 - Mean Absolute Error: 0.30612733840942363
+2024-03-26 19:01:24,680 - Number of ZIFs in Dataset: 9
+2024-03-26 19:01:24,680 - Mean Absolute Error: 0.3283508110046385
+2024-03-26 19:01:26,521 - Number of ZIFs in Dataset: 10
+2024-03-26 19:01:26,521 - Mean Absolute Error: 0.31756117820739727
+2024-03-26 19:01:28,213 - Number of ZIFs in Dataset: 11
+2024-03-26 19:01:28,222 - Mean Absolute Error: 0.2990758705139158
+2024-03-26 19:01:29,561 - Number of ZIFs in Dataset: 12
+2024-03-26 19:01:29,561 - Mean Absolute Error: 0.31449368476867656
+2024-03-26 19:01:31,121 - Number of ZIFs in Dataset: 13
+2024-03-26 19:01:31,121 - Mean Absolute Error: 0.320494918823242
+2024-03-26 19:01:32,673 - Number of ZIFs in Dataset: 14
+2024-03-26 19:01:32,674 - Mean Absolute Error: 0.333847551345825
+2024-03-26 19:01:34,308 - Number of ZIFs in Dataset: 15
+2024-03-26 19:01:34,327 - Mean Absolute Error: 0.32051709175109844
+2024-03-26 19:01:36,037 - Number of ZIFs in Dataset: 16
+2024-03-26 19:01:36,037 - Mean Absolute Error: 0.33400896072387676
+2024-03-26 19:01:37,804 - Number of ZIFs in Dataset: 17
+2024-03-26 19:01:37,804 - Mean Absolute Error: 0.05886700630187969
+2024-03-26 19:01:39,603 - Number of ZIFs in Dataset: 18
+2024-03-26 19:01:39,622 - Mean Absolute Error: 0.22751548767089824
+2024-03-26 19:01:41,126 - Number of ZIFs in Dataset: 19
+2024-03-26 19:01:41,126 - Mean Absolute Error: 0.2849738883972166
+2024-03-26 19:01:42,836 - Number of ZIFs in Dataset: 20
+2024-03-26 19:01:42,836 - Mean Absolute Error: 0.23537233352661113
+2024-03-26 19:01:44,488 - Number of ZIFs in Dataset: 21
+2024-03-26 19:01:44,488 - Mean Absolute Error: 0.21732118606567363
+2024-03-26 19:01:46,204 - Number of ZIFs in Dataset: 22
+2024-03-26 19:01:46,204 - Mean Absolute Error: 0.2548992919921873
+2024-03-26 19:01:48,054 - Number of ZIFs in Dataset: 23
+2024-03-26 19:01:48,054 - Mean Absolute Error: 0.11338016510009785
+2024-03-26 19:01:49,623 - Number of ZIFs in Dataset: 24
+2024-03-26 19:01:49,623 - Mean Absolute Error: 0.09690687179565449
+2024-03-26 19:01:51,334 - Number of ZIFs in Dataset: 25
+2024-03-26 19:01:51,334 - Mean Absolute Error: 0.19366952896118184
+2024-03-26 19:01:52,732 - Number of ZIFs in Dataset: 26
+2024-03-26 19:01:52,732 - Mean Absolute Error: 0.030490369796753125
+2024-03-26 19:01:54,386 - Number of ZIFs in Dataset: 27
+2024-03-26 19:01:54,386 - Mean Absolute Error: 0.15408584594726582
+2024-03-26 19:01:55,855 - Number of ZIFs in Dataset: 28
+2024-03-26 19:01:55,855 - Mean Absolute Error: 0.06479951858520527
+2024-03-26 19:01:57,424 - Number of ZIFs in Dataset: 29
+2024-03-26 19:01:57,424 - Mean Absolute Error: 0.010558395385741992
+2024-03-26 19:01:58,782 - Number of ZIFs in Dataset: 30
+2024-03-26 19:01:58,782 - Mean Absolute Error: 0.006394119262695508
+2024-03-26 19:02:00,416 - Number of ZIFs in Dataset: 31
+2024-03-26 19:02:00,416 - Mean Absolute Error: 0.0818186092376707
+2024-03-26 19:02:01,946 - Number of ZIFs in Dataset: 32
+2024-03-26 19:02:01,946 - Mean Absolute Error: 0.06059768676757793
+2024-03-26 19:02:03,523 - Number of ZIFs in Dataset: 33
+2024-03-26 19:02:03,523 - Mean Absolute Error: 0.024156780242920117
+2024-03-26 19:02:05,301 - Number of ZIFs in Dataset: 34
+2024-03-26 19:02:05,301 - Mean Absolute Error: 0.004644422531127734
+2024-03-26 19:02:05,301 - ----------   Round 17     ----------
+2024-03-26 19:02:05,359 - Number of ZIFs in Dataset: 1
+2024-03-26 19:02:05,359 - Mean Absolute Error: 0.16000028133392333
+2024-03-26 19:02:05,465 - Number of ZIFs in Dataset: 2
+2024-03-26 19:02:05,465 - Mean Absolute Error: 0.13000025033950804
+2024-03-26 19:02:05,579 - Number of ZIFs in Dataset: 3
+2024-03-26 19:02:05,580 - Mean Absolute Error: 0.07504198133945464
+2024-03-26 19:02:05,764 - Number of ZIFs in Dataset: 4
+2024-03-26 19:02:05,764 - Mean Absolute Error: 0.07548493325710295
+2024-03-26 19:02:06,680 - Number of ZIFs in Dataset: 5
+2024-03-26 19:02:06,680 - Mean Absolute Error: 0.07117822945117949
+2024-03-26 19:02:07,736 - Number of ZIFs in Dataset: 6
+2024-03-26 19:02:07,736 - Mean Absolute Error: 0.26756642937660213
+2024-03-26 19:02:08,859 - Number of ZIFs in Dataset: 7
+2024-03-26 19:02:08,875 - Mean Absolute Error: 0.17316638112068175
+2024-03-26 19:02:10,221 - Number of ZIFs in Dataset: 8
+2024-03-26 19:02:10,221 - Mean Absolute Error: 0.223555611371994
+2024-03-26 19:02:11,929 - Number of ZIFs in Dataset: 9
+2024-03-26 19:02:11,929 - Mean Absolute Error: 0.22733827114105223
+2024-03-26 19:02:13,574 - Number of ZIFs in Dataset: 10
+2024-03-26 19:02:13,574 - Mean Absolute Error: 0.2389861512184143
+2024-03-26 19:02:15,572 - Number of ZIFs in Dataset: 11
+2024-03-26 19:02:15,572 - Mean Absolute Error: 0.21214540481567382
+2024-03-26 19:02:17,383 - Number of ZIFs in Dataset: 12
+2024-03-26 19:02:17,383 - Mean Absolute Error: 0.22135876297950743
+2024-03-26 19:02:19,138 - Number of ZIFs in Dataset: 13
+2024-03-26 19:02:19,138 - Mean Absolute Error: 0.22482241868972777
+2024-03-26 19:02:20,931 - Number of ZIFs in Dataset: 14
+2024-03-26 19:02:20,931 - Mean Absolute Error: 0.21189902901649474
+2024-03-26 19:02:22,651 - Number of ZIFs in Dataset: 15
+2024-03-26 19:02:22,652 - Mean Absolute Error: 0.24793885827064513
+2024-03-26 19:02:24,324 - Number of ZIFs in Dataset: 16
+2024-03-26 19:02:24,324 - Mean Absolute Error: 0.22384910464286803
+2024-03-26 19:02:25,958 - Number of ZIFs in Dataset: 17
+2024-03-26 19:02:25,977 - Mean Absolute Error: 0.1901468801498413
+2024-03-26 19:02:27,458 - Number of ZIFs in Dataset: 18
+2024-03-26 19:02:27,458 - Mean Absolute Error: 0.18237196087837218
+2024-03-26 19:02:29,207 - Number of ZIFs in Dataset: 19
+2024-03-26 19:02:29,207 - Mean Absolute Error: 0.22597657322883605
+2024-03-26 19:02:30,924 - Number of ZIFs in Dataset: 20
+2024-03-26 19:02:30,924 - Mean Absolute Error: 0.20085652351379393
+2024-03-26 19:02:32,726 - Number of ZIFs in Dataset: 21
+2024-03-26 19:02:32,726 - Mean Absolute Error: 0.24033697128295897
+2024-03-26 19:02:34,388 - Number of ZIFs in Dataset: 22
+2024-03-26 19:02:34,388 - Mean Absolute Error: 0.22578732848167418
+2024-03-26 19:02:36,348 - Number of ZIFs in Dataset: 23
+2024-03-26 19:02:36,348 - Mean Absolute Error: 0.22598968625068663
+2024-03-26 19:02:38,236 - Number of ZIFs in Dataset: 24
+2024-03-26 19:02:38,236 - Mean Absolute Error: 0.23279412269592284
+2024-03-26 19:02:40,185 - Number of ZIFs in Dataset: 25
+2024-03-26 19:02:40,185 - Mean Absolute Error: 0.21631248474121093
+2024-03-26 19:02:41,984 - Number of ZIFs in Dataset: 26
+2024-03-26 19:02:41,984 - Mean Absolute Error: 0.23544968843460082
+2024-03-26 19:02:43,655 - Number of ZIFs in Dataset: 27
+2024-03-26 19:02:43,655 - Mean Absolute Error: 0.24237640380859374
+2024-03-26 19:02:45,277 - Number of ZIFs in Dataset: 28
+2024-03-26 19:02:45,277 - Mean Absolute Error: 0.23767785906791686
+2024-03-26 19:02:46,828 - Number of ZIFs in Dataset: 29
+2024-03-26 19:02:46,828 - Mean Absolute Error: 0.22994022250175475
+2024-03-26 19:02:48,467 - Number of ZIFs in Dataset: 30
+2024-03-26 19:02:48,467 - Mean Absolute Error: 0.2669772374629974
+2024-03-26 19:02:50,176 - Number of ZIFs in Dataset: 31
+2024-03-26 19:02:50,176 - Mean Absolute Error: 0.2627207207679748
+2024-03-26 19:02:52,384 - Number of ZIFs in Dataset: 32
+2024-03-26 19:02:52,384 - Mean Absolute Error: 0.07029475450515746
+2024-03-26 19:02:54,335 - Number of ZIFs in Dataset: 33
+2024-03-26 19:02:54,335 - Mean Absolute Error: 0.054980801343917834
+2024-03-26 19:02:56,323 - Number of ZIFs in Dataset: 34
+2024-03-26 19:02:56,323 - Mean Absolute Error: 0.03253549516201018
+2024-03-26 19:02:56,323 - ----------   Round 18     ----------
+2024-03-26 19:02:56,414 - Number of ZIFs in Dataset: 1
+2024-03-26 19:02:56,414 - Mean Absolute Error: 0.1599994945526123
+2024-03-26 19:02:56,500 - Number of ZIFs in Dataset: 2
+2024-03-26 19:02:56,500 - Mean Absolute Error: 0.09634301543235779
+2024-03-26 19:02:56,613 - Number of ZIFs in Dataset: 3
+2024-03-26 19:02:56,613 - Mean Absolute Error: 0.273357515335083
+2024-03-26 19:02:56,723 - Number of ZIFs in Dataset: 4
+2024-03-26 19:02:56,723 - Mean Absolute Error: 0.1847381639480591
+2024-03-26 19:02:57,444 - Number of ZIFs in Dataset: 5
+2024-03-26 19:02:57,444 - Mean Absolute Error: 0.28506917238235474
+2024-03-26 19:02:58,504 - Number of ZIFs in Dataset: 6
+2024-03-26 19:02:58,504 - Mean Absolute Error: 0.20847809791564942
+2024-03-26 19:02:59,755 - Number of ZIFs in Dataset: 7
+2024-03-26 19:02:59,755 - Mean Absolute Error: 0.07426329970359802
+2024-03-26 19:03:01,292 - Number of ZIFs in Dataset: 8
+2024-03-26 19:03:01,292 - Mean Absolute Error: 0.11112984538078308
+2024-03-26 19:03:02,908 - Number of ZIFs in Dataset: 9
+2024-03-26 19:03:02,908 - Mean Absolute Error: 0.15869706392288208
+2024-03-26 19:03:04,568 - Number of ZIFs in Dataset: 10
+2024-03-26 19:03:04,568 - Mean Absolute Error: 0.16051676392555236
+2024-03-26 19:03:06,348 - Number of ZIFs in Dataset: 11
+2024-03-26 19:03:06,348 - Mean Absolute Error: 0.17118851363658905
+2024-03-26 19:03:08,291 - Number of ZIFs in Dataset: 12
+2024-03-26 19:03:08,291 - Mean Absolute Error: 0.19349400222301483
+2024-03-26 19:03:10,088 - Number of ZIFs in Dataset: 13
+2024-03-26 19:03:10,088 - Mean Absolute Error: 0.18865526735782623
+2024-03-26 19:03:11,900 - Number of ZIFs in Dataset: 14
+2024-03-26 19:03:11,931 - Mean Absolute Error: 0.18180475652217865
+2024-03-26 19:03:13,372 - Number of ZIFs in Dataset: 15
+2024-03-26 19:03:13,372 - Mean Absolute Error: 0.1789158982038498
+2024-03-26 19:03:15,086 - Number of ZIFs in Dataset: 16
+2024-03-26 19:03:15,086 - Mean Absolute Error: 0.16884767532348632
+2024-03-26 19:03:16,837 - Number of ZIFs in Dataset: 17
+2024-03-26 19:03:16,837 - Mean Absolute Error: 0.14955228090286254
+2024-03-26 19:03:18,523 - Number of ZIFs in Dataset: 18
+2024-03-26 19:03:18,523 - Mean Absolute Error: 0.14677582204341888
+2024-03-26 19:03:20,108 - Number of ZIFs in Dataset: 19
+2024-03-26 19:03:20,108 - Mean Absolute Error: 0.17036430060863494
+2024-03-26 19:03:21,680 - Number of ZIFs in Dataset: 20
+2024-03-26 19:03:21,680 - Mean Absolute Error: 0.15608663380146026
+2024-03-26 19:03:23,144 - Number of ZIFs in Dataset: 21
+2024-03-26 19:03:23,144 - Mean Absolute Error: 0.14719900012016296
+2024-03-26 19:03:24,717 - Number of ZIFs in Dataset: 22
+2024-03-26 19:03:24,717 - Mean Absolute Error: 0.14824622392654419
+2024-03-26 19:03:26,321 - Number of ZIFs in Dataset: 23
+2024-03-26 19:03:26,321 - Mean Absolute Error: 0.15312516212463378
+2024-03-26 19:03:27,975 - Number of ZIFs in Dataset: 24
+2024-03-26 19:03:27,975 - Mean Absolute Error: 0.1558249545097351
+2024-03-26 19:03:29,437 - Number of ZIFs in Dataset: 25
+2024-03-26 19:03:29,437 - Mean Absolute Error: 0.16546228051185607
+2024-03-26 19:03:31,023 - Number of ZIFs in Dataset: 26
+2024-03-26 19:03:31,023 - Mean Absolute Error: 0.14980287373065948
+2024-03-26 19:03:32,446 - Number of ZIFs in Dataset: 27
+2024-03-26 19:03:32,446 - Mean Absolute Error: 0.1716851246356964
+2024-03-26 19:03:33,979 - Number of ZIFs in Dataset: 28
+2024-03-26 19:03:33,979 - Mean Absolute Error: 0.16871244728565216
+2024-03-26 19:03:35,442 - Number of ZIFs in Dataset: 29
+2024-03-26 19:03:35,442 - Mean Absolute Error: 0.1536138904094696
+2024-03-26 19:03:37,084 - Number of ZIFs in Dataset: 30
+2024-03-26 19:03:37,084 - Mean Absolute Error: 0.02477947354316712
+2024-03-26 19:03:38,747 - Number of ZIFs in Dataset: 31
+2024-03-26 19:03:38,747 - Mean Absolute Error: 0.14033210754394532
+2024-03-26 19:03:40,355 - Number of ZIFs in Dataset: 32
+2024-03-26 19:03:40,356 - Mean Absolute Error: 0.0239165472984314
+2024-03-26 19:03:41,954 - Number of ZIFs in Dataset: 33
+2024-03-26 19:03:41,978 - Mean Absolute Error: 0.0035761249065399126
+2024-03-26 19:03:43,610 - Number of ZIFs in Dataset: 34
+2024-03-26 19:03:43,611 - Mean Absolute Error: 0.009210969209671016
+2024-03-26 19:03:43,611 - ----------   Round 19     ----------
+2024-03-26 19:03:43,764 - Number of ZIFs in Dataset: 1
+2024-03-26 19:03:43,764 - Mean Absolute Error: 0.4000002670288086
+2024-03-26 19:03:43,925 - Number of ZIFs in Dataset: 2
+2024-03-26 19:03:43,925 - Mean Absolute Error: 1.9848295974731445
+2024-03-26 19:03:44,068 - Number of ZIFs in Dataset: 3
+2024-03-26 19:03:44,068 - Mean Absolute Error: 0.40570762038230895
+2024-03-26 19:03:44,228 - Number of ZIFs in Dataset: 4
+2024-03-26 19:03:44,228 - Mean Absolute Error: 0.22255703091621398
+2024-03-26 19:03:45,312 - Number of ZIFs in Dataset: 5
+2024-03-26 19:03:45,312 - Mean Absolute Error: 0.20328857779502868
+2024-03-26 19:03:46,347 - Number of ZIFs in Dataset: 6
+2024-03-26 19:03:46,347 - Mean Absolute Error: 0.2672258245944977
+2024-03-26 19:03:47,316 - Number of ZIFs in Dataset: 7
+2024-03-26 19:03:47,316 - Mean Absolute Error: 0.2511027681827545
+2024-03-26 19:03:48,404 - Number of ZIFs in Dataset: 8
+2024-03-26 19:03:48,404 - Mean Absolute Error: 0.24488975882530212
+2024-03-26 19:03:49,777 - Number of ZIFs in Dataset: 9
+2024-03-26 19:03:49,777 - Mean Absolute Error: 0.19694363355636596
+2024-03-26 19:03:51,492 - Number of ZIFs in Dataset: 10
+2024-03-26 19:03:51,493 - Mean Absolute Error: 0.19830539107322692
+2024-03-26 19:03:52,877 - Number of ZIFs in Dataset: 11
+2024-03-26 19:03:52,877 - Mean Absolute Error: 0.21690963983535766
+2024-03-26 19:03:54,360 - Number of ZIFs in Dataset: 12
+2024-03-26 19:03:54,360 - Mean Absolute Error: 0.19898306608200073
+2024-03-26 19:03:56,124 - Number of ZIFs in Dataset: 13
+2024-03-26 19:03:56,124 - Mean Absolute Error: 0.24075361371040344
+2024-03-26 19:03:58,074 - Number of ZIFs in Dataset: 14
+2024-03-26 19:03:58,074 - Mean Absolute Error: 0.2374067234992981
+2024-03-26 19:03:59,579 - Number of ZIFs in Dataset: 15
+2024-03-26 19:03:59,579 - Mean Absolute Error: 0.24380915641784667
+2024-03-26 19:04:01,089 - Number of ZIFs in Dataset: 16
+2024-03-26 19:04:01,089 - Mean Absolute Error: 0.245253347158432
+2024-03-26 19:04:02,840 - Number of ZIFs in Dataset: 17
+2024-03-26 19:04:02,840 - Mean Absolute Error: 0.2569580900669098
+2024-03-26 19:04:04,457 - Number of ZIFs in Dataset: 18
+2024-03-26 19:04:04,457 - Mean Absolute Error: 0.24520608067512512
+2024-03-26 19:04:06,092 - Number of ZIFs in Dataset: 19
+2024-03-26 19:04:06,092 - Mean Absolute Error: 0.12919732213020324
+2024-03-26 19:04:07,742 - Number of ZIFs in Dataset: 20
+2024-03-26 19:04:07,742 - Mean Absolute Error: 0.13274977385997772
+2024-03-26 19:04:09,480 - Number of ZIFs in Dataset: 21
+2024-03-26 19:04:09,480 - Mean Absolute Error: 0.12993862509727477
+2024-03-26 19:04:11,260 - Number of ZIFs in Dataset: 22
+2024-03-26 19:04:11,260 - Mean Absolute Error: 0.13420481264591216
+2024-03-26 19:04:12,981 - Number of ZIFs in Dataset: 23
+2024-03-26 19:04:12,981 - Mean Absolute Error: 0.11654243648052215
+2024-03-26 19:04:14,722 - Number of ZIFs in Dataset: 24
+2024-03-26 19:04:14,722 - Mean Absolute Error: 0.1351842212677002
+2024-03-26 19:04:16,482 - Number of ZIFs in Dataset: 25
+2024-03-26 19:04:16,483 - Mean Absolute Error: 0.14459637582302093
+2024-03-26 19:04:18,058 - Number of ZIFs in Dataset: 26
+2024-03-26 19:04:18,058 - Mean Absolute Error: 0.13760320127010345
+2024-03-26 19:04:19,703 - Number of ZIFs in Dataset: 27
+2024-03-26 19:04:19,727 - Mean Absolute Error: 0.13566149055957794
+2024-03-26 19:04:21,632 - Number of ZIFs in Dataset: 28
+2024-03-26 19:04:21,633 - Mean Absolute Error: 0.14321924030780792
+2024-03-26 19:04:23,184 - Number of ZIFs in Dataset: 29
+2024-03-26 19:04:23,184 - Mean Absolute Error: 0.1307322609424591
+2024-03-26 19:04:24,934 - Number of ZIFs in Dataset: 30
+2024-03-26 19:04:24,934 - Mean Absolute Error: 0.1421085077524185
+2024-03-26 19:04:26,742 - Number of ZIFs in Dataset: 31
+2024-03-26 19:04:26,743 - Mean Absolute Error: 0.13770613849163055
+2024-03-26 19:04:28,484 - Number of ZIFs in Dataset: 32
+2024-03-26 19:04:28,484 - Mean Absolute Error: 0.14147772669792175
+2024-03-26 19:04:30,132 - Number of ZIFs in Dataset: 33
+2024-03-26 19:04:30,132 - Mean Absolute Error: 0.12469799101352691
+2024-03-26 19:04:31,864 - Number of ZIFs in Dataset: 34
+2024-03-26 19:04:31,864 - Mean Absolute Error: 0.150125213265419
+2024-03-26 19:04:31,864 - ----------   Round 20     ----------
+2024-03-26 19:04:31,976 - Number of ZIFs in Dataset: 1
+2024-03-26 19:04:31,976 - Mean Absolute Error: 0.16000000000000003
+2024-03-26 19:04:32,095 - Number of ZIFs in Dataset: 2
+2024-03-26 19:04:32,095 - Mean Absolute Error: 0.11500051975250247
+2024-03-26 19:04:32,205 - Number of ZIFs in Dataset: 3
+2024-03-26 19:04:32,205 - Mean Absolute Error: 0.03164139747619632
+2024-03-26 19:04:32,292 - Number of ZIFs in Dataset: 4
+2024-03-26 19:04:32,292 - Mean Absolute Error: 0.028730306625366242
+2024-03-26 19:04:33,140 - Number of ZIFs in Dataset: 5
+2024-03-26 19:04:33,140 - Mean Absolute Error: 0.0403820610046387
+2024-03-26 19:04:34,145 - Number of ZIFs in Dataset: 6
+2024-03-26 19:04:34,146 - Mean Absolute Error: 0.049964163303375275
+2024-03-26 19:04:35,325 - Number of ZIFs in Dataset: 7
+2024-03-26 19:04:35,325 - Mean Absolute Error: 0.05043902635574338
+2024-03-26 19:04:36,821 - Number of ZIFs in Dataset: 8
+2024-03-26 19:04:36,821 - Mean Absolute Error: 0.1382277345657349
+2024-03-26 19:04:38,237 - Number of ZIFs in Dataset: 9
+2024-03-26 19:04:38,238 - Mean Absolute Error: 0.13500002384185794
+2024-03-26 19:04:39,840 - Number of ZIFs in Dataset: 10
+2024-03-26 19:04:39,840 - Mean Absolute Error: 0.09885225057601932
+2024-03-26 19:04:41,304 - Number of ZIFs in Dataset: 11
+2024-03-26 19:04:41,304 - Mean Absolute Error: 0.14294359445571903
+2024-03-26 19:04:43,052 - Number of ZIFs in Dataset: 12
+2024-03-26 19:04:43,052 - Mean Absolute Error: 0.0508716440200806
+2024-03-26 19:04:44,480 - Number of ZIFs in Dataset: 13
+2024-03-26 19:04:44,480 - Mean Absolute Error: 0.07005867719650272
+2024-03-26 19:04:45,965 - Number of ZIFs in Dataset: 14
+2024-03-26 19:04:45,965 - Mean Absolute Error: 0.061970624923706086
+2024-03-26 19:04:47,392 - Number of ZIFs in Dataset: 15
+2024-03-26 19:04:47,392 - Mean Absolute Error: 0.04585108518600467
+2024-03-26 19:04:49,156 - Number of ZIFs in Dataset: 16
+2024-03-26 19:04:49,156 - Mean Absolute Error: 0.066603217124939
+2024-03-26 19:04:50,940 - Number of ZIFs in Dataset: 17
+2024-03-26 19:04:50,940 - Mean Absolute Error: 0.07437411308288577
+2024-03-26 19:04:52,548 - Number of ZIFs in Dataset: 18
+2024-03-26 19:04:52,548 - Mean Absolute Error: 0.17702749729156497
+2024-03-26 19:04:53,885 - Number of ZIFs in Dataset: 19
+2024-03-26 19:04:53,885 - Mean Absolute Error: 0.15675899744033817
+2024-03-26 19:04:55,509 - Number of ZIFs in Dataset: 20
+2024-03-26 19:04:55,509 - Mean Absolute Error: 0.13181338071823123
+2024-03-26 19:04:57,245 - Number of ZIFs in Dataset: 21
+2024-03-26 19:04:57,246 - Mean Absolute Error: 0.09876719474792484
+2024-03-26 19:04:59,117 - Number of ZIFs in Dataset: 22
+2024-03-26 19:04:59,117 - Mean Absolute Error: 0.12961098909378055
+2024-03-26 19:05:00,854 - Number of ZIFs in Dataset: 23
+2024-03-26 19:05:00,854 - Mean Absolute Error: 0.015918943881988556
+2024-03-26 19:05:02,640 - Number of ZIFs in Dataset: 24
+2024-03-26 19:05:02,641 - Mean Absolute Error: 0.10171357154846195
+2024-03-26 19:05:04,514 - Number of ZIFs in Dataset: 25
+2024-03-26 19:05:04,514 - Mean Absolute Error: 0.006394479274749787
+2024-03-26 19:05:06,312 - Number of ZIFs in Dataset: 26
+2024-03-26 19:05:06,312 - Mean Absolute Error: 0.10880229234695438
+2024-03-26 19:05:08,156 - Number of ZIFs in Dataset: 27
+2024-03-26 19:05:08,156 - Mean Absolute Error: 0.06841627120971683
+2024-03-26 19:05:09,772 - Number of ZIFs in Dataset: 28
+2024-03-26 19:05:09,772 - Mean Absolute Error: 0.09075411796569821
+2024-03-26 19:05:11,330 - Number of ZIFs in Dataset: 29
+2024-03-26 19:05:11,331 - Mean Absolute Error: 0.02864680051803592
+2024-03-26 19:05:13,224 - Number of ZIFs in Dataset: 30
+2024-03-26 19:05:13,224 - Mean Absolute Error: 0.044730398654937775
+2024-03-26 19:05:14,960 - Number of ZIFs in Dataset: 31
+2024-03-26 19:05:14,960 - Mean Absolute Error: 0.013057265281677277
+2024-03-26 19:05:16,705 - Number of ZIFs in Dataset: 32
+2024-03-26 19:05:16,705 - Mean Absolute Error: 0.036727938652038605
+2024-03-26 19:05:18,661 - Number of ZIFs in Dataset: 33
+2024-03-26 19:05:18,661 - Mean Absolute Error: 0.1147865986824036
+2024-03-26 19:05:20,498 - Number of ZIFs in Dataset: 34
+2024-03-26 19:05:20,498 - Mean Absolute Error: 0.03012082338333133
+2024-03-26 19:05:20,498 - ----------   Round 21     ----------
+2024-03-26 19:05:20,564 - Number of ZIFs in Dataset: 1
+2024-03-26 19:05:20,564 - Mean Absolute Error: 0.11000060081481933
+2024-03-26 19:05:20,682 - Number of ZIFs in Dataset: 2
+2024-03-26 19:05:20,682 - Mean Absolute Error: 0.11076741456985473
+2024-03-26 19:05:20,780 - Number of ZIFs in Dataset: 3
+2024-03-26 19:05:20,780 - Mean Absolute Error: 0.11097907066345214
+2024-03-26 19:05:20,902 - Number of ZIFs in Dataset: 4
+2024-03-26 19:05:20,902 - Mean Absolute Error: 0.11393629550933837
+2024-03-26 19:05:21,789 - Number of ZIFs in Dataset: 5
+2024-03-26 19:05:21,789 - Mean Absolute Error: 0.9008919095993042
+2024-03-26 19:05:22,908 - Number of ZIFs in Dataset: 6
+2024-03-26 19:05:22,908 - Mean Absolute Error: 0.8396208381652832
+2024-03-26 19:05:24,083 - Number of ZIFs in Dataset: 7
+2024-03-26 19:05:24,083 - Mean Absolute Error: 0.8771396970748901
+2024-03-26 19:05:25,324 - Number of ZIFs in Dataset: 8
+2024-03-26 19:05:25,324 - Mean Absolute Error: 0.7852574682235718
+2024-03-26 19:05:26,706 - Number of ZIFs in Dataset: 9
+2024-03-26 19:05:26,706 - Mean Absolute Error: 0.44500208854675294
+2024-03-26 19:05:28,210 - Number of ZIFs in Dataset: 10
+2024-03-26 19:05:28,210 - Mean Absolute Error: 0.6819937324523926
+2024-03-26 19:05:29,788 - Number of ZIFs in Dataset: 11
+2024-03-26 19:05:29,788 - Mean Absolute Error: 0.5278419351577759
+2024-03-26 19:05:31,163 - Number of ZIFs in Dataset: 12
+2024-03-26 19:05:31,163 - Mean Absolute Error: 0.6406000947952271
+2024-03-26 19:05:32,759 - Number of ZIFs in Dataset: 13
+2024-03-26 19:05:32,759 - Mean Absolute Error: 0.554955849647522
+2024-03-26 19:05:34,451 - Number of ZIFs in Dataset: 14
+2024-03-26 19:05:34,451 - Mean Absolute Error: 0.6511405801773071
+2024-03-26 19:05:35,881 - Number of ZIFs in Dataset: 15
+2024-03-26 19:05:35,881 - Mean Absolute Error: 0.5503851270675659
+2024-03-26 19:05:37,710 - Number of ZIFs in Dataset: 16
+2024-03-26 19:05:37,710 - Mean Absolute Error: 0.5930141305923462
+2024-03-26 19:05:39,250 - Number of ZIFs in Dataset: 17
+2024-03-26 19:05:39,250 - Mean Absolute Error: 0.49064792156219483
+2024-03-26 19:05:40,867 - Number of ZIFs in Dataset: 18
+2024-03-26 19:05:40,867 - Mean Absolute Error: 0.48629117965698243
+2024-03-26 19:05:42,532 - Number of ZIFs in Dataset: 19
+2024-03-26 19:05:42,532 - Mean Absolute Error: 0.774121413230896
+2024-03-26 19:05:44,160 - Number of ZIFs in Dataset: 20
+2024-03-26 19:05:44,160 - Mean Absolute Error: 0.9389525747299194
+2024-03-26 19:05:45,752 - Number of ZIFs in Dataset: 21
+2024-03-26 19:05:45,752 - Mean Absolute Error: 0.4315112924575806
+2024-03-26 19:05:47,468 - Number of ZIFs in Dataset: 22
+2024-03-26 19:05:47,468 - Mean Absolute Error: 0.5390333032608032
+2024-03-26 19:05:48,978 - Number of ZIFs in Dataset: 23
+2024-03-26 19:05:48,979 - Mean Absolute Error: 0.3681463098526001
+2024-03-26 19:05:50,724 - Number of ZIFs in Dataset: 24
+2024-03-26 19:05:50,724 - Mean Absolute Error: 0.19438827991485597
+2024-03-26 19:05:52,504 - Number of ZIFs in Dataset: 25
+2024-03-26 19:05:52,504 - Mean Absolute Error: 0.45154155254364015
+2024-03-26 19:05:54,299 - Number of ZIFs in Dataset: 26
+2024-03-26 19:05:54,299 - Mean Absolute Error: 0.32007909774780274
+2024-03-26 19:05:56,072 - Number of ZIFs in Dataset: 27
+2024-03-26 19:05:56,072 - Mean Absolute Error: 0.03264368534088136
+2024-03-26 19:05:57,758 - Number of ZIFs in Dataset: 28
+2024-03-26 19:05:57,758 - Mean Absolute Error: 0.289687762260437
+2024-03-26 19:05:59,640 - Number of ZIFs in Dataset: 29
+2024-03-26 19:05:59,640 - Mean Absolute Error: 0.14355660438537599
+2024-03-26 19:06:01,500 - Number of ZIFs in Dataset: 30
+2024-03-26 19:06:01,500 - Mean Absolute Error: 0.33969510555267335
+2024-03-26 19:06:03,201 - Number of ZIFs in Dataset: 31
+2024-03-26 19:06:03,201 - Mean Absolute Error: 0.3427399492263794
+2024-03-26 19:06:04,988 - Number of ZIFs in Dataset: 32
+2024-03-26 19:06:04,988 - Mean Absolute Error: 0.253855357170105
+2024-03-26 19:06:06,760 - Number of ZIFs in Dataset: 33
+2024-03-26 19:06:06,760 - Mean Absolute Error: 0.19057405948638917
+2024-03-26 19:06:08,468 - Number of ZIFs in Dataset: 34
+2024-03-26 19:06:08,468 - Mean Absolute Error: 0.18196381092071534
+2024-03-26 19:06:08,468 - ----------   Round 22     ----------
+2024-03-26 19:06:08,525 - Number of ZIFs in Dataset: 1
+2024-03-26 19:06:08,525 - Mean Absolute Error: 0.15999999999999998
+2024-03-26 19:06:08,588 - Number of ZIFs in Dataset: 2
+2024-03-26 19:06:08,588 - Mean Absolute Error: 0.11145411074161532
+2024-03-26 19:06:08,681 - Number of ZIFs in Dataset: 3
+2024-03-26 19:06:08,681 - Mean Absolute Error: 0.10636058092117312
+2024-03-26 19:06:08,764 - Number of ZIFs in Dataset: 4
+2024-03-26 19:06:08,764 - Mean Absolute Error: 0.1016039961576462
+2024-03-26 19:06:09,446 - Number of ZIFs in Dataset: 5
+2024-03-26 19:06:09,446 - Mean Absolute Error: 0.0383812749385834
+2024-03-26 19:06:10,332 - Number of ZIFs in Dataset: 6
+2024-03-26 19:06:10,332 - Mean Absolute Error: 0.18046567201614377
+2024-03-26 19:06:11,337 - Number of ZIFs in Dataset: 7
+2024-03-26 19:06:11,337 - Mean Absolute Error: 0.1701909041404724
+2024-03-26 19:06:12,612 - Number of ZIFs in Dataset: 8
+2024-03-26 19:06:12,612 - Mean Absolute Error: 0.1376315093040466
+2024-03-26 19:06:14,079 - Number of ZIFs in Dataset: 9
+2024-03-26 19:06:14,079 - Mean Absolute Error: 0.2546042537689209
+2024-03-26 19:06:15,725 - Number of ZIFs in Dataset: 10
+2024-03-26 19:06:15,725 - Mean Absolute Error: 0.22222778558731077
+2024-03-26 19:06:17,224 - Number of ZIFs in Dataset: 11
+2024-03-26 19:06:17,224 - Mean Absolute Error: 0.22854516267776487
+2024-03-26 19:06:19,103 - Number of ZIFs in Dataset: 12
+2024-03-26 19:06:19,103 - Mean Absolute Error: 0.19810685873031614
+2024-03-26 19:06:20,534 - Number of ZIFs in Dataset: 13
+2024-03-26 19:06:20,534 - Mean Absolute Error: 0.12350729465484617
+2024-03-26 19:06:21,992 - Number of ZIFs in Dataset: 14
+2024-03-26 19:06:21,993 - Mean Absolute Error: 0.09288674950599668
+2024-03-26 19:06:23,812 - Number of ZIFs in Dataset: 15
+2024-03-26 19:06:23,812 - Mean Absolute Error: 0.11786964893341062
+2024-03-26 19:06:25,830 - Number of ZIFs in Dataset: 16
+2024-03-26 19:06:25,830 - Mean Absolute Error: 0.0742714738845825
+2024-03-26 19:06:27,672 - Number of ZIFs in Dataset: 17
+2024-03-26 19:06:27,672 - Mean Absolute Error: 0.0025878882408141846
+2024-03-26 19:06:29,312 - Number of ZIFs in Dataset: 18
+2024-03-26 19:06:29,312 - Mean Absolute Error: 0.014881554841995215
+2024-03-26 19:06:31,351 - Number of ZIFs in Dataset: 19
+2024-03-26 19:06:31,351 - Mean Absolute Error: 0.026472929716110205
+2024-03-26 19:06:33,112 - Number of ZIFs in Dataset: 20
+2024-03-26 19:06:33,112 - Mean Absolute Error: 0.015196177959442114
+2024-03-26 19:06:35,148 - Number of ZIFs in Dataset: 21
+2024-03-26 19:06:35,148 - Mean Absolute Error: 0.004439767599105859
+2024-03-26 19:06:37,315 - Number of ZIFs in Dataset: 22
+2024-03-26 19:06:37,315 - Mean Absolute Error: 0.03026676535606382
+2024-03-26 19:06:39,152 - Number of ZIFs in Dataset: 23
+2024-03-26 19:06:39,152 - Mean Absolute Error: 0.01591050267219546
+2024-03-26 19:06:40,983 - Number of ZIFs in Dataset: 24
+2024-03-26 19:06:40,983 - Mean Absolute Error: 0.005473200082778906
+2024-03-26 19:06:42,680 - Number of ZIFs in Dataset: 25
+2024-03-26 19:06:42,680 - Mean Absolute Error: 0.010422047376632715
+2024-03-26 19:06:44,430 - Number of ZIFs in Dataset: 26
+2024-03-26 19:06:44,431 - Mean Absolute Error: 0.06491723299026492
+2024-03-26 19:06:45,992 - Number of ZIFs in Dataset: 27
+2024-03-26 19:06:45,992 - Mean Absolute Error: 0.04529323816299441
+2024-03-26 19:06:47,639 - Number of ZIFs in Dataset: 28
+2024-03-26 19:06:47,639 - Mean Absolute Error: 0.043908085823059106
+2024-03-26 19:06:49,395 - Number of ZIFs in Dataset: 29
+2024-03-26 19:06:49,396 - Mean Absolute Error: 0.06350096702575686
+2024-03-26 19:06:51,234 - Number of ZIFs in Dataset: 30
+2024-03-26 19:06:51,234 - Mean Absolute Error: 0.03686853885650637
+2024-03-26 19:06:53,067 - Number of ZIFs in Dataset: 31
+2024-03-26 19:06:53,067 - Mean Absolute Error: 0.05017840504646304
+2024-03-26 19:06:54,996 - Number of ZIFs in Dataset: 32
+2024-03-26 19:06:54,996 - Mean Absolute Error: 0.06452858090400698
+2024-03-26 19:06:56,565 - Number of ZIFs in Dataset: 33
+2024-03-26 19:06:56,565 - Mean Absolute Error: 0.06543641924858096
+2024-03-26 19:06:58,054 - Number of ZIFs in Dataset: 34
+2024-03-26 19:06:58,054 - Mean Absolute Error: 0.0500658714771271
+2024-03-26 19:06:58,054 - ----------   Round 23     ----------
+2024-03-26 19:06:58,124 - Number of ZIFs in Dataset: 1
+2024-03-26 19:06:58,124 - Mean Absolute Error: 0.339999418258667
+2024-03-26 19:06:58,249 - Number of ZIFs in Dataset: 2
+2024-03-26 19:06:58,249 - Mean Absolute Error: 0.4299995112419128
+2024-03-26 19:06:58,369 - Number of ZIFs in Dataset: 3
+2024-03-26 19:06:58,369 - Mean Absolute Error: 0.3457466173171997
+2024-03-26 19:06:58,455 - Number of ZIFs in Dataset: 4
+2024-03-26 19:06:58,455 - Mean Absolute Error: 0.13480783581733702
+2024-03-26 19:06:59,260 - Number of ZIFs in Dataset: 5
+2024-03-26 19:06:59,260 - Mean Absolute Error: 0.002697784900665301
+2024-03-26 19:07:00,444 - Number of ZIFs in Dataset: 6
+2024-03-26 19:07:00,444 - Mean Absolute Error: 0.041493784189224225
+2024-03-26 19:07:01,794 - Number of ZIFs in Dataset: 7
+2024-03-26 19:07:01,813 - Mean Absolute Error: 0.02259672760963438
+2024-03-26 19:07:03,559 - Number of ZIFs in Dataset: 8
+2024-03-26 19:07:03,559 - Mean Absolute Error: 0.008212913274765032
+2024-03-26 19:07:05,146 - Number of ZIFs in Dataset: 9
+2024-03-26 19:07:05,146 - Mean Absolute Error: 0.024722148180007952
+2024-03-26 19:07:06,961 - Number of ZIFs in Dataset: 10
+2024-03-26 19:07:06,996 - Mean Absolute Error: 0.023003180027008074
+2024-03-26 19:07:08,713 - Number of ZIFs in Dataset: 11
+2024-03-26 19:07:08,713 - Mean Absolute Error: 0.03710771024227144
+2024-03-26 19:07:10,649 - Number of ZIFs in Dataset: 12
+2024-03-26 19:07:10,649 - Mean Absolute Error: 0.04890862524509432
+2024-03-26 19:07:12,433 - Number of ZIFs in Dataset: 13
+2024-03-26 19:07:12,433 - Mean Absolute Error: 0.04000796794891359
+2024-03-26 19:07:14,160 - Number of ZIFs in Dataset: 14
+2024-03-26 19:07:14,160 - Mean Absolute Error: 0.05692415356636049
+2024-03-26 19:07:15,849 - Number of ZIFs in Dataset: 15
+2024-03-26 19:07:15,849 - Mean Absolute Error: 0.03484754681587221
+2024-03-26 19:07:17,541 - Number of ZIFs in Dataset: 16
+2024-03-26 19:07:17,541 - Mean Absolute Error: 0.057995889782905596
+2024-03-26 19:07:19,232 - Number of ZIFs in Dataset: 17
+2024-03-26 19:07:19,232 - Mean Absolute Error: 0.04683360874652864
+2024-03-26 19:07:20,824 - Number of ZIFs in Dataset: 18
+2024-03-26 19:07:20,824 - Mean Absolute Error: 0.054908220171928424
+2024-03-26 19:07:22,720 - Number of ZIFs in Dataset: 19
+2024-03-26 19:07:22,729 - Mean Absolute Error: 0.03229712367057802
+2024-03-26 19:07:24,721 - Number of ZIFs in Dataset: 20
+2024-03-26 19:07:24,721 - Mean Absolute Error: 0.05340502083301546
+2024-03-26 19:07:26,454 - Number of ZIFs in Dataset: 21
+2024-03-26 19:07:26,454 - Mean Absolute Error: 0.06416446387767794
+2024-03-26 19:07:28,324 - Number of ZIFs in Dataset: 22
+2024-03-26 19:07:28,324 - Mean Absolute Error: 0.049159352183342
+2024-03-26 19:07:29,821 - Number of ZIFs in Dataset: 23
+2024-03-26 19:07:29,821 - Mean Absolute Error: 0.08248410046100618
+2024-03-26 19:07:31,328 - Number of ZIFs in Dataset: 24
+2024-03-26 19:07:31,328 - Mean Absolute Error: 0.053857271075248736
+2024-03-26 19:07:33,296 - Number of ZIFs in Dataset: 25
+2024-03-26 19:07:33,297 - Mean Absolute Error: 0.044298682808876055
+2024-03-26 19:07:35,274 - Number of ZIFs in Dataset: 26
+2024-03-26 19:07:35,274 - Mean Absolute Error: 0.06680691659450533
+2024-03-26 19:07:37,013 - Number of ZIFs in Dataset: 27
+2024-03-26 19:07:37,013 - Mean Absolute Error: 0.05861850500106813
+2024-03-26 19:07:38,768 - Number of ZIFs in Dataset: 28
+2024-03-26 19:07:38,768 - Mean Absolute Error: 0.07326972901821138
+2024-03-26 19:07:40,488 - Number of ZIFs in Dataset: 29
+2024-03-26 19:07:40,488 - Mean Absolute Error: 0.005732316970825213
+2024-03-26 19:07:42,421 - Number of ZIFs in Dataset: 30
+2024-03-26 19:07:42,421 - Mean Absolute Error: 0.05760002553462984
+2024-03-26 19:07:44,194 - Number of ZIFs in Dataset: 31
+2024-03-26 19:07:44,194 - Mean Absolute Error: 0.048966248035430926
+2024-03-26 19:07:46,162 - Number of ZIFs in Dataset: 32
+2024-03-26 19:07:46,162 - Mean Absolute Error: 0.0454509747028351
+2024-03-26 19:07:47,968 - Number of ZIFs in Dataset: 33
+2024-03-26 19:07:47,968 - Mean Absolute Error: 0.03435478031635286
+2024-03-26 19:07:49,796 - Number of ZIFs in Dataset: 34
+2024-03-26 19:07:49,796 - Mean Absolute Error: 0.006377298831939715
+2024-03-26 19:07:49,796 - ----------   Round 24     ----------
+2024-03-26 19:07:49,846 - Number of ZIFs in Dataset: 1
+2024-03-26 19:07:49,846 - Mean Absolute Error: 2.4299997186660764
+2024-03-26 19:07:49,958 - Number of ZIFs in Dataset: 2
+2024-03-26 19:07:49,958 - Mean Absolute Error: 2.1008238291740415
+2024-03-26 19:07:50,075 - Number of ZIFs in Dataset: 3
+2024-03-26 19:07:50,075 - Mean Absolute Error: 1.472119936943054
+2024-03-26 19:07:50,145 - Number of ZIFs in Dataset: 4
+2024-03-26 19:07:50,145 - Mean Absolute Error: 1.5442181921005247
+2024-03-26 19:07:51,220 - Number of ZIFs in Dataset: 5
+2024-03-26 19:07:51,220 - Mean Absolute Error: 1.4709823226928709
+2024-03-26 19:07:52,216 - Number of ZIFs in Dataset: 6
+2024-03-26 19:07:52,216 - Mean Absolute Error: 0.03660439491271994
+2024-03-26 19:07:53,223 - Number of ZIFs in Dataset: 7
+2024-03-26 19:07:53,223 - Mean Absolute Error: 0.03258036613464377
+2024-03-26 19:07:54,672 - Number of ZIFs in Dataset: 8
+2024-03-26 19:07:54,672 - Mean Absolute Error: 0.03933166503906271
+2024-03-26 19:07:56,042 - Number of ZIFs in Dataset: 9
+2024-03-26 19:07:56,042 - Mean Absolute Error: 0.013976802825927948
+2024-03-26 19:07:57,829 - Number of ZIFs in Dataset: 10
+2024-03-26 19:07:57,829 - Mean Absolute Error: 0.029243221282959198
+2024-03-26 19:07:59,527 - Number of ZIFs in Dataset: 11
+2024-03-26 19:07:59,527 - Mean Absolute Error: 0.022139778137207244
+2024-03-26 19:08:01,305 - Number of ZIFs in Dataset: 12
+2024-03-26 19:08:01,305 - Mean Absolute Error: 0.041077604293823455
+2024-03-26 19:08:02,824 - Number of ZIFs in Dataset: 13
+2024-03-26 19:08:02,824 - Mean Absolute Error: 0.02817105293273947
+2024-03-26 19:08:04,497 - Number of ZIFs in Dataset: 14
+2024-03-26 19:08:04,497 - Mean Absolute Error: 0.022065391540527557
+2024-03-26 19:08:06,328 - Number of ZIFs in Dataset: 15
+2024-03-26 19:08:06,328 - Mean Absolute Error: 0.034625997543335174
+2024-03-26 19:08:08,257 - Number of ZIFs in Dataset: 16
+2024-03-26 19:08:08,257 - Mean Absolute Error: 0.018771896362304474
+2024-03-26 19:08:10,102 - Number of ZIFs in Dataset: 17
+2024-03-26 19:08:10,102 - Mean Absolute Error: 0.010221490859985138
+2024-03-26 19:08:11,884 - Number of ZIFs in Dataset: 18
+2024-03-26 19:08:11,884 - Mean Absolute Error: 0.030141124725341584
+2024-03-26 19:08:13,830 - Number of ZIFs in Dataset: 19
+2024-03-26 19:08:13,830 - Mean Absolute Error: 0.014688262939452912
+2024-03-26 19:08:15,575 - Number of ZIFs in Dataset: 20
+2024-03-26 19:08:15,575 - Mean Absolute Error: 0.03539062499999979
+2024-03-26 19:08:17,177 - Number of ZIFs in Dataset: 21
+2024-03-26 19:08:17,177 - Mean Absolute Error: 0.028401861190795685
+2024-03-26 19:08:18,831 - Number of ZIFs in Dataset: 22
+2024-03-26 19:08:18,831 - Mean Absolute Error: 0.049941072463989045
+2024-03-26 19:08:20,755 - Number of ZIFs in Dataset: 23
+2024-03-26 19:08:20,778 - Mean Absolute Error: 0.1089856719970701
+2024-03-26 19:08:22,749 - Number of ZIFs in Dataset: 24
+2024-03-26 19:08:22,749 - Mean Absolute Error: 0.003838548660278107
+2024-03-26 19:08:24,568 - Number of ZIFs in Dataset: 25
+2024-03-26 19:08:24,568 - Mean Absolute Error: 0.20081807136535623
+2024-03-26 19:08:26,263 - Number of ZIFs in Dataset: 26
+2024-03-26 19:08:26,263 - Mean Absolute Error: 0.00770734786987326
+2024-03-26 19:08:27,947 - Number of ZIFs in Dataset: 27
+2024-03-26 19:08:27,948 - Mean Absolute Error: 0.0185012912750242
+2024-03-26 19:08:29,669 - Number of ZIFs in Dataset: 28
+2024-03-26 19:08:29,670 - Mean Absolute Error: 0.03761077880859354
+2024-03-26 19:08:31,208 - Number of ZIFs in Dataset: 29
+2024-03-26 19:08:31,208 - Mean Absolute Error: 0.004242649078369354
+2024-03-26 19:08:32,779 - Number of ZIFs in Dataset: 30
+2024-03-26 19:08:32,779 - Mean Absolute Error: 0.005158433914184357
+2024-03-26 19:08:34,452 - Number of ZIFs in Dataset: 31
+2024-03-26 19:08:34,452 - Mean Absolute Error: 0.034439811706542756
+2024-03-26 19:08:36,397 - Number of ZIFs in Dataset: 32
+2024-03-26 19:08:36,397 - Mean Absolute Error: 0.026759634017944123
+2024-03-26 19:08:38,381 - Number of ZIFs in Dataset: 33
+2024-03-26 19:08:38,381 - Mean Absolute Error: 0.014754047393799041
+2024-03-26 19:08:39,996 - Number of ZIFs in Dataset: 34
+2024-03-26 19:08:39,996 - Mean Absolute Error: 0.04919410705566385
+2024-03-26 19:08:39,996 - ----------   Round 25     ----------
+2024-03-26 19:08:40,111 - Number of ZIFs in Dataset: 1
+2024-03-26 19:08:40,111 - Mean Absolute Error: 0.24000028014183045
+2024-03-26 19:08:40,246 - Number of ZIFs in Dataset: 2
+2024-03-26 19:08:40,247 - Mean Absolute Error: 0.2407487952709198
+2024-03-26 19:08:40,369 - Number of ZIFs in Dataset: 3
+2024-03-26 19:08:40,369 - Mean Absolute Error: 0.23427847266197205
+2024-03-26 19:08:40,487 - Number of ZIFs in Dataset: 4
+2024-03-26 19:08:40,487 - Mean Absolute Error: 0.21684485912322998
+2024-03-26 19:08:41,255 - Number of ZIFs in Dataset: 5
+2024-03-26 19:08:41,255 - Mean Absolute Error: 0.18416328966617584
+2024-03-26 19:08:42,372 - Number of ZIFs in Dataset: 6
+2024-03-26 19:08:42,372 - Mean Absolute Error: 0.20257821917533875
+2024-03-26 19:08:43,570 - Number of ZIFs in Dataset: 7
+2024-03-26 19:08:43,570 - Mean Absolute Error: 0.1957971477508545
+2024-03-26 19:08:44,854 - Number of ZIFs in Dataset: 8
+2024-03-26 19:08:44,854 - Mean Absolute Error: 0.19972017645835877
+2024-03-26 19:08:46,306 - Number of ZIFs in Dataset: 9
+2024-03-26 19:08:46,306 - Mean Absolute Error: 0.2555167102813721
+2024-03-26 19:08:47,964 - Number of ZIFs in Dataset: 10
+2024-03-26 19:08:47,964 - Mean Absolute Error: 0.19713083148002625
+2024-03-26 19:08:49,790 - Number of ZIFs in Dataset: 11
+2024-03-26 19:08:49,790 - Mean Absolute Error: 0.19517725944519043
+2024-03-26 19:08:51,759 - Number of ZIFs in Dataset: 12
+2024-03-26 19:08:51,759 - Mean Absolute Error: 0.22342413902282715
+2024-03-26 19:08:53,649 - Number of ZIFs in Dataset: 13
+2024-03-26 19:08:53,649 - Mean Absolute Error: 0.1968465769290924
+2024-03-26 19:08:55,228 - Number of ZIFs in Dataset: 14
+2024-03-26 19:08:55,247 - Mean Absolute Error: 0.19621995329856873
+2024-03-26 19:08:56,742 - Number of ZIFs in Dataset: 15
+2024-03-26 19:08:56,742 - Mean Absolute Error: 0.19261059403419495
+2024-03-26 19:08:58,346 - Number of ZIFs in Dataset: 16
+2024-03-26 19:08:58,346 - Mean Absolute Error: 0.19255036354064942
+2024-03-26 19:08:59,950 - Number of ZIFs in Dataset: 17
+2024-03-26 19:08:59,950 - Mean Absolute Error: 0.20412132382392884
+2024-03-26 19:09:01,678 - Number of ZIFs in Dataset: 18
+2024-03-26 19:09:01,678 - Mean Absolute Error: 0.2019442641735077
+2024-03-26 19:09:03,158 - Number of ZIFs in Dataset: 19
+2024-03-26 19:09:03,158 - Mean Absolute Error: 0.22374576568603516
+2024-03-26 19:09:04,838 - Number of ZIFs in Dataset: 20
+2024-03-26 19:09:04,838 - Mean Absolute Error: 0.21270174026489258
+2024-03-26 19:09:06,488 - Number of ZIFs in Dataset: 21
+2024-03-26 19:09:06,488 - Mean Absolute Error: 0.24151885747909546
+2024-03-26 19:09:08,281 - Number of ZIFs in Dataset: 22
+2024-03-26 19:09:08,281 - Mean Absolute Error: 0.19028255581855774
+2024-03-26 19:09:10,033 - Number of ZIFs in Dataset: 23
+2024-03-26 19:09:10,033 - Mean Absolute Error: 0.20222744584083557
+2024-03-26 19:09:11,967 - Number of ZIFs in Dataset: 24
+2024-03-26 19:09:11,967 - Mean Absolute Error: 0.14252034068107605
+2024-03-26 19:09:13,756 - Number of ZIFs in Dataset: 25
+2024-03-26 19:09:13,775 - Mean Absolute Error: 0.13432713091373444
+2024-03-26 19:09:15,561 - Number of ZIFs in Dataset: 26
+2024-03-26 19:09:15,561 - Mean Absolute Error: 0.13863024353981018
+2024-03-26 19:09:17,340 - Number of ZIFs in Dataset: 27
+2024-03-26 19:09:17,340 - Mean Absolute Error: 0.1421917849779129
+2024-03-26 19:09:19,083 - Number of ZIFs in Dataset: 28
+2024-03-26 19:09:19,083 - Mean Absolute Error: 0.14067231357097626
+2024-03-26 19:09:21,114 - Number of ZIFs in Dataset: 29
+2024-03-26 19:09:21,114 - Mean Absolute Error: 0.15275287866592407
+2024-03-26 19:09:22,744 - Number of ZIFs in Dataset: 30
+2024-03-26 19:09:22,744 - Mean Absolute Error: 0.20315343379974365
+2024-03-26 19:09:24,396 - Number of ZIFs in Dataset: 31
+2024-03-26 19:09:24,396 - Mean Absolute Error: 0.16154974937438965
+2024-03-26 19:09:25,968 - Number of ZIFs in Dataset: 32
+2024-03-26 19:09:25,968 - Mean Absolute Error: 0.12750229477882385
+2024-03-26 19:09:27,461 - Number of ZIFs in Dataset: 33
+2024-03-26 19:09:27,461 - Mean Absolute Error: 0.1457703137397766
+2024-03-26 19:09:28,748 - Number of ZIFs in Dataset: 34
+2024-03-26 19:09:28,749 - Mean Absolute Error: 0.16508664429187775
+2024-03-26 19:09:28,749 - ----------   Round 26     ----------
+2024-03-26 19:09:28,813 - Number of ZIFs in Dataset: 1
+2024-03-26 19:09:28,813 - Mean Absolute Error: 1.0999997234344483
+2024-03-26 19:09:28,883 - Number of ZIFs in Dataset: 2
+2024-03-26 19:09:28,883 - Mean Absolute Error: 1.2316555655002595
+2024-03-26 19:09:28,950 - Number of ZIFs in Dataset: 3
+2024-03-26 19:09:28,950 - Mean Absolute Error: 1.231321213245392
+2024-03-26 19:09:29,032 - Number of ZIFs in Dataset: 4
+2024-03-26 19:09:29,032 - Mean Absolute Error: 0.6807816600799561
+2024-03-26 19:09:29,983 - Number of ZIFs in Dataset: 5
+2024-03-26 19:09:29,983 - Mean Absolute Error: 0.6683850860595704
+2024-03-26 19:09:31,112 - Number of ZIFs in Dataset: 6
+2024-03-26 19:09:31,112 - Mean Absolute Error: 0.3976712799072266
+2024-03-26 19:09:32,563 - Number of ZIFs in Dataset: 7
+2024-03-26 19:09:32,564 - Mean Absolute Error: 0.5493858432769776
+2024-03-26 19:09:33,920 - Number of ZIFs in Dataset: 8
+2024-03-26 19:09:33,920 - Mean Absolute Error: 0.646824655532837
+2024-03-26 19:09:35,294 - Number of ZIFs in Dataset: 9
+2024-03-26 19:09:35,294 - Mean Absolute Error: 0.565373239517212
+2024-03-26 19:09:36,792 - Number of ZIFs in Dataset: 10
+2024-03-26 19:09:36,792 - Mean Absolute Error: 0.6384427523612977
+2024-03-26 19:09:38,308 - Number of ZIFs in Dataset: 11
+2024-03-26 19:09:38,308 - Mean Absolute Error: 0.6577690815925599
+2024-03-26 19:09:39,858 - Number of ZIFs in Dataset: 12
+2024-03-26 19:09:39,858 - Mean Absolute Error: 0.6546353077888489
+2024-03-26 19:09:41,504 - Number of ZIFs in Dataset: 13
+2024-03-26 19:09:41,504 - Mean Absolute Error: 0.6085833287239075
+2024-03-26 19:09:43,090 - Number of ZIFs in Dataset: 14
+2024-03-26 19:09:43,090 - Mean Absolute Error: 0.5955100631713868
+2024-03-26 19:09:44,829 - Number of ZIFs in Dataset: 15
+2024-03-26 19:09:44,829 - Mean Absolute Error: 0.626388487815857
+2024-03-26 19:09:46,508 - Number of ZIFs in Dataset: 16
+2024-03-26 19:09:46,527 - Mean Absolute Error: 0.6090996837615967
+2024-03-26 19:09:48,152 - Number of ZIFs in Dataset: 17
+2024-03-26 19:09:48,152 - Mean Absolute Error: 0.5528673505783082
+2024-03-26 19:09:50,214 - Number of ZIFs in Dataset: 18
+2024-03-26 19:09:50,214 - Mean Absolute Error: 0.6601047492027283
+2024-03-26 19:09:51,855 - Number of ZIFs in Dataset: 19
+2024-03-26 19:09:51,864 - Mean Absolute Error: 0.6103104329109192
+2024-03-26 19:09:53,388 - Number of ZIFs in Dataset: 20
+2024-03-26 19:09:53,388 - Mean Absolute Error: 0.596396324634552
+2024-03-26 19:09:54,995 - Number of ZIFs in Dataset: 21
+2024-03-26 19:09:54,996 - Mean Absolute Error: 0.6028006052970887
+2024-03-26 19:09:56,600 - Number of ZIFs in Dataset: 22
+2024-03-26 19:09:56,600 - Mean Absolute Error: 0.6403084969520569
+2024-03-26 19:09:58,132 - Number of ZIFs in Dataset: 23
+2024-03-26 19:09:58,132 - Mean Absolute Error: 0.6254213428497315
+2024-03-26 19:09:59,954 - Number of ZIFs in Dataset: 24
+2024-03-26 19:09:59,954 - Mean Absolute Error: 0.5730401849746705
+2024-03-26 19:10:01,559 - Number of ZIFs in Dataset: 25
+2024-03-26 19:10:01,559 - Mean Absolute Error: 0.6146048879623414
+2024-03-26 19:10:03,153 - Number of ZIFs in Dataset: 26
+2024-03-26 19:10:03,172 - Mean Absolute Error: 0.184158263206482
+2024-03-26 19:10:04,680 - Number of ZIFs in Dataset: 27
+2024-03-26 19:10:04,680 - Mean Absolute Error: 0.16839557647705083
+2024-03-26 19:10:06,280 - Number of ZIFs in Dataset: 28
+2024-03-26 19:10:06,280 - Mean Absolute Error: 0.36366802215576177
+2024-03-26 19:10:07,986 - Number of ZIFs in Dataset: 29
+2024-03-26 19:10:07,986 - Mean Absolute Error: 0.29570013046264654
+2024-03-26 19:10:09,569 - Number of ZIFs in Dataset: 30
+2024-03-26 19:10:09,569 - Mean Absolute Error: 0.35358398914337164
+2024-03-26 19:10:10,896 - Number of ZIFs in Dataset: 31
+2024-03-26 19:10:10,896 - Mean Absolute Error: 0.25256734848022466
+2024-03-26 19:10:12,596 - Number of ZIFs in Dataset: 32
+2024-03-26 19:10:12,596 - Mean Absolute Error: 0.18014555931091314
+2024-03-26 19:10:14,280 - Number of ZIFs in Dataset: 33
+2024-03-26 19:10:14,280 - Mean Absolute Error: 0.2971783256530762
+2024-03-26 19:10:16,070 - Number of ZIFs in Dataset: 34
+2024-03-26 19:10:16,070 - Mean Absolute Error: 0.29520576953887945
+2024-03-26 19:10:16,070 - ----------   Round 27     ----------
+2024-03-26 19:10:16,144 - Number of ZIFs in Dataset: 1
+2024-03-26 19:10:16,144 - Mean Absolute Error: 0.589999862909317
+2024-03-26 19:10:16,227 - Number of ZIFs in Dataset: 2
+2024-03-26 19:10:16,227 - Mean Absolute Error: 0.649999880194664
+2024-03-26 19:10:16,312 - Number of ZIFs in Dataset: 3
+2024-03-26 19:10:16,312 - Mean Absolute Error: 0.831099591255188
+2024-03-26 19:10:16,397 - Number of ZIFs in Dataset: 4
+2024-03-26 19:10:16,397 - Mean Absolute Error: 0.05692050695419315
+2024-03-26 19:10:17,293 - Number of ZIFs in Dataset: 5
+2024-03-26 19:10:17,293 - Mean Absolute Error: 0.2057129526138306
+2024-03-26 19:10:18,371 - Number of ZIFs in Dataset: 6
+2024-03-26 19:10:18,371 - Mean Absolute Error: 0.05696586608886722
+2024-03-26 19:10:19,775 - Number of ZIFs in Dataset: 7
+2024-03-26 19:10:19,775 - Mean Absolute Error: 0.23912427663803104
+2024-03-26 19:10:21,316 - Number of ZIFs in Dataset: 8
+2024-03-26 19:10:21,316 - Mean Absolute Error: 0.4208650076389313
+2024-03-26 19:10:23,221 - Number of ZIFs in Dataset: 9
+2024-03-26 19:10:23,221 - Mean Absolute Error: 0.16099587917327884
+2024-03-26 19:10:25,110 - Number of ZIFs in Dataset: 10
+2024-03-26 19:10:25,110 - Mean Absolute Error: 0.1796410465240479
+2024-03-26 19:10:26,896 - Number of ZIFs in Dataset: 11
+2024-03-26 19:10:26,896 - Mean Absolute Error: 0.1655424022674561
+2024-03-26 19:10:28,712 - Number of ZIFs in Dataset: 12
+2024-03-26 19:10:28,712 - Mean Absolute Error: 0.07458124399185184
+2024-03-26 19:10:30,320 - Number of ZIFs in Dataset: 13
+2024-03-26 19:10:30,320 - Mean Absolute Error: 0.09785703659057621
+2024-03-26 19:10:32,013 - Number of ZIFs in Dataset: 14
+2024-03-26 19:10:32,013 - Mean Absolute Error: 0.06695852518081669
+2024-03-26 19:10:33,695 - Number of ZIFs in Dataset: 15
+2024-03-26 19:10:33,696 - Mean Absolute Error: 0.12881753683090214
+2024-03-26 19:10:35,576 - Number of ZIFs in Dataset: 16
+2024-03-26 19:10:35,576 - Mean Absolute Error: 0.05501184701919559
+2024-03-26 19:10:37,390 - Number of ZIFs in Dataset: 17
+2024-03-26 19:10:37,390 - Mean Absolute Error: 0.10420451402664188
+2024-03-26 19:10:39,036 - Number of ZIFs in Dataset: 18
+2024-03-26 19:10:39,036 - Mean Absolute Error: 0.1456139469146729
+2024-03-26 19:10:40,761 - Number of ZIFs in Dataset: 19
+2024-03-26 19:10:40,761 - Mean Absolute Error: 0.1899027013778687
+2024-03-26 19:10:42,257 - Number of ZIFs in Dataset: 20
+2024-03-26 19:10:42,282 - Mean Absolute Error: 0.17155984878540043
+2024-03-26 19:10:43,841 - Number of ZIFs in Dataset: 21
+2024-03-26 19:10:43,841 - Mean Absolute Error: 0.16559360265731815
+2024-03-26 19:10:45,472 - Number of ZIFs in Dataset: 22
+2024-03-26 19:10:45,472 - Mean Absolute Error: 0.17319677114486698
+2024-03-26 19:10:47,101 - Number of ZIFs in Dataset: 23
+2024-03-26 19:10:47,101 - Mean Absolute Error: 0.1932927751541138
+2024-03-26 19:10:48,772 - Number of ZIFs in Dataset: 24
+2024-03-26 19:10:48,772 - Mean Absolute Error: 0.1983577394485474
+2024-03-26 19:10:50,394 - Number of ZIFs in Dataset: 25
+2024-03-26 19:10:50,394 - Mean Absolute Error: 0.17778680562973026
+2024-03-26 19:10:51,974 - Number of ZIFs in Dataset: 26
+2024-03-26 19:10:51,974 - Mean Absolute Error: 0.19031456947326664
+2024-03-26 19:10:53,514 - Number of ZIFs in Dataset: 27
+2024-03-26 19:10:53,514 - Mean Absolute Error: 0.17607025146484379
+2024-03-26 19:10:55,011 - Number of ZIFs in Dataset: 28
+2024-03-26 19:10:55,012 - Mean Absolute Error: 0.1733277821540833
+2024-03-26 19:10:56,730 - Number of ZIFs in Dataset: 29
+2024-03-26 19:10:56,730 - Mean Absolute Error: 0.16518668174743656
+2024-03-26 19:10:58,226 - Number of ZIFs in Dataset: 30
+2024-03-26 19:10:58,226 - Mean Absolute Error: 0.17375657796859745
+2024-03-26 19:10:59,891 - Number of ZIFs in Dataset: 31
+2024-03-26 19:10:59,891 - Mean Absolute Error: 0.02096019029617313
+2024-03-26 19:11:01,662 - Number of ZIFs in Dataset: 32
+2024-03-26 19:11:01,662 - Mean Absolute Error: 0.30632122516632077
+2024-03-26 19:11:03,253 - Number of ZIFs in Dataset: 33
+2024-03-26 19:11:03,253 - Mean Absolute Error: 0.04013534545898434
+2024-03-26 19:11:05,021 - Number of ZIFs in Dataset: 34
+2024-03-26 19:11:05,021 - Mean Absolute Error: 0.2608359670639038
+2024-03-26 19:11:05,021 - ----------   Round 28     ----------
+2024-03-26 19:11:05,090 - Number of ZIFs in Dataset: 1
+2024-03-26 19:11:05,090 - Mean Absolute Error: 0.29000050544738765
+2024-03-26 19:11:05,184 - Number of ZIFs in Dataset: 2
+2024-03-26 19:11:05,184 - Mean Absolute Error: 0.26000047445297236
+2024-03-26 19:11:05,276 - Number of ZIFs in Dataset: 3
+2024-03-26 19:11:05,276 - Mean Absolute Error: 0.19827140092849727
+2024-03-26 19:11:05,358 - Number of ZIFs in Dataset: 4
+2024-03-26 19:11:05,359 - Mean Absolute Error: 0.12827236175537104
+2024-03-26 19:11:06,112 - Number of ZIFs in Dataset: 5
+2024-03-26 19:11:06,112 - Mean Absolute Error: 0.15863759040832515
+2024-03-26 19:11:07,304 - Number of ZIFs in Dataset: 6
+2024-03-26 19:11:07,304 - Mean Absolute Error: 0.20050115108489985
+2024-03-26 19:11:08,675 - Number of ZIFs in Dataset: 7
+2024-03-26 19:11:08,675 - Mean Absolute Error: 0.16815734624862666
+2024-03-26 19:11:10,173 - Number of ZIFs in Dataset: 8
+2024-03-26 19:11:10,189 - Mean Absolute Error: 0.08138506889343267
+2024-03-26 19:11:11,904 - Number of ZIFs in Dataset: 9
+2024-03-26 19:11:11,904 - Mean Absolute Error: 0.07125104188919062
+2024-03-26 19:11:13,634 - Number of ZIFs in Dataset: 10
+2024-03-26 19:11:13,634 - Mean Absolute Error: 0.12766952037811274
+2024-03-26 19:11:15,543 - Number of ZIFs in Dataset: 11
+2024-03-26 19:11:15,543 - Mean Absolute Error: 0.004826791286468457
+2024-03-26 19:11:17,394 - Number of ZIFs in Dataset: 12
+2024-03-26 19:11:17,395 - Mean Absolute Error: 0.010070853233337451
+2024-03-26 19:11:19,081 - Number of ZIFs in Dataset: 13
+2024-03-26 19:11:19,081 - Mean Absolute Error: 0.010468192100524853
+2024-03-26 19:11:20,636 - Number of ZIFs in Dataset: 14
+2024-03-26 19:11:20,636 - Mean Absolute Error: 0.08675623655319209
+2024-03-26 19:11:22,347 - Number of ZIFs in Dataset: 15
+2024-03-26 19:11:22,347 - Mean Absolute Error: 0.017195873260498096
+2024-03-26 19:11:23,864 - Number of ZIFs in Dataset: 16
+2024-03-26 19:11:23,864 - Mean Absolute Error: 0.06752533435821528
+2024-03-26 19:11:25,401 - Number of ZIFs in Dataset: 17
+2024-03-26 19:11:25,401 - Mean Absolute Error: 0.10769451379775996
+2024-03-26 19:11:27,004 - Number of ZIFs in Dataset: 18
+2024-03-26 19:11:27,004 - Mean Absolute Error: 0.04920060157775874
+2024-03-26 19:11:28,986 - Number of ZIFs in Dataset: 19
+2024-03-26 19:11:28,986 - Mean Absolute Error: 0.09541446685791011
+2024-03-26 19:11:30,551 - Number of ZIFs in Dataset: 20
+2024-03-26 19:11:30,551 - Mean Absolute Error: 0.1514958810806274
+2024-03-26 19:11:32,266 - Number of ZIFs in Dataset: 21
+2024-03-26 19:11:32,267 - Mean Absolute Error: 0.1130716729164124
+2024-03-26 19:11:34,081 - Number of ZIFs in Dataset: 22
+2024-03-26 19:11:34,081 - Mean Absolute Error: 0.16210573196411138
+2024-03-26 19:11:35,682 - Number of ZIFs in Dataset: 23
+2024-03-26 19:11:35,682 - Mean Absolute Error: 0.04355210781097407
+2024-03-26 19:11:37,478 - Number of ZIFs in Dataset: 24
+2024-03-26 19:11:37,487 - Mean Absolute Error: 0.1636080670356751
+2024-03-26 19:11:39,168 - Number of ZIFs in Dataset: 25
+2024-03-26 19:11:39,168 - Mean Absolute Error: 0.1872119235992432
+2024-03-26 19:11:40,878 - Number of ZIFs in Dataset: 26
+2024-03-26 19:11:40,878 - Mean Absolute Error: 0.3490229177474976
+2024-03-26 19:11:42,440 - Number of ZIFs in Dataset: 27
+2024-03-26 19:11:42,440 - Mean Absolute Error: 0.14022331714630132
+2024-03-26 19:11:44,372 - Number of ZIFs in Dataset: 28
+2024-03-26 19:11:44,372 - Mean Absolute Error: 0.25285082340240483
+2024-03-26 19:11:46,365 - Number of ZIFs in Dataset: 29
+2024-03-26 19:11:46,365 - Mean Absolute Error: 0.08363788604736333
+2024-03-26 19:11:48,187 - Number of ZIFs in Dataset: 30
+2024-03-26 19:11:48,188 - Mean Absolute Error: 0.21875923156738286
+2024-03-26 19:11:49,704 - Number of ZIFs in Dataset: 31
+2024-03-26 19:11:49,705 - Mean Absolute Error: 0.15642028331756597
+2024-03-26 19:11:51,572 - Number of ZIFs in Dataset: 32
+2024-03-26 19:11:51,572 - Mean Absolute Error: 0.23668079853057866
+2024-03-26 19:11:53,120 - Number of ZIFs in Dataset: 33
+2024-03-26 19:11:53,120 - Mean Absolute Error: 0.2301041412353516
+2024-03-26 19:11:54,758 - Number of ZIFs in Dataset: 34
+2024-03-26 19:11:54,758 - Mean Absolute Error: 0.11958616256713872
+2024-03-26 19:11:54,758 - ----------   Round 29     ----------
+2024-03-26 19:11:54,802 - Number of ZIFs in Dataset: 1
+2024-03-26 19:11:54,802 - Mean Absolute Error: 0.0599998724460602
+2024-03-26 19:11:54,867 - Number of ZIFs in Dataset: 2
+2024-03-26 19:11:54,867 - Mean Absolute Error: 0.18917436480522154
+2024-03-26 19:11:54,961 - Number of ZIFs in Dataset: 3
+2024-03-26 19:11:54,961 - Mean Absolute Error: 0.287733952999115
+2024-03-26 19:11:55,044 - Number of ZIFs in Dataset: 4
+2024-03-26 19:11:55,044 - Mean Absolute Error: 0.09834982037544249
+2024-03-26 19:11:55,957 - Number of ZIFs in Dataset: 5
+2024-03-26 19:11:55,957 - Mean Absolute Error: 0.08100585222244261
+2024-03-26 19:11:56,928 - Number of ZIFs in Dataset: 6
+2024-03-26 19:11:56,928 - Mean Absolute Error: 0.0357446777820587
+2024-03-26 19:11:58,024 - Number of ZIFs in Dataset: 7
+2024-03-26 19:11:58,024 - Mean Absolute Error: 0.054749618768692
+2024-03-26 19:11:59,418 - Number of ZIFs in Dataset: 8
+2024-03-26 19:11:59,418 - Mean Absolute Error: 0.06375358581542967
+2024-03-26 19:12:01,128 - Number of ZIFs in Dataset: 9
+2024-03-26 19:12:01,128 - Mean Absolute Error: 0.04261798739433287
+2024-03-26 19:12:02,953 - Number of ZIFs in Dataset: 10
+2024-03-26 19:12:02,953 - Mean Absolute Error: 0.059688489437103254
+2024-03-26 19:12:04,584 - Number of ZIFs in Dataset: 11
+2024-03-26 19:12:04,584 - Mean Absolute Error: 0.06267727494239805
+2024-03-26 19:12:06,268 - Number of ZIFs in Dataset: 12
+2024-03-26 19:12:06,268 - Mean Absolute Error: 0.09484295129775999
+2024-03-26 19:12:07,943 - Number of ZIFs in Dataset: 13
+2024-03-26 19:12:07,943 - Mean Absolute Error: 0.04375718116760252
+2024-03-26 19:12:09,686 - Number of ZIFs in Dataset: 14
+2024-03-26 19:12:09,686 - Mean Absolute Error: 0.04217315793037413
+2024-03-26 19:12:11,247 - Number of ZIFs in Dataset: 15
+2024-03-26 19:12:11,247 - Mean Absolute Error: 0.045780729055404645
+2024-03-26 19:12:13,193 - Number of ZIFs in Dataset: 16
+2024-03-26 19:12:13,193 - Mean Absolute Error: 0.061092685461044294
+2024-03-26 19:12:14,880 - Number of ZIFs in Dataset: 17
+2024-03-26 19:12:14,880 - Mean Absolute Error: 0.09505842208862303
+2024-03-26 19:12:16,907 - Number of ZIFs in Dataset: 18
+2024-03-26 19:12:16,907 - Mean Absolute Error: 0.08335415601730345
+2024-03-26 19:12:18,640 - Number of ZIFs in Dataset: 19
+2024-03-26 19:12:18,650 - Mean Absolute Error: 0.060677717924118024
+2024-03-26 19:12:20,533 - Number of ZIFs in Dataset: 20
+2024-03-26 19:12:20,533 - Mean Absolute Error: 0.09919859051704405
+2024-03-26 19:12:22,390 - Number of ZIFs in Dataset: 21
+2024-03-26 19:12:22,390 - Mean Absolute Error: 0.10021699547767637
+2024-03-26 19:12:24,405 - Number of ZIFs in Dataset: 22
+2024-03-26 19:12:24,409 - Mean Absolute Error: 0.1120621073246002
+2024-03-26 19:12:26,228 - Number of ZIFs in Dataset: 23
+2024-03-26 19:12:26,228 - Mean Absolute Error: 0.12602088928222654
+2024-03-26 19:12:28,033 - Number of ZIFs in Dataset: 24
+2024-03-26 19:12:28,033 - Mean Absolute Error: 0.08643595457077025
+2024-03-26 19:12:29,708 - Number of ZIFs in Dataset: 25
+2024-03-26 19:12:29,708 - Mean Absolute Error: 0.08079169273376463
+2024-03-26 19:12:31,746 - Number of ZIFs in Dataset: 26
+2024-03-26 19:12:31,746 - Mean Absolute Error: 0.07656247496604918
+2024-03-26 19:12:33,344 - Number of ZIFs in Dataset: 27
+2024-03-26 19:12:33,344 - Mean Absolute Error: 0.027209143638610822
+2024-03-26 19:12:34,712 - Number of ZIFs in Dataset: 28
+2024-03-26 19:12:34,712 - Mean Absolute Error: 0.05216000556945799
+2024-03-26 19:12:36,459 - Number of ZIFs in Dataset: 29
+2024-03-26 19:12:36,459 - Mean Absolute Error: 0.0996463108062744
+2024-03-26 19:12:38,099 - Number of ZIFs in Dataset: 30
+2024-03-26 19:12:38,099 - Mean Absolute Error: 0.09116057634353636
+2024-03-26 19:12:39,482 - Number of ZIFs in Dataset: 31
+2024-03-26 19:12:39,482 - Mean Absolute Error: 0.17588327407836912
+2024-03-26 19:12:41,266 - Number of ZIFs in Dataset: 32
+2024-03-26 19:12:41,266 - Mean Absolute Error: 0.11265031576156614
+2024-03-26 19:12:42,902 - Number of ZIFs in Dataset: 33
+2024-03-26 19:12:42,902 - Mean Absolute Error: 0.08306102037429808
+2024-03-26 19:12:44,322 - Number of ZIFs in Dataset: 34
+2024-03-26 19:12:44,323 - Mean Absolute Error: 0.11918611407279966
+2024-03-26 19:12:44,323 - ----------   Round 30     ----------
+2024-03-26 19:12:44,405 - Number of ZIFs in Dataset: 1
+2024-03-26 19:12:44,405 - Mean Absolute Error: 0.9199999999999999
+2024-03-26 19:12:44,498 - Number of ZIFs in Dataset: 2
+2024-03-26 19:12:44,498 - Mean Absolute Error: 0.8750005197525024
+2024-03-26 19:12:44,652 - Number of ZIFs in Dataset: 3
+2024-03-26 19:12:44,652 - Mean Absolute Error: 0.9167429041862487
+2024-03-26 19:12:44,795 - Number of ZIFs in Dataset: 4
+2024-03-26 19:12:44,795 - Mean Absolute Error: 0.9592174422740936
+2024-03-26 19:12:45,773 - Number of ZIFs in Dataset: 5
+2024-03-26 19:12:45,773 - Mean Absolute Error: 0.9329825472831725
+2024-03-26 19:12:46,728 - Number of ZIFs in Dataset: 6
+2024-03-26 19:12:46,728 - Mean Absolute Error: 0.9314927887916564
+2024-03-26 19:12:47,984 - Number of ZIFs in Dataset: 7
+2024-03-26 19:12:47,984 - Mean Absolute Error: 0.9666319656372071
+2024-03-26 19:12:49,300 - Number of ZIFs in Dataset: 8
+2024-03-26 19:12:49,300 - Mean Absolute Error: 0.9059053230285645
+2024-03-26 19:12:50,642 - Number of ZIFs in Dataset: 9
+2024-03-26 19:12:50,642 - Mean Absolute Error: 0.9860871601104737
+2024-03-26 19:12:52,452 - Number of ZIFs in Dataset: 10
+2024-03-26 19:12:52,452 - Mean Absolute Error: 1.1498814392089844
+2024-03-26 19:12:54,217 - Number of ZIFs in Dataset: 11
+2024-03-26 19:12:54,217 - Mean Absolute Error: 0.8774581718444825
+2024-03-26 19:12:55,849 - Number of ZIFs in Dataset: 12
+2024-03-26 19:12:55,849 - Mean Absolute Error: 0.8877299594879151
+2024-03-26 19:12:57,457 - Number of ZIFs in Dataset: 13
+2024-03-26 19:12:57,457 - Mean Absolute Error: 0.8300872611999512
+2024-03-26 19:12:58,993 - Number of ZIFs in Dataset: 14
+2024-03-26 19:12:58,994 - Mean Absolute Error: 0.8914812374114991
+2024-03-26 19:13:00,708 - Number of ZIFs in Dataset: 15
+2024-03-26 19:13:00,708 - Mean Absolute Error: 0.7977507877349854
+2024-03-26 19:13:02,346 - Number of ZIFs in Dataset: 16
+2024-03-26 19:13:02,369 - Mean Absolute Error: 1.114449338912964
+2024-03-26 19:13:04,108 - Number of ZIFs in Dataset: 17
+2024-03-26 19:13:04,109 - Mean Absolute Error: 0.9296894836425782
+2024-03-26 19:13:05,612 - Number of ZIFs in Dataset: 18
+2024-03-26 19:13:05,612 - Mean Absolute Error: 0.7101233768463135
+2024-03-26 19:13:06,963 - Number of ZIFs in Dataset: 19
+2024-03-26 19:13:06,963 - Mean Absolute Error: 0.5766244697570801
+2024-03-26 19:13:08,420 - Number of ZIFs in Dataset: 20
+2024-03-26 19:13:08,420 - Mean Absolute Error: 0.7411278057098389
+2024-03-26 19:13:09,826 - Number of ZIFs in Dataset: 21
+2024-03-26 19:13:09,826 - Mean Absolute Error: 0.8712719249725343
+2024-03-26 19:13:11,532 - Number of ZIFs in Dataset: 22
+2024-03-26 19:13:11,532 - Mean Absolute Error: 0.7358468341827393
+2024-03-26 19:13:13,032 - Number of ZIFs in Dataset: 23
+2024-03-26 19:13:13,032 - Mean Absolute Error: 0.1912420558929444
+2024-03-26 19:13:14,323 - Number of ZIFs in Dataset: 24
+2024-03-26 19:13:14,323 - Mean Absolute Error: 0.249132947921753
+2024-03-26 19:13:15,624 - Number of ZIFs in Dataset: 25
+2024-03-26 19:13:15,624 - Mean Absolute Error: 0.30602772712707527
+2024-03-26 19:13:17,179 - Number of ZIFs in Dataset: 26
+2024-03-26 19:13:17,180 - Mean Absolute Error: 0.4114714431762696
+2024-03-26 19:13:18,706 - Number of ZIFs in Dataset: 27
+2024-03-26 19:13:18,706 - Mean Absolute Error: 0.09567018032073982
+2024-03-26 19:13:20,498 - Number of ZIFs in Dataset: 28
+2024-03-26 19:13:20,498 - Mean Absolute Error: 0.046152873039245534
+2024-03-26 19:13:22,473 - Number of ZIFs in Dataset: 29
+2024-03-26 19:13:22,473 - Mean Absolute Error: 0.168325228691101
+2024-03-26 19:13:23,952 - Number of ZIFs in Dataset: 30
+2024-03-26 19:13:23,952 - Mean Absolute Error: 0.3479855489730834
+2024-03-26 19:13:25,488 - Number of ZIFs in Dataset: 31
+2024-03-26 19:13:25,488 - Mean Absolute Error: 0.18467382907867425
+2024-03-26 19:13:27,158 - Number of ZIFs in Dataset: 32
+2024-03-26 19:13:27,158 - Mean Absolute Error: 0.29620007991790764
+2024-03-26 19:13:28,845 - Number of ZIFs in Dataset: 33
+2024-03-26 19:13:28,845 - Mean Absolute Error: 0.03138669013977058
+2024-03-26 19:13:30,443 - Number of ZIFs in Dataset: 34
+2024-03-26 19:13:30,477 - Mean Absolute Error: 0.23131005287170403
+2024-03-26 19:13:30,477 - ----------   Round 31     ----------
+2024-03-26 19:13:30,572 - Number of ZIFs in Dataset: 1
+2024-03-26 19:13:30,572 - Mean Absolute Error: 0.09999946117401126
+2024-03-26 19:13:30,709 - Number of ZIFs in Dataset: 2
+2024-03-26 19:13:30,709 - Mean Absolute Error: 0.007040712833404572
+2024-03-26 19:13:30,876 - Number of ZIFs in Dataset: 3
+2024-03-26 19:13:30,876 - Mean Absolute Error: 0.18335786104202267
+2024-03-26 19:13:31,030 - Number of ZIFs in Dataset: 4
+2024-03-26 19:13:31,030 - Mean Absolute Error: 0.22877251744270322
+2024-03-26 19:13:31,857 - Number of ZIFs in Dataset: 5
+2024-03-26 19:13:31,857 - Mean Absolute Error: 0.12176844120025632
+2024-03-26 19:13:32,972 - Number of ZIFs in Dataset: 6
+2024-03-26 19:13:32,972 - Mean Absolute Error: 0.09422149896621701
+2024-03-26 19:13:34,374 - Number of ZIFs in Dataset: 7
+2024-03-26 19:13:34,374 - Mean Absolute Error: 0.2349240446090698
+2024-03-26 19:13:35,696 - Number of ZIFs in Dataset: 8
+2024-03-26 19:13:35,696 - Mean Absolute Error: 0.13851767420768735
+2024-03-26 19:13:36,916 - Number of ZIFs in Dataset: 9
+2024-03-26 19:13:36,916 - Mean Absolute Error: 0.10899823546409604
+2024-03-26 19:13:38,381 - Number of ZIFs in Dataset: 10
+2024-03-26 19:13:38,381 - Mean Absolute Error: 0.18222877025604245
+2024-03-26 19:13:39,993 - Number of ZIFs in Dataset: 11
+2024-03-26 19:13:39,993 - Mean Absolute Error: 0.1828891599178314
+2024-03-26 19:13:41,487 - Number of ZIFs in Dataset: 12
+2024-03-26 19:13:41,487 - Mean Absolute Error: 0.16993823289871213
+2024-03-26 19:13:43,024 - Number of ZIFs in Dataset: 13
+2024-03-26 19:13:43,024 - Mean Absolute Error: 0.15430935859680173
+2024-03-26 19:13:44,708 - Number of ZIFs in Dataset: 14
+2024-03-26 19:13:44,708 - Mean Absolute Error: 0.20556267738342282
+2024-03-26 19:13:46,488 - Number of ZIFs in Dataset: 15
+2024-03-26 19:13:46,497 - Mean Absolute Error: 0.1771815979480743
+2024-03-26 19:13:48,084 - Number of ZIFs in Dataset: 16
+2024-03-26 19:13:48,084 - Mean Absolute Error: 0.16966381311416623
+2024-03-26 19:13:49,912 - Number of ZIFs in Dataset: 17
+2024-03-26 19:13:49,912 - Mean Absolute Error: 0.19142478346824643
+2024-03-26 19:13:51,561 - Number of ZIFs in Dataset: 18
+2024-03-26 19:13:51,586 - Mean Absolute Error: 0.14295944213867184
+2024-03-26 19:13:53,412 - Number of ZIFs in Dataset: 19
+2024-03-26 19:13:53,412 - Mean Absolute Error: 0.21811398506164548
+2024-03-26 19:13:55,096 - Number of ZIFs in Dataset: 20
+2024-03-26 19:13:55,096 - Mean Absolute Error: 0.15858241558074948
+2024-03-26 19:13:56,776 - Number of ZIFs in Dataset: 21
+2024-03-26 19:13:56,799 - Mean Absolute Error: 0.188407506942749
+2024-03-26 19:13:58,396 - Number of ZIFs in Dataset: 22
+2024-03-26 19:13:58,396 - Mean Absolute Error: 0.21955993413925168
+2024-03-26 19:14:00,429 - Number of ZIFs in Dataset: 23
+2024-03-26 19:14:00,429 - Mean Absolute Error: 0.15984317302703854
+2024-03-26 19:14:02,342 - Number of ZIFs in Dataset: 24
+2024-03-26 19:14:02,342 - Mean Absolute Error: 0.1831068956851959
+2024-03-26 19:14:04,151 - Number of ZIFs in Dataset: 25
+2024-03-26 19:14:04,151 - Mean Absolute Error: 0.1964905226230621
+2024-03-26 19:14:05,797 - Number of ZIFs in Dataset: 26
+2024-03-26 19:14:05,797 - Mean Absolute Error: 0.16130557298660275
+2024-03-26 19:14:07,341 - Number of ZIFs in Dataset: 27
+2024-03-26 19:14:07,350 - Mean Absolute Error: 0.1681009197235107
+2024-03-26 19:14:08,933 - Number of ZIFs in Dataset: 28
+2024-03-26 19:14:08,933 - Mean Absolute Error: 0.11541238069534299
+2024-03-26 19:14:10,641 - Number of ZIFs in Dataset: 29
+2024-03-26 19:14:10,641 - Mean Absolute Error: 0.03167262315750119
+2024-03-26 19:14:12,379 - Number of ZIFs in Dataset: 30
+2024-03-26 19:14:12,379 - Mean Absolute Error: 0.04948839187622067
+2024-03-26 19:14:13,862 - Number of ZIFs in Dataset: 31
+2024-03-26 19:14:13,862 - Mean Absolute Error: 0.12898674249649045
+2024-03-26 19:14:15,531 - Number of ZIFs in Dataset: 32
+2024-03-26 19:14:15,531 - Mean Absolute Error: 0.03014531373977658
+2024-03-26 19:14:17,443 - Number of ZIFs in Dataset: 33
+2024-03-26 19:14:17,452 - Mean Absolute Error: 0.11217978239059445
+2024-03-26 19:14:19,126 - Number of ZIFs in Dataset: 34
+2024-03-26 19:14:19,126 - Mean Absolute Error: 0.12952765464782712
+2024-03-26 19:14:19,126 - ----------   Round 32     ----------
+2024-03-26 19:14:19,180 - Number of ZIFs in Dataset: 1
+2024-03-26 19:14:19,180 - Mean Absolute Error: 0.809999862909317
+2024-03-26 19:14:19,251 - Number of ZIFs in Dataset: 2
+2024-03-26 19:14:19,252 - Mean Absolute Error: 0.5208020901679993
+2024-03-26 19:14:19,324 - Number of ZIFs in Dataset: 3
+2024-03-26 19:14:19,324 - Mean Absolute Error: 0.5231098031997681
+2024-03-26 19:14:19,398 - Number of ZIFs in Dataset: 4
+2024-03-26 19:14:19,398 - Mean Absolute Error: 0.46813852548599244
+2024-03-26 19:14:20,218 - Number of ZIFs in Dataset: 5
+2024-03-26 19:14:20,218 - Mean Absolute Error: 0.42387808322906495
+2024-03-26 19:14:21,344 - Number of ZIFs in Dataset: 6
+2024-03-26 19:14:21,344 - Mean Absolute Error: 0.43340224981307984
+2024-03-26 19:14:22,623 - Number of ZIFs in Dataset: 7
+2024-03-26 19:14:22,623 - Mean Absolute Error: 0.9632882976531982
+2024-03-26 19:14:24,140 - Number of ZIFs in Dataset: 8
+2024-03-26 19:14:24,140 - Mean Absolute Error: 0.006079564094543466
+2024-03-26 19:14:25,656 - Number of ZIFs in Dataset: 9
+2024-03-26 19:14:25,656 - Mean Absolute Error: 0.25131739139556886
+2024-03-26 19:14:27,192 - Number of ZIFs in Dataset: 10
+2024-03-26 19:14:27,192 - Mean Absolute Error: 0.12443148136138915
+2024-03-26 19:14:28,692 - Number of ZIFs in Dataset: 11
+2024-03-26 19:14:28,692 - Mean Absolute Error: 0.017041692733764657
+2024-03-26 19:14:30,274 - Number of ZIFs in Dataset: 12
+2024-03-26 19:14:30,274 - Mean Absolute Error: 0.23642874717712403
+2024-03-26 19:14:31,937 - Number of ZIFs in Dataset: 13
+2024-03-26 19:14:31,937 - Mean Absolute Error: 0.1254768466949463
+2024-03-26 19:14:33,631 - Number of ZIFs in Dataset: 14
+2024-03-26 19:14:33,631 - Mean Absolute Error: 0.06427443981170655
+2024-03-26 19:14:35,224 - Number of ZIFs in Dataset: 15
+2024-03-26 19:14:35,224 - Mean Absolute Error: 0.000386943817138663
+2024-03-26 19:14:37,001 - Number of ZIFs in Dataset: 16
+2024-03-26 19:14:37,001 - Mean Absolute Error: 0.17352349519729615
+2024-03-26 19:14:38,532 - Number of ZIFs in Dataset: 17
+2024-03-26 19:14:38,532 - Mean Absolute Error: 0.15179360866546632
+2024-03-26 19:14:40,024 - Number of ZIFs in Dataset: 18
+2024-03-26 19:14:40,024 - Mean Absolute Error: 0.20559168815612794
+2024-03-26 19:14:41,520 - Number of ZIFs in Dataset: 19
+2024-03-26 19:14:41,520 - Mean Absolute Error: 0.21327144861221314
+2024-03-26 19:14:43,140 - Number of ZIFs in Dataset: 20
+2024-03-26 19:14:43,140 - Mean Absolute Error: 0.15093470573425294
+2024-03-26 19:14:45,001 - Number of ZIFs in Dataset: 21
+2024-03-26 19:14:45,001 - Mean Absolute Error: 0.18901021242141725
+2024-03-26 19:14:46,930 - Number of ZIFs in Dataset: 22
+2024-03-26 19:14:46,949 - Mean Absolute Error: 0.1385604238510132
+2024-03-26 19:14:48,772 - Number of ZIFs in Dataset: 23
+2024-03-26 19:14:48,772 - Mean Absolute Error: 0.1902983283996582
+2024-03-26 19:14:50,722 - Number of ZIFs in Dataset: 24
+2024-03-26 19:14:50,722 - Mean Absolute Error: 0.09875340223312379
+2024-03-26 19:14:52,365 - Number of ZIFs in Dataset: 25
+2024-03-26 19:14:52,387 - Mean Absolute Error: 0.04756457567214967
+2024-03-26 19:14:53,936 - Number of ZIFs in Dataset: 26
+2024-03-26 19:14:53,936 - Mean Absolute Error: 0.13129145860671998
+2024-03-26 19:14:55,716 - Number of ZIFs in Dataset: 27
+2024-03-26 19:14:55,716 - Mean Absolute Error: 0.2103275752067566
+2024-03-26 19:14:57,387 - Number of ZIFs in Dataset: 28
+2024-03-26 19:14:57,410 - Mean Absolute Error: 0.30250138998031617
+2024-03-26 19:14:58,836 - Number of ZIFs in Dataset: 29
+2024-03-26 19:14:58,836 - Mean Absolute Error: 0.12020427942276002
+2024-03-26 19:15:00,434 - Number of ZIFs in Dataset: 30
+2024-03-26 19:15:00,434 - Mean Absolute Error: 0.16993821620941163
+2024-03-26 19:15:01,968 - Number of ZIFs in Dataset: 31
+2024-03-26 19:15:01,968 - Mean Absolute Error: 0.21021516084671021
+2024-03-26 19:15:03,539 - Number of ZIFs in Dataset: 32
+2024-03-26 19:15:03,539 - Mean Absolute Error: 0.126335928440094
+2024-03-26 19:15:05,073 - Number of ZIFs in Dataset: 33
+2024-03-26 19:15:05,073 - Mean Absolute Error: 0.15245760440826417
+2024-03-26 19:15:06,416 - Number of ZIFs in Dataset: 34
+2024-03-26 19:15:06,417 - Mean Absolute Error: 0.12230939626693726
+2024-03-26 19:15:06,417 - ----------   Round 33     ----------
+2024-03-26 19:15:06,480 - Number of ZIFs in Dataset: 1
+2024-03-26 19:15:06,480 - Mean Absolute Error: 1.189999737739563
+2024-03-26 19:15:06,556 - Number of ZIFs in Dataset: 2
+2024-03-26 19:15:06,556 - Mean Absolute Error: 1.0108313941955567
+2024-03-26 19:15:06,656 - Number of ZIFs in Dataset: 3
+2024-03-26 19:15:06,656 - Mean Absolute Error: 0.9494910025596619
+2024-03-26 19:15:06,786 - Number of ZIFs in Dataset: 4
+2024-03-26 19:15:06,787 - Mean Absolute Error: 0.9474116349220276
+2024-03-26 19:15:07,552 - Number of ZIFs in Dataset: 5
+2024-03-26 19:15:07,552 - Mean Absolute Error: 0.9359340453147889
+2024-03-26 19:15:08,692 - Number of ZIFs in Dataset: 6
+2024-03-26 19:15:08,710 - Mean Absolute Error: 0.9602424287796021
+2024-03-26 19:15:09,781 - Number of ZIFs in Dataset: 7
+2024-03-26 19:15:09,781 - Mean Absolute Error: 0.35457757949829105
+2024-03-26 19:15:11,187 - Number of ZIFs in Dataset: 8
+2024-03-26 19:15:11,187 - Mean Absolute Error: 0.4012003326416016
+2024-03-26 19:15:12,818 - Number of ZIFs in Dataset: 9
+2024-03-26 19:15:12,818 - Mean Absolute Error: 0.5517721557617188
+2024-03-26 19:15:14,448 - Number of ZIFs in Dataset: 10
+2024-03-26 19:15:14,448 - Mean Absolute Error: 0.6472018146514893
+2024-03-26 19:15:16,221 - Number of ZIFs in Dataset: 11
+2024-03-26 19:15:16,221 - Mean Absolute Error: 0.4628571653366089
+2024-03-26 19:15:18,042 - Number of ZIFs in Dataset: 12
+2024-03-26 19:15:18,042 - Mean Absolute Error: 0.6058663511276245
+2024-03-26 19:15:19,808 - Number of ZIFs in Dataset: 13
+2024-03-26 19:15:19,818 - Mean Absolute Error: 0.5245820665359497
+2024-03-26 19:15:21,650 - Number of ZIFs in Dataset: 14
+2024-03-26 19:15:21,650 - Mean Absolute Error: 0.5923815751075745
+2024-03-26 19:15:23,540 - Number of ZIFs in Dataset: 15
+2024-03-26 19:15:23,540 - Mean Absolute Error: 0.5504583501815796
+2024-03-26 19:15:25,444 - Number of ZIFs in Dataset: 16
+2024-03-26 19:15:25,444 - Mean Absolute Error: 0.7970223212242127
+2024-03-26 19:15:27,100 - Number of ZIFs in Dataset: 17
+2024-03-26 19:15:27,100 - Mean Absolute Error: 0.7500556492805481
+2024-03-26 19:15:28,766 - Number of ZIFs in Dataset: 18
+2024-03-26 19:15:28,766 - Mean Absolute Error: 0.6512561225891114
+2024-03-26 19:15:30,656 - Number of ZIFs in Dataset: 19
+2024-03-26 19:15:30,656 - Mean Absolute Error: 0.7615700745582581
+2024-03-26 19:15:32,423 - Number of ZIFs in Dataset: 20
+2024-03-26 19:15:32,423 - Mean Absolute Error: 0.7243621134757996
+2024-03-26 19:15:34,286 - Number of ZIFs in Dataset: 21
+2024-03-26 19:15:34,286 - Mean Absolute Error: 0.35887447834014896
+2024-03-26 19:15:36,068 - Number of ZIFs in Dataset: 22
+2024-03-26 19:15:36,068 - Mean Absolute Error: 0.379155912399292
+2024-03-26 19:15:37,631 - Number of ZIFs in Dataset: 23
+2024-03-26 19:15:37,631 - Mean Absolute Error: 0.44315902233123783
+2024-03-26 19:15:39,147 - Number of ZIFs in Dataset: 24
+2024-03-26 19:15:39,147 - Mean Absolute Error: 0.5246814870834351
+2024-03-26 19:15:41,059 - Number of ZIFs in Dataset: 25
+2024-03-26 19:15:41,059 - Mean Absolute Error: 0.25391749382019047
+2024-03-26 19:15:42,641 - Number of ZIFs in Dataset: 26
+2024-03-26 19:15:42,641 - Mean Absolute Error: 0.3676199102401734
+2024-03-26 19:15:44,284 - Number of ZIFs in Dataset: 27
+2024-03-26 19:15:44,284 - Mean Absolute Error: 0.4314800882339478
+2024-03-26 19:15:45,996 - Number of ZIFs in Dataset: 28
+2024-03-26 19:15:45,996 - Mean Absolute Error: 0.23773721694946293
+2024-03-26 19:15:47,542 - Number of ZIFs in Dataset: 29
+2024-03-26 19:15:47,542 - Mean Absolute Error: 0.30283740997314457
+2024-03-26 19:15:49,254 - Number of ZIFs in Dataset: 30
+2024-03-26 19:15:49,254 - Mean Absolute Error: 0.29950622558593754
+2024-03-26 19:15:50,905 - Number of ZIFs in Dataset: 31
+2024-03-26 19:15:50,905 - Mean Absolute Error: 0.3714567804336548
+2024-03-26 19:15:52,418 - Number of ZIFs in Dataset: 32
+2024-03-26 19:15:52,418 - Mean Absolute Error: 0.37977270126342777
+2024-03-26 19:15:54,305 - Number of ZIFs in Dataset: 33
+2024-03-26 19:15:54,323 - Mean Absolute Error: 0.34733132362365726
+2024-03-26 19:15:55,973 - Number of ZIFs in Dataset: 34
+2024-03-26 19:15:55,973 - Mean Absolute Error: 0.2712463521957398
+2024-03-26 19:15:55,973 - ----------   Round 34     ----------
+2024-03-26 19:15:56,025 - Number of ZIFs in Dataset: 1
+2024-03-26 19:15:56,025 - Mean Absolute Error: 0.8099997401237489
+2024-03-26 19:15:56,092 - Number of ZIFs in Dataset: 2
+2024-03-26 19:15:56,092 - Mean Absolute Error: 0.8099508941173554
+2024-03-26 19:15:56,168 - Number of ZIFs in Dataset: 3
+2024-03-26 19:15:56,168 - Mean Absolute Error: 0.8687155902385713
+2024-03-26 19:15:56,228 - Number of ZIFs in Dataset: 4
+2024-03-26 19:15:56,228 - Mean Absolute Error: 0.8725737690925599
+2024-03-26 19:15:56,952 - Number of ZIFs in Dataset: 5
+2024-03-26 19:15:56,952 - Mean Absolute Error: 0.33479859828948966
+2024-03-26 19:15:57,988 - Number of ZIFs in Dataset: 6
+2024-03-26 19:15:57,988 - Mean Absolute Error: 0.23136487007141104
+2024-03-26 19:15:59,092 - Number of ZIFs in Dataset: 7
+2024-03-26 19:15:59,092 - Mean Absolute Error: 0.44155850410461417
+2024-03-26 19:16:00,430 - Number of ZIFs in Dataset: 8
+2024-03-26 19:16:00,430 - Mean Absolute Error: 0.23170688152313224
+2024-03-26 19:16:02,153 - Number of ZIFs in Dataset: 9
+2024-03-26 19:16:02,153 - Mean Absolute Error: 0.39219131469726554
+2024-03-26 19:16:04,156 - Number of ZIFs in Dataset: 10
+2024-03-26 19:16:04,156 - Mean Absolute Error: 0.40066649913787833
+2024-03-26 19:16:05,748 - Number of ZIFs in Dataset: 11
+2024-03-26 19:16:05,748 - Mean Absolute Error: 0.31837656497955313
+2024-03-26 19:16:07,545 - Number of ZIFs in Dataset: 12
+2024-03-26 19:16:07,545 - Mean Absolute Error: 0.3601283073425292
+2024-03-26 19:16:09,765 - Number of ZIFs in Dataset: 13
+2024-03-26 19:16:09,765 - Mean Absolute Error: 0.28800477981567374
+2024-03-26 19:16:11,417 - Number of ZIFs in Dataset: 14
+2024-03-26 19:16:11,417 - Mean Absolute Error: 0.41975202560424796
+2024-03-26 19:16:13,147 - Number of ZIFs in Dataset: 15
+2024-03-26 19:16:13,147 - Mean Absolute Error: 0.2545466661453246
+2024-03-26 19:16:14,943 - Number of ZIFs in Dataset: 16
+2024-03-26 19:16:14,943 - Mean Absolute Error: 0.1396829843521119
+2024-03-26 19:16:16,675 - Number of ZIFs in Dataset: 17
+2024-03-26 19:16:16,679 - Mean Absolute Error: 0.11186150312423715
+2024-03-26 19:16:18,547 - Number of ZIFs in Dataset: 18
+2024-03-26 19:16:18,547 - Mean Absolute Error: 0.22015575170516977
+2024-03-26 19:16:20,446 - Number of ZIFs in Dataset: 19
+2024-03-26 19:16:20,446 - Mean Absolute Error: 0.10835680961608896
+2024-03-26 19:16:22,268 - Number of ZIFs in Dataset: 20
+2024-03-26 19:16:22,268 - Mean Absolute Error: 0.1991428494453431
+2024-03-26 19:16:23,952 - Number of ZIFs in Dataset: 21
+2024-03-26 19:16:23,952 - Mean Absolute Error: 0.01806650161743173
+2024-03-26 19:16:25,364 - Number of ZIFs in Dataset: 22
+2024-03-26 19:16:25,364 - Mean Absolute Error: 0.07029364109039316
+2024-03-26 19:16:26,969 - Number of ZIFs in Dataset: 23
+2024-03-26 19:16:26,970 - Mean Absolute Error: 0.1850170850753785
+2024-03-26 19:16:28,615 - Number of ZIFs in Dataset: 24
+2024-03-26 19:16:28,615 - Mean Absolute Error: 0.05761573314666757
+2024-03-26 19:16:30,288 - Number of ZIFs in Dataset: 25
+2024-03-26 19:16:30,288 - Mean Absolute Error: 0.09322080612182626
+2024-03-26 19:16:32,147 - Number of ZIFs in Dataset: 26
+2024-03-26 19:16:32,147 - Mean Absolute Error: 0.20761916637420663
+2024-03-26 19:16:33,916 - Number of ZIFs in Dataset: 27
+2024-03-26 19:16:33,916 - Mean Absolute Error: 0.14081678390502939
+2024-03-26 19:16:35,905 - Number of ZIFs in Dataset: 28
+2024-03-26 19:16:35,905 - Mean Absolute Error: 0.18147716522216806
+2024-03-26 19:16:37,660 - Number of ZIFs in Dataset: 29
+2024-03-26 19:16:37,660 - Mean Absolute Error: 0.04548654556274423
+2024-03-26 19:16:39,437 - Number of ZIFs in Dataset: 30
+2024-03-26 19:16:39,437 - Mean Absolute Error: 0.11586341857910165
+2024-03-26 19:16:41,228 - Number of ZIFs in Dataset: 31
+2024-03-26 19:16:41,228 - Mean Absolute Error: 0.14285645484924325
+2024-03-26 19:16:43,145 - Number of ZIFs in Dataset: 32
+2024-03-26 19:16:43,145 - Mean Absolute Error: 0.19869521856307992
+2024-03-26 19:16:44,944 - Number of ZIFs in Dataset: 33
+2024-03-26 19:16:44,944 - Mean Absolute Error: 0.0036939144134522373
+2024-03-26 19:16:46,669 - Number of ZIFs in Dataset: 34
+2024-03-26 19:16:46,669 - Mean Absolute Error: 0.23877820968627939
+2024-03-26 19:16:46,669 - ----------   Round 35     ----------
+2024-03-26 19:16:46,735 - Number of ZIFs in Dataset: 1
+2024-03-26 19:16:46,736 - Mean Absolute Error: 0.8099988746643066
+2024-03-26 19:16:46,810 - Number of ZIFs in Dataset: 2
+2024-03-26 19:16:46,810 - Mean Absolute Error: 0.1984170126914978
+2024-03-26 19:16:46,888 - Number of ZIFs in Dataset: 3
+2024-03-26 19:16:46,888 - Mean Absolute Error: 0.2905757474899292
+2024-03-26 19:16:46,969 - Number of ZIFs in Dataset: 4
+2024-03-26 19:16:46,969 - Mean Absolute Error: 0.04430246829986573
+2024-03-26 19:16:47,878 - Number of ZIFs in Dataset: 5
+2024-03-26 19:16:47,879 - Mean Absolute Error: 0.14818357944488525
+2024-03-26 19:16:49,136 - Number of ZIFs in Dataset: 6
+2024-03-26 19:16:49,136 - Mean Absolute Error: 0.14079617977142334
+2024-03-26 19:16:50,336 - Number of ZIFs in Dataset: 7
+2024-03-26 19:16:50,350 - Mean Absolute Error: 0.01729291200637817
+2024-03-26 19:16:51,548 - Number of ZIFs in Dataset: 8
+2024-03-26 19:16:51,548 - Mean Absolute Error: 0.03274322032928467
+2024-03-26 19:16:53,109 - Number of ZIFs in Dataset: 9
+2024-03-26 19:16:53,109 - Mean Absolute Error: 0.06547493219375611
+2024-03-26 19:16:54,692 - Number of ZIFs in Dataset: 10
+2024-03-26 19:16:54,692 - Mean Absolute Error: 0.15533680200576783
+2024-03-26 19:16:56,380 - Number of ZIFs in Dataset: 11
+2024-03-26 19:16:56,380 - Mean Absolute Error: 0.058314208984375004
+2024-03-26 19:16:58,115 - Number of ZIFs in Dataset: 12
+2024-03-26 19:16:58,115 - Mean Absolute Error: 0.05900234460830689
+2024-03-26 19:16:59,912 - Number of ZIFs in Dataset: 13
+2024-03-26 19:16:59,912 - Mean Absolute Error: 0.0040561008453369185
+2024-03-26 19:17:01,669 - Number of ZIFs in Dataset: 14
+2024-03-26 19:17:01,669 - Mean Absolute Error: 0.1086365532875061
+2024-03-26 19:17:03,552 - Number of ZIFs in Dataset: 15
+2024-03-26 19:17:03,552 - Mean Absolute Error: 0.024200017452239986
+2024-03-26 19:17:05,581 - Number of ZIFs in Dataset: 16
+2024-03-26 19:17:05,581 - Mean Absolute Error: 0.01554280042648315
+2024-03-26 19:17:07,741 - Number of ZIFs in Dataset: 17
+2024-03-26 19:17:07,742 - Mean Absolute Error: 0.02268456935882568
+2024-03-26 19:17:09,441 - Number of ZIFs in Dataset: 18
+2024-03-26 19:17:09,441 - Mean Absolute Error: 0.013621444702148433
+2024-03-26 19:17:11,154 - Number of ZIFs in Dataset: 19
+2024-03-26 19:17:11,154 - Mean Absolute Error: 0.04913150787353515
+2024-03-26 19:17:12,866 - Number of ZIFs in Dataset: 20
+2024-03-26 19:17:12,885 - Mean Absolute Error: 0.1393127691745758
+2024-03-26 19:17:14,600 - Number of ZIFs in Dataset: 21
+2024-03-26 19:17:14,600 - Mean Absolute Error: 0.005052859783172603
+2024-03-26 19:17:16,532 - Number of ZIFs in Dataset: 22
+2024-03-26 19:17:16,532 - Mean Absolute Error: 0.024257247447967534
+2024-03-26 19:17:18,328 - Number of ZIFs in Dataset: 23
+2024-03-26 19:17:18,328 - Mean Absolute Error: 0.03487711668014526
+2024-03-26 19:17:20,157 - Number of ZIFs in Dataset: 24
+2024-03-26 19:17:20,157 - Mean Absolute Error: 0.013497586250305171
+2024-03-26 19:17:21,543 - Number of ZIFs in Dataset: 25
+2024-03-26 19:17:21,543 - Mean Absolute Error: 0.01619613647460938
+2024-03-26 19:17:23,252 - Number of ZIFs in Dataset: 26
+2024-03-26 19:17:23,252 - Mean Absolute Error: 0.007084612846374516
+2024-03-26 19:17:24,878 - Number of ZIFs in Dataset: 27
+2024-03-26 19:17:24,878 - Mean Absolute Error: 0.05032395839691162
+2024-03-26 19:17:26,301 - Number of ZIFs in Dataset: 28
+2024-03-26 19:17:26,301 - Mean Absolute Error: 0.04015337944030761
+2024-03-26 19:17:28,085 - Number of ZIFs in Dataset: 29
+2024-03-26 19:17:28,085 - Mean Absolute Error: 0.0192810845375061
+2024-03-26 19:17:29,937 - Number of ZIFs in Dataset: 30
+2024-03-26 19:17:29,956 - Mean Absolute Error: 0.012546236515045162
+2024-03-26 19:17:31,658 - Number of ZIFs in Dataset: 31
+2024-03-26 19:17:31,658 - Mean Absolute Error: 0.002898628711700435
+2024-03-26 19:17:33,541 - Number of ZIFs in Dataset: 32
+2024-03-26 19:17:33,542 - Mean Absolute Error: 0.05777787685394287
+2024-03-26 19:17:35,072 - Number of ZIFs in Dataset: 33
+2024-03-26 19:17:35,096 - Mean Absolute Error: 0.007868344783782955
+2024-03-26 19:17:36,606 - Number of ZIFs in Dataset: 34
+2024-03-26 19:17:36,606 - Mean Absolute Error: 0.05141776323318481
+2024-03-26 19:17:36,608 - -------- Optimization Execution Time Is: 00:28:38
