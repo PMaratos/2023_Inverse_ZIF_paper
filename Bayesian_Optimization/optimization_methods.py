@@ -5,8 +5,8 @@ from sklearn.gaussian_process.kernels import ConstantKernel
 from sklearn.model_selection import KFold
 
 # Acquisition functions
-from Bayesian_Optimization.acquisition_functions import ExpectedImprovementCalculator
-from Bayesian_Optimization.selection_strategy    import GreedySelectionStrategy
+from acquisition_functions import ExpectedImprovementCalculator
+from selection_strategy    import GreedySelectionStrategy
 
 # Metric imports
 from sklearn import metrics

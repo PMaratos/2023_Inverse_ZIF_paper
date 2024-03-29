@@ -1,13 +1,20 @@
 import os
+import sys
+import inspect
 from datetime import datetime
 import argparse
 import logging
 import pandas as pd
-from Bayesian_Optimization.statistical_tests import Statistical_Tests
-from ga_inverse import readData
+from statistical_tests import Statistical_Tests
 from xgboost import XGBRegressor
-from Bayesian_Optimization.optimization_methods import BayesianOptimization
-from Bayesian_Optimization.plot_optimization import plot_logD_trainSize_perMethod
+from optimization_methods import BayesianOptimization
+from plot_optimization import plot_logD_trainSize_perMethod
+
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir) 
+
+from ga_inverse import readData
 
 def plot_data_exists(data_path) -> bool:
 
