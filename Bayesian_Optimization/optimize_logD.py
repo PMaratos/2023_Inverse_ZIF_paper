@@ -50,7 +50,7 @@ if __name__ == "__main__":
     currDateTime = datetime.now().strftime('Optimization_%d-%m-%Y-%H-%M-%S.%f')[:-3]
 
     # Create a directory to store the results of the experiments
-    resultsPath = os.path.join(os.curdir,"Experiments")
+    resultsPath = os.path.join("../","Experiments")
     if not os.path.exists(resultsPath):
         os.mkdir(resultsPath)
 
