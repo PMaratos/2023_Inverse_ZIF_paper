@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from abc import ABC
-import acquisition_functions as af
+import Bayesian_Optimization.acquisition_functions as af
 
 class SelectionStrategy(ABC):
     def select_next_instance():

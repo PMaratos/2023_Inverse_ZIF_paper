@@ -3,11 +3,11 @@ from datetime import datetime
 import argparse
 import logging
 import pandas as pd
-from statistical_tests import Statistical_Tests
+from Bayesian_Optimization.statistical_tests import Statistical_Tests
 from ga_inverse import readData
 from xgboost import XGBRegressor
-from optimization_methods import BayesianOptimization
-from plot_optimization import plot_logD_trainSize_perMethod
+from Bayesian_Optimization.optimization_methods import BayesianOptimization
+from Bayesian_Optimization.plot_optimization import plot_logD_trainSize_perMethod
 
 def plot_data_exists(data_path) -> bool:
 
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     # Create a directory to store the results of the experiments
     resultsPath = os.path.join(os.curdir,"Experiments")
     if not os.path.exists(resultsPath):
-        os.mkdir("Experiments")
+        os.mkdir(resultsPath)
 
     trainData    = parsed_args.train
     bayesianData = parsed_args.bayesian
