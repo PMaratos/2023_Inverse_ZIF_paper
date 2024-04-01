@@ -108,6 +108,10 @@ if __name__ == "__main__":
         print("P-Value of Paired T Test Between Bayesian Optimzation and Random Order: " + str(stat_test.pvalue))
         print("Statistic Value: " + str(stat_test.statistic))
 
+        plot_logD_trainSize_perMethod(frame1=bo_result, frame2=random_results, method1_v_method2_stats=bo_v_random_stats, label1='Bayesian Optimization', label2='Random Order', on_off='True',
+                                    xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD',
+                                    fileName=os.path.join(curRunResultsPath, "plot_LogD-#Training_Points.png"), marker_colors=['y', 'g'])
+
     serial_results = None
     bo_v_serial_stats = None
     if plot_data_exists(serialData):
@@ -116,7 +120,6 @@ if __name__ == "__main__":
         bo_v_serial_stats = {"pvalue": stat_test.pvalue, "statistic": stat_test.statistic}
         print("P-Value of Paired T Test Between Bayesian Optimzation and Serial Order: " + str(stat_test.pvalue))
 
-    plot_logD_trainSize_perMethod(bo_result, random_results, serial_results, bo_v_random_stats, bo_v_serial_stats, 'Bayesian Optimization', 'Random Order','Researcher Order', 'True',
-             -1, 75, -0.5, 6.5, 18, 1.5, 2, 2, 2, 8,
-             'Number of ZIFs in the training dataset', 'Mean absolute error of log$\it{D}$',
-             os.path.join(curRunResultsPath, "plot_LogD-#Training_Points.png"), marker_colors=['y', 'g', 'r'])
+        plot_logD_trainSize_perMethod(frame1=bo_result, frame2=serial_results, method1_v_method2_stats=bo_v_serial_stats, label1='Bayesian Optimization', label2='Serial Order', on_off='True',
+                                    xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD',
+                                    fileName=os.path.join(curRunResultsPath, "plot_LogD-#Training_Points.png"), marker_colors=['y', 'r'])
