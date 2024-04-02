@@ -12,17 +12,20 @@ class Logger(logging.Logger):
             handler.setFormatter(logging.Formatter(formatting))
             self.addHandler(handler)
 
-    def debug(self, message, *args, **kwargs):
-        super().debug(message, *args, **kwargs)
+    def createLogMessage(self, prefix, message):
+        return "[" + prefix + "] " + message
 
-    def info(self, message, *args, **kwargs):
-        super().info(message, *args, **kwargs)
+    def debug(self, prefix, message, *args, **kwargs):
+        super().debug(self.createLogMessage(prefix,message), *args, **kwargs)
 
-    def warn(self, message, *args, **kwargs):
-        super().warn(message, *args, **kwargs)
+    def info(self, prefix, message, *args, **kwargs):
+        super().info(self.createLogMessage(prefix,message), *args, **kwargs)
 
-    def error(self, message, *args, **kwargs):
-        super().error(message, *args, **kwargs)
+    def warn(self, prefix, message, *args, **kwargs):
+        super().warn(self.createLogMessage(prefix,message), *args, **kwargs)
 
-    def fatal(self, message, *args, **kwargs):
-        super().critical(message, *args, **kwargs)
+    def error(self, prefix, message, *args, **kwargs):
+        super().error(self.createLogMessage(prefix,message), *args, **kwargs)
+
+    def fatal(self, prefix, message, *args, **kwargs):
+        super().critical(self.createLogMessage(prefix,message), *args, **kwargs)
