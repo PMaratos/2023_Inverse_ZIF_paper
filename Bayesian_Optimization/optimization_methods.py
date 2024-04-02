@@ -1,27 +1,17 @@
-# Surrogate model imports
+import math
+import numpy as np
+import pandas as pd
+import logging
+import time
+from abc import ABC
+from datetime import timedelta
+from sklearn import metrics
+from acquisition_functions import ExpectedImprovementCalculator
+from selection_strategy    import GreedySelectionStrategy
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF
 from sklearn.gaussian_process.kernels import ConstantKernel
 from sklearn.model_selection import KFold
-
-# Acquisition functions
-from acquisition_functions import ExpectedImprovementCalculator
-from selection_strategy    import GreedySelectionStrategy
-
-# Metric imports
-from sklearn import metrics
-import math
-
-# Data handling imports
-import numpy as np
-import pandas as pd
-
-# Logging
-import logging
-
-from sklearn.model_selection import LeavePOut
-
-from abc import ABC
 
 class OptimizationFactory(ABC):
     def optimizeModel():
@@ -40,19 +30,21 @@ class BayesianOptimization(OptimizationFactory):
             X_featureNames:     The names of the training features.
             Y_featureNames:     The names of the target features.
         """
-
+        optimization_start_time = time.time()
         # Make a list with all unique ZIF names.
         uniqueZIFs = zifs.type.unique()
 
         # Initiate a gaussian process model
         gp_model = GaussianProcessRegressor(kernel=ConstantKernel(1.0) * RBF(1.0))
 
+        # Count the total number that the kfold process takes in seconds
+        total_kfold_elapsed_time = 0.0
 
         # Initialize dictionary of errors per training data size
         maePerTrainSize = {}
         for leaveOutZifIndex in range(len(uniqueZIFs)):
             
-            logger.info("----------   Round " + str(leaveOutZifIndex + 1) + "     ----------")
+            logger.info("[Outer Loop]----------   Round " + str(leaveOutZifIndex + 1) + "     ----------")
 
             trainZIFnames = np.delete(uniqueZIFs, leaveOutZifIndex)
             testZIFname   = uniqueZIFs[leaveOutZifIndex]
@@ -67,14 +59,15 @@ class BayesianOptimization(OptimizationFactory):
 
                 if selectRandomSample < 5:
                     # Sample 5 random ZIFs.
-                    startingZIF  = np.random.choice(trainZIFnames, size=1, replace=False)[0]
-                    selectedZIF  = trainZIFs[(trainZIFs['type'] == startingZIF)]
+                    randomZifName  = np.random.choice(trainZIFnames, size=1, replace=False)[0]
+                    selectedZIF  = trainZIFs[(trainZIFs['type'] == randomZifName)]
 
                     # Remove the sellected ZIF from the list of available for training
-                    trainZIFs     = trainZIFs[(trainZIFs['type']) != startingZIF]
-                    trainZIFnames = np.delete(trainZIFnames, np.where(trainZIFnames == startingZIF))
+                    trainZIFs     = trainZIFs[(trainZIFs['type']) != randomZifName]
+                    trainZIFnames = np.delete(trainZIFnames, np.where(trainZIFnames == randomZifName))
 
                     selectRandomSample += 1
+                    logger.info("[Random Selection] Randomly Selected Zif: " + randomZifName)
                 else:
                     # Calculate the expected improvement values for all candidate zifs
                     eiCalculator = ExpectedImprovementCalculator(factor=0)
@@ -88,7 +81,7 @@ class BayesianOptimization(OptimizationFactory):
                     # Remove the sellected ZIF from the list of available for training
                     trainZIFs = trainZIFs[(trainZIFs['type']) != eiName]
                     trainZIFnames = np.delete(trainZIFnames, np.where(trainZIFnames == eiName))
-
+                    logger.info("[Expected Improvement Selection] Greedily Selected Zif: " + eiName)
                 # Add the next ZIF to the currently used data.
                 currentData = pd.concat([currentData, selectedZIF], axis=0, ignore_index=True)
 
@@ -104,6 +97,8 @@ class BayesianOptimization(OptimizationFactory):
 
                 # Trying KFold Method
                 if trainLength >= 5:
+                    logger.info("[Bayesian] Start of inner KFold method in order to compute the MAE of the model in the currently known zif space.")                    
+
                     averageMAE = 0
                     
                     leaveOutNum = None
@@ -112,7 +107,9 @@ class BayesianOptimization(OptimizationFactory):
                     else:
                         leaveOutNum = 10
 
+                    logger.info("[Inner KFold Loop] Starting A " + str(leaveOutNum) + "Fold Process To Compute The Average MAE of the model.")
                     kf = KFold(n_splits=leaveOutNum)
+                    kFold_start_time = time.time()
                     for train_index, test_index in kf.split(currentBatchNames):
                         # trainZifNames  = currentBatchNames[train_index]
                         testZifNames   = currentBatchNames[test_index].tolist()
@@ -131,7 +128,11 @@ class BayesianOptimization(OptimizationFactory):
                         y_batchPred = model.predict(x_batchTest)
 
                         averageMAE += metrics.mean_absolute_error(y_batchTest,y_batchPred)
-
+                    kFold_elapsed_time = time.time() - kFold_start_time
+                    total_kfold_elapsed_time += kFold_elapsed_time
+                    logger.info("[Inner KFold Loop] Finished The " + str(leaveOutNum) + "Fold Process In " + 
+                                time.strftime("%H:%M:%S", time.gmtime(kFold_elapsed_time)) + " time.")
+                    
                     averageMAE /= trainLength
                     
                     minMae = min(currentBayesianMae)
@@ -152,9 +153,6 @@ class BayesianOptimization(OptimizationFactory):
 
                 y_pred  = model.predict(x_test)
 
-                # best_y = np.max(y_pred)
-                # best_y = np.min(y_pred)
-
                 mae = metrics.mean_absolute_error(y_test, y_pred)
 
                 if (sizeOfTrainZIFs + 1) not in maePerTrainSize.keys():
@@ -163,9 +161,15 @@ class BayesianOptimization(OptimizationFactory):
                 # Append mae to the corresponding dictionary list
                 maePerTrainSize[(sizeOfTrainZIFs + 1)].append(mae)
 
-                logger.info("Number of ZIFs in Dataset: " + str((sizeOfTrainZIFs + 1)))
-                logger.info("Mean Absolute Error: " + str(mae))
+                logger.info("[Outer Loop] Number of ZIFs in Dataset: " + str((sizeOfTrainZIFs + 1)))
+                logger.info("[Outer Loop] Mean Absolute Error: " + str(mae))
 
+        total_elapsed_time = time.time() - optimization_start_time
+        logger.info("[Optimization] Execution Time Is: " + str(timedelta(seconds=total_elapsed_time)))
+        
+        logger.info("[Optimization] The kFold process takes " +
+                    str(total_kfold_elapsed_time * 100 / total_elapsed_time) +
+                    "%% of the total optimization time.")
 
         result_df = pd.DataFrame()
         result_df["sizeOfTrainingSet"] = np.array([iCnt for iCnt in sorted(maePerTrainSize.keys()) ])
