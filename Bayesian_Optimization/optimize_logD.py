@@ -1,10 +1,11 @@
 import os
 import sys
 import inspect
-from datetime import datetime
 import argparse
 import logging
+from logger import Logger
 import pandas as pd
+from datetime import datetime
 from statistical_tests import Statistical_Tests
 from xgboost import XGBRegressor
 from optimization_methods import BayesianOptimization
@@ -56,30 +57,26 @@ if __name__ == "__main__":
 
     currDateTime = datetime.now().strftime('Optimization_%d-%m-%Y-%H-%M-%S.%f')[:-3]
 
-    # Create a directory to store the results of the experiments
-    resultsPath = os.path.join("../","Experiments")
-    if not os.path.exists(resultsPath):
-        os.mkdir(resultsPath)
-
     trainData    = parsed_args.train
     bayesianData = parsed_args.bayesian
     randomData   = parsed_args.random
     serialData   = parsed_args.serial
 
+     # Create a directory to store the results of the experiments
+    resultsPath = os.path.join("../","Experiments")
+    if not os.path.exists(resultsPath):
+        os.mkdir(resultsPath)
+
     # Create a specific results direcotry for this run of BO.
     curRunResultsPath = os.path.join(resultsPath,currDateTime)
     os.mkdir(curRunResultsPath)
+
+    logger = Logger(name = 'BO_logger', level=logging.DEBUG,
+                    fileName=os.path.join(curRunResultsPath, currDateTime + ".log"))
+
     if plot_data_exists(bayesianData):
         bo_result = pd.read_csv(bayesianData)
     else:
-
-        # Logging Configuration TODO Create a separate logger class.
-        logger = logging.getLogger('BO_logger')
-        logger.setLevel(level=logging.DEBUG)
-
-        fileHandler  = logging.FileHandler(os.path.join(curRunResultsPath, currDateTime + ".log"))
-        fileHandler.setFormatter(logging.Formatter('%(asctime)s - %(message)s'))
-        logger.addHandler(fileHandler)
 
         zifs, featureNames, targetNames = data_preparation(trainData)
 
