@@ -65,6 +65,7 @@ class BayesianOptimization(OptimizationFactory):
             maeConvergenceList = []
             maeConverged       = False
             convergedDataset   = None
+            convergedNumOfData = 0
 
             for sizeOfTrainZIFs in range(len(uniqueZIFs) - 1):
 
@@ -173,7 +174,7 @@ class BayesianOptimization(OptimizationFactory):
                     if len(maeConvergenceList) == 5:
 
                         # Save th ecurrent snapshot of the data to a csv file. Use a random name to avoid overwriting
-                        convergedDatasetName = "convergedDataset_" + str(sizeOfTrainZIFs + 1) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
+                        convergedDatasetName = "convergedDataset_" + str(convergedNumOfData) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
                         convergedDataset.to_csv(os.path.join(save_path,convergedDatasetName), index=False)
                         maeConverged = True
 
@@ -184,6 +185,7 @@ class BayesianOptimization(OptimizationFactory):
                             convergedDataset = currentData
                             convergedDataset["mae"] = mae
                             convergedDataset["tested_against"] = testZIFname
+                            convergedNumOfData = sizeOfTrainZIFs + 1
                         else:
 
                             if abs(mae - maeConvergenceList[-1]) <= 0.15:
@@ -191,6 +193,7 @@ class BayesianOptimization(OptimizationFactory):
                             else:
                                 maeConvergenceList = []
                                 convergedDataset   = None
+                                convergedNumOfData = 0
                     
 
                 if (sizeOfTrainZIFs + 1) not in maePerTrainSize.keys():
