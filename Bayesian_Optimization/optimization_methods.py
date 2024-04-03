@@ -174,7 +174,7 @@ class BayesianOptimization(OptimizationFactory):
                     if len(maeConvergenceList) == 5:
 
                         # Save th ecurrent snapshot of the data to a csv file. Use a random name to avoid overwriting
-                        convergedDatasetName = "convergedDataset_" + str(convergedNumOfData) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
+                        convergedDatasetName = str(leaveOutZifIndex + 1) + ". convergedDataset_" + str(convergedNumOfData) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
                         convergedDataset.to_csv(os.path.join(save_path,convergedDatasetName), index=False)
                         maeConverged = True
 
