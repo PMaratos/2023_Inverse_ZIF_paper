@@ -1,7 +1,10 @@
+import os
 import math
 import numpy as np
 import pandas as pd
 import time
+import string
+import random
 from logger import Logger
 from abc import ABC
 from datetime import timedelta
@@ -24,7 +27,7 @@ class BayesianOptimization(OptimizationFactory):
         self.logger = logger
         self.logPrefix = "Bayesian Optimization"
 
-    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list) -> pd.DataFrame:
+    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , save_path : str) -> pd.DataFrame:
 
         """ Bayesian Optimization As A Method For Optimizing MAE of LogD 
             model:              The model to be optimized.
@@ -58,6 +61,11 @@ class BayesianOptimization(OptimizationFactory):
             selectRandomSample = 0
             currentData   = pd.DataFrame()
             currentBayesianMae = []
+
+            maeConvergenceList = []
+            maeConverged       = False
+            convergedDataset   = None
+
             for sizeOfTrainZIFs in range(len(uniqueZIFs) - 1):
 
                 if selectRandomSample < 5:
@@ -160,6 +168,30 @@ class BayesianOptimization(OptimizationFactory):
                 y_pred  = model.predict(x_test)
 
                 mae = metrics.mean_absolute_error(y_test, y_pred)
+
+                if not maeConverged:
+                    if len(maeConvergenceList) == 5:
+
+                        # Save th ecurrent snapshot of the data to a csv file. Use a random name to avoid overwriting
+                        convergedDatasetName = "convergedDataset_" + str(sizeOfTrainZIFs + 1) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
+                        convergedDataset.to_csv(os.path.join(save_path,convergedDatasetName), index=False)
+                        maeConverged = True
+
+                    else:
+
+                        if not maeConvergenceList:
+                            maeConvergenceList.append(mae)
+                            convergedDataset = currentData
+                            convergedDataset["mae"] = mae
+                            convergedDataset["tested_against"] = testZIFname
+                        else:
+
+                            if abs(mae - maeConvergenceList[-1]) <= 0.15:
+                                maeConvergenceList.append(mae)
+                            else:
+                                maeConvergenceList = []
+                                convergedDataset   = None
+                    
 
                 if (sizeOfTrainZIFs + 1) not in maePerTrainSize.keys():
                     maePerTrainSize[(sizeOfTrainZIFs + 1)] = []
