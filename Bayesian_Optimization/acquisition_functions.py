@@ -1,4 +1,5 @@
 import numpy as np
+from logger import Logger
 from scipy.stats import norm
 from abc import ABC
 
@@ -7,7 +8,9 @@ class AcquisitionCalculator(ABC):
         pass
     
 class ExpectedImprovementCalculator(AcquisitionCalculator):
-   def __init__(self, factor):
+   def __init__(self, factor, logger: Logger):
+      self.logger = logger
+      self.logPrefix = "Expected Improvement Calculator"
       self.factor = factor
 
    def get_acquisition_function(self, x, featureNames, model, best_y):
@@ -24,6 +27,8 @@ class ExpectedImprovementCalculator(AcquisitionCalculator):
          model:       The trained model which maps instances in the x[featureNames] subspace to an estimate of the target variable y (usually a Gaussian Process)
          best_y:      The best target value y found so far. (Could be minimum or maximum depending on the problem.)
          factor:      A factor used as a weight on the exploration-exploitation tradeoff."""
+      
+      self.logger.info(self.logPrefix, "Starting Calculation of Expected Improvement values.")
 
       x_global = x[featureNames].to_numpy()
 
@@ -40,6 +45,8 @@ class ExpectedImprovementCalculator(AcquisitionCalculator):
 
       # Expeted Improvement Considering the mean score of a ZIF for all gasses.
       x["expectedImprovement"] = ei.tolist()
+
+      self.logger.info(self.logPrefix, "Finished Calculation of Expected Improvement values.")
 
       # Expected Improvement Considering the gass as a zif feature
       return ei

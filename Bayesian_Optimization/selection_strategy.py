@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from logger import Logger
 from abc import ABC
 
 class SelectionStrategy(ABC):
@@ -7,16 +8,29 @@ class SelectionStrategy(ABC):
         pass
 
 class GreedySelectionStrategy(SelectionStrategy):
-    def __init__(self):
-        pass
+    def __init__(self, logger : Logger):
+        self.logger    =  logger
+        self.logPrefix = "Greedy Selection Strategy"
 
     def select_next_instance(self, acquisition_values : np.array, candidate_instances: pd.DataFrame):
-        return candidate_instances.iloc[np.argmax(acquisition_values)]["type"]
+        selected = candidate_instances.iloc[np.argmax(acquisition_values)]["type"] 
+        self.logger.info(self.logPrefix, "Greedily Selected: "+ str(selected))
+        return selected
                 
 class RandomSelectionStrategy(SelectionStrategy):
-    def select_next_instance(self, acquisition_values : np.array, candidate_instances: pd.DataFrame):
-        return np.random.choice(candidate_instances.type.unique(), size=1, replace=False)[0]
+    def __init__(self, logger : Logger):
+        self.logger    = logger
+        self.logPrefix = "Random Selection Strategy"
+
+    def select_next_instance(self, candidate_instances: pd.DataFrame):
+        selected = np.random.choice(candidate_instances, size=1, replace=False)[0]
+        self.logger.info(self.logPrefix, "Randomly Selected Zif: " + selected)
+        return selected
 
 class ProbabilisticSelectionStrategy(SelectionStrategy):
+
+    def __init__(self):
+        self.logPrefix = "Probabilistic Selection Strategy"
+
     def select_next_instance(self, acquisition_values : np.array, candidate_instances: pd.DataFrame):
         raise NotImplementedError("Vassili kanto!")

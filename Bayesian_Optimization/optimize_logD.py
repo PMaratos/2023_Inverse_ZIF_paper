@@ -87,14 +87,14 @@ if __name__ == "__main__":
                             random_state=6410
                             )
         # Instantiate Bayesian Optimizer
-        bayesianOpt = BayesianOptimization()
+        bayesianOpt = BayesianOptimization(logger)
 
         # Get the optimized model
-        bo_result = bayesianOpt.optimizeModel(XGBR, zifs, featureNames, targetNames,logger)
+        bo_result = bayesianOpt.optimizeModel(XGBR, zifs, featureNames, targetNames)
 
         bo_result.to_csv(os.path.join(curRunResultsPath,"bo.csv"), index=False)
     
-    pairedtTest = Statistical_Tests("pairedT")
+    pairedtTest = Statistical_Tests("pairedT", logger)
 
     random_results = None
     bo_v_random_stats = None
