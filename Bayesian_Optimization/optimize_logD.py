@@ -71,6 +71,10 @@ if __name__ == "__main__":
     curRunResultsPath = os.path.join(resultsPath,currDateTime)
     os.mkdir(curRunResultsPath)
 
+    # Create a specific directory for the intermediate saved datasets
+    savedDataPath = os.path.join(curRunResultsPath, "saved_datasets")
+    os.mkdir(savedDataPath)
+
     logger = Logger(name = 'BO_logger', level=logging.DEBUG,
                     fileName=os.path.join(curRunResultsPath, currDateTime + ".log"))
 
@@ -90,7 +94,7 @@ if __name__ == "__main__":
         bayesianOpt = BayesianOptimization(logger)
 
         # Get the optimized model
-        bo_result = bayesianOpt.optimizeModel(XGBR, zifs, featureNames, targetNames)
+        bo_result = bayesianOpt.optimizeModel(XGBR, zifs, featureNames, targetNames, savedDataPath)
 
         bo_result.to_csv(os.path.join(curRunResultsPath,"bo.csv"), index=False)
     
