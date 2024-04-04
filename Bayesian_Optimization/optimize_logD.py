@@ -100,6 +100,11 @@ if __name__ == "__main__":
     
     pairedtTest = Statistical_Tests("pairedT", logger)
 
+    if (not plot_data_exists(randomData)) and (not plot_data_exists(serialData)):
+        plot_logD_trainSize_perMethod(frame1=bo_result, label1='Bayesian Optimization', on_off='True',
+                                    xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD',
+                                    fileName=os.path.join(curRunResultsPath, "plot_LogD-#Training_Points.png"), marker_colors=['y'])
+
     random_results = None
     bo_v_random_stats = None
     if plot_data_exists(randomData):
