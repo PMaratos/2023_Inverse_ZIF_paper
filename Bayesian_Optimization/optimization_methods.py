@@ -49,6 +49,10 @@ class BayesianOptimization(OptimizationFactory):
         maePerTrainSize = {}
         for leaveOutZifIndex in range(len(uniqueZIFs)):
             
+            roundPath = os.path.join(save_path, "Round " + str(leaveOutZifIndex + 1))
+            os.mkdir(roundPath)
+            roundMae = []
+
             self.logger.info(self.logPrefix,
                         "----------   Round " + str(leaveOutZifIndex + 1) + "     ----------")
 
@@ -175,7 +179,7 @@ class BayesianOptimization(OptimizationFactory):
 
                         # Save th ecurrent snapshot of the data to a csv file. Use a random name to avoid overwriting
                         convergedDatasetName = str(leaveOutZifIndex + 1) + ".convergedDataset_" + str(convergedNumOfData) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
-                        convergedDataset.to_csv(os.path.join(save_path,convergedDatasetName), index=False)
+                        convergedDataset.to_csv(os.path.join(roundPath,convergedDatasetName), index=False)
                         maeConverged = True
 
                     else:
@@ -207,6 +211,17 @@ class BayesianOptimization(OptimizationFactory):
                 self.logger.info(self.logPrefix,
                             "Mean Absolute Error: " + str(mae))
 
+                roundMae.append(mae)
+
+            self.logger.info(self.logPrefix,"Writting results of Round " + str(leaveOutZifIndex + 1) + " to file.")
+
+            intermediate_df = pd.DataFrame()
+            intermediate_df["sizeOfTrainingSet"]       = range(1,len(roundMae))
+            intermediate_df["averageError"]            = roundMae
+            intermediate_df["stdErrorOfMeanError"]     = []
+            intermediate_df["stdDeviationOfMeanError"] = []
+            intermediate_df.to_csv(os.path.join(roundPath,"full_round_" + str(leaveOutZifIndex + 1) + ".csv"), index=False)
+
         total_elapsed_time = time.time() - optimization_start_time
         self.logger.info(self.logPrefix,
                     "Execution Time Is: " + str(timedelta(seconds=total_elapsed_time)))
@@ -217,8 +232,9 @@ class BayesianOptimization(OptimizationFactory):
                     "%% of the total optimization time.")
 
         result_df = pd.DataFrame()
-        result_df["sizeOfTrainingSet"] = np.array([iCnt for iCnt in sorted(maePerTrainSize.keys()) ])
-        result_df["averageError"] = [ np.array(maePerTrainSize[iCnt]).mean() for iCnt in maePerTrainSize.keys() ]
-        result_df["stdErrorOfMeanError"] = [ np.array(maePerTrainSize[iCnt]).std() / math.sqrt(iCnt) for iCnt in maePerTrainSize.keys() ]
+        result_df["sizeOfTrainingSet"]       = np.array([iCnt for iCnt in sorted(maePerTrainSize.keys()) ])
+        result_df["averageError"]            = [ np.array(maePerTrainSize[iCnt]).mean() for iCnt in maePerTrainSize.keys() ]
+        result_df["stdErrorOfMeanError"]     = [ np.array(maePerTrainSize[iCnt]).std() / math.sqrt(iCnt) for iCnt in maePerTrainSize.keys() ]
+        result_df["stdDeviationOfMeanError"] = [ np.array(maePerTrainSize[iCnt]).std()  for iCnt in maePerTrainSize.keys() ]
 
         return result_df
