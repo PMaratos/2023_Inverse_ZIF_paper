@@ -41,12 +41,6 @@ class ExpectedImprovementCalculator(AcquisitionCalculator):
       # Minimization Problem
       z = np.divide(np.subtract(best_y - factor, y_pred), y_std)
       ei = (np.subtract(best_y - factor, y_pred + factor) * norm.cdf(z)) + (y_std * norm.pdf(z))
-
-
-      # Expeted Improvement Considering the mean score of a ZIF for all gasses.
-      x["expectedImprovement"] = ei.tolist()
-
       self.logger.info(self.logPrefix, "Finished Calculation of Expected Improvement values.")
 
-      # Expected Improvement Considering the gass as a zif feature
       return ei
