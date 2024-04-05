@@ -188,7 +188,7 @@ class BayesianOptimization(OptimizationFactory):
                             convergedNumOfData = sizeOfTrainZIFs + 1
                         else:
 
-                            if abs(mae - maeConvergenceList[-1]) <= 0.15:
+                            if  (mae <= 1.2) and (mae - maeConvergenceList[0] <= maeConvergenceList[0] * 0.2):
                                 maeConvergenceList.append(mae)
                             else:
                                 maeConvergenceList = []
