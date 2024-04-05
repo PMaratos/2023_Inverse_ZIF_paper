@@ -3,7 +3,7 @@ import logging
 
 class Logger(logging.Logger):
 
-    def __init__(self, name, level=logging.NOTSET, output="all", filePath='./logger.log',
+    def __init__(self, name, level=logging.NOTSET, output="filestream", filePath='./logger.log',
                  formatting="%(asctime)s - %(levelname)s - %(message)s"):
         
         super().__init__(name, level)
