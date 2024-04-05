@@ -49,7 +49,7 @@ class BayesianOptimization(OptimizationFactory):
         maePerTrainSize = {}
         for leaveOutZifIndex in range(len(uniqueZIFs)):
             
-            roundPath = os.path.join(save_path, "Round " + str(leaveOutZifIndex + 1))
+            roundPath = os.path.join(save_path, "Round_" + str(leaveOutZifIndex + 1))
             os.mkdir(roundPath)
             roundMae = []
 
