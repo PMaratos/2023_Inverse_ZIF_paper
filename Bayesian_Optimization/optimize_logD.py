@@ -53,6 +53,7 @@ if __name__ == "__main__":
     parser.add_argument('-b', '--bayesian', help='A file containing the logD data acquired by adding zifs using the bayesian optimization mehtod.', default='bo.csv')
     parser.add_argument('-r', '--random',   help='A file containing the logD data acquired by adding zifs in random order.', default='random.csv')
     parser.add_argument('-s', '--serial',   help='A file containing the logD data acquired by adding zifs in a specific serial order.', default='serial.csv')
+    parser.add_argument('-o', '--output',   help='Whether the outpout should be printed on a stdout or a file or both.', default='all')
     parsed_args = parser.parse_args() # Actually parse
 
     currDateTime = datetime.now().strftime('Optimization_%d-%m-%Y-%H-%M-%S.%f')[:-3]
@@ -61,6 +62,7 @@ if __name__ == "__main__":
     bayesianData = parsed_args.bayesian
     randomData   = parsed_args.random
     serialData   = parsed_args.serial
+    output       = parsed_args.output
 
      # Create a directory to store the results of the experiments
     resultsPath = os.path.join("../","Experiments")
@@ -75,8 +77,8 @@ if __name__ == "__main__":
     savedDataPath = os.path.join(curRunResultsPath, "saved_datasets")
     os.mkdir(savedDataPath)
 
-    logger = Logger(name = 'BO_logger', level=logging.DEBUG,
-                    fileName=os.path.join(curRunResultsPath, currDateTime + ".log"))
+    logger = Logger(name = 'BO_logger', level=logging.DEBUG, output=output,
+                    filePath=os.path.join(curRunResultsPath, currDateTime + ".log"))
 
     if plot_data_exists(bayesianData):
         bo_result = pd.read_csv(bayesianData)

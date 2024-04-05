@@ -1,16 +1,24 @@
+import sys
 import logging
 
 class Logger(logging.Logger):
 
-    def __init__(self, name, level=logging.NOTSET, fileName=None, formatting="%(asctime)s - %(levelname)s - %(message)s"):
+    def __init__(self, name, level=logging.NOTSET, output="all", filePath='./logger.log',
+                 formatting="%(asctime)s - %(levelname)s - %(message)s"):
         
         super().__init__(name, level)
         self.extra_info = None
 
-        if fileName is not None:
-            handler = logging.FileHandler(filename=fileName)            
+        if output == "filestream" or output == "all":
+            handler = logging.FileHandler(filename=filePath)            
             handler.setFormatter(logging.Formatter(formatting))
             self.addHandler(handler)
+        
+        if output == 'stdout' or output == "all":
+            handler = logging.StreamHandler(sys.stdout)
+            handler.setFormatter(logging.Formatter(formatting))
+            self.addHandler(handler)
+
 
     def createLogMessage(self, prefix, message):
         return "[" + prefix + "] " + message
