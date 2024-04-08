@@ -205,7 +205,7 @@ class BayesianOptimization(OptimizationFactory):
                         for key, value in bestPerformingData.items():
                             bestPerformingData[key]["stop_criterion"] = stopCriterion
                             bestPerformingDataName = "Round_" + str(leaveOutZifIndex + 1) + "_" + "Dataset_No_" + str(key) + "bestPerformingDataset_" + str(len(value.type)) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
-                            bestPerformingData.to_csv(os.path.join(roundPath,bestPerformingDataName), index=False)
+                            bestPerformingData[key].to_csv(os.path.join(roundPath,bestPerformingDataName), index=False)
 
 
                 if (sizeOfTrainZIFs + 1) not in maePerTrainSize.keys():
