@@ -204,7 +204,7 @@ class BayesianOptimization(OptimizationFactory):
                         # Save th ecurrent snapshot of the data to a csv file. Use a random name to avoid overwriting
                         for key, value in bestPerformingData.items():
                             bestPerformingData[key]["stop_criterion"] = stopCriterion
-                            bestPerformingDataName = "Round_" + str(leaveOutZifIndex + 1) + "_" + "Dataset_No_" + str(key) + "bestPerformingDataset_" + str(len(value.type)) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
+                            bestPerformingDataName = "Round_" + str(leaveOutZifIndex + 1) + "_" + "Dataset_No_" + str(key) + "_best_performing_dataset_of_size_" + str(len(value.type)) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
                             bestPerformingData[key].to_csv(os.path.join(roundPath,bestPerformingDataName), index=False)
 
 
