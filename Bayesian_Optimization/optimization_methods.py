@@ -66,10 +66,10 @@ class BayesianOptimization(OptimizationFactory):
             currentData   = pd.DataFrame()
             currentBayesianMae = []
 
-            maeConvergenceList = []
-            maeConverged       = False
-            convergedDataset   = None
-            convergedNumOfData = 0
+            maeBestPerformanceList      = []
+            maeStopCriterionMet         = False
+            bestPerformingData          = None
+            bestPerformingDataSize      = 0
 
             for sizeOfTrainZIFs in range(len(uniqueZIFs) - 1):
 
@@ -152,7 +152,7 @@ class BayesianOptimization(OptimizationFactory):
                                 " --- Finished The " + str(leaveOutNum) + "Fold Process In --- " + 
                                 time.strftime("%H:%M:%S", time.gmtime(kFold_elapsed_time)) + " time.")
                     
-                    averageMAE /= trainLength
+                    averageMAE /= trainLength # TODO: Check if this is correct
                     
                     minMae = min(currentBayesianMae)
 
@@ -174,30 +174,31 @@ class BayesianOptimization(OptimizationFactory):
 
                 mae = metrics.mean_absolute_error(y_test, y_pred)
 
-                if not maeConverged:
-                    if len(maeConvergenceList) == 5:
+                if not maeStopCriterionMet:
+                    if len(maeBestPerformanceList) == 5:
 
                         # Save th ecurrent snapshot of the data to a csv file. Use a random name to avoid overwriting
-                        convergedDatasetName = str(leaveOutZifIndex + 1) + ".convergedDataset_" + str(convergedNumOfData) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
-                        convergedDataset.to_csv(os.path.join(roundPath,convergedDatasetName), index=False)
-                        maeConverged = True
+                        convergedDatasetName = str(leaveOutZifIndex + 1) + ".bestPerformingDataset_" + str(bestPerformingDataSize) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
+                        bestPerformingData.to_csv(os.path.join(roundPath,convergedDatasetName), index=False)
+                        maeStopCriterionMet = True
 
                     else:
 
-                        if not maeConvergenceList:
-                            maeConvergenceList.append(mae)
-                            convergedDataset = currentData
-                            convergedDataset["mae"] = mae
-                            convergedDataset["tested_against"] = testZIFname
-                            convergedNumOfData = sizeOfTrainZIFs + 1
+                        if not maeBestPerformanceList:
+                            maeBestPerformanceList.append(mae)
+                            bestPerformingData = currentData
+                            bestPerformingData["mae"] = mae
+                            bestPerformingData["tested_against"] = testZIFname
+                            bestPerformingDataSize = sizeOfTrainZIFs + 1
                         else:
 
-                            if  (mae <= 1.2) and (mae - maeConvergenceList[0] <= maeConvergenceList[0] * 0.2):
-                                maeConvergenceList.append(mae)
+                            # OBSOLETE? : if  (mae <= 1.2) and (mae - maeConvergenceList[0] <= maeConvergenceList[0] * 0.2):
+                            if  (mae <= 1.2) or (mae > maeBestPerformanceList[0] - maeBestPerformanceList[0] * 0.2): # If we are within our target performance  ... or we do not improve significantly                                    
+                                maeBestPerformanceList.append(mae) # move towards stopping
                             else:
-                                maeConvergenceList = []
-                                convergedDataset   = None
-                                convergedNumOfData = 0
+                                maeBestPerformanceList = []
+                                bestPerformingData     = None
+                                bestPerformingDataSize = 0
                     
 
                 if (sizeOfTrainZIFs + 1) not in maePerTrainSize.keys():
@@ -216,10 +217,10 @@ class BayesianOptimization(OptimizationFactory):
             self.logger.info(self.logPrefix,"Writting results of Round " + str(leaveOutZifIndex + 1) + " to file.")
 
             intermediate_df = pd.DataFrame()
-            intermediate_df["sizeOfTrainingSet"]       = range(1,len(roundMae))
+            intermediate_df["sizeOfTrainingSet"]       = list(range(len(roundMae)))
             intermediate_df["averageError"]            = roundMae
-            intermediate_df["stdErrorOfMeanError"]     = []
-            intermediate_df["stdDeviationOfMeanError"] = []
+            intermediate_df["stdErrorOfMeanError"]     = roundMae
+            intermediate_df["stdDeviationOfMeanError"] = roundMae
             intermediate_df.to_csv(os.path.join(roundPath,"full_round_" + str(leaveOutZifIndex + 1) + ".csv"), index=False)
 
         total_elapsed_time = time.time() - optimization_start_time
