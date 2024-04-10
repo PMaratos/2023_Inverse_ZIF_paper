@@ -185,6 +185,7 @@ class BayesianOptimization(OptimizationFactory):
                             stopCriterion = "error_threshold_reached"
                             maeStopCriterionMet = True
                             saveCurrentData = True
+                            bestPerformingData     = {}
 
                         elif (not maeBestPerformanceList) or (mae > maeBestPerformanceList[0] - (maeBestPerformanceList[0] * 0.2)):
                             maeBestPerformanceList.append(mae)
