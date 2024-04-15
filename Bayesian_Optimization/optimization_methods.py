@@ -181,13 +181,13 @@ class BayesianOptimization(OptimizationFactory):
                         maeStopCriterionMet = True
                     else:
 
-                        if mae <= 1.2:
+                        if mae <= 0.5:
                             stopCriterion = "error_threshold_reached"
                             maeStopCriterionMet = True
                             saveCurrentData = True
                             bestPerformingData     = {}
 
-                        elif (not maeBestPerformanceList) or (mae > maeBestPerformanceList[0] - (maeBestPerformanceList[0] * 0.2)):
+                        elif (not maeBestPerformanceList) or (mae > maeBestPerformanceList[0] - (maeBestPerformanceList[0] * 0.1)):
                             maeBestPerformanceList.append(mae)
                             saveCurrentData = True
 
