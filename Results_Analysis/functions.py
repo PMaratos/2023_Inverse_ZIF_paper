@@ -10,6 +10,7 @@ from colorama import init, Fore, Style
 
 def parse_data(path: str, saveName: str):
     total_runs = 0
+    full_result_thresh = {}
     stopDataSizeFreq = {}
     stopDataSizeFreqThres = {}
     stopDataSizeFreqPerf = {}
@@ -42,6 +43,19 @@ def parse_data(path: str, saveName: str):
 
                     if (selectedDataset is None) or (fileSplit[-2] > selectedDataset.split('_')[-2]):
                         selectedDataset = os.path.join(savePath, roundDir, roundResult)
+                else:
+                    full_data = pd.read_csv(os.path.join(savePath, roundDir, roundResult))
+
+                    error = full_data["averageError"]
+                    for size, row in full_data.iterrows():
+                        if row["averageError"] < 0.5:
+                            if (size + 1) not in full_result_thresh:
+                                full_result_thresh[size + 1] = 1
+                            else:
+                                full_result_thresh[size + 1] += 1
+                            
+                            break
+
 
             stoppedDataSize = selectedDataset.split('_')[-2]
             if stoppedDataSize in stopDataSizeFreq:
@@ -86,7 +100,7 @@ def parse_data(path: str, saveName: str):
     for key in lowPerformanceZifs.keys():
         number_of_stoped_runs += lowPerformanceZifs[key]["count"]
 
-    return sortedDataSizeFreq, stopDataSizeFreqThres, stopDataSizeFreqPerf, mostFreqDataSize, thresholdReachingZifs, lowPerformanceZifs, total_runs
+    return sortedDataSizeFreq, stopDataSizeFreqThres, stopDataSizeFreqPerf, mostFreqDataSize, thresholdReachingZifs, lowPerformanceZifs, full_result_thresh, total_runs
 
 def plot_mae_per_size(data: dict):
     plt.bar(list(data.keys()), list(data.values()), width = 0.6)
@@ -118,6 +132,18 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
         sortedData[key] += prevSum
         prevSum = sortedData[key]
         sortedData[key] /= numberOfRuns
+
+    # In case a data size is missing use the vaulue from the previous one.
+    for key in range(list(sortedData.keys())[0], list(sortedData.keys())[-1] + 1):
+        if key not in sortedData.keys():
+            if key > 1:
+                sortedData[key] = sortedData[key - 1]
+            else:
+                sortedData[key] = 0
+
+    # Remove the first 5 data sizes which have been created randomly.
+    for key in range(1,6):
+        del sortedData[key]
 
     if plot:
         plt.bar(sortedData.keys(), sortedData.values())

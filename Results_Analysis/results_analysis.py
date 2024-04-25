@@ -14,7 +14,7 @@ if __name__ == "__main__":
     path      = parsed_args.path
     saveName  = parsed_args.save
 
-    sortedDataSizeFreq, stopDataSizeFreqThres, stopDataSizeFreqPerf, mostFreqDataSize, thresholdReachingZifs, lowPerformanceZifs, total_runs = parse_data(path,saveName)
+    sortedDataSizeFreq, stopDataSizeFreqThres, stopDataSizeFreqPerf, mostFreqDataSize, thresholdReachingZifs, lowPerformanceZifs, full_result_thresh, total_runs = parse_data(path,saveName)
 
     action = 0
     while action != dialogs.getNumOfActions():
@@ -47,7 +47,8 @@ if __name__ == "__main__":
             case 5: # Plot cumulative probability of achieving theshold
                 utils.printEmptyLine()
 
-                cumulative_thres(stopDataSizeFreqThres,total_runs)
+                cumulative_thres(full_result_thresh,total_runs)
+                # cumulative_thres(stopDataSizeFreqThres,total_runs)
 
             case 6 : # Plot success rate per zif
                 utils.printEmptyLine()
