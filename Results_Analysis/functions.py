@@ -9,6 +9,24 @@ import matplotlib.pyplot as plt
 from colorama import init, Fore, Style
 
 def parse_data(path: str, saveName: str):
+    """
+    Parses data from the specified directory and saves the results.
+
+    Parameters:
+        path     (str): The path to the directory containing the data.
+        saveName (str): The name of the directory containing the saved data.
+
+    Returns:
+        sortedDataSizeFreq    (dict): A dictionary (key: data sizes value: frequency of stopping).
+        stopDataSizeFreqThres (dict): A dictionary (key: data sizes value: frequency of reaching stopping due to reach of the error).
+        stopDataSizeFreqPerf  (dict): A dictionary (key: data sizes value: frequency of reaching stopping due to low performance gain criterion).
+        mostFreqDataSize      (int) : The most frequently encountered data size.
+        thresholdReachingZifs (dict): A dictionary (key: tested ZIFs value: dictionaries containing the count of stopping due to error threshold reached and the datasets tested against each ZIF).
+        lowPerformanceZifs    (dict): A dictionary (key: tested ZIFs value: dictionaries containing the count of stopping due to low performance and the datasets tested against each ZIF).
+        full_result_thresh    (dict): A dictionary (key: data sizes value: frequency of reaching the error threshold for the full round).
+        total_runs            (int) : The total number of runs performed.
+    """
+    
     total_runs = 0
     full_result_thresh = {}
     stopDataSizeFreq = {}
@@ -103,12 +121,31 @@ def parse_data(path: str, saveName: str):
     return sortedDataSizeFreq, stopDataSizeFreqThres, stopDataSizeFreqPerf, mostFreqDataSize, thresholdReachingZifs, lowPerformanceZifs, full_result_thresh, total_runs
 
 def plot_mae_per_size(data: dict):
+    """
+    Plots a bar graph of the number of times the stop criteria were met for each number of Zifs in the dataset.
+
+    Parameters:
+        data (dict): A dictionary where the keys are the number of Zifs in the dataset and the values are the number of times the stop criteria were met.
+
+    Returns:
+        None
+    """
     plt.bar(list(data.keys()), list(data.values()), width = 0.6)
     plt.xlabel('Number of Zifs in Dataset')
     plt.ylabel('Number of times stop criteria were met.')
     plt.show()
 
 def box_plot_statistics(mae_data: list, case: str):
+    """
+    Generate a box plot and print describing statistics for the given data.
+
+    Parameters:
+        mae_data (list): A list of MAE values.
+        case     (str) : A name specifying the plot.
+
+    Returns:
+        None
+    """
     print("\n" + "Statistics for " + case + "\n")
     print("Minimum:", min(mae_data))
     print("Maximum:", max(mae_data))
@@ -124,6 +161,17 @@ def box_plot_statistics(mae_data: list, case: str):
     plt.show()
 
 def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot: bool = True):
+    """
+    Calculate the cumulative possibility of activating the threshold criterion.
+
+    Parameters:
+        threshold_criterion_results (dict): A dictionary (key: data sizes, value: frequency of stopping due to threshold criterion).
+        numberOfRuns                (int) : The total number of runs.
+        plot                        (bool): Whether to plot the results. Default is True.
+
+    Returns:
+        dict or None: The sortedData dictionary if plot is False, otherwise None.
+    """
 
     sortedData = {k: threshold_criterion_results[k] for k in sorted(threshold_criterion_results, key=lambda x: float(x))}
 
@@ -152,7 +200,19 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
         return sortedData
 
 def succes_rate_per_zif(success: dict, failure: dict):
+    """
+    Calculate the success rate for each ZIF.
 
+    Parameters:
+        success (dict): A dictionary (key: the tested ZIF, value: the count of successes (activation of threshold criterion) and the corresponding training datasets).
+        failure (dict): A dictionary (key: the tested ZIF, value: the count of failures  (activation of low progression gain criterion) and the corresponding training datasets).
+
+    Returns:
+        Prints:
+            The success rate for each ZIF, including the total count of successes and failures.
+            The total number of ZIFs that achieved small error and the total number of ZIFs that achieved large error.
+    """
+        
     init()
 
     sorted_success = dict(sorted(success.items(), key=lambda x: x[1]["count"], reverse=True))
@@ -172,6 +232,17 @@ def succes_rate_per_zif(success: dict, failure: dict):
     print("Total number of ZIFs that did not achieve small  error: " + str(len(tmp_failure)))
 
 def datasets_used_against_zif(success: dict, failure: dict):
+    """
+    Print the train datasets used against the selected ZIF.
+
+    Parameters:
+        success (dict): A dictionary (key: ZIF names, value: dictionaries containing the count of successes and the corresponding datasets).
+        failure (dict): A dictionary (key: ZIF names, value: dictionaries containing the count of failures and the corresponding datasets).
+
+    Returns:
+        None
+
+    """
 
     print("Enter zif name.")
     testZif = input()
@@ -192,6 +263,19 @@ def datasets_used_against_zif(success: dict, failure: dict):
                 print(x)    
 
 def get_datasets_by_probability(threshold_criterion_results: dict, total_runs: int, path: str, saveName: str):
+    """
+    Gather the datasets that achieved a certain probability.
+
+    Parameters:
+        threshold_criterion_results (dict): A dictionary (key: data sizes, value: frequency of stopping due to threshold criterion).
+        total_runs                  (int) : The total number of runs performed.
+        path                        (str) : The path to the directory containing the round results.
+        saveName                    (str) : The name of the directory containing the round results.
+
+    Returns:
+        None
+
+    """   
     
     single_prob = False
     print("Do you want to get datasets coresponding to one probability? [Y/N] ")
@@ -279,76 +363,87 @@ def get_datasets_by_probability(threshold_criterion_results: dict, total_runs: i
     print("The percentage of datasets that achieved large error is: " + str(overThresCount / totalCount))
 
 def analyse_by_data_size(most_freq_size: int, path: str, saveName: str):
+    """
+    Analyzes data for a given data size.
 
-        print("Which data size results do you want to analyse?")
-        selected_size = input()
+    Parameters:
+        most_freq_size (int): The most frequently encountered data size in the data.
+        path           (str): The path to the directory containing the data.
+        saveName       (str): The name of the directory containing the saved data.
 
-        if selected_size == "-1":
-            selected_size = most_freq_size
+    Returns:
+        None
+    """
 
-        value_range = {}
-        for experimentFile in os.listdir(path):
+    print("Which data size results do you want to analyse?")
+    selected_size = input()
+
+    if selected_size == "-1":
+        selected_size = most_freq_size
+
+    value_range = {}
+    for experimentFile in os.listdir(path):
+
+        # Skip non-directory files
+        if not os.path.isdir(os.path.join(path, experimentFile)):
+            continue
+
+        # Skip non-directory files
+        savePath = os.path.join(path, experimentFile, saveName)
+        if not os.path.isdir(savePath):
+            continue
+
+        for roundDir in os.listdir(savePath):
 
             # Skip non-directory files
-            if not os.path.isdir(os.path.join(path, experimentFile)):
-                continue
+            if not os.path.isdir(os.path.join(savePath, roundDir)):
+                continue                
 
-            # Skip non-directory files
-            savePath = os.path.join(path, experimentFile, saveName)
-            if not os.path.isdir(savePath):
-                continue
+            selectedDataset = None
+            for roundResult in os.listdir(os.path.join(savePath, roundDir)):
 
-            for roundDir in os.listdir(savePath):
+                fileSplit = roundResult.split('_')
+                # Skip the full round report.
+                if fileSplit[0] != 'full':
 
-                # Skip non-directory files
-                if not os.path.isdir(os.path.join(savePath, roundDir)):
-                    continue                
-
-                selectedDataset = None
-                for roundResult in os.listdir(os.path.join(savePath, roundDir)):
-
-                    fileSplit = roundResult.split('_')
-                    # Skip the full round report.
-                    if fileSplit[0] != 'full':
-
-                        if (selectedDataset is None) or (fileSplit[-2] > selectedDataset.split('_')[-2]):
+                    if (selectedDataset is None) or (fileSplit[-2] > selectedDataset.split('_')[-2]):
                             selectedDataset = os.path.join(savePath, roundDir, roundResult)
 
-                if selectedDataset is None:
-                    continue    
-                dataSize = selectedDataset.split('_')[-2]
-                if dataSize != selected_size:
-                    continue
+            if selectedDataset is None:
+                continue    
+            dataSize = selectedDataset.split('_')[-2]
+            if dataSize != selected_size:
+                continue
 
-                data = pd.read_csv(selectedDataset)
-                value_range[data["mae"][1]] = {"path": selectedDataset,
+            data = pd.read_csv(selectedDataset)
+            value_range[data["mae"][1]] = {"path": selectedDataset,
                                                         "stop_criterion": data["stop_criterion"][1],
                                                         "tested_zif": data["tested_against"][1]}
 
-        # Plot number of times each stop criterion was activated.
-        thresholdCount   = 0
-        performanceCount = 0
-        thresholdMae   = []
-        performanceMae = []
-        for mae, info in value_range.items():
-            if info["stop_criterion"] == "error_threshold_reached":
-                thresholdCount += 1
-                thresholdMae.append(mae)
-            if info["stop_criterion"] == "low_performance_gain":
-                performanceCount += 1
-                performanceMae.append(mae)
+    # Plot number of times each stop criterion was activated.
+    thresholdCount   = 0
+    performanceCount = 0
+    thresholdMae   = []
+    performanceMae = []
+    for mae, info in value_range.items():
+        if info["stop_criterion"] == "error_threshold_reached":
+            thresholdCount += 1
+            thresholdMae.append(mae)
+        if info["stop_criterion"] == "low_performance_gain":
+            performanceCount += 1
+            performanceMae.append(mae)
 
-        plt.bar(["threshold", "performance"], [thresholdCount, performanceCount], width = 0.1)
-        plt.xlabel('Number of Zifs in Dataset')
-        plt.ylabel('Number of times any stop criterion was met.')
-        plt.show()
+    plt.bar(["threshold", "performance"], [thresholdCount, performanceCount], width = 0.1)
+    plt.xlabel('Number of Zifs in Dataset')
+    plt.ylabel('Number of times any stop criterion was met.')
+    plt.show()
 
-        if len(value_range) > 1:
-            if thresholdMae:
-                box_plot_statistics(thresholdMae, "Threshold Criterion")
-            if performanceMae:
-                box_plot_statistics(performanceMae, "No Performance Gain Criterion")
-            if value_range:
-                box_plot_statistics(value_range.keys(), "Range of Values")
-        else:
-            print("Can not further analyse data. Multitude less than 2.")
+    if len(value_range) > 1:
+        if thresholdMae:
+            box_plot_statistics(thresholdMae, "Threshold Criterion")
+        if performanceMae:
+            box_plot_statistics(performanceMae, "No Performance Gain Criterion")
+        if value_range:
+            box_plot_statistics(value_range.keys(), "Range of Values")
+    else:
+        print("Can not further analyse data. Multitude less than 2.")
