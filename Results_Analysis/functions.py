@@ -283,10 +283,12 @@ def get_datasets_by_probability(threshold_criterion_results: dict, total_runs: i
         single_prob = True
         print("Please enter the probability to search for.")
     else:
-        print("Please enter the lower bound of the probability to search for.")
+        print("Please enter the upper bound probability to search for.")
+
     probability = float(input())
 
     cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, plot = False)
+    
     key_prob_distance = {}
     if single_prob:
         for key in list(cumulative_results.keys()):
@@ -298,7 +300,7 @@ def get_datasets_by_probability(threshold_criterion_results: dict, total_runs: i
             del cumulative_results[key]
     else:
         for key in list(cumulative_results.keys()):
-            if cumulative_results[key] < probability:
+            if cumulative_results[key] > probability:
                 del cumulative_results[key]
 
     if len(cumulative_results) == 0:
