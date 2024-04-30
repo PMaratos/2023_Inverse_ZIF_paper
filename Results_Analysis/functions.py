@@ -62,15 +62,17 @@ def parse_data(path: str, saveName: str):
                     if (selectedDataset is None) or (fileSplit[-2] > selectedDataset.split('_')[-2]):
                         selectedDataset = os.path.join(savePath, roundDir, roundResult)
                 else:
-                    full_data = pd.read_csv(os.path.join(savePath, roundDir, roundResult))
+                    full_data_path = os.path.join(savePath, roundDir, roundResult)
+                    full_data = pd.read_csv(full_data_path)
 
-                    error = full_data["averageError"]
                     for size, row in full_data.iterrows():
                         if row["averageError"] < 0.5:
                             if (size + 1) not in full_result_thresh:
-                                full_result_thresh[size + 1] = 1
+                                full_result_thresh[size + 1] = {"count": 1,
+                                                                "datasets": [full_data_path]}
                             else:
-                                full_result_thresh[size + 1] += 1
+                                full_result_thresh[size + 1]["count"] += 1
+                                full_result_thresh[size + 1]["datasets"].apend(full_data_path)
                             
                             break
 
