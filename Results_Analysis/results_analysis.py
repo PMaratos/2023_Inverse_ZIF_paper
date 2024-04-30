@@ -3,18 +3,26 @@ import dialogs
 import argparse
 from functions import *
 
+import sys
+sys.path.append('..')
+from ga_inverse import readData
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-p', '--path',      help='The path to the results of the experiments.', default='./')
+    parser.add_argument('-t', '--train',     help='The path to the original training data.', default='../train_data/train_zifs_diffusivity/TrainData.xlsx')
     parser.add_argument('-s', '--save',      help='The name of the directory containing round results.', default='saved_datasets/')
 
     parsed_args = parser.parse_args() # Actually parse
 
-    path      = parsed_args.path
-    saveName  = parsed_args.save
-
+    path       = parsed_args.path
+    saveName   = parsed_args.save
+    train_path = parsed_args.train
     sortedDataSizeFreq, stopDataSizeFreqThres, stopDataSizeFreqPerf, mostFreqDataSize, thresholdReachingZifs, lowPerformanceZifs, full_result_thresh, total_runs = parse_data(path,saveName)
+
+
+    train_data = readData(train_path)
 
     action = 0
     while action != dialogs.getNumOfActions():
@@ -63,7 +71,7 @@ if __name__ == "__main__":
             case 8: # Gather datasets by probability
                 utils.printEmptyLine()
                 
-                get_datasets_by_probability(full_result_thresh, total_runs, path, saveName)
+                get_datasets_by_probability(train_data, full_result_thresh, total_runs, path, saveName)
 
             case _:
                 pass
