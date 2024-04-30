@@ -63,7 +63,7 @@ if __name__ == "__main__":
             case 8: # Gather datasets by probability
                 utils.printEmptyLine()
                 
-                get_datasets_by_probability(stopDataSizeFreqThres, total_runs, path, saveName)
+                get_datasets_by_probability(full_result_thresh, total_runs, path, saveName)
 
             case _:
                 pass
