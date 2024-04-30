@@ -72,7 +72,7 @@ def parse_data(path: str, saveName: str):
                                                                 "datasets": [full_data_path]}
                             else:
                                 full_result_thresh[size + 1]["count"] += 1
-                                full_result_thresh[size + 1]["datasets"].apend(full_data_path)
+                                full_result_thresh[size + 1]["datasets"].append(full_data_path)
                             
                             break
 
@@ -179,24 +179,27 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
 
     prevSum = 0
     for key in sortedData.keys():
-        sortedData[key] += prevSum
-        prevSum = sortedData[key]
-        sortedData[key] /= numberOfRuns
+        sortedData[key]["count"] += prevSum
+        prevSum = sortedData[key]["count"]
+        sortedData[key]["count"] /= numberOfRuns
 
     # In case a data size is missing use the vaulue from the previous one.
     for key in range(list(sortedData.keys())[0], list(sortedData.keys())[-1] + 1):
         if key not in sortedData.keys():
             if key > 1:
-                sortedData[key] = sortedData[key - 1]
+                sortedData[key] = {"count": sortedData[key - 1]["count"]}
             else:
-                sortedData[key] = 0
+                sortedData[key] = {"count": 0}
+            sortedData[key]["datasets"] = []
 
     # Remove the first 5 data sizes which have been created randomly.
     for key in range(1,6):
         del sortedData[key]
 
     if plot:
-        plt.bar(sortedData.keys(), sortedData.values())
+        info_dicts = sortedData.values()
+        count_list = [info["count"] for info in info_dicts]
+        plt.bar(sortedData.keys(), count_list)
         plt.show()
     else:
         return sortedData
