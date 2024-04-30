@@ -1,10 +1,11 @@
 import os
 import dialogs
 import shutil
+import random
+import string
 import statistics
 import numpy as np
 import pandas as pd
-import argparse
 import matplotlib.pyplot as plt
 from colorama import init, Fore, Style
 
@@ -267,7 +268,7 @@ def datasets_used_against_zif(success: dict, failure: dict):
             for x in failure[testZif]["datasets"]:
                 print(x)    
 
-def get_datasets_by_probability(threshold_criterion_results: dict, total_runs: int, path: str, saveName: str):
+def get_datasets_by_probability(train_data: pd.DataFrame, threshold_criterion_results: dict, total_runs: int, path: str, saveName: str):
     """
     Gather the datasets that achieved a certain probability.
 
@@ -297,7 +298,7 @@ def get_datasets_by_probability(threshold_criterion_results: dict, total_runs: i
     key_prob_distance = {}
     if single_prob:
         for key in list(cumulative_results.keys()):
-            key_prob_distance[key] = abs(cumulative_results[key] - probability)
+            key_prob_distance[key] = abs(cumulative_results[key]["count"] - probability)
         sorted_key_prob_distance = dict(sorted(key_prob_distance.items(), key=lambda x: x[1], reverse=True))
 
         key_list = list(sorted_key_prob_distance.keys())[:-1]
@@ -305,7 +306,7 @@ def get_datasets_by_probability(threshold_criterion_results: dict, total_runs: i
             del cumulative_results[key]
     else:
         for key in list(cumulative_results.keys()):
-            if cumulative_results[key] > probability:
+            if cumulative_results[key]["count"] > probability:
                 del cumulative_results[key]
 
     if len(cumulative_results) == 0:
@@ -318,56 +319,42 @@ def get_datasets_by_probability(threshold_criterion_results: dict, total_runs: i
 
     os.mkdir(selected_datasets_path)
 
-    overThresCount = 0
-    totalCount = 0
-    for experimentFile in os.listdir(path):
+    for key in cumulative_results.keys():
+        for data_path in cumulative_results[key]["datasets"]:
+            data_splits   = data_path.split(os.sep)
+            data_round    = data_splits[-2].replace('_', ' ')
+            log_file      = data_splits[-4] + ".log"
+            log_file_path = os.path.join(*data_splits[:-3],log_file)
 
-        # Skip non-directory files
-        if not os.path.isdir(os.path.join(path, experimentFile)):
-            continue
+            used_zifs = []
+            gather_zifs = False
+            zifs_counter = 0
+            with open(log_file_path, 'r') as log_file:
+                for log in log_file:
+                    if data_round in log or gather_zifs == True:
+                        gather_zifs = True
+                    else:
+                        continue
 
-        # Skip non-directory files
-        savePath = os.path.join(path, experimentFile, saveName)
-        if not os.path.isdir(savePath):
-            continue
+                    if gather_zifs:
+                        if "Selection Strategy" in log:
+                            used_zifs.append(log.split(" ")[-1].replace('\n', ''))
+                            zifs_counter += 1
 
-        for roundDir in os.listdir(savePath):
+                    if zifs_counter == key:
+                        break
 
-            # Skip non-directory files
-            if not os.path.isdir(os.path.join(savePath, roundDir)):
-                continue                
+            threshold_dataset = pd.DataFrame()
+            for zif in used_zifs:
+                selected_rows = train_data.loc[train_data['type'] == zif]
+                threshold_dataset = threshold_dataset._append(selected_rows, ignore_index = True)
 
-            selectedDataset = None
-            for roundResult in os.listdir(os.path.join(savePath, roundDir)):
-
-                fileSplit = roundResult.split('_')
-                # Skip the full round report.
-                if fileSplit[0] != 'full':
-
-                    if (selectedDataset is None) or (fileSplit[-2] > selectedDataset.split('_')[-2]):
-                        selectedDataset = os.path.join(savePath, roundDir, roundResult)
-
-            if selectedDataset is None:
-                continue    
-            dataSize = selectedDataset.split('_')[-2]
-            if dataSize not in list(cumulative_results.keys()):
-                continue
-
-            data = pd.read_csv(selectedDataset)
-            if data["mae"][0] > 0.5:
-                overThresCount += 1
-            
-            totalCount += 1
-
-            data_size_dir = os.path.join(selected_datasets_path, dataSize)
+            # Save intermediate dataset to location
+            data_size_dir = os.path.join(selected_datasets_path, str(key))
             if not os.path.exists(data_size_dir):
                 os.mkdir(data_size_dir)
-            
-            shutil.copy(selectedDataset, data_size_dir)
-    
-    print("Numerator of the percentage: " + str(overThresCount))
-    print("Denominator of the percentage: " + str(totalCount))
-    print("The percentage of datasets that achieved large error is: " + str(overThresCount / totalCount))
+                
+            threshold_dataset.to_csv(os.path.join(data_size_dir, data_round.replace(" ","_") + "_Size_" + str(key) + ''.join(random.choice(string.ascii_letters) for _ in range(5)) +  ".csv"), index = False)
 
 def analyse_by_data_size(most_freq_size: int, path: str, saveName: str):
     """
