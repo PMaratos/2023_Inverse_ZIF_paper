@@ -268,50 +268,18 @@ def datasets_used_against_zif(success: dict, failure: dict):
             for x in failure[testZif]["datasets"]:
                 print(x)    
 
-def get_datasets_by_probability(train_data: pd.DataFrame, threshold_criterion_results: dict, total_runs: int, path: str, saveName: str):
+def get_datasets(train_data: pd.DataFrame, cumulative_results: dict):
     """
-    Gather the datasets that achieved a certain probability.
+    Gather the datasets by probability or data size.
 
     Parameters:
-        threshold_criterion_results (dict): A dictionary (key: data sizes, value: frequency of stopping due to threshold criterion).
-        total_runs                  (int) : The total number of runs performed.
-        path                        (str) : The path to the directory containing the round results.
-        saveName                    (str) : The name of the directory containing the round results.
-
+        train_data                  (pd.DataFrame) : The original training data used to reconstruct each intermediate dataset (zif by zif).
+        cumulative_results          (dict)         : A dictionary (key: data sizes, value: frequency of stopping due to threshold criterion).
+        selection_method            (str)          : The method used to select the datasets.
     Returns:
         None
 
     """   
-    
-    single_prob = False
-    print("Do you want to get datasets coresponding to one probability? [Y/N] ")
-    if dialogs.yesNoInput():
-        single_prob = True
-        print("Please enter the probability to search for.")
-    else:
-        print("Please enter the upper bound probability to search for.")
-
-    probability = float(input())
-
-    cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, plot = False)
-    
-    key_prob_distance = {}
-    if single_prob:
-        for key in list(cumulative_results.keys()):
-            key_prob_distance[key] = abs(cumulative_results[key]["count"] - probability)
-        sorted_key_prob_distance = dict(sorted(key_prob_distance.items(), key=lambda x: x[1], reverse=True))
-
-        key_list = list(sorted_key_prob_distance.keys())[:-1]
-        for key in key_list:
-            del cumulative_results[key]
-    else:
-        for key in list(cumulative_results.keys()):
-            if cumulative_results[key]["count"] > probability:
-                del cumulative_results[key]
-
-    if len(cumulative_results) == 0:
-        print("There are no datasets that meet the given probability threshold.")
-        return
 
     selected_datasets_path = os.path.join(os.curdir, "selected_datasets")
     if os.path.exists(selected_datasets_path):
@@ -355,6 +323,80 @@ def get_datasets_by_probability(train_data: pd.DataFrame, threshold_criterion_re
                 os.mkdir(data_size_dir)
                 
             threshold_dataset.to_csv(os.path.join(data_size_dir, data_round.replace(" ","_") + "_Size_" + str(key) + ''.join(random.choice(string.ascii_letters) for _ in range(5)) +  ".csv"), index = False)
+
+def get_datasets_by_probability(train_data: pd.DataFrame, threshold_criterion_results: dict, total_runs: int):
+    """
+    Gather the datasets that achieved a certain probability.
+
+    Parameters:
+        threshold_criterion_results (dict): A dictionary (key: data sizes, value: frequency of stopping due to threshold criterion).
+        total_runs                  (int) : The total number of runs performed.
+
+    Returns:
+        None
+
+    """   
+
+    single_prob = False
+    print("Do you want to get datasets coresponding to one probability? [Y/N] ")
+    if dialogs.yesNoInput():
+        single_prob = True
+        print("Please enter the probability to search for.")
+    else:
+        print("Please enter the upper bound probability to search for.")
+
+    probability = float(input())
+
+    cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, plot = False)
+    
+    key_prob_distance = {}
+    if single_prob:
+        for key in list(cumulative_results.keys()):
+            key_prob_distance[key] = abs(cumulative_results[key]["count"] - probability)
+        sorted_key_prob_distance = dict(sorted(key_prob_distance.items(), key=lambda x: x[1], reverse=True))
+
+        key_list = list(sorted_key_prob_distance.keys())[:-1]
+        for key in key_list:
+            del cumulative_results[key]
+    else:
+        for key in list(cumulative_results.keys()):
+            if cumulative_results[key]["count"] > probability:
+                del cumulative_results[key]
+
+    if len(cumulative_results) == 0:
+        print("There are no datasets that meet the given probability threshold.")
+        return
+    
+    get_datasets(train_data, cumulative_results)
+
+def get_datasets_by_data_size(train_data: pd.DataFrame, threshold_criterion_results: dict, total_runs: int):
+    """
+    Gather the datasets the achieved threshold error and are of given data size.
+
+    Parameters:
+        threshold_criterion_results (dict): A dictionary (key: data sizes, value: frequency of stopping due to threshold criterion).
+        total_runs                  (int) : The total number of runs performed.
+        path                        (str) : The path to the directory containing the round results.
+        saveName                    (str) : The name of the directory containing the round results.
+
+    Returns:
+        None
+
+    """   
+
+    cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, plot = False)
+
+    print("Please enter the size of the datasets you want.")
+    data_size = int(input())
+    while data_size not in list(cumulative_results.keys()):
+        print("The data size you selected does not exist please select a number between: " + str(list(cumulative_results.keys())[0]) + " and " + str(list(cumulative_results.keys())[-1]))
+        data_size = int(input())
+        
+    for key in list(cumulative_results.keys()):
+        if key != data_size:
+            del cumulative_results[key]
+    
+    get_datasets(train_data, cumulative_results)
 
 def analyse_by_data_size(most_freq_size: int, path: str, saveName: str):
     """
