@@ -152,8 +152,14 @@ def case(separation):
 
 
 def readData(source_file = './TrainData.xlsx') -> pd.DataFrame:
+
     # Read file
-    df=pd.read_excel(source_file)
+    df = pd.DataFrame()
+    if source_file.split('.')[-1] == 'csv':
+        df = pd.read_csv(source_file)
+    else:
+        df=pd.read_excel(source_file)
+
     df.head(2)
     df['logD'] = np.log10(df['diffusivity'])
 
