@@ -6,8 +6,14 @@ import string
 import statistics
 import numpy as np
 import pandas as pd
+from sklearn import metrics
 import matplotlib.pyplot as plt
+from xgboost import XGBRegressor
 from colorama import init, Fore, Style
+
+import sys
+sys.path.append('../Bayesian_Optimization')
+from Bayesian_Optimization.optimize_logD import data_preparation
 
 def parse_data(path: str, saveName: str):
     """
@@ -397,6 +403,44 @@ def get_datasets_by_data_size(train_data: pd.DataFrame, threshold_criterion_resu
             del cumulative_results[key]
     
     get_datasets(train_data, cumulative_results)
+
+def test_against_all_zifs(train_data: pd.DataFrame, full_result_thresh: dict, total_runs: int):
+
+    # Instantiate the XGB regressor model
+    XGBR = XGBRegressor(n_estimators=500, max_depth=5, eta=0.07, subsample=0.75, colsample_bytree=0.7, reg_lambda=0.4, reg_alpha=0.13,
+                        n_jobs=6,
+                        # nthread=6,
+                        random_state=6410
+                        )
+
+    print("Do you want to select datasets by data size? [Y/N] ")
+    if dialogs.yesNoInput():
+        get_datasets_by_data_size(train_data, full_result_thresh, total_runs)
+    else:
+        get_datasets_by_probability(train_data, full_result_thresh, total_runs)
+    
+    for dataset_dir in os.listdir("./selected_datasets"):
+        
+        mae_list = []
+        for dataset in os.listdir("./selected_datasets/" + dataset_dir):
+            
+            zifs, featureNames, targetNames = data_preparation(os.path.join("./selected_datasets/" + dataset_dir, dataset))
+
+            x_trainAll = zifs[featureNames].to_numpy()
+            y_trainAll = zifs[targetNames].to_numpy()
+
+            x_test  = train_data[featureNames].to_numpy()
+            y_test  = train_data[targetNames].to_numpy()
+
+            XGBR.fit(x_trainAll, y_trainAll.ravel())
+
+            y_pred = XGBR.predict(x_test)
+
+            mae = metrics.mean_absolute_error(y_test, y_pred)
+            mae_list.append(mae)
+            print("Dataset: " + dataset + ", MAE: " + str(mae))
+
+        print("Dataset: " + dataset_dir + ", Average MAE: " + str(sum(mae_list) / len(mae_list)))
 
 def analyse_by_data_size(most_freq_size: int, path: str, saveName: str):
     """

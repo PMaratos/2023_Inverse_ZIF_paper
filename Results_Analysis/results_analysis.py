@@ -23,6 +23,7 @@ if __name__ == "__main__":
 
 
     train_data = readData(train_path)
+    # train_data = pd.read_excel(train_path)
 
     action = 0
     while action != dialogs.getNumOfActions():
@@ -77,6 +78,11 @@ if __name__ == "__main__":
                 utils.printEmptyLine()
                 
                 get_datasets_by_data_size(train_data, full_result_thresh, total_runs)
+
+            case 10: # Gather datasets by probability
+                utils.printEmptyLine()
+                
+                test_against_all_zifs(train_data, full_result_thresh, total_runs)
 
             case _:
                 pass

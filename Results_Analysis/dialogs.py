@@ -10,6 +10,7 @@ def getMainAction():
                 "Print Datasets Used Against a Zif",
                 "Get best datasets by probability",
                 "Get best datasets by data size",
+                "Test selected model against all Zifs",
                 "Exit"]
 
 def getNumOfActions():
