@@ -11,10 +11,9 @@ from xgboost import XGBRegressor
 from optimization_methods import BayesianOptimization
 from plot_optimization import plot_logD_trainSize_perMethod
 
-currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parentdir = os.path.dirname(currentdir)
-sys.path.insert(0, parentdir) 
-
+import os
+import sys
+sys.path.insert(0,os.pardir)
 from ga_inverse import readData
 
 def plot_data_exists(data_path) -> bool:

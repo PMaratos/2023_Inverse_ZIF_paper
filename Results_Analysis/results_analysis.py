@@ -3,8 +3,9 @@ import dialogs
 import argparse
 from functions import *
 
+import os
 import sys
-sys.path.append('..')
+sys.path.insert(0,os.pardir)
 from ga_inverse import readData
 
 if __name__ == "__main__":
