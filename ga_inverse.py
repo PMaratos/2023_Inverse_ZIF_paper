@@ -160,21 +160,33 @@ def readData(source_file = './TrainData.xlsx') -> pd.DataFrame:
     else:
         df=pd.read_excel(source_file)
 
-    df.head(2)
-    df['logD'] = np.log10(df['diffusivity'])
+    if 'diffusivity' in df.columns:
+        df['logD'] = np.log10(df['diffusivity'])
 
     # Keep appropriate columns
-    cleaned_original_df=df[[ 'type', 'gas', 'MetalNum', 'aperture', 'size - van der Waals (Å)','mass', 'ascentricF', 'logD', 'size - kinetic diameter (Å)', 'ionicRad', 
+    approriate_columns = [ 'type', 'gas', 'MetalNum', 'aperture', 'size - van der Waals (Å)','mass', 'ascentricF', 'logD', 'size - kinetic diameter (Å)', 'ionicRad', 
         'Μ-N_lff', 'Μ-N_kFF', 'MetalCharge', 'MetalMass',
         'σ_1', 'e_1', 'σ_2', 'e_2', 'σ_3', 'e_3', 'linker_length1', 'linker_length2',
         'linker_length3', 'linker_mass1', 'linker_mass2', 'linker_mass3',
         'func1_length', 'func2_length', 'func3_length', 'func1_mass',  
         'func2_mass', 'func3_mass', 'func1_charge', 'func2_charge',
-        'func3_charge',]]
-    
-    # Rename columns
-    cleaned_original_df=cleaned_original_df.rename(columns={'size - van der Waals (Å)':'diameter', 'size - kinetic diameter (Å)':'kdiameter', 
-        })
+        'func3_charge',]
+
+    cleaned_original_df = pd.DataFrame()
+    for col in approriate_columns:
+        if col in df.columns:
+            if col == 'size - van der Waals (Å)':
+                cleaned_original_df['diameter'] =df[col]
+            elif col == 'size - kinetic diameter (Å)':
+                cleaned_original_df['kdiameter'] =df[col]
+            else:
+                cleaned_original_df[col] =df[col]
+        elif col == 'size - van der Waals (Å)':
+            cleaned_original_df['diameter'] =df['diameter']
+        elif col == 'size - kinetic diameter (Å)':
+            cleaned_original_df['kdiameter'] =df['diameter']
+        else:
+            continue
 
     # Clear NA entries
     cleaned_original_df = cleaned_original_df.dropna()
