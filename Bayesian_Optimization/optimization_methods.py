@@ -17,14 +17,19 @@ from sklearn.gaussian_process.kernels import RBF
 from sklearn.gaussian_process.kernels import ConstantKernel
 from sklearn.model_selection import KFold
 
+# TODO Refactor this file by separating functions
+
 class OptimizationFactory(ABC):
+
+    def __init__(self,logger : Logger):
+        self.logger = logger
+        self.logPrefix = "Abstract Optimization"
     def optimizeModel():
         pass
 
 class BayesianOptimization(OptimizationFactory):
 
     def __init__(self,logger : Logger):
-        self.logger = logger
         self.logPrefix = "Bayesian Optimization"
 
     def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , save_path : str) -> pd.DataFrame:
@@ -247,3 +252,155 @@ class BayesianOptimization(OptimizationFactory):
         result_df["stdDeviationOfMeanError"] = [ np.array(maePerTrainSize[iCnt]).std()  for iCnt in maePerTrainSize.keys() ]
 
         return result_df
+
+class RandomOptimization(OptimizationFactory):
+
+    def __init__(self,logger : Logger):
+        self.logPrefix = "Random Optimization"
+    
+    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , save_path : str) -> pd.DataFrame:
+
+        """ Random Optimization As A Method For Optimizing MAE of LogD 
+            model:              The model to be optimized.
+            zifs :              The data used during optimization.
+            X_featureNames:     The names of the training features.
+            Y_featureNames:     The names of the target features.
+        """
+        optimization_start_time = time.time()
+        # Make a list with all unique ZIF names.
+        uniqueZIFs = zifs.type.unique()
+
+        # Count the total number that the kfold process takes in seconds
+        total_kfold_elapsed_time = 0.0
+
+        # Initialize dictionary of errors per training data size
+        maePerTrainSize = {}
+        for leaveOutZifIndex in range(len(uniqueZIFs)):
+            
+            roundPath = os.path.join(save_path, "Round_" + str(leaveOutZifIndex + 1))
+            os.mkdir(roundPath)
+            roundMae = []
+
+            self.logger.info(self.logPrefix,
+                        "----------   Round " + str(leaveOutZifIndex + 1) + "     ----------")
+
+            trainZIFnames = np.delete(uniqueZIFs, leaveOutZifIndex)
+            testZIFname   = uniqueZIFs[leaveOutZifIndex]
+
+            trainZIFs = zifs[zifs['type'] != testZIFname]
+            testZIFs  = zifs[zifs['type'] == testZIFname]
+
+            selectRandomSample = 0
+            currentData   = pd.DataFrame()
+
+            maeBestPerformanceList      = []
+            maeStopCriterionMet         = False
+            bestPerformingData          = {}
+
+            for sizeOfTrainZIFs in range(len(uniqueZIFs) - 1):
+
+                # Sample each ZIF randomly.
+                randomSelection = RandomSelectionStrategy(logger=self.logger)
+                randomZifName = randomSelection.select_next_instance(trainZIFnames)
+                selectedZIF  = trainZIFs[(trainZIFs['type'] == randomZifName)]
+
+                # Remove the sellected ZIF from the list of available for training
+                trainZIFs     = trainZIFs[(trainZIFs['type']) != randomZifName]
+                trainZIFnames = np.delete(trainZIFnames, np.where(trainZIFnames == randomZifName))
+
+                selectRandomSample += 1
+
+                # Add the next ZIF to the currently used data.
+                currentData = pd.concat([currentData, selectedZIF], axis=0, ignore_index=True)
+
+                # Create feature matrices for all currently used data.
+                x_trainAll = currentData[X_featureNames].to_numpy()
+                y_trainAll = currentData[Y_featureNames].to_numpy()
+
+                # Prediction on outer leave one out test data
+                x_test  = testZIFs[X_featureNames].to_numpy()
+                y_test  = testZIFs[Y_featureNames].to_numpy()
+
+                model.fit(x_trainAll, y_trainAll.ravel())
+
+                y_pred  = model.predict(x_test)
+
+                mae = metrics.mean_absolute_error(y_test, y_pred)
+
+                saveCurrentData = False
+                stopCriterion   = None
+                if not maeStopCriterionMet:
+                    if len(maeBestPerformanceList) == 5:
+                        stopCriterion = "low_performance_gain"
+                        maeStopCriterionMet = True
+                    else:
+
+                        if mae <= 0.5:
+                            stopCriterion = "error_threshold_reached"
+                            maeStopCriterionMet = True
+                            saveCurrentData = True
+                            bestPerformingData     = {}
+
+                        elif (not maeBestPerformanceList) or (mae > maeBestPerformanceList[0] - (maeBestPerformanceList[0] * 0.1)):
+                            maeBestPerformanceList.append(mae)
+                            saveCurrentData = True
+
+                        else:
+                            maeBestPerformanceList = []
+                            bestPerformingData     = {}
+
+                    if saveCurrentData:
+                        datasetsInDict = len(bestPerformingData) + 1
+                        bestPerformingData[datasetsInDict] = currentData
+                        bestPerformingData[datasetsInDict]["mae"] = mae
+                        bestPerformingData[datasetsInDict]["tested_against"] = testZIFname
+
+                    if maeStopCriterionMet:
+                        # Save th ecurrent snapshot of the data to a csv file. Use a random name to avoid overwriting
+                        for key, value in bestPerformingData.items():
+                            bestPerformingData[key]["stop_criterion"] = stopCriterion
+                            bestPerformingDataName = "Round_" + str(leaveOutZifIndex + 1) + "_" + "Dataset_No_" + str(key) + "_best_performing_dataset_of_size_" + str(len(value.type.unique())) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
+                            bestPerformingData[key].to_csv(os.path.join(roundPath,bestPerformingDataName), index=False)
+
+
+                if (sizeOfTrainZIFs + 1) not in maePerTrainSize.keys():
+                    maePerTrainSize[(sizeOfTrainZIFs + 1)] = []
+                
+                # Append mae to the corresponding dictionary list
+                maePerTrainSize[(sizeOfTrainZIFs + 1)].append(mae)
+
+                self.logger.info(self.logPrefix, 
+                            "Number of ZIFs in Dataset: " + str((sizeOfTrainZIFs + 1)))
+                self.logger.info(self.logPrefix,
+                            "Mean Absolute Error: " + str(mae))
+
+                roundMae.append(mae)
+
+            self.logger.info(self.logPrefix,"Writting results of Round " + str(leaveOutZifIndex + 1) + " to file.")
+
+            intermediate_df = pd.DataFrame()
+            intermediate_df["sizeOfTrainingSet"]       = list(range(len(roundMae)))
+            intermediate_df["averageError"]            = roundMae
+            intermediate_df["stdErrorOfMeanError"]     = roundMae
+            intermediate_df["stdDeviationOfMeanError"] = roundMae
+            intermediate_df.to_csv(os.path.join(roundPath,"full_round_" + str(leaveOutZifIndex + 1) + ".csv"), index=False)
+
+        total_elapsed_time = time.time() - optimization_start_time
+        self.logger.info(self.logPrefix,
+                    "Execution Time Is: " + str(timedelta(seconds=total_elapsed_time)))
+        
+        self.logger.info(self.logPrefix,
+                    "The kFold process takes " +
+                    str(total_kfold_elapsed_time * 100 / total_elapsed_time) +
+                    "%% of the total optimization time.")
+
+        result_df = pd.DataFrame()
+        result_df["sizeOfTrainingSet"]       = np.array([iCnt for iCnt in sorted(maePerTrainSize.keys()) ])
+        result_df["averageError"]            = [ np.array(maePerTrainSize[iCnt]).mean() for iCnt in maePerTrainSize.keys() ]
+        result_df["stdErrorOfMeanError"]     = [ np.array(maePerTrainSize[iCnt]).std() / math.sqrt(iCnt) for iCnt in maePerTrainSize.keys() ]
+        result_df["stdDeviationOfMeanError"] = [ np.array(maePerTrainSize[iCnt]).std()  for iCnt in maePerTrainSize.keys() ]
+
+        return result_df
+
+class SerialOptimization(OptimizationFactory):
+    pass

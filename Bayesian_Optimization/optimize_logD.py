@@ -9,6 +9,8 @@ from datetime import datetime
 from statistical_tests import Statistical_Tests
 from xgboost import XGBRegressor
 from optimization_methods import BayesianOptimization
+from optimization_methods import RandomOptimization
+from optimization_methods import SerialOptimization
 from plot_optimization import plot_logD_trainSize_perMethod
 
 import os
@@ -49,19 +51,30 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument('-t', '--train',    help='A file containing the train data.', default='TrainData.xlsx')
+    parser.add_argument('-m', '--method',   help='Select the optimization method to be used one of [bo, random, serial].', default='bo')
     parser.add_argument('-b', '--bayesian', help='A file containing the logD data acquired by adding zifs using the bayesian optimization mehtod.', default='bo.csv')
     parser.add_argument('-r', '--random',   help='A file containing the logD data acquired by adding zifs in random order.', default='random.csv')
     parser.add_argument('-s', '--serial',   help='A file containing the logD data acquired by adding zifs in a specific serial order.', default='serial.csv')
     parser.add_argument('-o', '--output',   help='Whether the outpout should be printed on a stdout or a file or both.', default='filestream')
     parsed_args = parser.parse_args() # Actually parse
 
-    currDateTime = datetime.now().strftime('Optimization_%d-%m-%Y-%H-%M-%S.%f')[:-3]
+    log_filename = datetime.now().strftime('Optimization_%d-%m-%Y-%H-%M-%S.%f')[:-3]
 
     trainData    = parsed_args.train
     bayesianData = parsed_args.bayesian
     randomData   = parsed_args.random
     serialData   = parsed_args.serial
     output       = parsed_args.output
+    method       = parsed_args.method
+
+    if method == "bo":
+        log_filename = "Bayesian_" + log_filename
+    elif method == "random":
+        log_filename = "Random_" + log_filename
+    elif method == "serial":
+        log_filename = "Serial_" + log_filename
+    else:
+        raise Exception("Invalid optimization method.")
 
      # Create a directory to store the results of the experiments
     resultsPath = os.path.join("../","Experiments")
@@ -69,7 +82,7 @@ if __name__ == "__main__":
         os.mkdir(resultsPath)
 
     # Create a specific results direcotry for this run of BO.
-    curRunResultsPath = os.path.join(resultsPath,currDateTime)
+    curRunResultsPath = os.path.join(resultsPath,log_filename)
     os.mkdir(curRunResultsPath)
 
     # Create a specific directory for the intermediate saved datasets
@@ -77,7 +90,7 @@ if __name__ == "__main__":
     os.mkdir(savedDataPath)
 
     logger = Logger(name = 'BO_logger', level=logging.DEBUG, output=output,
-                    filePath=os.path.join(curRunResultsPath, currDateTime + ".log"))
+                    filePath=os.path.join(curRunResultsPath, log_filename + ".log"))
 
     if plot_data_exists(bayesianData):
         bo_result = pd.read_csv(bayesianData)
@@ -91,13 +104,25 @@ if __name__ == "__main__":
                             # nthread=6,
                             random_state=6410
                             )
-        # Instantiate Bayesian Optimizer
-        bayesianOpt = BayesianOptimization(logger)
+        # Instantiate An Optimizer
+        optimizer   = None
+        result_name = None
+        if method == 'bo':
+            optimizer = BayesianOptimization(logger)
+            result_name = 'bo.csv'
+        elif method == 'random':
+            optimizer = RandomOptimization(logger)
+            result_name = 'random_opt.csv'
+        elif method == 'serial':
+            optimizer = SerialOptimization(logger)
+            result_name = 'serial_opt.csv'
+        else:
+            raise NotImplementedError("Invalid optimization method provided.")
 
         # Get the optimized model
-        bo_result = bayesianOpt.optimizeModel(XGBR, zifs, featureNames, targetNames, savedDataPath)
+        result = optimizer.optimizeModel(XGBR, zifs, featureNames, targetNames, savedDataPath)
 
-        bo_result.to_csv(os.path.join(curRunResultsPath,"bo.csv"), index=False)
+        result.to_csv(os.path.join(curRunResultsPath,result_name), index=False)
     
     pairedtTest = Statistical_Tests("pairedT", logger)
 
