@@ -20,16 +20,13 @@ from sklearn.model_selection import KFold
 # TODO Refactor this file by separating functions
 
 class OptimizationFactory(ABC):
-
-    def __init__(self,logger : Logger):
-        self.logger = logger
-        self.logPrefix = "Abstract Optimization"
     def optimizeModel():
         pass
 
 class BayesianOptimization(OptimizationFactory):
 
     def __init__(self,logger : Logger):
+        self.logger = logger
         self.logPrefix = "Bayesian Optimization"
 
     def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , save_path : str) -> pd.DataFrame:
@@ -255,7 +252,8 @@ class BayesianOptimization(OptimizationFactory):
 
 class RandomOptimization(OptimizationFactory):
 
-    def __init__(self,logger : Logger):
+    def __init__(self, logger : Logger):
+        self.logger = logger
         self.logPrefix = "Random Optimization"
     
     def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , save_path : str) -> pd.DataFrame:
