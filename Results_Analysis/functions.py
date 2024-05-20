@@ -11,9 +11,10 @@ import matplotlib.pyplot as plt
 from xgboost import XGBRegressor
 from colorama import init, Fore, Style
 
+import os
 import sys
-sys.path.append('../Bayesian_Optimization')
-from Bayesian_Optimization.optimize_logD import data_preparation
+sys.path.insert(0,os.path.join(os.pardir,"Bayesian_Optimization"))
+from  optimize_logD import data_preparation
 
 def parse_data(path: str, saveName: str):
     """
@@ -182,7 +183,8 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
         dict or None: The sortedData dictionary if plot is False, otherwise None.
     """
 
-    sortedData = {k: threshold_criterion_results[k] for k in sorted(threshold_criterion_results, key=lambda x: float(x))}
+    
+    sortedData = {k: threshold_criterion_results[k].copy() for k in sorted(threshold_criterion_results, key=lambda x: float(x))}
 
     prevSum = 0
     for key in sortedData.keys():
@@ -207,9 +209,11 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
         info_dicts = sortedData.values()
         count_list = [info["count"] for info in info_dicts]
         plt.bar(sortedData.keys(), count_list)
+        plt.xticks(fontsize=20)
+        plt.yticks(fontsize=20)
         plt.show()
-    else:
-        return sortedData
+
+    return sortedData
 
 def succes_rate_per_zif(success: dict, failure: dict):
     """
@@ -353,7 +357,7 @@ def get_datasets_by_probability(train_data: pd.DataFrame, threshold_criterion_re
 
     probability = float(input())
 
-    cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, plot = False)
+    cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, plot = False).copy()
     
     key_prob_distance = {}
     if single_prob:
@@ -390,7 +394,7 @@ def get_datasets_by_data_size(train_data: pd.DataFrame, threshold_criterion_resu
 
     """   
 
-    cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, plot = False)
+    cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, plot = False).copy()
 
     print("Please enter the size of the datasets you want.")
     data_size = int(input())
@@ -423,7 +427,6 @@ def test_against_all_zifs(train_data: pd.DataFrame, full_result_thresh: dict, to
         
         mae_list = []
         for dataset in os.listdir("./selected_datasets/" + dataset_dir):
-            
             zifs, featureNames, targetNames = data_preparation(os.path.join("./selected_datasets/" + dataset_dir, dataset))
 
             x_trainAll = zifs[featureNames].to_numpy()
