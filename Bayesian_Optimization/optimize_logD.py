@@ -127,7 +127,7 @@ if __name__ == "__main__":
     pairedtTest = Statistical_Tests("pairedT", logger)
 
     if (not plot_data_exists(randomData)) and (not plot_data_exists(serialData)):
-        plot_logD_trainSize_perMethod(frame1=bo_result, label1='Bayesian Optimization', on_off='True',
+        plot_logD_trainSize_perMethod(frame1=result, label1='Bayesian Optimization', on_off='True',
                                     xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD',
                                     fileName=os.path.join(curRunResultsPath, "plot_LogD-#Training_Points.png"), marker_colors=['y'])
 
@@ -135,7 +135,7 @@ if __name__ == "__main__":
     bo_v_random_stats = None
     if plot_data_exists(randomData):
         random_results = pd.read_csv(randomData)
-        stat_test = pairedtTest.getTest(bo_result["averageError"].to_numpy(),random_results["averageError"].to_numpy())
+        stat_test = pairedtTest.getTest(result["averageError"].to_numpy(),random_results["averageError"].to_numpy())
         bo_v_random_stats = {"pvalue": stat_test.pvalue, "statistic": stat_test.statistic}
         print("P-Value of Paired T Test Between Bayesian Optimzation and Random Order: " + str(stat_test.pvalue))
         print("Statistic Value: " + str(stat_test.statistic))
@@ -148,7 +148,7 @@ if __name__ == "__main__":
     bo_v_serial_stats = None
     if plot_data_exists(serialData):
         serial_results = pd.read_csv(serialData)
-        stat_test = pairedtTest.getTest(bo_result["averageError"].to_numpy(),serial_results["averageError"].to_numpy())
+        stat_test = pairedtTest.getTest(result["averageError"].to_numpy(),serial_results["averageError"].to_numpy())
         bo_v_serial_stats = {"pvalue": stat_test.pvalue, "statistic": stat_test.statistic}
         print("P-Value of Paired T Test Between Bayesian Optimzation and Serial Order: " + str(stat_test.pvalue))
 
