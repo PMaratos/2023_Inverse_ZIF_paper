@@ -27,6 +27,16 @@ class RandomSelectionStrategy(SelectionStrategy):
         self.logger.info(self.logPrefix, "Randomly Selected Zif: " + selected)
         return selected
 
+class SerialSelectionStrategy(SelectionStrategy):
+    def __init__(self, logger : Logger):
+        self.logger    = logger
+        self.logPrefix = "Serial Selection Strategy"
+
+    def select_next_instance(self, candidate_instances: pd.DataFrame, candidate_position: int):
+        selected = candidate_instances[candidate_position]
+        self.logger.info(self.logPrefix, "Serialy Selected Zif: " + selected)
+        return selected
+
 class ProbabilisticSelectionStrategy(SelectionStrategy):
 
     def __init__(self):
