@@ -183,23 +183,24 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
         dict or None: The sortedData dictionary if plot is False, otherwise None.
     """
 
-    
-    sortedData = {k: threshold_criterion_results[k].copy() for k in sorted(threshold_criterion_results, key=lambda x: float(x))}
+    temp_results = threshold_criterion_results.copy()
+
+    # In case a data size is missing use the vaulue from the previous one.
+    for key in range(min(temp_results.keys()), max(temp_results.keys()) + 1):
+        if key not in temp_results.keys():
+            if key > 1:
+                temp_results[key] = {"count": temp_results[key - 1]["count"]}
+            else:
+                temp_results[key] = {"count": 0}
+            temp_results[key]["datasets"] = []
+
+    sortedData = {k: temp_results[k].copy() for k in sorted(temp_results, key=lambda x: float(x))}
 
     prevSum = 0
     for key in sortedData.keys():
         sortedData[key]["count"] += prevSum
         prevSum = sortedData[key]["count"]
         sortedData[key]["count"] /= numberOfRuns
-
-    # In case a data size is missing use the vaulue from the previous one.
-    for key in range(list(sortedData.keys())[0], list(sortedData.keys())[-1] + 1):
-        if key not in sortedData.keys():
-            if key > 1:
-                sortedData[key] = {"count": sortedData[key - 1]["count"]}
-            else:
-                sortedData[key] = {"count": 0}
-            sortedData[key]["datasets"] = []
 
     # Remove the first 5 data sizes which have been created randomly.
     for key in range(1,6):
