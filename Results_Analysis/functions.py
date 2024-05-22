@@ -207,9 +207,9 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
         del sortedData[key]
 
     if plot:
-        info_dicts = sortedData.values()
-        count_list = [info["count"] for info in info_dicts]
-        plt.bar(sortedData.keys(), count_list)
+        count_list = [sortedData[size]["count"] for size in sortedData.keys()]
+        plt.plot(sortedData.keys(), count_list)
+        plt.grid()
         plt.xticks(fontsize=20)
         plt.yticks(fontsize=20)
         plt.show()
