@@ -16,7 +16,7 @@ import sys
 sys.path.insert(0,os.path.join(os.pardir,"Bayesian_Optimization"))
 from  optimize_logD import data_preparation
 
-def parse_data(path: str, saveName: str):
+def parse_data(path: str, saveName: str = 'saved_datasets'):
     """
     Parses data from the specified directory and saves the results.
 
@@ -183,33 +183,55 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
         dict or None: The sortedData dictionary if plot is False, otherwise None.
     """
 
+    data_list = []
+    data_name_list = []
+    more_data = True
     temp_results = threshold_criterion_results.copy()
+    while more_data:
 
-    # In case a data size is missing use the vaulue from the previous one.
-    for key in range(min(temp_results.keys()), max(temp_results.keys()) + 1):
-        if key not in temp_results.keys():
-            if key > 1:
-                temp_results[key] = {"count": temp_results[key - 1]["count"]}
-            else:
-                temp_results[key] = {"count": 0}
-            temp_results[key]["datasets"] = []
+        # In case a data size is missing use the vaulue from the previous one.
+        for key in range(min(temp_results.keys()), max(temp_results.keys()) + 1):
+            if key not in temp_results.keys():
+                if key > 1:
+                    temp_results[key] = {"count": temp_results[key - 1]["count"]}
+                else:
+                    temp_results[key] = {"count": 0}
+                temp_results[key]["datasets"] = []
 
-    sortedData = {k: temp_results[k].copy() for k in sorted(temp_results, key=lambda x: float(x))}
+        sortedData = {k: temp_results[k].copy() for k in sorted(temp_results, key=lambda x: float(x))}
 
-    prevSum = 0
-    for key in sortedData.keys():
-        sortedData[key]["count"] += prevSum
-        prevSum = sortedData[key]["count"]
-        sortedData[key]["count"] /= numberOfRuns
+        prevSum = 0
+        for key in sortedData.keys():
+            sortedData[key]["count"] += prevSum
+            prevSum = sortedData[key]["count"]
+            sortedData[key]["count"] /= numberOfRuns
 
-    # Remove the first 5 data sizes which have been created randomly.
-    for key in range(1,6):
-        del sortedData[key]
+        # Remove the first 5 data sizes which have been created randomly.
+        for key in range(1,6):
+            del sortedData[key]
+
+        print("What is the name for this dataset?")
+        data_name_list.append(input())
+
+        data_list.append(sortedData)
+
+        print("Do you want to add more data to the cumulative probability plot? [Y/N]")
+        if dialogs.yesNoInput():
+            print("Insert the path for the new set of data.")
+            new_data_path = input()
+
+            parse_results = list(parse_data(new_data_path))
+
+            temp_results = parse_results[-2]
+        else:
+            more_data = False
 
     if plot:
-        count_list = [sortedData[size]["count"] for size in sortedData.keys()]
-        plt.plot(sortedData.keys(), count_list)
+        for data in data_list:
+            count_list = [data[size]["count"] for size in data.keys()]
+            plt.scatter(data.keys(), count_list, label=data_name_list[data_list.index(data)])
         plt.grid()
+        plt.legend()
         plt.xticks(fontsize=20)
         plt.yticks(fontsize=20)
         plt.show()
