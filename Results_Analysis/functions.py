@@ -212,7 +212,6 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
 
         print("What is the name for this dataset?")
         data_name_list.append(input())
-
         data_list.append(sortedData)
 
         print("Do you want to add more data to the cumulative probability plot? [Y/N]")
@@ -222,7 +221,9 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
 
             parse_results = list(parse_data(new_data_path))
 
+            temp_results.clear()
             temp_results = parse_results[-2]
+            numberOfRuns = parse_results[-1]
         else:
             more_data = False
 
