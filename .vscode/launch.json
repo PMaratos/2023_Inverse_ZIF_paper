@@ -64,11 +64,10 @@
             "type": "debugpy",
             "request": "launch",
             "program": "./results_analysis.py",
-            "args": ["-p", "../Experiments/10_Fold_Convergence/changed_criteria_values/"],
+            "args": ["-p", "../Experiments/10_Fold_Convergence/serial_run/"],
             "console": "integratedTerminal",
             "justMyCode": true,
             "cwd": "./Results_Analysis",
-            "env": { "PYTHONPATH": "../"}
         }
     ]
 }
