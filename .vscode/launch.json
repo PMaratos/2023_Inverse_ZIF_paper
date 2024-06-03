@@ -63,11 +63,12 @@
             "name": "Results Analysis",
             "type": "debugpy",
             "request": "launch",
-            "program": "./results_analysis.py",
+            "program": "./Results_Analysis/results_analysis.py",
             "args": ["-p", "../Experiments/10_Fold_Convergence/serial_run/"],
             "console": "integratedTerminal",
             "justMyCode": true,
-            "cwd": "./Results_Analysis",
+            "env": { "PYTHONPATH": "../"}
+            // "cwd": "./Results_Analysis",
         }
     ]
 }
