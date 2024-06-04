@@ -106,7 +106,7 @@ if __name__ == "__main__":
         bo_result = pd.read_csv(bayesianData)
     else:
 
-        zifs, featureNames, targetNames = data_preparation(trainData,dataType)
+        np_data, featureNames, targetNames = data_preparation(trainData,dataType)
 
         # Instantiate the XGB regressor model
         XGBR = XGBRegressor(n_estimators=500, max_depth=5, eta=0.07, subsample=0.75, colsample_bytree=0.7, reg_lambda=0.4, reg_alpha=0.13,
@@ -130,7 +130,7 @@ if __name__ == "__main__":
             raise NotImplementedError("Invalid optimization method provided.")
 
         # Get the optimized model
-        result = optimizer.optimizeModel(XGBR, zifs, featureNames, targetNames, savedDataPath)
+        result = optimizer.optimizeModel(XGBR, np_data, featureNames, targetNames, savedDataPath)
 
         result.to_csv(os.path.join(curRunResultsPath,result_name), index=False)
     
