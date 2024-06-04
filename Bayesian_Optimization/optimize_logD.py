@@ -28,21 +28,29 @@ def plot_data_exists(data_path) -> bool:
 
     return True
 
-def data_preparation(sourceFile=None) -> list:
+def data_preparation(sourceFile=None, research_data="zifs_diffusivity") -> list:
 
-    if sourceFile is not None:
-        data_from_file = readData(sourceFile)
+    if research_data == "zifs_diffusivity":
+        if sourceFile is not None:
+            data_from_file = readData(sourceFile)
+        else:
+            data_from_file = readData()
     else:
-        data_from_file = readData()
+        data_from_file = pd.read_csv(sourceFile)
+        data_from_file = data_from_file.rename(columns={'CO2_working_capacity(mol/kg)':'working_capacity'})
 
-    Y = ["logD"]
-    X = ['diameter','mass','ascentricF', 'kdiameter','ionicRad',
-         'MetalNum','MetalMass','σ_1', 'e_1',
-         'linker_length1', 'linker_length2', 'linker_length3',
-         'linker_mass1', 'linker_mass2', 'linker_mass3',
-         'func1_length', 'func2_length', 'func3_length', 
-         'func1_mass', 'func2_mass', 'func3_mass']
-    
+    if research_data == "zifs_diffusivity":
+        Y = ["logD"]
+        X = ['diameter','mass','ascentricF', 'kdiameter','ionicRad',
+            'MetalNum','MetalMass','σ_1', 'e_1',
+            'linker_length1', 'linker_length2', 'linker_length3',
+            'linker_mass1', 'linker_mass2', 'linker_mass3',
+            'func1_length', 'func2_length', 'func3_length', 
+            'func1_mass', 'func2_mass', 'func3_mass']
+    else:
+        Y = ["working_capacity"]
+        X = ["Nodular_BB1", "Nodular_BB2", "Connecting_BB1", "Connecting_BB2"]
+
     return data_from_file, X, Y
 
 if __name__ == "__main__":
@@ -50,7 +58,8 @@ if __name__ == "__main__":
     # Command line parameters
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-t', '--train',    help='A file containing the train data.', default='TrainData.xlsx')
+    parser.add_argument('-d', '--data',     help='A file containing the train data.', default='TrainData.xlsx')
+    parser.add_argument('-t', '--type',     help='The research data type.', default='zifs_diffusivity')
     parser.add_argument('-m', '--method',   help='Select the optimization method to be used one of [bo, random, serial].', default='bo')
     parser.add_argument('-b', '--bayesian', help='A file containing the logD data acquired by adding zifs using the bayesian optimization mehtod.', default='bo.csv')
     parser.add_argument('-r', '--random',   help='A file containing the logD data acquired by adding zifs in random order.', default='random.csv')
@@ -60,7 +69,8 @@ if __name__ == "__main__":
 
     log_filename = datetime.now().strftime('Optimization_%d-%m-%Y-%H-%M-%S.%f')[:-3]
 
-    trainData    = parsed_args.train
+    trainData    = parsed_args.data
+    dataType     = parsed_args.type
     bayesianData = parsed_args.bayesian
     randomData   = parsed_args.random
     serialData   = parsed_args.serial
@@ -96,7 +106,7 @@ if __name__ == "__main__":
         bo_result = pd.read_csv(bayesianData)
     else:
 
-        zifs, featureNames, targetNames = data_preparation(trainData)
+        zifs, featureNames, targetNames = data_preparation(trainData,dataType)
 
         # Instantiate the XGB regressor model
         XGBR = XGBRegressor(n_estimators=500, max_depth=5, eta=0.07, subsample=0.75, colsample_bytree=0.7, reg_lambda=0.4, reg_alpha=0.13,
