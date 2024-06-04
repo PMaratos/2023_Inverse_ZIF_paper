@@ -37,7 +37,10 @@ def data_preparation(sourceFile=None, research_data="zifs_diffusivity") -> list:
             data_from_file = readData()
     else:
         data_from_file = pd.read_csv(sourceFile)
-        data_from_file = data_from_file.rename(columns={'CO2_working_capacity(mol/kg)':'working_capacity'})
+        data_from_file = data_from_file.rename(columns={'CO2_working_capacity(mol/kg)':'working_capacity', 'mof_name':'type'})
+
+        # One Hot Encode Data
+        data_from_file = pd.get_dummies(data_from_file, columns=["Nodular_BB1", "Nodular_BB2", "Connecting_BB1", "Connecting_BB2"],dtype=int)
 
     if research_data == "zifs_diffusivity":
         Y = ["logD"]
