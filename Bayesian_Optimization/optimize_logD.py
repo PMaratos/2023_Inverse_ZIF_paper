@@ -40,8 +40,12 @@ def data_preparation(sourceFile=None, research_data="zifs_diffusivity") -> list:
         data_from_file = data_from_file.rename(columns={'CO2_working_capacity(mol/kg)':'working_capacity', 'mof_name':'type'})
 
         # One Hot Encode Data
-        data_from_file = pd.get_dummies(data_from_file, columns=["Nodular_BB1", "Nodular_BB2", "Connecting_BB1", "Connecting_BB2"],dtype=int)
+        features = ["Nodular_BB1", "Nodular_BB2", "Connecting_BB1", "Connecting_BB2"]
+        data_from_file = pd.get_dummies(data_from_file, columns=features,dtype=int)
 
+    # Define X and Y
+    Y = []
+    X = []
     if research_data == "zifs_diffusivity":
         Y = ["logD"]
         X = ['diameter','mass','ascentricF', 'kdiameter','ionicRad',
@@ -52,7 +56,7 @@ def data_preparation(sourceFile=None, research_data="zifs_diffusivity") -> list:
             'func1_mass', 'func2_mass', 'func3_mass']
     else:
         Y = ["working_capacity"]
-        X = ["Nodular_BB1", "Nodular_BB2", "Connecting_BB1", "Connecting_BB2"]
+        X = [feature_label for base_label in features for feature_label in list(data_from_file.columns) if base_label in feature_label]
 
     return data_from_file, X, Y
 
