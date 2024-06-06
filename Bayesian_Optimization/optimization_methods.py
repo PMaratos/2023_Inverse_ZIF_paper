@@ -214,7 +214,7 @@ class BayesianOptimization(OptimizationFactory):
                         datasetsInDict = len(bestPerformingData) + 1
                         bestPerformingData[datasetsInDict] = currentData
                         bestPerformingData[datasetsInDict]["mae"] = mae
-                        bestPerformingData[datasetsInDict]["tested_against"] = testZIFname
+                        bestPerformingData[datasetsInDict]["tested_against"] = '-'.join(testZIFname)
 
                     if maeStopCriterionMet:
                         # Save th ecurrent snapshot of the data to a csv file. Use a random name to avoid overwriting
