@@ -59,7 +59,6 @@ class BayesianOptimization(OptimizationFactory):
         else:
             select_data_points_num = 100
 
-
         zif_kfold = KFold(n_splits=fold_num)
         inner_round = 0 
         maePerTrainSize = {}
@@ -75,8 +74,8 @@ class BayesianOptimization(OptimizationFactory):
             trainZIFnames = np.delete(uniqueZIFs, left_out_zif_indicies)
             testZIFname   = uniqueZIFs[left_out_zif_indicies]
 
-            trainZIFs = zifs[zifs['type'] != testZIFname]
-            testZIFs  = zifs[zifs['type'] == testZIFname]
+            trainZIFs = zifs[~zifs['type'].isin(testZIFname)]
+            testZIFs  = zifs[zifs['type'].isin(testZIFname)]
 
             selectRandomSample = 0
             currentData   = pd.DataFrame()
