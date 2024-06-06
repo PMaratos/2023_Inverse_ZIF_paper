@@ -60,7 +60,7 @@ class BayesianOptimization(OptimizationFactory):
             fold_num = len(uniqueZIFs)
             select_data_points_num = len(uniqueZIFs) - 1
         elif fold_design_space < design_space_thres:
-            select_data_points_num = fold_design_space
+            select_data_points_num = int(fold_design_space)
         else:
             select_data_points_num = 100
 
