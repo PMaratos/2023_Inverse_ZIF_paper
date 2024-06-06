@@ -52,10 +52,13 @@ class BayesianOptimization(OptimizationFactory):
         # Initialize dictionary of errors per training data size
         # TODO: Make the maximum number of points (100) configurable. 
         fold_num = 10
+        design_space_thres = 100
         select_data_points_num = 0
-        if (len(uniqueZIFs)) < 100:
+        if (len(uniqueZIFs)) < design_space_thres:
             fold_num = len(uniqueZIFs)
             select_data_points_num = len(uniqueZIFs) - 1
+        elif len(uniqueZIFs) * ((fold_num - 1) / fold_num) < design_space_thres:
+            select_data_points_num = len(uniqueZIFs) * ((fold_num - 1) / fold_num)
         else:
             select_data_points_num = 100
 
