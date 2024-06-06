@@ -73,7 +73,14 @@ class BayesianOptimization(OptimizationFactory):
             maeStopCriterionMet         = False
             bestPerformingData          = {}
 
-            for sizeOfTrainZIFs in range(len(uniqueZIFs) - 1):
+            # TODO: Make the maximum number of points (100) configurable. 
+            select_data_points_num = 0
+            if (len(uniqueZIFs) - 1) < 100:
+                select_data_points_num = len(uniqueZIFs) - 1
+            else:
+                select_data_points_num = 100
+            
+            for sizeOfTrainZIFs in range(select_data_points_num):
 
                 if selectRandomSample < 5:
                     # Sample 5 random ZIFs.
