@@ -39,8 +39,6 @@ class BayesianOptimization(OptimizationFactory):
             Y_featureNames:     The names of the target features.
         """
         optimization_start_time = time.time()
-        # Make a list with all unique ZIF names.
-        uniqueZIFs = zifs.type.unique()
 
         # Initiate a gaussian process model
         gp_model = GaussianProcessRegressor(kernel=ConstantKernel(1.0) * RBF(1.0))
@@ -48,19 +46,34 @@ class BayesianOptimization(OptimizationFactory):
         # Count the total number that the kfold process takes in seconds
         total_kfold_elapsed_time = 0.0
 
+        # Make a list with all unique ZIF names.
+        uniqueZIFs = zifs.type.unique()
+
         # Initialize dictionary of errors per training data size
+        # TODO: Make the maximum number of points (100) configurable. 
+        fold_num = 10
+        select_data_points_num = 0
+        if (len(uniqueZIFs)) < 100:
+            fold_num = len(uniqueZIFs)
+            select_data_points_num = len(uniqueZIFs) - 1
+        else:
+            select_data_points_num = 100
+
+
+        zif_kfold = KFold(n_splits=fold_num)
+        inner_round = 0 
         maePerTrainSize = {}
-        for leaveOutZifIndex in range(len(uniqueZIFs)):
-            
-            roundPath = os.path.join(save_path, "Round_" + str(leaveOutZifIndex + 1))
+        for train_zif_indicies, left_out_zif_indicies in zif_kfold.split(uniqueZIFs):
+            inner_round += 1
+            roundPath = os.path.join(save_path, "Round_" + str(inner_round))
             os.mkdir(roundPath)
             roundMae = []
 
             self.logger.info(self.logPrefix,
-                        "----------   Round " + str(leaveOutZifIndex + 1) + "     ----------")
+                        "----------   Round " + str(inner_round) + "     ----------")
 
-            trainZIFnames = np.delete(uniqueZIFs, leaveOutZifIndex)
-            testZIFname   = uniqueZIFs[leaveOutZifIndex]
+            trainZIFnames = np.delete(uniqueZIFs, left_out_zif_indicies)
+            testZIFname   = uniqueZIFs[left_out_zif_indicies]
 
             trainZIFs = zifs[zifs['type'] != testZIFname]
             testZIFs  = zifs[zifs['type'] == testZIFname]
@@ -72,13 +85,6 @@ class BayesianOptimization(OptimizationFactory):
             maeBestPerformanceList      = []
             maeStopCriterionMet         = False
             bestPerformingData          = {}
-
-            # TODO: Make the maximum number of points (100) configurable. 
-            select_data_points_num = 0
-            if (len(uniqueZIFs) - 1) < 100:
-                select_data_points_num = len(uniqueZIFs) - 1
-            else:
-                select_data_points_num = 100
             
             for sizeOfTrainZIFs in range(select_data_points_num):
 
@@ -215,7 +221,7 @@ class BayesianOptimization(OptimizationFactory):
                         # Save th ecurrent snapshot of the data to a csv file. Use a random name to avoid overwriting
                         for key, value in bestPerformingData.items():
                             bestPerformingData[key]["stop_criterion"] = stopCriterion
-                            bestPerformingDataName = "Round_" + str(leaveOutZifIndex + 1) + "_" + "Dataset_No_" + str(key) + "_best_performing_dataset_of_size_" + str(len(value.type.unique())) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
+                            bestPerformingDataName = "Round_" + str(inner_round) + "_" + "Dataset_No_" + str(key) + "_best_performing_dataset_of_size_" + str(len(value.type.unique())) + "_" + ''.join(random.choice(string.ascii_letters) for _ in range(5)) + ".csv"
                             bestPerformingData[key].to_csv(os.path.join(roundPath,bestPerformingDataName), index=False)
 
 
@@ -232,14 +238,14 @@ class BayesianOptimization(OptimizationFactory):
 
                 roundMae.append(mae)
 
-            self.logger.info(self.logPrefix,"Writting results of Round " + str(leaveOutZifIndex + 1) + " to file.")
+            self.logger.info(self.logPrefix,"Writting results of Round " + str(inner_round) + " to file.")
 
             intermediate_df = pd.DataFrame()
             intermediate_df["sizeOfTrainingSet"]       = list(range(len(roundMae)))
             intermediate_df["averageError"]            = roundMae
             intermediate_df["stdErrorOfMeanError"]     = roundMae
             intermediate_df["stdDeviationOfMeanError"] = roundMae
-            intermediate_df.to_csv(os.path.join(roundPath,"full_round_" + str(leaveOutZifIndex + 1) + ".csv"), index=False)
+            intermediate_df.to_csv(os.path.join(roundPath,"full_round_" + str(inner_round) + ".csv"), index=False)
 
         total_elapsed_time = time.time() - optimization_start_time
         self.logger.info(self.logPrefix,
