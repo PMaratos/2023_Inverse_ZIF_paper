@@ -127,7 +127,7 @@ class BayesianOptimization(OptimizationFactory):
                 # Leave One Out for Bayesian Optimization
                 currentBatchNames = currentData.type.unique()
                 trainLength = len(currentBatchNames)
-                averageMAE = 100.0  # Temporary value denoting that train size 1 has a very large error.
+                averageMAE = 100.0  # TODO Temporary value denoting that train size 1 has a very large error.
                 minMae     = float('-inf')
 
                 # Trying KFold Method
@@ -148,10 +148,10 @@ class BayesianOptimization(OptimizationFactory):
                     kf = KFold(n_splits=leaveOutNum)
                     kFold_start_time = time.time()
                     for train_index, test_index in kf.split(currentBatchNames):
-                        # trainZifNames  = currentBatchNames[train_index]
+                        trainZifNames  = currentBatchNames[train_index].tolist()
                         testZifNames   = currentBatchNames[test_index].tolist()
 
-                        trainBatchZIFs = zifs[~zifs['type'].isin(testZifNames)]
+                        trainBatchZIFs = zifs[zifs['type'].isin(trainZifNames)]
                         testBatchZIF   = zifs[zifs['type'].isin(testZifNames)]
 
                         x_batchTrain   = trainBatchZIFs[X_featureNames].to_numpy()
@@ -173,10 +173,11 @@ class BayesianOptimization(OptimizationFactory):
                     
                     averageMAE /= trainLength # TODO: Check if this is correct
                     
-                    minMae = min(currentBayesianMae)
-
                 for i in range(selectedZIF.shape[0]):
                     currentBayesianMae.append(averageMAE)
+
+                if currentBayesianMae:
+                    minMae = min(currentBayesianMae)
 
                 if trainLength >= 5:
                     # Fit the Gaussian process model to the sampled points
