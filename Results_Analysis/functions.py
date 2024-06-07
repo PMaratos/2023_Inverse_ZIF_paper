@@ -93,7 +93,7 @@ def parse_data(path: str, saveName: str = 'saved_datasets'):
 
             data = pd.read_csv(selectedDataset)            
             tested_zif = data["tested_against"][0]
-            if data["stop_criterion"][1] == "error_threshold_reached":
+            if data["stop_criterion"][0] == "error_threshold_reached":
                 if stoppedDataSize in stopDataSizeFreqThres:
                     stopDataSizeFreqThres[stoppedDataSize] += 1
                 else:
@@ -208,7 +208,8 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
 
         # Remove the first 5 data sizes which have been created randomly.
         for key in range(1,6):
-            del sortedData[key]
+            if key in sortedData.keys():
+                del sortedData[key]
 
         print("What is the name for this dataset?")
         data_name_list.append(input())
