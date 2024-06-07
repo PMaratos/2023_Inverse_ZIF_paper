@@ -42,6 +42,10 @@ def parse_data(path: str, saveName: str = 'saved_datasets'):
     stopDataSizeFreqPerf = {}
     lowPerformanceZifs = {}
     thresholdReachingZifs = {}
+
+    print("Please insert the error threshold that you wish to use for the full report analysis.")
+    full_threshold = float(input())
+
     for experimentFile in os.listdir(path):
 
         # Skip non-directory files
@@ -74,7 +78,7 @@ def parse_data(path: str, saveName: str = 'saved_datasets'):
                     full_data = pd.read_csv(full_data_path)
 
                     for size, row in full_data.iterrows():
-                        if row["averageError"] < 0.5:
+                        if row["averageError"] < full_threshold:
                             if (size + 1) not in full_result_thresh:
                                 full_result_thresh[size + 1] = {"count": 1,
                                                                 "datasets": [full_data_path]}
