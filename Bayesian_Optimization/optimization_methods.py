@@ -469,12 +469,11 @@ class SerialOptimization(OptimizationFactory):
             select_data_points_num = int(fold_design_space)
         else:
             select_data_points_num = 100
-        inner_round += 1
         zif_kfold = KFold(n_splits=fold_num)
         inner_round = 0 
         maePerTrainSize = {}
         for train_zif_indicies, left_out_zif_indicies in zif_kfold.split(uniqueZIFs):
-            
+            inner_round += 1
             roundPath = os.path.join(save_path, "Round_" + str(inner_round))
             os.mkdir(roundPath)
             roundMae = []
