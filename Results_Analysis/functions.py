@@ -36,6 +36,7 @@ def parse_data(path: str, saveName: str = 'saved_datasets'):
     """
     
     total_runs = 0
+    max_dataset_size = 0
     full_result_thresh = {}
     stopDataSizeFreq = {}
     stopDataSizeFreqThres = {}
@@ -76,6 +77,10 @@ def parse_data(path: str, saveName: str = 'saved_datasets'):
                 else:
                     full_data_path = os.path.join(savePath, roundDir, roundResult)
                     full_data = pd.read_csv(full_data_path)
+
+                    if not max_dataset_size:
+                        for size, row in full_data.iterrows():
+                            max_dataset_size += 1
 
                     for size, row in full_data.iterrows():
                         if row["averageError"] < full_threshold:
@@ -132,7 +137,7 @@ def parse_data(path: str, saveName: str = 'saved_datasets'):
     for key in lowPerformanceZifs.keys():
         number_of_stoped_runs += lowPerformanceZifs[key]["count"]
 
-    return sortedDataSizeFreq, stopDataSizeFreqThres, stopDataSizeFreqPerf, mostFreqDataSize, thresholdReachingZifs, lowPerformanceZifs, full_result_thresh, total_runs
+    return sortedDataSizeFreq, stopDataSizeFreqThres, stopDataSizeFreqPerf, mostFreqDataSize, thresholdReachingZifs, lowPerformanceZifs, full_result_thresh, total_runs, max_dataset_size
 
 def plot_mae_per_size(data: dict):
     """
@@ -174,7 +179,7 @@ def box_plot_statistics(mae_data: list, case: str):
     plt.title('Box Plot of '+ case)
     plt.show()
 
-def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot: bool = True):
+def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, max_dataset_size: int, plot: bool = True):
     """
     Calculate the cumulative possibility of activating the threshold criterion.
 
@@ -202,7 +207,7 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
             sortedData[key]["count"] /= numberOfRuns
 
         # In case a data size is missing use the vaulue from the previous one.
-        for key in range(min(sortedData.keys()), max(sortedData.keys()) + 1):
+        for key in range(1, max_dataset_size + 1):
             if key not in sortedData.keys():
                 if key > 1:
                     sortedData[key] = {"count": sortedData[key - 1]["count"]}
@@ -227,8 +232,9 @@ def cumulative_thres(threshold_criterion_results: dict, numberOfRuns: int, plot:
             parse_results = list(parse_data(new_data_path))
 
             temp_results.clear()
-            temp_results = parse_results[-2]
-            numberOfRuns = parse_results[-1]
+            temp_results     = parse_results[-3]
+            numberOfRuns     = parse_results[-2]
+            max_dataset_size = parse_results[-1]
         else:
             more_data = False
 
@@ -363,7 +369,7 @@ def get_datasets(train_data: pd.DataFrame, cumulative_results: dict):
                 
             threshold_dataset.to_csv(os.path.join(data_size_dir, data_round.replace(" ","_") + "_Size_" + str(key) + ''.join(random.choice(string.ascii_letters) for _ in range(5)) +  ".csv"), index = False)
 
-def get_datasets_by_probability(train_data: pd.DataFrame, threshold_criterion_results: dict, total_runs: int):
+def get_datasets_by_probability(train_data: pd.DataFrame, threshold_criterion_results: dict, total_runs: int, max_dataset_size: int):
     """
     Gather the datasets that achieved a certain probability.
 
@@ -386,7 +392,7 @@ def get_datasets_by_probability(train_data: pd.DataFrame, threshold_criterion_re
 
     probability = float(input())
 
-    cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, plot = False).copy()
+    cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, max_dataset_size, plot = False).copy()
     
     key_prob_distance = {}
     if single_prob:
@@ -408,7 +414,7 @@ def get_datasets_by_probability(train_data: pd.DataFrame, threshold_criterion_re
     
     get_datasets(train_data, cumulative_results)
 
-def get_datasets_by_data_size(train_data: pd.DataFrame, threshold_criterion_results: dict, total_runs: int):
+def get_datasets_by_data_size(train_data: pd.DataFrame, threshold_criterion_results: dict, total_runs: int, max_dataset_size: int):
     """
     Gather the datasets the achieved threshold error and are of given data size.
 
@@ -423,7 +429,7 @@ def get_datasets_by_data_size(train_data: pd.DataFrame, threshold_criterion_resu
 
     """   
 
-    cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, plot = False).copy()
+    cumulative_results = cumulative_thres(threshold_criterion_results, total_runs, max_dataset_size, plot = False).copy()
 
     print("Please enter the size of the datasets you want.")
     data_size = int(input())

@@ -20,7 +20,7 @@ if __name__ == "__main__":
     path       = parsed_args.path
     saveName   = parsed_args.save
     train_path = parsed_args.train
-    sortedDataSizeFreq, stopDataSizeFreqThres, stopDataSizeFreqPerf, mostFreqDataSize, thresholdReachingZifs, lowPerformanceZifs, full_result_thresh, total_runs = parse_data(path,saveName)
+    sortedDataSizeFreq, stopDataSizeFreqThres, stopDataSizeFreqPerf, mostFreqDataSize, thresholdReachingZifs, lowPerformanceZifs, full_result_thresh, total_runs, max_dataset_size = parse_data(path,saveName)
 
 
     train_data = readData(train_path)
@@ -57,7 +57,7 @@ if __name__ == "__main__":
             case 5: # Plot cumulative probability of achieving theshold
                 utils.printEmptyLine()
 
-                cumulative_thres(full_result_thresh,total_runs)
+                cumulative_thres(full_result_thresh,total_runs,max_dataset_size)
                 # cumulative_thres(stopDataSizeFreqThres,total_runs)
 
             case 6 : # Plot success rate per zif
@@ -73,12 +73,12 @@ if __name__ == "__main__":
             case 8: # Gather datasets by probability
                 utils.printEmptyLine()
                 
-                get_datasets_by_probability(train_data, full_result_thresh, total_runs)
+                get_datasets_by_probability(train_data, full_result_thresh, total_runs,max_dataset_size)
 
             case 9: # Gather datasets by probability
                 utils.printEmptyLine()
                 
-                get_datasets_by_data_size(train_data, full_result_thresh, total_runs)
+                get_datasets_by_data_size(train_data, full_result_thresh, total_runs,max_dataset_size)
 
             case 10: # Gather datasets by probability
                 utils.printEmptyLine()
