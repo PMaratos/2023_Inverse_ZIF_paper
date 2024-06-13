@@ -30,23 +30,15 @@ def plot_data_exists(data_path) -> bool:
 
 def data_preparation(sourceFile=None, research_data="zifs_diffusivity") -> list:
 
+    Y = []
+    X = []
+
     if research_data == "zifs_diffusivity":
         if sourceFile is not None:
             data_from_file = readData(sourceFile)
         else:
             data_from_file = readData()
-    else:
-        data_from_file = pd.read_csv(sourceFile)
-        data_from_file = data_from_file.rename(columns={'CO2_working_capacity(mol/kg)':'working_capacity', 'mof_name':'type'})
 
-        # One Hot Encode Data
-        features = ["Nodular_BB1", "Nodular_BB2", "Connecting_BB1", "Connecting_BB2"]
-        data_from_file = pd.get_dummies(data_from_file, columns=features,dtype=int)
-
-    # Define X and Y
-    Y = []
-    X = []
-    if research_data == "zifs_diffusivity":
         Y = ["logD"]
         X = ['diameter','mass','ascentricF', 'kdiameter','ionicRad',
             'MetalNum','MetalMass','σ_1', 'e_1',
@@ -54,9 +46,28 @@ def data_preparation(sourceFile=None, research_data="zifs_diffusivity") -> list:
             'linker_mass1', 'linker_mass2', 'linker_mass3',
             'func1_length', 'func2_length', 'func3_length', 
             'func1_mass', 'func2_mass', 'func3_mass']
-    else:
+    
+    elif research_data == "c02":
+        data_from_file = pd.read_csv(sourceFile)
+        data_from_file = data_from_file.rename(columns={'CO2_working_capacity(mol/kg)':'working_capacity', 'mof_name':'type'})
+
+        # One Hot Encode Data
+        features = ["Nodular_BB1", "Nodular_BB2", "Connecting_BB1", "Connecting_BB2"]
+        data_from_file = pd.get_dummies(data_from_file, columns=features,dtype=int)
+
         Y = ["working_capacity"]
         X = [feature_label for base_label in features for feature_label in list(data_from_file.columns) if base_label in feature_label]
+
+    else:
+        data_from_file = pd.read_csv(sourceFile)
+
+        Y = ["logSelfD"]
+        X = ['LCD',	'PLD',	'LFPD',	'Volume',	'ASA_m2_g',	
+             'ASA_m2_cm3',	'NASA_m2_g', 'NASA_m2_cm3',	
+             'AV_VF	AV_cm3_g',	'NAV_cm3_g', 'H', 'C',	'N', 'metal type', 
+             'total degree of unsaturation', 'metalic percentage',	'oxygetn-to-metal ratio',	
+             'electronegtive-to-total ratio', 'weighted electronegativity per atom', 
+             'nitrogen to oxygen', 'mass',	'ascentricF',	'diameter',	'kdiameter']
 
     return data_from_file, X, Y
 
@@ -66,7 +77,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument('-d', '--data',     help='A file containing the train data.', default='TrainData.xlsx')
-    parser.add_argument('-t', '--type',     help='The research data type.', default='zifs_diffusivity')
+    parser.add_argument('-t', '--type',     help='The research data type. One of [zifs_diffusivity, c02, o2_n2].', default='zifs_diffusivity')
     parser.add_argument('-m', '--method',   help='Select the optimization method to be used one of [bo, random, serial].', default='bo')
     parser.add_argument('-b', '--bayesian', help='A file containing the logD data acquired by adding zifs using the bayesian optimization mehtod.', default='bo.csv')
     parser.add_argument('-r', '--random',   help='A file containing the logD data acquired by adding zifs in random order.', default='random.csv')
