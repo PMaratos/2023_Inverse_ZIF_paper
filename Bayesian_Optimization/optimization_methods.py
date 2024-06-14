@@ -62,7 +62,7 @@ class BayesianOptimization(OptimizationFactory):
         elif fold_design_space < design_space_thres:
             select_data_points_num = int(fold_design_space)
         else:
-            select_data_points_num = 100
+            select_data_points_num = design_space_thres
 
         zif_kfold = KFold(n_splits=fold_num)
         inner_round = 0 
@@ -303,7 +303,7 @@ class RandomOptimization(OptimizationFactory):
         elif fold_design_space < design_space_thres:
             select_data_points_num = int(fold_design_space)
         else:
-            select_data_points_num = 100
+            select_data_points_num = design_space_thres
 
         zif_kfold = KFold(n_splits=fold_num)
         inner_round = 0 
@@ -468,7 +468,7 @@ class SerialOptimization(OptimizationFactory):
         elif fold_design_space < design_space_thres:
             select_data_points_num = int(fold_design_space)
         else:
-            select_data_points_num = 100
+            select_data_points_num = design_space_thres
         zif_kfold = KFold(n_splits=fold_num)
         inner_round = 0 
         maePerTrainSize = {}
