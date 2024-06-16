@@ -5,16 +5,19 @@ import random
 import string
 import statistics
 import numpy as np
+from scipy import stats
 import pandas as pd
 from sklearn import metrics
 import matplotlib.pyplot as plt
 from xgboost import XGBRegressor
 from colorama import init, Fore, Style
 
+
 import os
 import sys
 sys.path.insert(0,os.path.join(os.pardir,"Bayesian_Optimization"))
-from  optimize_logD import data_preparation
+from optimize_logD import data_preparation
+from Bayesian_Optimization import plot_optimization
 
 def parse_data(path: str, saveName: str = 'saved_datasets'):
     """
@@ -565,3 +568,132 @@ def analyse_by_data_size(most_freq_size: int, path: str, saveName: str):
             box_plot_statistics(value_range.keys(), "Range of Values")
     else:
         print("Can not further analyse data. Multitude less than 2.")
+
+def plot_error_to_dataset_size(path :str):
+
+    all_exp_results  = []
+    all_exp_results_names = []
+
+    more_data = True
+    while more_data:
+
+        full_exp_results = {}
+        result_files_num = 0
+
+        print("What is the label for the current data?")
+        all_exp_results_names.append(input())
+
+        for experimentFile in os.listdir(path):
+
+            # Skip non-directory files
+            if not os.path.isdir(os.path.join(path, experimentFile)):
+                continue
+
+            experimentPath = os.path.join(path, experimentFile)
+            
+            for content in os.listdir(experimentPath):
+
+                if content == "bo.csv" or content == "random_opt.csv" or content == "serial_opt.csv":
+
+                    result_files_num += 1
+
+                    exp_data = pd.read_csv(os.path.join(experimentPath, content))
+
+                    for index, row in exp_data.iterrows():
+
+                        if row["sizeOfTrainingSet"] not in full_exp_results:
+                            
+                            full_exp_results[row["sizeOfTrainingSet"]] = {"averageError": row["averageError"] , "stdErrorOfMeanError": row["stdErrorOfMeanError"] , "stdDeviationOfMeanError": row["stdDeviationOfMeanError"]}
+                        
+                        else:
+
+                            full_exp_results[row["sizeOfTrainingSet"]]["averageError"] += row["averageError"]
+                            full_exp_results[row["sizeOfTrainingSet"]]["stdErrorOfMeanError"] += row["stdErrorOfMeanError"]
+                            full_exp_results[row["sizeOfTrainingSet"]]["stdDeviationOfMeanError"] += row["stdDeviationOfMeanError"]
+
+        for dataset_size in full_exp_results:
+        
+            full_exp_results[dataset_size]["averageError"] /= result_files_num
+            full_exp_results[dataset_size]["stdErrorOfMeanError"] /= result_files_num
+            full_exp_results[dataset_size]["stdDeviationOfMeanError"] /= result_files_num
+
+
+        all_exp_results.append(full_exp_results)
+
+        print("Do you want to add more data to the cumulative probability plot? [Y/N]")
+        if dialogs.yesNoInput():
+            print("Insert the path for the new set of data.")
+            path = input()
+        
+        else:
+            more_data = False
+
+
+    if len(all_exp_results) == 1:
+
+        exp_results = all_exp_results[0]
+
+        results = pd.DataFrame().from_dict(exp_results, orient='index')
+        results["sizeOfTrainingSet"] = results.index.astype(int)
+
+        plot_optimization.plot_logD_trainSize_perMethod(frame1=results, label1=all_exp_results_names[0], on_off='True',
+                                        xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD Across Multiple Experiments',
+                                        fileName=os.path.join(path, "plot_LogD-#Training_Points.png"), marker_colors=['y'])
+    
+    elif len(all_exp_results) == 2:
+
+        exp_results_0 = all_exp_results[0]
+        exp_results_1 = all_exp_results[1]
+
+        results_0 = pd.DataFrame().from_dict(exp_results_0, orient='index')
+        results_0["sizeOfTrainingSet"] = results_0.index.astype(int)
+
+        results_1 = pd.DataFrame().from_dict(exp_results_1, orient='index')
+        results_1["sizeOfTrainingSet"] = results_1.index.astype(int)
+
+        stat_results = stats.ttest_rel(results_0["averageError"].to_numpy(),results_1["averageError"].to_numpy())
+        print("Paired T Test Completed With p-value: " + str(stat_results.pvalue) + " and statistic: " + str(stat_results.statistic))
+
+        result_0_v_result_1 = {"pvalue": stat_results.pvalue, "statistic": stat_results.statistic}
+        print("P-Value of Paired T Test Between Method 1 and Method 2: " + str(stat_results.pvalue))
+        print("Statistic Value: " + str(stat_results.statistic))
+
+        plot_optimization.plot_logD_trainSize_perMethod(frame1=results_0, frame2=results_1, label1=all_exp_results_names[0], method1_v_method2_stats=result_0_v_result_1, label2=all_exp_results_names[1], on_off='True',
+                                        xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD Across Multiple Experiments',
+                                        fileName=os.path.join(path, "plot_LogD-#Training_Points.png"), marker_colors=['y','g'])
+        
+    elif len(all_exp_results) == 3:
+
+        exp_results_0 = all_exp_results[0]
+        exp_results_1 = all_exp_results[1]
+        exp_results_2 = all_exp_results[2]
+
+        results_0 = pd.DataFrame().from_dict(exp_results_0, orient='index')
+        results_0["sizeOfTrainingSet"] = results_0.index.astype(int)
+
+        results_1 = pd.DataFrame().from_dict(exp_results_1, orient='index')
+        results_1["sizeOfTrainingSet"] = results_1.index.astype(int)
+
+        results_2 = pd.DataFrame().from_dict(exp_results_2, orient='index')
+        results_2["sizeOfTrainingSet"] = results_2.index.astype(int)
+
+        stat_results = stats.ttest_rel(results_0["averageError"].to_numpy(),results_1["averageError"].to_numpy())
+        print("Paired T Test Completed With p-value: " + str(stat_results.pvalue) + " and statistic: " + str(stat_results.statistic))
+
+        result_0_v_result_1 = {"pvalue": stat_results.pvalue, "statistic": stat_results.statistic}
+        print("P-Value of Paired T Test Between Method 1 and Method 2: " + str(stat_results.pvalue))
+        print("Statistic Value: " + str(stat_results.statistic))
+
+        stat_results = stats.ttest_rel(results_0["averageError"].to_numpy(),results_2["averageError"].to_numpy())
+        print("Paired T Test Completed With p-value: " + str(stat_results.pvalue) + " and statistic: " + str(stat_results.statistic))
+
+        result_0_v_result_2 = {"pvalue": stat_results.pvalue, "statistic": stat_results.statistic}
+        print("P-Value of Paired T Test Between Method 1 and Method 3: " + str(stat_results.pvalue))
+        print("Statistic Value: " + str(stat_results.statistic))
+
+        plot_optimization.plot_logD_trainSize_perMethod(frame1=results_0, frame2=results_1, frame3=results_2, method1_v_method2_stats=result_0_v_result_1, method1_v_method3_stats=result_0_v_result_2 ,label1=all_exp_results_names[0], label2=all_exp_results_names[1], label3=all_exp_results_names[2], on_off='True',
+                                        xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD Across Multiple Experiments',
+                                        fileName=os.path.join(path, "plot_LogD-#Training_Points.png"), marker_colors=['y','g','r'])
+    
+    else:
+        print("Method is implemented for up to three types of experiments.")

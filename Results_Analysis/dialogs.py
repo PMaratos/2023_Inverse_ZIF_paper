@@ -11,6 +11,7 @@ def getMainAction():
                 "Get best datasets by probability",
                 "Get best datasets by data size",
                 "Test selected model against all Zifs",
+                "Plot Error To Dataset Size",
                 "Exit"]
 
 def getNumOfActions():

@@ -85,5 +85,10 @@ if __name__ == "__main__":
                 
                 test_against_all_zifs(train_data, full_result_thresh, total_runs)
 
+            case 11: # Plot error to dataset size for all runs.
+                utils.printEmptyLine()
+                
+                plot_error_to_dataset_size(path)
+
             case _:
                 pass
