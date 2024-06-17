@@ -13,6 +13,7 @@ from acquisition_functions import ExpectedImprovementCalculator
 from selection_strategy    import GreedySelectionStrategy
 from selection_strategy    import RandomSelectionStrategy
 from selection_strategy    import SerialSelectionStrategy
+from selection_strategy    import ProbabilisticSelectionStrategy
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF
 from sklearn.gaussian_process.kernels import ConstantKernel
@@ -109,8 +110,12 @@ class BayesianOptimization(OptimizationFactory):
                     eI = eiCalculator.get_acquisition_function(trainZIFs, X_featureNames, gp_model, minMae)
 
                     # Select the next zif in a greedy manner
-                    greedySelection = GreedySelectionStrategy(logger=self.logger)
-                    eiName = greedySelection.select_next_instance(eI, trainZIFs)
+                    # greedySelection = GreedySelectionStrategy(logger=self.logger)
+                    # eiName = greedySelection.select_next_instance(eI, trainZIFs)
+
+                    probSelection   = ProbabilisticSelectionStrategy(logger=self.logger)
+                    eiName = probSelection.select_next_instance(eI, trainZIFs)
+
                     selectedZIF = trainZIFs[(trainZIFs['type'] == eiName)]
 
                     # Remove the sellected ZIF from the list of available for training
