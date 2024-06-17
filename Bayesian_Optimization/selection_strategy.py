@@ -43,4 +43,16 @@ class ProbabilisticSelectionStrategy(SelectionStrategy):
         self.logPrefix = "Probabilistic Selection Strategy"
 
     def select_next_instance(self, acquisition_values : np.array, candidate_instances: pd.DataFrame):
-        raise NotImplementedError("Vassili kanto!")
+        
+        options = ['max', 'rand']
+        probabilities = [0.8, 0.2]
+        option = np.random.choice(options, p=probabilities)
+
+        if option == 'max':
+            selected = candidate_instances.iloc[np.argmax(acquisition_values)]["type"]
+            self.logger.info(self.logPrefix, "Probabilistic selection settled to max value.")
+        else:
+            selected = np.random.choice(candidate_instances, size=1, replace=False)[0]
+            self.logger.info(self.logPrefix, "Probabilistic selection settled to random value.")
+
+        self.logger.info(self.logPrefix, "Probabilisticly Selected: "+ str(selected))
