@@ -59,3 +59,5 @@ class ProbabilisticSelectionStrategy(SelectionStrategy):
             self.logger.info(self.logPrefix, "Probabilistic selection settled to random value.")
 
         self.logger.info(self.logPrefix, "Probabilisticly Selected: "+ str(selected))
+
+        return selected
