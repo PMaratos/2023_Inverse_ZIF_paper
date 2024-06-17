@@ -39,7 +39,8 @@ class SerialSelectionStrategy(SelectionStrategy):
 
 class ProbabilisticSelectionStrategy(SelectionStrategy):
 
-    def __init__(self):
+    def __init__(self, logger : Logger):
+        self.logger    =  logger
         self.logPrefix = "Probabilistic Selection Strategy"
 
     def select_next_instance(self, acquisition_values : np.array, candidate_instances: pd.DataFrame):
