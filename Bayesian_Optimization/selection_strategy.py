@@ -53,7 +53,9 @@ class ProbabilisticSelectionStrategy(SelectionStrategy):
             selected = candidate_instances.iloc[np.argmax(acquisition_values)]["type"]
             self.logger.info(self.logPrefix, "Probabilistic selection settled to max value.")
         else:
-            selected = np.random.choice(candidate_instances, size=1, replace=False)[0]
+
+            candidate_names = candidate_instances["type"].unique()
+            selected = np.random.choice(candidate_names, size=1, replace=False)[0]
             self.logger.info(self.logPrefix, "Probabilistic selection settled to random value.")
 
         self.logger.info(self.logPrefix, "Probabilisticly Selected: "+ str(selected))
