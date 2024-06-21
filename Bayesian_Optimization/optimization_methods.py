@@ -310,7 +310,7 @@ class RandomOptimization(OptimizationFactory):
         else:
             select_data_points_num = design_space_thres
 
-        zif_kfold = KFold(n_splits=fold_num)
+        zif_kfold = KFold(n_splits=fold_num, shuffle=True, random_state=10)
         inner_round = 0 
         maePerTrainSize = {}
         for train_zif_indicies, left_out_zif_indicies in zif_kfold.split(uniqueZIFs):
@@ -474,7 +474,8 @@ class SerialOptimization(OptimizationFactory):
             select_data_points_num = int(fold_design_space)
         else:
             select_data_points_num = design_space_thres
-        zif_kfold = KFold(n_splits=fold_num)
+
+        zif_kfold = KFold(n_splits=fold_num, shuffle=True, random_state=10)
         inner_round = 0 
         maePerTrainSize = {}
         for train_zif_indicies, left_out_zif_indicies in zif_kfold.split(uniqueZIFs):
