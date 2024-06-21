@@ -64,10 +64,10 @@ def data_preparation(sourceFile=None, research_data="zifs_diffusivity") -> list:
         Y = ["logSelfD"]
         X = ['LCD',	'PLD',	'LFPD',	'Volume',	'ASA_m2_g',	
              'ASA_m2_cm3',	'NASA_m2_g', 'NASA_m2_cm3',	
-             'AV_VF	AV_cm3_g',	'NAV_cm3_g', 'H', 'C',	'N', 'metal type', 
-             'total degree of unsaturation', 'metalic percentage',	'oxygetn-to-metal ratio',	
-             'electronegtive-to-total ratio', 'weighted electronegativity per atom', 
-             'nitrogen to oxygen', 'mass',	'ascentricF',	'diameter',	'kdiameter']
+             'AV_VF',	'AV_cm3_g',	'NAV_cm3_g', ' H', 'C',	'N', 'metal type', 
+             ' total degree of unsaturation', 'metalic percentage',	' oxygetn-to-metal ratio',	
+             'electronegtive-to-total ratio', ' weighted electronegativity per atom', 
+             ' nitrogen to oxygen ', 'mass',	'ascentricF',	'diameter',	'kdiameter']
 
     return data_from_file, X, Y
 
