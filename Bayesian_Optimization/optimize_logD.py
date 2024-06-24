@@ -47,7 +47,7 @@ def data_preparation(sourceFile=None, research_data="zifs_diffusivity") -> list:
             'func1_length', 'func2_length', 'func3_length', 
             'func1_mass', 'func2_mass', 'func3_mass']
     
-    elif research_data == "c02":
+    elif research_data == "co2":
         data_from_file = pd.read_csv(sourceFile)
         data_from_file = data_from_file.rename(columns={'CO2_working_capacity(mol/kg)':'working_capacity', 'mof_name':'type'})
 
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument('-d', '--data',     help='A file containing the train data.', default='TrainData.xlsx')
-    parser.add_argument('-t', '--type',     help='The research data type. One of [zifs_diffusivity, c02, o2_n2].', default='zifs_diffusivity')
+    parser.add_argument('-t', '--type',     help='The research data type. One of [zifs_diffusivity, co2, o2_n2].', default='zifs_diffusivity')
     parser.add_argument('-m', '--method',   help='Select the optimization method to be used one of [bo, random, serial].', default='bo')
     parser.add_argument('-b', '--bayesian', help='A file containing the logD data acquired by adding zifs using the bayesian optimization mehtod.', default='bo.csv')
     parser.add_argument('-r', '--random',   help='A file containing the logD data acquired by adding zifs in random order.', default='random.csv')
