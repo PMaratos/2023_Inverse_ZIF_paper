@@ -121,9 +121,12 @@ if __name__ == "__main__":
         os.mkdir(resultsPath)
 
     # Create a specific results directory for this experiment
-    resultsPath = os.path.join(resultsPath, experiment_dir)
-    if not os.path.exists(resultsPath):
-        os.mkdir(resultsPath)
+    for directory in experiment_dir.split(os.path.sep):
+    
+        resultsPath = os.path.join(resultsPath, directory)
+
+        if not os.path.exists(resultsPath):
+            os.mkdir(resultsPath)
 
 
     for i in range(experiments_num):
