@@ -31,7 +31,7 @@ class BayesianOptimization(OptimizationFactory):
         self.logger = logger
         self.logPrefix = "Bayesian Optimization"
 
-    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , save_path : str) -> pd.DataFrame:
+    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , designspace_thres : int, save_path : str) -> pd.DataFrame:
 
         """ Bayesian Optimization As A Method For Optimizing MAE of LogD 
             model:              The model to be optimized.
@@ -51,19 +51,24 @@ class BayesianOptimization(OptimizationFactory):
         uniqueZIFs = zifs.type.unique()
 
         # Initialize dictionary of errors per training data size
-        # TODO: Make the maximum number of points (100) configurable. 
+
         fold_num = 10
         design_space = (len(uniqueZIFs))
         fold_design_space = len(uniqueZIFs) * ((fold_num - 1) / fold_num)
-        design_space_thres = 100
+
         select_data_points_num = 0
-        if design_space < design_space_thres:
+        if design_space < designspace_thres:
             fold_num = len(uniqueZIFs)
             select_data_points_num = len(uniqueZIFs) - 1
-        elif fold_design_space < design_space_thres:
+
+        elif fold_design_space < designspace_thres:
             select_data_points_num = int(fold_design_space)
+
         else:
-            select_data_points_num = design_space_thres
+            select_data_points_num = designspace_thres
+
+        self.logger.info(self.logPrefix,
+                         "----------   Data points to be selected are: " + str(select_data_points_num) +  " out of a design space of " + str(design_space) + " data points." + "     ----------")
 
         zif_kfold = KFold(n_splits=fold_num, shuffle=True, random_state=10)
         inner_round = 0 
@@ -280,7 +285,7 @@ class RandomOptimization(OptimizationFactory):
         self.logger = logger
         self.logPrefix = "Random Optimization"
     
-    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , save_path : str) -> pd.DataFrame:
+    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , designspace_thres : int, save_path : str) -> pd.DataFrame:
 
         """ Random Optimization As A Method For Optimizing MAE of LogD 
             model:              The model to be optimized.
@@ -296,19 +301,25 @@ class RandomOptimization(OptimizationFactory):
         total_kfold_elapsed_time = 0.0
 
         # Initialize dictionary of errors per training data size
-        # TODO: Make the maximum number of points (100) configurable. 
+
         fold_num = 10
         design_space = (len(uniqueZIFs))
         fold_design_space = len(uniqueZIFs) * ((fold_num - 1) / fold_num)
-        design_space_thres = 100
+
         select_data_points_num = 0
-        if design_space < design_space_thres:
+        if design_space < designspace_thres:
             fold_num = len(uniqueZIFs)
             select_data_points_num = len(uniqueZIFs) - 1
-        elif fold_design_space < design_space_thres:
+
+        elif fold_design_space < designspace_thres:
             select_data_points_num = int(fold_design_space)
+
         else:
-            select_data_points_num = design_space_thres
+            select_data_points_num = designspace_thres
+
+        self.logger.info(self.logPrefix,
+                         "----------   Data points to be selected are: " + str(select_data_points_num) +  " out of a design space of " + str(design_space) + " data points." + "     ----------")
+
 
         zif_kfold = KFold(n_splits=fold_num, shuffle=True, random_state=10)
         inner_round = 0 
@@ -445,7 +456,7 @@ class SerialOptimization(OptimizationFactory):
         self.logger = logger
         self.logPrefix = "Serial Optimization"
     
-    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , save_path : str) -> pd.DataFrame:
+    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , designspace_thres : int, save_path : str) -> pd.DataFrame:
 
         """ Serial Optimization As A Method For Optimizing MAE of LogD 
             model:              The model to be optimized.
@@ -461,19 +472,24 @@ class SerialOptimization(OptimizationFactory):
         total_kfold_elapsed_time = 0.0
 
         # Initialize dictionary of errors per training data size
-        # TODO: Make the maximum number of points (100) configurable. 
         fold_num = 10
         design_space = (len(uniqueZIFs))
         fold_design_space = len(uniqueZIFs) * ((fold_num - 1) / fold_num)
-        design_space_thres = 100
+
         select_data_points_num = 0
-        if design_space < design_space_thres:
+        if design_space < designspace_thres:
             fold_num = len(uniqueZIFs)
             select_data_points_num = len(uniqueZIFs) - 1
-        elif fold_design_space < design_space_thres:
+
+        elif fold_design_space < designspace_thres:
             select_data_points_num = int(fold_design_space)
+
         else:
-            select_data_points_num = design_space_thres
+            select_data_points_num = designspace_thres
+
+        self.logger.info(self.logPrefix,
+                         "----------   Data points to be selected are: " + str(select_data_points_num) +  " out of a design space of " + str(design_space) + " data points." + "     ----------")
+
 
         zif_kfold = KFold(n_splits=fold_num, shuffle=True, random_state=10)
         inner_round = 0 

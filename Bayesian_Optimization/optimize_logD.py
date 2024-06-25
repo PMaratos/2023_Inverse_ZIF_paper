@@ -79,6 +79,7 @@ if __name__ == "__main__":
     parser.add_argument('-d', '--data',     help='A file containing the train data.', default='TrainData.xlsx')
     parser.add_argument('-t', '--type',     help='The research data type. One of [zifs_diffusivity, co2, o2_n2].', default='zifs_diffusivity')
     parser.add_argument('-m', '--method',   help='Select the optimization method to be used one of [bo, random, serial].', default='bo')
+    parser.add_argument('-n', '--number',   help='The number of data points that will be selected from the design space', default=100)
     parser.add_argument('-b', '--bayesian', help='A file containing the logD data acquired by adding zifs using the bayesian optimization mehtod.', default='bo.csv')
     parser.add_argument('-r', '--random',   help='A file containing the logD data acquired by adding zifs in random order.', default='random.csv')
     parser.add_argument('-s', '--serial',   help='A file containing the logD data acquired by adding zifs in a specific serial order.', default='serial.csv')
@@ -87,13 +88,14 @@ if __name__ == "__main__":
 
     log_filename = datetime.now().strftime('Optimization_%d-%m-%Y-%H-%M-%S.%f')[:-3]
 
-    trainData    = parsed_args.data
-    dataType     = parsed_args.type
-    bayesianData = parsed_args.bayesian
-    randomData   = parsed_args.random
-    serialData   = parsed_args.serial
-    output       = parsed_args.output
-    method       = parsed_args.method
+    trainData         = parsed_args.data
+    dataType          = parsed_args.type
+    bayesianData      = parsed_args.bayesian
+    randomData        = parsed_args.random
+    serialData        = parsed_args.serial
+    output            = parsed_args.output
+    method            = parsed_args.method
+    designspace_thres = int(parsed_args.number)
 
     if dataType not in ["zifs_diffusivity", "co2", "o2_n2"]:
         raise Exception("Invalid research data type.")
@@ -151,7 +153,7 @@ if __name__ == "__main__":
             raise NotImplementedError("Invalid optimization method provided.")
 
         # Get the optimized model
-        result = optimizer.optimizeModel(XGBR, np_data, featureNames, targetNames, savedDataPath)
+        result = optimizer.optimizeModel(XGBR, np_data, featureNames, targetNames, designspace_thres, savedDataPath)
 
         result.to_csv(os.path.join(curRunResultsPath,result_name), index=False)
     
