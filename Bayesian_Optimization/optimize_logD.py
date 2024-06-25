@@ -58,7 +58,7 @@ def data_preparation(sourceFile=None, research_data="zifs_diffusivity") -> list:
         Y = ["working_capacity"]
         X = [feature_label for base_label in features for feature_label in list(data_from_file.columns) if base_label in feature_label]
 
-    else:
+    elif research_data == "o2_n2":
         data_from_file = pd.read_csv(sourceFile)
 
         Y = ["logSelfD"]
@@ -68,6 +68,17 @@ def data_preparation(sourceFile=None, research_data="zifs_diffusivity") -> list:
              ' total degree of unsaturation', 'metalic percentage',	' oxygetn-to-metal ratio',	
              'electronegtive-to-total ratio', ' weighted electronegativity per atom', 
              ' nitrogen to oxygen ', 'mass',	'ascentricF',	'diameter',	'kdiameter']
+
+    else:
+        data_from_file = pd.read_csv(sourceFile)
+        data_from_file = data_from_file.rename(columns={' absolute methane uptake high P [v STP/v]':'methane_uptake', ' name':'type'})        
+
+        Y = ['methane_uptake']
+        X = ['dimensions', ' supercell volume [A^3]', ' density [kg/m^3]',
+             ' surface area [m^2/g]', ' num carbon', ' num hydrogen',
+             ' num nitrogen', ' num oxygen', ' num sulfur', ' num silicon',
+             ' vertices', ' edges', ' genus', ' largest included sphere diameter [A]',
+             ' largest free sphere diameter [A]', ' largest included sphere along free sphere path diameter [A]']
 
     return data_from_file, X, Y
 
@@ -99,7 +110,7 @@ if __name__ == "__main__":
     designspace_thres = int(parsed_args.number)
     experiments_num   = int(parsed_args.loop)
 
-    if dataType not in ["zifs_diffusivity", "co2", "o2_n2"]:
+    if dataType not in ["zifs_diffusivity", "co2", "o2_n2", "methane"]:
         raise Exception("Invalid research data type.")
 
     # Create a directory to store the results of the experiments
