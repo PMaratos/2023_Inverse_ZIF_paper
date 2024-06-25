@@ -31,7 +31,7 @@ class BayesianOptimization(OptimizationFactory):
         self.logger = logger
         self.logPrefix = "Bayesian Optimization"
 
-    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , designspace_thres : int, save_path : str) -> pd.DataFrame:
+    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , designspace_thres : int, bo_selection : str, save_path : str) -> pd.DataFrame:
 
         """ Bayesian Optimization As A Method For Optimizing MAE of LogD 
             model:              The model to be optimized.
@@ -114,12 +114,17 @@ class BayesianOptimization(OptimizationFactory):
                     eiCalculator = ExpectedImprovementCalculator(factor=0,logger = self.logger)
                     eI = eiCalculator.get_acquisition_function(trainZIFs, X_featureNames, gp_model, minMae)
 
-                    # Select the next zif in a greedy manner
-                    # greedySelection = GreedySelectionStrategy(logger=self.logger)
-                    # eiName = greedySelection.select_next_instance(eI, trainZIFs)
-
-                    probSelection   = ProbabilisticSelectionStrategy(logger=self.logger)
-                    eiName = probSelection.select_next_instance(eI, trainZIFs)
+                    eiName = None
+                    if bo_selection == "greedy":
+                        # Select the next zif in a greedy manner
+                        greedySelection = GreedySelectionStrategy(logger=self.logger)
+                        eiName = greedySelection.select_next_instance(eI, trainZIFs)
+                    elif bo_selection == "prob":
+                        # Select the next zif in a probabilistic manner.
+                        probSelection   = ProbabilisticSelectionStrategy(logger=self.logger)
+                        eiName = probSelection.select_next_instance(eI, trainZIFs)
+                    else:
+                        raise ValueError("Unknown selection method: " + str(bo_selection))
 
                     selectedZIF = trainZIFs[(trainZIFs['type'] == eiName)]
 
@@ -285,7 +290,7 @@ class RandomOptimization(OptimizationFactory):
         self.logger = logger
         self.logPrefix = "Random Optimization"
     
-    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , designspace_thres : int, save_path : str) -> pd.DataFrame:
+    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , designspace_thres : int, bo_selection : str, save_path : str) -> pd.DataFrame:
 
         """ Random Optimization As A Method For Optimizing MAE of LogD 
             model:              The model to be optimized.
@@ -456,7 +461,7 @@ class SerialOptimization(OptimizationFactory):
         self.logger = logger
         self.logPrefix = "Serial Optimization"
     
-    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , designspace_thres : int, save_path : str) -> pd.DataFrame:
+    def optimizeModel(self, model : any, zifs : pd.DataFrame, X_featureNames : list, Y_featureNames : list , designspace_thres : int, bo_selection : str, save_path : str) -> pd.DataFrame:
 
         """ Serial Optimization As A Method For Optimizing MAE of LogD 
             model:              The model to be optimized.

@@ -88,7 +88,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument('-d', '--data',     help='A file containing the train data.', default='TrainData.xlsx')
-    parser.add_argument('-t', '--type',     help='The research data type. One of [zifs_diffusivity, co2, o2_n2].', default='zifs_diffusivity')
+    parser.add_argument('-t', '--type',     help='The research data type. One of [zifs_diffusivity, co2, o2_n2, methane].', default='zifs_diffusivity')
     parser.add_argument('-m', '--method',   help='Select the optimization method to be used one of [bo, random, serial].', default='bo')
     parser.add_argument('-n', '--number',   help='The number of data points that will be selected from the design space', default=100)
     parser.add_argument('-b', '--bayesian', help='A file containing the logD data acquired by adding zifs using the bayesian optimization mehtod.', default='bo.csv')
@@ -97,6 +97,7 @@ if __name__ == "__main__":
     parser.add_argument('-o', '--output',   help='Whether the outpout should be printed on a stdout or a file or both.', default='filestream')
     parser.add_argument('-f', '--folder',   help='A folder with a signature name concerning the experiment conducted', default='test_opt')
     parser.add_argument('-l', '--loop',     help='Define the number of times the experiment should be conducted.', default=1)
+    parser.add_argument('--bo_selection',   help='Define the selection method to be used durin the bayesian optimization. One of [greedy, prob].', default='prob')
     parsed_args = parser.parse_args() # Actually parse
 
     trainData         = parsed_args.data
@@ -107,6 +108,7 @@ if __name__ == "__main__":
     output            = parsed_args.output
     method            = parsed_args.method
     experiment_dir    = parsed_args.folder
+    bo_selection      = parsed_args.bo_selection
     designspace_thres = int(parsed_args.number)
     experiments_num   = int(parsed_args.loop)
 
@@ -180,7 +182,7 @@ if __name__ == "__main__":
                 raise NotImplementedError("Invalid optimization method provided.")
 
             # Get the optimized model
-            result = optimizer.optimizeModel(XGBR, np_data, featureNames, targetNames, designspace_thres, savedDataPath)
+            result = optimizer.optimizeModel(XGBR, np_data, featureNames, targetNames, designspace_thres, bo_selection ,savedDataPath)
 
             result.to_csv(os.path.join(curRunResultsPath,result_name), index=False)
         
