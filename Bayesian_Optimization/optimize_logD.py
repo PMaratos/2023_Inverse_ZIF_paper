@@ -141,68 +141,66 @@ if __name__ == "__main__":
 
         logger.info("Optimization", "Experiment " + str(i + 1) + " of " + str(experiments_num) + " started.")
         
-        time.sleep(2)
+        if plot_data_exists(bayesianData):
+            result = pd.read_csv(bayesianData)
+        else:
 
-        # if plot_data_exists(bayesianData):
-        #     result = pd.read_csv(bayesianData)
-        # else:
+            np_data, featureNames, targetNames = data_preparation(trainData,dataType)
 
-        #     np_data, featureNames, targetNames = data_preparation(trainData,dataType)
+            # Instantiate the XGB regressor model
+            XGBR = XGBRegressor(n_estimators=500, max_depth=5, eta=0.07, subsample=0.75, colsample_bytree=0.7, reg_lambda=0.4, reg_alpha=0.13,
+                                n_jobs=6,
+                                # nthread=6,
+                                random_state=6410
+                                )
+            # Instantiate An Optimizer
+            optimizer   = None
+            result_name = None
+            if method == 'bo':
+                optimizer = BayesianOptimization(logger)
+                result_name = 'bo.csv'
+            elif method == 'random':
+                optimizer = RandomOptimization(logger)
+                result_name = 'random_opt.csv'
+            elif method == 'serial':
+                optimizer = SerialOptimization(logger)
+                result_name = 'serial_opt.csv'
+            else:
+                raise NotImplementedError("Invalid optimization method provided.")
 
-        #     # Instantiate the XGB regressor model
-        #     XGBR = XGBRegressor(n_estimators=500, max_depth=5, eta=0.07, subsample=0.75, colsample_bytree=0.7, reg_lambda=0.4, reg_alpha=0.13,
-        #                         n_jobs=6,
-        #                         # nthread=6,
-        #                         random_state=6410
-        #                         )
-        #     # Instantiate An Optimizer
-        #     optimizer   = None
-        #     result_name = None
-        #     if method == 'bo':
-        #         optimizer = BayesianOptimization(logger)
-        #         result_name = 'bo.csv'
-        #     elif method == 'random':
-        #         optimizer = RandomOptimization(logger)
-        #         result_name = 'random_opt.csv'
-        #     elif method == 'serial':
-        #         optimizer = SerialOptimization(logger)
-        #         result_name = 'serial_opt.csv'
-        #     else:
-        #         raise NotImplementedError("Invalid optimization method provided.")
+            # Get the optimized model
+            result = optimizer.optimizeModel(XGBR, np_data, featureNames, targetNames, designspace_thres, savedDataPath)
 
-        #     # Get the optimized model
-        #     result = optimizer.optimizeModel(XGBR, np_data, featureNames, targetNames, designspace_thres, savedDataPath)
-
-        #     result.to_csv(os.path.join(curRunResultsPath,result_name), index=False)
+            result.to_csv(os.path.join(curRunResultsPath,result_name), index=False)
         
-        # pairedtTest = Statistical_Tests("pairedT", logger)
+        pairedtTest = Statistical_Tests("pairedT", logger)
 
-        # if (not plot_data_exists(randomData)) and (not plot_data_exists(serialData)):
-        #     plot_logD_trainSize_perMethod(frame1=result, label1='Bayesian Optimization', on_off='True',
-        #                                 xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD',
-        #                                 fileName=os.path.join(curRunResultsPath, "plot_LogD-#Training_Points.png"), marker_colors=['y'])
+        if (not plot_data_exists(randomData)) and (not plot_data_exists(serialData)):
+            plot_logD_trainSize_perMethod(frame1=result, label1='Bayesian Optimization', on_off='True',
+                                        xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD',
+                                        fileName=os.path.join(curRunResultsPath, "plot_LogD-#Training_Points.png"), marker_colors=['y'])
 
-        # random_results = None
-        # bo_v_random_stats = None
-        # if plot_data_exists(randomData):
-        #     random_results = pd.read_csv(randomData)
-        #     stat_test = pairedtTest.getTest(result["averageError"].to_numpy(),random_results["averageError"].to_numpy())
-        #     bo_v_random_stats = {"pvalue": stat_test.pvalue, "statistic": stat_test.statistic}
-        #     print("P-Value of Paired T Test Between Bayesian Optimzation and Random Order: " + str(stat_test.pvalue))
-        #     print("Statistic Value: " + str(stat_test.statistic))
+        random_results = None
+        bo_v_random_stats = None
+        if plot_data_exists(randomData):
+            random_results = pd.read_csv(randomData)
+            stat_test = pairedtTest.getTest(result["averageError"].to_numpy(),random_results["averageError"].to_numpy())
+            bo_v_random_stats = {"pvalue": stat_test.pvalue, "statistic": stat_test.statistic}
+            print("P-Value of Paired T Test Between Bayesian Optimzation and Random Order: " + str(stat_test.pvalue))
+            print("Statistic Value: " + str(stat_test.statistic))
 
-        #     plot_logD_trainSize_perMethod(frame1=result, frame2=random_results, method1_v_method2_stats=bo_v_random_stats, label1='Bayesian Optimization', label2='Random Order', on_off='True',
-        #                                 xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD',
-        #                                 fileName=os.path.join(curRunResultsPath, "plot_LogD-#Training_Points.png"), marker_colors=['y', 'g'])
+            plot_logD_trainSize_perMethod(frame1=result, frame2=random_results, method1_v_method2_stats=bo_v_random_stats, label1='Bayesian Optimization', label2='Random Order', on_off='True',
+                                        xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD',
+                                        fileName=os.path.join(curRunResultsPath, "plot_LogD-#Training_Points.png"), marker_colors=['y', 'g'])
 
-        # serial_results = None
-        # bo_v_serial_stats = None
-        # if plot_data_exists(serialData):
-        #     serial_results = pd.read_csv(serialData)
-        #     stat_test = pairedtTest.getTest(result["averageError"].to_numpy(),serial_results["averageError"].to_numpy())
-        #     bo_v_serial_stats = {"pvalue": stat_test.pvalue, "statistic": stat_test.statistic}
-        #     print("P-Value of Paired T Test Between Bayesian Optimzation and Serial Order: " + str(stat_test.pvalue))
+        serial_results = None
+        bo_v_serial_stats = None
+        if plot_data_exists(serialData):
+            serial_results = pd.read_csv(serialData)
+            stat_test = pairedtTest.getTest(result["averageError"].to_numpy(),serial_results["averageError"].to_numpy())
+            bo_v_serial_stats = {"pvalue": stat_test.pvalue, "statistic": stat_test.statistic}
+            print("P-Value of Paired T Test Between Bayesian Optimzation and Serial Order: " + str(stat_test.pvalue))
 
-        #     plot_logD_trainSize_perMethod(frame1=result, frame2=serial_results, method1_v_method2_stats=bo_v_serial_stats, label1='Bayesian Optimization', label2='Serial Order', on_off='True',
-        #                                 xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD',
-        #                                 fileName=os.path.join(curRunResultsPath, "plot_LogD-#Training_Points.png"), marker_colors=['y', 'r'])
+            plot_logD_trainSize_perMethod(frame1=result, frame2=serial_results, method1_v_method2_stats=bo_v_serial_stats, label1='Bayesian Optimization', label2='Serial Order', on_off='True',
+                                        xLabel='Number of ZIFs in the training dataset', yLabel='Mean absolute error of logD',
+                                        fileName=os.path.join(curRunResultsPath, "plot_LogD-#Training_Points.png"), marker_colors=['y', 'r'])
