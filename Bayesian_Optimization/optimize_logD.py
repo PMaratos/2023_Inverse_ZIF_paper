@@ -84,6 +84,7 @@ if __name__ == "__main__":
     parser.add_argument('-r', '--random',   help='A file containing the logD data acquired by adding zifs in random order.', default='random.csv')
     parser.add_argument('-s', '--serial',   help='A file containing the logD data acquired by adding zifs in a specific serial order.', default='serial.csv')
     parser.add_argument('-o', '--output',   help='Whether the outpout should be printed on a stdout or a file or both.', default='filestream')
+    parser.add_argument('-f', '--folder',   help='A folder with a signature name concerning the experiment conducted', default='test_opt')
     parsed_args = parser.parse_args() # Actually parse
 
     log_filename = datetime.now().strftime('Optimization_%d-%m-%Y-%H-%M-%S.%f')[:-3]
@@ -95,6 +96,7 @@ if __name__ == "__main__":
     serialData        = parsed_args.serial
     output            = parsed_args.output
     method            = parsed_args.method
+    experiment_dir    = parsed_args.folder
     designspace_thres = int(parsed_args.number)
 
     if dataType not in ["zifs_diffusivity", "co2", "o2_n2"]:
@@ -115,7 +117,7 @@ if __name__ == "__main__":
         os.mkdir(resultsPath)
 
     # Create a specific results direcotry for this run of BO.
-    curRunResultsPath = os.path.join(resultsPath,log_filename)
+    curRunResultsPath = os.path.join(resultsPath, experiment_dir, log_filename)
     os.mkdir(curRunResultsPath)
 
     # Create a specific directory for the intermediate saved datasets
