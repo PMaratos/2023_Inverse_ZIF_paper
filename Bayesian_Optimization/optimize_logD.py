@@ -95,6 +95,9 @@ if __name__ == "__main__":
     output       = parsed_args.output
     method       = parsed_args.method
 
+    if dataType not in ["zifs_diffusivity", "co2", "o2_n2"]:
+        raise Exception("Invalid research data type.")
+
     if method == "bo":
         log_filename = "Bayesian_" + log_filename
     elif method == "random":
