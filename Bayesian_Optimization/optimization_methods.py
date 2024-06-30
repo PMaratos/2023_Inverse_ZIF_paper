@@ -17,6 +17,7 @@ from selection_strategy    import ProbabilisticSelectionStrategy
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF
 from sklearn.gaussian_process.kernels import ConstantKernel
+from sklearn.gaussian_process.kernels import Matern
 from sklearn.model_selection import KFold
 
 # TODO Refactor this file by separating functions
@@ -42,7 +43,8 @@ class BayesianOptimization(OptimizationFactory):
         optimization_start_time = time.time()
 
         # Initiate a gaussian process model
-        gp_model = GaussianProcessRegressor(kernel=ConstantKernel(1.0) * RBF(1.0))
+        #gp_model = GaussianProcessRegressor(kernel=ConstantKernel(1.0) * RBF(1.0))
+        gp_model = GaussianProcessRegressor(kernel=1.0 * Matern(length_scale=1.0, nu=2.5))
 
         # Count the total number that the kfold process takes in seconds
         total_kfold_elapsed_time = 0.0
