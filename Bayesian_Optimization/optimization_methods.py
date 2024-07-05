@@ -18,6 +18,7 @@ from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import RBF
 from sklearn.gaussian_process.kernels import ConstantKernel
 from sklearn.gaussian_process.kernels import Matern
+from sklearn.gaussian_process.kernels import RationalQuadratic
 from sklearn.model_selection import KFold
 
 # TODO Refactor this file by separating functions
@@ -43,8 +44,12 @@ class BayesianOptimization(OptimizationFactory):
         optimization_start_time = time.time()
 
         # Initiate a gaussian process model
+        #self.logger.info(self.logPrefix, "----------   Using Gaussian Process Regressor as Surrogate with kernel: ConstantKernel(1.0) * RBF(1.0) ----------")
         #gp_model = GaussianProcessRegressor(kernel=ConstantKernel(1.0) * RBF(1.0))
-        gp_model = GaussianProcessRegressor(kernel=1.0 * Matern(length_scale=1.0, nu=2.5))
+        #self.logger.info(self.logPrefix, "----------   Using Gaussian Process Regressor as Surrogate with kernel: 1.0 * Matern(length_scale=1.0, nu=1.5) ----------")
+        #gp_model = GaussianProcessRegressor(kernel=1.0 * Matern(length_scale=1.0, nu=1.5))
+        self.logger.info(self.logPrefix, "----------   Using Gaussian Process Regressor as Surrogate with kernel: RationalQuadratic(length_scale=1.0, alpha=1.5) ----------")
+        gp_model = GaussianProcessRegressor(kernel=RationalQuadratic(length_scale=1.0, alpha=1.5))
 
         # Count the total number that the kfold process takes in seconds
         total_kfold_elapsed_time = 0.0
