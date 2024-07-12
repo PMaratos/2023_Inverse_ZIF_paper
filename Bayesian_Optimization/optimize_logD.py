@@ -165,8 +165,6 @@ if __name__ == "__main__":
 
             # Instantiate the XGB regressor model
             XGBR = XGBRegressor(n_estimators=500, max_depth=5, eta=0.07, subsample=0.75, colsample_bytree=0.7, reg_lambda=0.4, reg_alpha=0.13,
-                                n_jobs=6,
-                                # nthread=6,
                                 random_state=6410
                                 )
             # Instantiate An Optimizer
