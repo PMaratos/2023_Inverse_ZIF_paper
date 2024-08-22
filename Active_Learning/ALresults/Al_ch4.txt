@@ -1,0 +1,291 @@
+Round 1 train size 5 mae is 1.0837185090960346 train_mae is 0.05246499091298844
+UNC 25
+Round 1 train size 6 mae is 0.754908667632315 train_mae is 0.017446204938708076
+UNC 9
+Round 1 train size 7 mae is 0.7607481891764778 train_mae is 0.01329177568337748
+UNC 23
+Round 1 train size 8 mae is 0.7325270690212377 train_mae is 0.01102674645386307
+UNC 28
+Round 1 train size 9 mae is 0.7290055051004403 train_mae is 0.010199035716106529
+UNC 13
+Round 1 train size 10 mae is 0.7203846921086754 train_mae is 0.009299282302125653
+UNC 18
+Round 1 train size 11 mae is 0.6910871506982708 train_mae is 0.009718968853377818
+UNC 19
+Round 1 train size 12 mae is 0.688401260856224 train_mae is 0.00973317823571528
+UNC 16
+Round 1 train size 13 mae is 0.6553573912190102 train_mae is 0.009149681083242892
+UNC 25
+Round 1 train size 14 mae is 0.6372509594688102 train_mae is 0.00973013273619336
+UNC 8
+Round 1 train size 15 mae is 0.6438060348828963 train_mae is 0.009962326861841309
+UNC 15
+Round 1 train size 16 mae is 0.6572112653792308 train_mae is 0.009593499948568819
+UNC 12
+Round 1 train size 17 mae is 0.6516253153290197 train_mae is 0.008928502014162685
+UNC 15
+Round 1 train size 18 mae is 0.6448219980521056 train_mae is 0.008986680351306033
+UNC 18
+Round 1 train size 19 mae is 0.6081686082433064 train_mae is 0.009063133706713649
+UNC 17
+Round 1 train size 20 mae is 0.6133081079945459 train_mae is 0.009178774293851385
+UNC 11
+Round 1 train size 21 mae is 0.6178472387949511 train_mae is 0.00947183507923638
+UNC 22
+Round 1 train size 22 mae is 0.6106270541345156 train_mae is 0.00894214650874322
+UNC 14
+Round 1 train size 23 mae is 0.6227475483297168 train_mae is 0.008612486949566116
+UNC 22
+Round 1 train size 24 mae is 0.6113382636176765 train_mae is 0.009053175123106218
+UNC 16
+Round 1 train size 25 mae is 0.6097570913353282 train_mae is 0.009174001897786051
+UNC 22
+Round 1 train size 26 mae is 0.5969103788998367 train_mae is 0.008932488532378227
+UNC 11
+Round 1 train size 27 mae is 0.5921498334335248 train_mae is 0.00905348726768088
+UNC 17
+Round 1 train size 28 mae is 0.5707024771859219 train_mae is 0.009352574409431104
+UNC 12
+Round 1 train size 29 mae is 0.5659469711598145 train_mae is 0.00944424096440606
+UNC 18
+Round 1 train size 30 mae is 0.5604106022245482 train_mae is 0.009687964342100886
+UNC 20
+Round 1 train size 31 mae is 0.5492991432305149 train_mae is 0.010163309111679031
+UNC 15
+Round 1 train size 32 mae is 0.5401915369105705 train_mae is 0.010052207996352116
+UNC 11
+Round 1 train size 33 mae is 0.5389844513922392 train_mae is 0.00999629219426823
+UNC 9
+Round 1 train size 34 mae is 0.5484612419469816 train_mae is 0.010537169192711448
+UNC 15
+Round 1 train size 35 mae is 0.5338250211924689 train_mae is 0.010720334021829205
+UNC 9
+Round 1 train size 36 mae is 0.5282006133788479 train_mae is 0.01119480568464553
+UNC 17
+Round 1 train size 37 mae is 0.5290896171802878 train_mae is 0.01085773993746602
+UNC 12
+Round 1 train size 38 mae is 0.5247264310125831 train_mae is 0.011160061587321019
+UNC 15
+Round 1 train size 39 mae is 0.5308644089412872 train_mae is 0.011105292500236659
+UNC 18
+Round 1 train size 40 mae is 0.5291291249755826 train_mae is 0.011594370296901286
+UNC 18
+Round 1 train size 41 mae is 0.5373182888569487 train_mae is 0.011672753936481104
+UNC 12
+Round 1 train size 42 mae is 0.536133744473011 train_mae is 0.012018677729647771
+UNC 7
+Round 1 train size 43 mae is 0.523473618729068 train_mae is 0.012072377473570222
+UNC 18
+Round 1 train size 44 mae is 0.5265075560680458 train_mae is 0.012419171849707492
+UNC 6
+Round 1 train size 45 mae is 0.5223697115977977 train_mae is 0.013084891598432034
+UNC 8
+Round 1 train size 46 mae is 0.5195975077109942 train_mae is 0.012558316492545818
+UNC 11
+Round 1 train size 47 mae is 0.5306570073191473 train_mae is 0.013020536482406352
+UNC 7
+Round 1 train size 48 mae is 0.5388080582608755 train_mae is 0.013401647216366639
+UNC 10
+Round 1 train size 49 mae is 0.5315371634224569 train_mae is 0.013860351476878969
+UNC 10
+Round 1 train size 50 mae is 0.5265939519490158 train_mae is 0.014017448736408035
+UNC 14
+Round 1 train size 51 mae is 0.5102804751342699 train_mae is 0.014017387814755552
+UNC 14
+Round 1 train size 52 mae is 0.49478575318903645 train_mae is 0.014782054316544224
+UNC 11
+Round 1 train size 53 mae is 0.5066035200124579 train_mae is 0.01454183659326746
+UNC 21
+Round 1 train size 54 mae is 0.5068353735426321 train_mae is 0.014805137158927633
+UNC 19
+Round 1 train size 55 mae is 0.5044367336267565 train_mae is 0.015059424764415802
+UNC 14
+Round 1 train size 56 mae is 0.5076690133758233 train_mae is 0.015873260097182557
+UNC 15
+Round 1 train size 57 mae is 0.5047408066312952 train_mae is 0.016438752059305294
+UNC 10
+Round 1 train size 58 mae is 0.5022695590307485 train_mae is 0.015984755583077753
+UNC 15
+Round 1 train size 59 mae is 0.5001129396498658 train_mae is 0.01647499265426957
+UNC 8
+Round 1 train size 60 mae is 0.498065693718554 train_mae is 0.01634866833587016
+UNC 10
+Round 1 train size 61 mae is 0.5048988415233189 train_mae is 0.01679497583779387
+UNC 9
+Round 1 train size 62 mae is 0.4942088356235165 train_mae is 0.017075873816143707
+UNC 14
+Round 1 train size 63 mae is 0.4983121235343623 train_mae is 0.017232890743747193
+UNC 11
+Round 1 train size 64 mae is 0.4926811744302612 train_mae is 0.01789212323988621
+UNC 10
+Round 1 train size 65 mae is 0.4858130349043823 train_mae is 0.01838435594684909
+UNC 9
+Round 1 train size 66 mae is 0.4849085763261312 train_mae is 0.018433817264923366
+UNC 7
+Round 1 train size 67 mae is 0.48497964761909895 train_mae is 0.01972053151849032
+UNC 9
+Round 1 train size 68 mae is 0.4806092146049446 train_mae is 0.019333296808101023
+UNC 13
+Round 1 train size 69 mae is 0.4810199561201942 train_mae is 0.019309616096938303
+UNC 7
+Round 1 train size 70 mae is 0.4827358456349196 train_mae is 0.019655255673991796
+UNC 7
+Round 1 train size 71 mae is 0.4858064841725692 train_mae is 0.020801108470079967
+UNC 7
+Round 1 train size 72 mae is 0.4745552492623654 train_mae is 0.020330835044234486
+UNC 2
+Round 1 train size 73 mae is 0.4690092154580291 train_mae is 0.021080299383391846
+UNC 10
+Round 1 train size 74 mae is 0.46682866054894256 train_mae is 0.02103048896596499
+UNC 10
+Round 1 train size 75 mae is 0.4677411172157106 train_mae is 0.020824516702961978
+UNC 5
+Round 1 train size 76 mae is 0.47041501386377993 train_mae is 0.02137145387948607
+UNC 8
+Round 1 train size 77 mae is 0.46011870355835216 train_mae is 0.021050224322148363
+UNC 5
+Round 1 train size 78 mae is 0.47012644666373105 train_mae is 0.021994107054815797
+UNC 8
+Round 1 train size 79 mae is 0.46882320046705817 train_mae is 0.022126940924596727
+UNC 9
+Round 1 train size 80 mae is 0.4797724727321142 train_mae is 0.022904380215257765
+UNC 10
+Round 1 train size 81 mae is 0.4796823463593476 train_mae is 0.023578673713359793
+UNC 8
+Round 1 train size 82 mae is 0.4682796536514651 train_mae is 0.023729594642345368
+UNC 8
+Round 1 train size 83 mae is 0.47285581995620674 train_mae is 0.023259698628154857
+UNC 8
+Round 1 train size 84 mae is 0.4859986185803908 train_mae is 0.02477183448955022
+UNC 9
+Round 1 train size 85 mae is 0.4798067759404095 train_mae is 0.024692045493119354
+UNC 6
+Round 1 train size 86 mae is 0.47012797956163366 train_mae is 0.024869749730237752
+UNC 11
+Round 1 train size 87 mae is 0.4831053855251172 train_mae is 0.025892098007133928
+UNC 12
+Round 1 train size 88 mae is 0.4787800669825761 train_mae is 0.026792020395911376
+UNC 4
+Round 1 train size 89 mae is 0.4706245214505233 train_mae is 0.026979856239567702
+UNC 5
+Round 1 train size 90 mae is 0.4770342270206614 train_mae is 0.027999200797270783
+UNC 5
+Round 1 train size 91 mae is 0.47067156007556815 train_mae is 0.02751735462472689
+UNC 11
+Round 1 train size 92 mae is 0.4775130903015709 train_mae is 0.028563935596396833
+UNC 9
+Round 1 train size 93 mae is 0.4757258110707389 train_mae is 0.028811605992989365
+UNC 6
+Round 1 train size 94 mae is 0.4783343735999277 train_mae is 0.029898505337807774
+UNC 10
+Round 1 train size 95 mae is 0.47475216995400565 train_mae is 0.030469471153694003
+UNC 8
+Round 1 train size 96 mae is 0.47651050677993306 train_mae is 0.030165707448191078
+UNC 5
+Round 1 train size 97 mae is 0.47124754496926535 train_mae is 0.030465335310198852
+UNC 16
+Round 1 train size 98 mae is 0.4724303870879064 train_mae is 0.03037380923524253
+UNC 6
+Round 1 train size 99 mae is 0.48139162346025843 train_mae is 0.031264902830447375
+UNC 9
+Round 1 train size 100 mae is 0.4775027398978816 train_mae is 0.032111572052229836
+UNC 7
+Round 1 train size 101 mae is 0.4764049749043487 train_mae is 0.03173127703271189
+UNC 9
+Round 1 train size 102 mae is 0.48223262582597365 train_mae is 0.032945187923459456
+UNC 7
+Round 1 train size 103 mae is 0.48388020681123495 train_mae is 0.03349465026323348
+UNC 14
+Round 1 train size 104 mae is 0.46891900945357146 train_mae is 0.03343451813683873
+UNC 11
+Round 1 train size 105 mae is 0.47502327371631126 train_mae is 0.033141342755983065
+UNC 6
+Round 1 train size 106 mae is 0.4649957538071867 train_mae is 0.03507472819891778
+UNC 9
+Round 1 train size 107 mae is 0.46516124883323695 train_mae is 0.03396517309309992
+UNC 11
+Round 1 train size 108 mae is 0.4779767778658548 train_mae is 0.03544090018631128
+UNC 4
+Round 1 train size 109 mae is 0.4752416119123964 train_mae is 0.03612459487602369
+UNC 8
+Round 1 train size 110 mae is 0.4693049296028628 train_mae is 0.035319102386384645
+UNC 5
+Round 1 train size 111 mae is 0.4670564716028153 train_mae is 0.03626097765763783
+UNC 4
+Round 1 train size 112 mae is 0.46959496327720396 train_mae is 0.0356752485194068
+UNC 7
+Round 1 train size 113 mae is 0.4688739053968175 train_mae is 0.03689661191776072
+UNC 6
+Round 1 train size 114 mae is 0.4766722592127639 train_mae is 0.03538191330652741
+UNC 3
+Round 1 train size 115 mae is 0.46776707628553965 train_mae is 0.03667153804008985
+UNC 2
+Round 1 train size 116 mae is 0.47532823607324787 train_mae is 0.037321240568396905
+UNC 4
+Round 1 train size 117 mae is 0.47041224291640726 train_mae is 0.03752197753180127
+UNC 0
+Round 1 train size 118 mae is 0.470189774210052 train_mae is 0.037171535083781855
+UNC 2
+Round 1 train size 119 mae is 0.4749047526428116 train_mae is 0.03714834303289206
+UNC 3
+Round 1 train size 120 mae is 0.4673172659834894 train_mae is 0.038348674907618056
+UNC 4
+Round 1 train size 121 mae is 0.4670701917379008 train_mae is 0.037876051366983035
+UNC 3
+Round 1 train size 122 mae is 0.46927034572049126 train_mae is 0.039188424451597766
+UNC 0
+Round 1 train size 123 mae is 0.4721986825545428 train_mae is 0.03921391216397716
+UNC 2
+Round 1 train size 124 mae is 0.47318370608899923 train_mae is 0.03882228158143414
+UNC 3
+Round 1 train size 125 mae is 0.46673057904883436 train_mae is 0.04005055744625538
+UNC 1
+Round 1 train size 126 mae is 0.4703767857047794 train_mae is 0.039789133226462006
+UNC 4
+Round 1 train size 127 mae is 0.463330982220613 train_mae is 0.04006967147393731
+UNC 9
+Round 1 train size 128 mae is 0.4606342659358666 train_mae is 0.040919967575108976
+UNC 2
+Round 1 train size 129 mae is 0.47138220638075967 train_mae is 0.03978420493148812
+UNC 6
+Round 1 train size 130 mae is 0.45724530668965657 train_mae is 0.0407561955965
+UNC 4
+Round 1 train size 131 mae is 0.4712430229298531 train_mae is 0.0408458157273438
+UNC 2
+Round 1 train size 132 mae is 0.46265523974768996 train_mae is 0.03940431254911382
+UNC 4
+Round 1 train size 133 mae is 0.4614971000920563 train_mae is 0.042210633145946704
+UNC 4
+Round 1 train size 134 mae is 0.46389232191474744 train_mae is 0.040677430006278645
+UNC 3
+Round 1 train size 135 mae is 0.4607259873876367 train_mae is 0.04173633703439176
+UNC 6
+Round 1 train size 136 mae is 0.4620624277025946 train_mae is 0.0413932429401144
+UNC 2
+Round 1 train size 137 mae is 0.45404993703381524 train_mae is 0.04262691502704675
+UNC 1
+Round 1 train size 138 mae is 0.45705440405776615 train_mae is 0.04139876069775451
+UNC 1
+Round 1 train size 139 mae is 0.4543455467220629 train_mae is 0.0415417138355655
+UNC 2
+Round 1 train size 140 mae is 0.4591279222335928 train_mae is 0.04152554600785025
+UNC 5
+Round 1 train size 141 mae is 0.46446934558839664 train_mae is 0.042095517388734655
+UNC 5
+Round 1 train size 142 mae is 0.4706358206800843 train_mae is 0.043363785683589416
+UNC 4
+Round 1 train size 143 mae is 0.4628312354504379 train_mae is 0.04202608136439473
+UNC 2
+Round 1 train size 144 mae is 0.4598807320189056 train_mae is 0.043002888845717006
+UNC 7
+Round 1 train size 145 mae is 0.4652148926389511 train_mae is 0.04292886676993462
+UNC 6
+Round 1 train size 146 mae is 0.4618627881745648 train_mae is 0.04337593228668225
+UNC 8
+Round 1 train size 147 mae is 0.4749961800260554 train_mae is 0.0440362801219822
+UNC 3
+Round 1 train size 148 mae is 0.47556627532088397 train_mae is 0.0438650515890029
+UNC 6
+Round 1 train size 149 mae is 0.46760428977032753 train_mae is 0.04454591259994952
+UNC 4
+Round 1 train size 150 mae is 0.4650071309237255 train_mae is 0.045066056399053186

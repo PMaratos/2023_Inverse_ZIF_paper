@@ -1,0 +1,16 @@
+qbc (xgb,gp,rf)
+
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 10 active meh
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 5 active καλό fig1
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 15 active καλό fig2
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | no active ok
+
+
+qbc (xgb,gp,rf,cat)
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 10 active πιο meh
+
+with more samples 
+bool_unc = res < (mean_unc * 0.05) uncert only πολύ καλό
+
+======n2
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | no active πολύ καλό

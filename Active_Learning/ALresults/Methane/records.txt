@@ -1,0 +1,54 @@
+qbc (gp and xgb)
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | active 10 ->καλό fig1
+qbc -> rand_std exp 3,4 | max std exp 5 | min mean std | active 10 ->όχι καλό
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | active 5 ->ok fig2
+qbc -> rand_std exp 2,3,4 |  | min mean std | active 5 -> meh 
+qbc -> rand_std exp 1,2,3,4 | max std exp 5 | min mean std | active 5 -> καλό fig3 
+qbc -> rand_std exp 1,2,3,4 | max std exp 5 | min mean std | active 10 -> meh καλό στο τέλος 
+qbc -> rand_std exp 1,2,3,4 | max std exp 6 | max y exp 5 | min mean std | active 5 -> meh
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | active 15 ->καλό fig4
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | active 25 ->καλό fig5
+qbc -> rand_std exp 2,3,4 | max std exp 5 | max y |min mean std | active 25 -> same with random
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | no active ->καλό fig6
+
+qbc (gp, xgb, rf)
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | no active ->καλό 
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 10 active ->πολύ καλό fig 7
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 5 active ->meh
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 15 active ->ok παρόμοιο με fig4
+qbc -> rand_std exp 1,2,3,4 | max std exp 5 | min mean std | 5 active ->ok
+qbc -> rand_std exp 1,2,3,4 | max std exp 5 | min mean std | 10 active -> bad
+qbc -> rand_std exp 2,3,4 | max std exp 6 | max y 5|min mean std | 10 active ->ok
+qbc -> rand_std exp 2,3,4 | max std exp 5, 6 | min mean std | 10 active -> bad
+qbc -> rand_std exp 2,3,4 | no max std  | min mean std | 10 active -> καλό, σύγκλιση στο τέλος
+
+qbc (xgb,rf)
+qbc -> rand_std exp 1,2,3,4 | max std exp 5 | min mean std | no active -> bad
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 10 active -> σαν fig1
+
+qbc (catboost,xgb,rf)
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 10 active -> fig 8
+
+(hristoforos method)
+rand_std exp 2,3,4 | max std exp 5 | min mean std | 10 active -> ok
+rand_std exp 2,3,4 | max std exp 5 | min mean std | 5 active -> meh
+rand_std exp 2,3,4 | max std exp 5 | min mean std | 25 active -> meh
+
+qbc (catboost,xgb,rf,gp)
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 10 active -> fig 9
+
+================== multi fidelity ================
+
+qbc (gp, xgb, rf) 
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 10 active και unc < 0.1 -> fig 10
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 10 active και unc < 0.2 -> too much time τα δύο folds πάνε στο 5.60
+
++ Christ estimation error unc<0.2 & mae< 0.2
+
+
+
+
+
+
+
+

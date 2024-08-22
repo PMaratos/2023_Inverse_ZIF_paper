@@ -1,0 +1,7 @@
+qbc (xgb,rf,gp)
+qbc -> rand_std exp 2,3,4 | max std exp 5 | min mean std | 10 active οκ μαζί με random
+
+more samples  < mean(unc)*0.05
+
+c02/n2   10 active meh, no active meh 
+more samples  < mean(unc)*0.01
