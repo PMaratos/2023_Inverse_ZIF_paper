@@ -39,60 +39,47 @@ def stat_test(df1,df2):
 
 if __name__ == "__main__":
 
+    al_selection_methods = ["density", "igs", "qbc", "rt"]
+    dataset_names = ["Forrester", "forrester_imb", "jump_forrester", "jump_forrester_imb", "gaussian", "gaussian_imb", "gaussian_imb_noise", "exponential", "exponential_imb"]
 
-    # df1_1 = create_results('./ALresults/Synthetic/density/Forrester/Forrester_150_density')
-    # df2_1 = create_results('./ALresults/Synthetic/igs/Forrester/Forrester_150_igs')
-    # df3_1 = create_results('./ALresults/Synthetic/qbc/Forrester/Forrester_150_qbc')
+    dataset_to_plot_names = {"Forrester"          : "Forrester", 
+                             "forrester_imb"      : "Forrester Imbalanced", 
+                             "jump_forrester"     : "Jump Forrester", 
+                             "jump_forrester_imb" : "Jump Forrester Imbalanced", 
+                             "gaussian"           : "Gaussian", 
+                             "gaussian_imb"       : "Gaussian Imbalanced", 
+                             "gaussian_imb_noise" : "Gaussian Imbalanced with Noise", 
+                             "exponential"        : "Exponential", 
+                             "exponential_imb"    : "Exponential Imbalanced"}
 
-    # df1_1 = create_results('./ALresults/Synthetic/density/forrester_imb/forrester_imb_150_density')
-    # df2_1 = create_results('./ALresults/Synthetic/igs/forrester_imb/forrester_imb_150_igs')
-    # df3_1 = create_results('./ALresults/Synthetic/qbc/forrester_imb/forrester_imb_150_qbc')
+    experiment_results = []
+    for dataset in dataset_names:
+        for method in al_selection_methods:
+            experiment_results.append(create_results('./ALresults/Synthetic/' + method + '/' + dataset + '/' + dataset + '_150_' + method))
 
-    # df1_1 = create_results('./ALresults/Synthetic/density/gaussian/gaussian_150_density')
-    # df2_1 = create_results('./ALresults/Synthetic/igs/gaussian/gaussian_150_igs')
-    # df3_1 = create_results('./ALresults/Synthetic/qbc/gaussian/gaussian_150_qbc')
 
-    # df1_1 = create_results('./ALresults/Synthetic/density/gaussian_imb/gaussian_imb_150_density')
-    # df2_1 = create_results('./ALresults/Synthetic/igs/gaussian_imb/gaussian_imb_150_igs')
-    # df3_1 = create_results('./ALresults/Synthetic/qbc/gaussian_imb/gaussian_imb_150_qbc')
+        t_v, p_v = stat_test(experiment_results[0],experiment_results[1])
+        p_v = p_v.item()
 
-    # df1_1 = create_results('./ALresults/Synthetic/density/gaussian_imb_noise/gaussian_imb_noise_150_density')
-    # df2_1 = create_results('./ALresults/Synthetic/igs/gaussian_imb_noise/gaussian_imb_noise_150_igs')
-    # df3_1 = create_results('./ALresults/Synthetic/qbc/gaussian_imb_noise/gaussian_imb_noise_150_qbc')
+        plt.figure()
+        plt.plot(experiment_results[0], label='Density', linewidth=1)
+        plt.plot(experiment_results[1], label='iGS', linestyle='--', linewidth=1)
+        plt.plot(experiment_results[2], label='QBC', linestyle='-.', linewidth=1)
+        plt.plot(experiment_results[3], label='RT',  linestyle=':', linewidth=1)
+        # plt.plot(df5_1, label='ActiveLearning density')
 
-    df1_1 = create_results('./ALresults/Synthetic/density/jump_forrester/jump_forrester_150_density')
-    df2_1 = create_results('./ALresults/Synthetic/igs/jump_forrester/jump_forrester_150_igs')
-    df3_1 = create_results('./ALresults/Synthetic/qbc/jump_forrester/jump_forrester_150_qbc')
+        plt.xlabel('# of Queries')
+        plt.ylabel('MAE')
+        plt.title('Average Error Comparison (' + dataset_to_plot_names[dataset] + ')')
 
-    # df1_1 = create_results('./ALresults/Synthetic/density/jump_forrester_imb/jump_forrester_imb_150_density')
-    # df2_1 = create_results('./ALresults/Synthetic/igs/jump_forrester_imb/jump_forrester_imb_150_igs')
-    # df3_1 = create_results('./ALresults/Synthetic/qbc/jump_forrester_imb/jump_forrester_imb_150_qbc')
+        handles, labels = plt.gca().get_legend_handles_labels()
+        plt.legend(handles, labels)
 
-    # df1_1 = create_results('./ALresults/Synthetic/density/exponential/exponential_150_density')
-    # df2_1 = create_results('./ALresults/Synthetic/igs/exponential/exponential_150_igs')
-    # df3_1 = create_results('./ALresults/Synthetic/qbc/exponential/exponential_150_qbc')
+        save_path = os.curdir + '/plots'
+        if not os.path.exists(save_path):
+            os.makedirs(save_path)
 
-    # df1_1 = create_results('./ALresults/Synthetic/density/exponential_imb/exponential_imb_150_density')
-    # df2_1 = create_results('./ALresults/Synthetic/igs/exponential_imb/exponential_imb_150_igs')
-    # df3_1 = create_results('./ALresults/Synthetic/qbc/exponential_imb/exponential_imb_150_qbc')
+        plt.savefig(os.path.join(save_path, dataset + '.png'), dpi=300, bbox_inches='tight')
 
-    t_v, p_v = stat_test(df1_1,df2_1)
-    p_v = p_v.item()
-
-    plt.figure()
-    plt.plot(df1_1, label='Density', linewidth=3)
-    plt.plot(df2_1, label='iGS', linestyle='--', linewidth=3)
-    plt.plot(df3_1, label='QBC', linestyle='-.', linewidth=3)
-    #plt.plot(df4_1, label='ActiveLearning RT')
-    # plt.plot(df5_1, label='ActiveLearning density')
-
-    plt.xlabel('# of Queries')
-    plt.ylabel('MAE')
-    plt.title('Average Error Comparison (Forrester)')
-
-    handles, labels = plt.gca().get_legend_handles_labels()
-
-    #labels.append(f'p-value: {p_v:.3e}')
-    # labels[0] += f' \n(p-value: {p_v:.3e})'
-    plt.legend(handles, labels)
-    plt.show()
+        experiment_results = []
+        # plt.show()
