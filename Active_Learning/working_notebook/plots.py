@@ -39,7 +39,7 @@ def stat_test(df1,df2):
 
 if __name__ == "__main__":
 
-    al_selection_methods = ["density", "igs", "qbc", "rt"]
+    al_selection_methods = ["density", "igs", "qbc", "rt", "random"]
     dataset_names = ["Forrester", "forrester_imb", "jump_forrester", "jump_forrester_imb", "gaussian", "gaussian_imb", "gaussian_imb_noise", "exponential", "exponential_imb"]
 
     dataset_to_plot_names = {"Forrester"          : "Forrester", 
@@ -61,12 +61,14 @@ if __name__ == "__main__":
         t_v, p_v = stat_test(experiment_results[0],experiment_results[1])
         p_v = p_v.item()
 
+        linewidth = 1.2
+
         plt.figure()
-        plt.plot(experiment_results[0], label='Density', linewidth=1)
-        plt.plot(experiment_results[1], label='iGS', linestyle='--', linewidth=1)
-        plt.plot(experiment_results[2], label='QBC', linestyle='-.', linewidth=1)
-        plt.plot(experiment_results[3], label='RT',  linestyle=':', linewidth=1)
-        # plt.plot(df5_1, label='ActiveLearning density')
+        plt.plot(experiment_results[0], label='Density', linewidth=linewidth)
+        plt.plot(experiment_results[1], label='iGS', linestyle='--', linewidth=linewidth)
+        plt.plot(experiment_results[2], label='QBC', linestyle='-.', linewidth=linewidth)
+        plt.plot(experiment_results[3], label='RT',  linestyle=':', linewidth=linewidth)
+        plt.plot(experiment_results[4], label='Random', linestyle=(0, (3, 2)), linewidth=linewidth)
 
         plt.xlabel('# of Queries')
         plt.ylabel('MAE')
