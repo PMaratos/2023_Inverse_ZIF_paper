@@ -61,7 +61,8 @@ if __name__ == "__main__":
         t_v, p_v = stat_test(experiment_results[0],experiment_results[1])
         p_v = p_v.item()
 
-        linewidth = 1.2
+        f_size = 16
+        linewidth = 2.2
 
         plt.figure()
         plt.plot(experiment_results[0], label='Density', linewidth=linewidth)
@@ -70,12 +71,15 @@ if __name__ == "__main__":
         plt.plot(experiment_results[3], label='RT',  linestyle=':', linewidth=linewidth)
         plt.plot(experiment_results[4], label='Random', linestyle=(0, (3, 2)), linewidth=linewidth)
 
-        plt.xlabel('# of Queries')
-        plt.ylabel('MAE')
-        plt.title('Average Error Comparison (' + dataset_to_plot_names[dataset] + ')')
+        plt.xlabel('# of Queries', fontsize=f_size)
+        plt.ylabel('MAE', fontsize=f_size)
+        plt.title('Average Error Comparison (' + dataset_to_plot_names[dataset] + ')', fontsize=f_size)
+
+        plt.xticks(fontsize=f_size)
+        plt.xticks(fontsize=f_size)
 
         handles, labels = plt.gca().get_legend_handles_labels()
-        plt.legend(handles, labels)
+        plt.legend(handles, labels, fontsize=f_size)
 
         save_path = os.curdir + '/plots'
         if not os.path.exists(save_path):
