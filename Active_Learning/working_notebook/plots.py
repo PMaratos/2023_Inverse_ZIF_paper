@@ -65,7 +65,7 @@ if __name__ == "__main__":
         linewidth = 2.2
 
         plt.figure()
-        plt.plot(experiment_results[0], label='Density', linewidth=linewidth)
+        plt.plot(experiment_results[0], label='DAGS', linewidth=linewidth)
         plt.plot(experiment_results[1], label='iGS', linestyle='--', linewidth=linewidth)
         plt.plot(experiment_results[2], label='QBC', linestyle='-.', linewidth=linewidth)
         plt.plot(experiment_results[3], label='RT',  linestyle=':', linewidth=linewidth)
